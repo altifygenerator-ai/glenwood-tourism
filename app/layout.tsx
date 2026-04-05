@@ -15,13 +15,13 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://yourdomain.com"),
+  metadataBase: new URL("https://glenwoodarkansas.org"),
   title: {
-    default: "Visit Amity Arkansas",
-    template: "%s | Visit Amity Arkansas",
+    default: "Visit Glenwood Arkansas",
+    template: "%s | Visit Glenwood Arkansas",
   },
   description:
-    "Explore Amity Arkansas — local attractions, history, events, and small-town charm.",
+    "Explore Glenwood Arkansas — local attractions, history, events, and small-town charm.",
 };
 
 export default function RootLayout({
