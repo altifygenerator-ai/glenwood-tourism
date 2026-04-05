@@ -21,7 +21,7 @@ export async function POST(req: Request) {
 
     await resend.emails.send({
       from: "onboarding@resend.dev",
-      to: "your@email.com",
+      to: "altifygenerator@gmail.com",
       subject: "New Contact Form Submission",
       text: JSON.stringify(body, null, 2),
     });
