@@ -33,6 +33,14 @@ export default function Navbar() {
 >
   History
 </a>
+<a
+  href="https://amityarkansas.org"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-3 py-1 rounded-md border border-white/20 hover:bg-white hover:text-black transition"
+>
+  Visit Amity
+</a>
         </nav>
       </div>
     </header>
