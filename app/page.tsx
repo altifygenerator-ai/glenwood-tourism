@@ -1,65 +1,125 @@
-import Image from "next/image";
+import Hero from "@/components/tourism/Hero"
+import Highlights from "@/components/tourism/Highlights"
+import AttractionGrid from "@/components/tourism/AttractionGrid"
+import Itinerary from "@/components/tourism/Itinerary"
+import Section from "@/components/tourism/Section"
+import Intro from "@/components/tourism/Intro"
+import FAQ from "@/components/tourism/FAQ"
+import BackgroundSection from "@/components/tourism/BackgroundSection"
+import {
+  amityHero,
+  amityHighlights,
+  amityAttractions,
+  amityItinerary,
+  amitySEO,
+  amityIntro,
+  amityFAQ,
+} from "@/data/amity"
+import Link from "next/link"
+import { generateMetadata } from "@/lib/seo"
 
-export default function Home() {
+export const metadata = generateMetadata(amitySEO)
+
+export default function Page() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+    <main>
+      <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Place",
+      name: "Amity, Arkansas",
+      description:
+        "A historic small town in Pike County known for its community, heritage, and nearby attractions.",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Amity",
+        addressRegion: "AR",
+        addressCountry: "US",
+      },
+    }),
+  }}
+/>
+      
+      <Hero data={amityHero}  />
+<div className="flex gap-4 justify-center mt-4">
+  <a
+    href="/explore"
+    className="bg-white text-black px-6 py-3 rounded-md font-medium"
+  >
+    Explore
+  </a>
+
+  <a
+    href="/history"
+    className="border border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-black transition"
+  >
+    Our History
+  </a>
+</div>
+      <Section>
+        <Highlights items={amityHighlights} />
+      </Section>
+
+
+      <Section>
+        <Intro data={amityIntro} />
+      </Section>
+<BackgroundSection image="/images/amity/CaddoRiver3.jpg">
+  <h2 className="text-4xl font-semibold max-w-2xl">
+    Float the Caddo River and experience the quiet beauty of Southwest Arkansas.
+  </h2>
+</BackgroundSection>
+      <Section>
+        <h2 className="text-3xl font-semibold mb-6" style={{ color: "var(--color-muted)" }}>
+          Things to do near Amity, Arkansas
+        </h2>
+        <AttractionGrid items={amityAttractions} />
+      </Section>
+<BackgroundSection image="/images/amity/CaddoRiverCanoe.webp">
+  <h2 className="text-4xl font-semibold max-w-2xl">
+    Drift Through the Quiet Waters of the Caddo River
+  </h2>
+</BackgroundSection>
+      <Section>
+        <h2 className="text-3xl font-semibold mb-6">
+          Plan your trip
+        </h2>
+        <Itinerary items={amityItinerary} />
+      </Section>
+<BackgroundSection image="/images/amity/tradedays.png">
+  <div className="max-w-xl ml-auto text-right">
+  <h2 className="text-3xl font-semibold mb-4">
+    Support Local Events in Amity
+  </h2>
+
+  <p className="mb-6">
+    Amity has a long tradition of local markets and community gatherings.
+    We're building a platform to highlight businesses, vendors, and future events.
+  </p>
+
+  <div className="flex justify-end">
+    <Link
+  href="/contact"
+  className="inline-flex w-fit bg-white px-6 py-3 rounded-md font-medium shadow hover:shadow-lg transition !text-black"
+>
+  Get Involved
+</Link>
+  </div>
+</div>
+</BackgroundSection>
+      <Section>
+        <h2 className="text-3xl font-semibold mb-6">
+          Frequently asked questions
+        </h2>
+        <FAQ items={amityFAQ} />
+      </Section>
+      <BackgroundSection image="/images/amity/CaddoRiverTrees.jpg">
+  <h2 className="text-4xl font-semibold max-w-2xl">
+    Explore Amity Today
+  </h2>
+</BackgroundSection>
+    </main>
+  )
 }
