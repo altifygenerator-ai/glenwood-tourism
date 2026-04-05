@@ -1,27 +1,38 @@
-import { Resend } from "resend"
-
-const resend = new Resend(process.env.RESEND_API_KEY)
+import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
-  const data = await req.json()
-
   try {
-    await resend.emails.send({
-      from: "Amity Tourism <onboarding@resend.dev>", // works immediately
-      to: "altifygenerator@gmail.com", // 👈 PUT YOUR EMAIL HERE
-      subject: "New Business Inquiry",
-      html: `
-        <h2>New Business Inquiry</h2>
-        <p><strong>Name:</strong> ${data.name}</p>
-        <p><strong>Email:</strong> ${data.email}</p>
-        <p><strong>Business:</strong> ${data.business}</p>
-        <p><strong>Message:</strong> ${data.message}</p>
-      `,
-    })
+    const body = await req.json();
 
-    return Response.json({ success: true })
+    // Optional: check env safely
+    const apiKey = process.env.RESEND_API_KEY;
+
+    if (!apiKey) {
+      console.error("Missing RESEND_API_KEY");
+      return NextResponse.json(
+        { error: "Server not configured" },
+        { status: 500 }
+      );
+    }
+
+    // Lazy import (prevents build crash)
+    const { Resend } = await import("resend");
+    const resend = new Resend(apiKey);
+
+    await resend.emails.send({
+      from: "onboarding@resend.dev",
+      to: "your@email.com",
+      subject: "New Contact Form Submission",
+      text: JSON.stringify(body, null, 2),
+    });
+
+    return NextResponse.json({ success: true });
+
   } catch (error) {
-    console.error(error)
-    return Response.json({ error: "Email failed" }, { status: 500 })
+    console.error(error);
+    return NextResponse.json(
+      { error: "Something went wrong" },
+      { status: 500 }
+    );
   }
 }
