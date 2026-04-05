@@ -7,7 +7,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link href="/" className="font-semibold text-lg tracking-wide">
-          🌿 Amity Tourism
+          🌿 Glenwood Tourism
         </Link>
 
         {/* Nav */}

@@ -5,10 +5,9 @@ export default function Footer() {
         
         {/* About */}
         <div>
-          <h3 className="text-lg font-semibold mb-3">Amity Tourism</h3>
+          <h3 className="text-lg font-semibold mb-3">Glenwood Tourism</h3>
           <p className="text-sm text-white/80">
-            Discover the charm of Amity, Arkansas — from scenic river floats to
-            peaceful small-town experiences in the Ouachita region.
+            Discover Glenwood, Arkansas — from floating the Caddo River to exploring nearby lakes and outdoor destinations in the Ouachita region.
           </p>
         </div>
 
@@ -27,7 +26,7 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-3">Get Listed</h3>
           <p className="text-sm text-white/80 mb-4">
-            Own a local business? Get featured on Amity Tourism and reach visitors.
+            Own a local business in Glenwood? Get featured and connect with visitors exploring the area.
           </p>
           <a
             href="/contact"
@@ -41,21 +40,20 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10 text-center text-sm text-white/70 py-6 space-y-4">
 
-  <a
-    href="https://buy.stripe.com/aFa4gz7By3qv67T8BX7N602"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-block bg-[color:var(--color-accent)] text-white px-5 py-2 rounded-md font-medium shadow hover:opacity-90 transition"
-  >
-    ❤️ Keep This Website Running
-  </a>
+        <a
+          href="https://buy.stripe.com/aFa4gz7By3qv67T8BX7N602"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-[color:var(--color-accent)] text-white px-5 py-2 rounded-md font-medium shadow hover:opacity-90 transition"
+        >
+          ❤️ Support Local Visibility
+        </a>
 
-  <div>
-    © {new Date().getFullYear()} Amity Tourism. All rights reserved.
-  </div>
+        <div>
+          © {new Date().getFullYear()} Glenwood Tourism. All rights reserved.
+        </div>
 
-</div>
-      
+      </div>
     </footer>
   )
 }
