@@ -3,6 +3,7 @@ import "./globals.css";
 import { Inter, Playfair_Display } from "next/font/google";
 import Footer from "@/components/layout/Footer"
 import Navbar from "@/components/layout/Navbar"
+import { Analytics } from "@vercel/analytics/next"
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-body",
@@ -34,6 +35,7 @@ export default function RootLayout({
   <Navbar />
   <main className="flex-grow">{children}</main>
   <Footer />
+  <Analytics />
 </body>
     </html>
   
