@@ -141,24 +141,24 @@ export const glenwoodHistory = {
   hero: {
     title: "History of Glenwood",
     description:
-      "A southwest Arkansas town shaped by timber, railroads, and the landscape of the Ouachita region.",
+      "A southwest Arkansas town shaped by railroads, timber, and life along the Caddo River in the Ouachita Mountains.",
     image: "/images/glenwood/oldglenwood.jpg",
   },
 
   sections: [
     {
-      title: "Early Beginnings",
+      title: "A Railroad and Timber Boomtown",
       text:
-        "Glenwood grew as a boomtown tied to railroad development and timber interests in the region, and it was incorporated in 1909.",
+        "Glenwood was not an early frontier settlement like many Arkansas towns. Instead, it emerged rapidly in the early 1900s as a direct result of railroad expansion and the timber industry. Around 1905, the Gurdon and Fort Smith Railroad pushed through the area, opening access to vast pine forests in the Ouachita region. Investors and lumber companies quickly moved in, and by 1907 the town of Glenwood was officially laid out by Curt Hays and Will Fagan near the rail line. Originally known as 'Holly,' the town was renamed Glenwood to secure a post office. Within just a few years, Glenwood had grown into a functioning town with businesses, housing, and a growing population, leading to its incorporation in 1909.",
       images: [
         "/images/glenwood/oldchurch.jpg",
         "/images/glenwood/oldglenwood2.jpg",
       ],
     },
     {
-      title: "A Community Built Around the Region",
+      title: "Growth Along the Caddo River",
       text:
-        "The town’s identity has always been tied to its location, with the Caddo River and nearby natural areas helping shape local life and tourism.",
+        "During the 1910s, Glenwood developed into a regional hub centered around timber production and rail transport. Large sawmills operated nearby, and the town became a shipping point for lumber moving across Arkansas and beyond. The arrival of the Memphis, Dallas and Gulf Railroad in 1914 further strengthened Glenwood’s position, connecting it to Hot Springs and expanding trade routes. The town itself reflected the structure of a classic timber community, with a business district near the depot and surrounding housing tied to mill operations. At the same time, the nearby Caddo River and surrounding mountains played an important role in daily life, providing water, recreation, and a natural setting that still defines the area today.",
       images: [
         "/images/glenwood/oldbuildings.webp",
         "/images/glenwood/oldmain.jpg",
@@ -166,9 +166,9 @@ export const glenwoodHistory = {
       ],
     },
     {
-      title: "Glenwood Today",
+      title: "From Industry to Outdoor Identity",
       text:
-        "Today Glenwood blends small-town Arkansas life with a strong outdoor identity, making it a natural fit for visitors looking for river trips, lake days, and scenic drives.",
+        "Like many timber towns, Glenwood experienced changes as lumber production slowed and large operations declined through the mid-1900s. While the early boom years faded, the town adapted rather than disappearing. Schools, small businesses, and local services kept the community stable, while its location near the Caddo River, Lake Greeson, and the Ouachita Mountains gradually shifted its identity. Today, Glenwood is known less for industry and more for its connection to outdoor recreation, including floating the Caddo River, camping, fishing, and scenic travel routes. It remains a small but important community in southwest Arkansas, carrying its railroad and timber history forward into a more tourism-driven future.",
       images: [
         "/images/glenwood/rivercanoes.jpg",
         "/images/glenwood/oldtown.jpg",
