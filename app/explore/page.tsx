@@ -14,7 +14,7 @@ export default function ExplorePage() {
       </h1>
 
       <p className="text-[color:var(--color-muted)] mb-12 max-w-2xl">
-        Discover things to do in Glenwood, Arkansas — from floating the Caddo River to exploring Lake Greeson, hiking in the Ouachita Mountains, and visiting nearby state parks.
+        Glenwood is one of southwest Arkansas’ best small-town bases for outdoor adventure. Float the Caddo River, spend the day on Lake Greeson, explore the Ouachita Mountains, visit nearby state parks, or take an easy day trip to Crater of Diamonds State Park and Hot Springs.
       </p>
 
       {/* ATTRACTIONS */}
@@ -25,7 +25,7 @@ export default function ExplorePage() {
       {/* IMAGE BREAK */}
       <BackgroundSection image="/images/glenwood/rivercanoe.jpg">
         <h2 className="text-4xl font-semibold max-w-2xl">
-          Float the Caddo River and experience one of Arkansas’ most scenic waterways.
+          Float the Caddo River, one of Arkansas’ favorite scenic rivers for canoeing, kayaking, tubing, and fishing.
         </h2>
       </BackgroundSection>
 
@@ -36,14 +36,14 @@ export default function ExplorePage() {
         </h2>
 
         <p className="text-[color:var(--color-muted)] mb-6 max-w-2xl">
-          Glenwood is known for its river and lake access. Whether you want to float, fish, or relax by the water, the Caddo River and Lake Greeson offer some of the best outdoor experiences in southwest Arkansas.
+          Glenwood is known for easy access to the Caddo River, where visitors can canoe, kayak, raft, tube, swim, and fish. The river is popular with families and casual floaters, with calm stretches and fun Class I and II rapids depending on water levels and route. Nearby Lake Greeson adds even more options with boating, swimming, camping, hiking, and fishing surrounded by public land and mountain scenery.
         </p>
       </Section>
 
       {/* IMAGE BREAK */}
       <BackgroundSection image="/images/glenwood/lagegreeson.jpg">
         <h2 className="text-4xl font-semibold max-w-2xl">
-          Spend the day on Lake Greeson with boating, fishing, and open water views.
+          Spend the day on Lake Greeson with boating, fishing, camping, swimming, hiking, and wide-open water views.
         </h2>
       </BackgroundSection>
 
@@ -54,14 +54,14 @@ export default function ExplorePage() {
         </h2>
 
         <p className="text-[color:var(--color-muted)] mb-6 max-w-2xl">
-          Surrounded by the Ouachita Mountains, Glenwood is a great starting point for hiking, scenic drives, and exploring Arkansas forests, waterfalls, and natural areas.
+          Glenwood sits in the Ouachita region, making it a great starting point for scenic drives, forest roads, hiking, camping, wildlife watching, and quiet days outside. Visitors can explore nearby lakes, rivers, mountain views, and natural areas while still staying close to town, restaurants, cabins, campgrounds, and local outfitters.
         </p>
       </Section>
 
       {/* IMAGE BREAK */}
       <BackgroundSection image="/images/glenwood/forest.jpg">
         <h2 className="text-4xl font-semibold max-w-2xl">
-          Explore the Ouachita Mountains and the natural beauty of southwest Arkansas.
+          Explore the Ouachita Mountains, forest trails, scenic drives, and the natural beauty surrounding Glenwood.
         </h2>
       </BackgroundSection>
 
@@ -72,14 +72,14 @@ export default function ExplorePage() {
         </h2>
 
         <p className="text-[color:var(--color-muted)] mb-6 max-w-2xl">
-          Visit the Crater of Diamonds State Park and search for real diamonds, or explore nearby destinations that make this area one of the most unique regions in Arkansas.
+          Glenwood is close to some of Arkansas’ most memorable day trips. At Crater of Diamonds State Park in Murfreesboro, visitors can search a 37-acre field for real diamonds and keep what they find. You can also plan nearby trips to Daisy State Park, DeGray Lake, Hot Springs, Murfreesboro, Amity, and other small towns that make the Diamond Lakes region worth exploring.
         </p>
       </Section>
 
       {/* IMAGE BREAK */}
       <BackgroundSection image="/images/glenwood/crater.jpg">
         <h2 className="text-4xl font-semibold max-w-2xl">
-          Search for real diamonds at Crater of Diamonds State Park.
+          Search for real diamonds at Crater of Diamonds State Park, one of Arkansas’ most unique attractions.
         </h2>
       </BackgroundSection>
 
@@ -99,7 +99,7 @@ export default function ExplorePage() {
         </h2>
 
         <p className="text-[color:var(--color-muted)] mb-6 max-w-2xl">
-          Glenwood is surrounded by small Arkansas towns worth visiting. Take a short drive and explore more of the region.
+          Glenwood is surrounded by small Arkansas towns and regional stops that are easy to add to a weekend trip. Visit Amity for a quiet small-town stop, head toward Murfreesboro for Crater of Diamonds and Lake Greeson, or make the drive to Hot Springs for dining, shopping, bathhouse history, and extra family-friendly attractions.
         </p>
 
         <div className="flex gap-4 flex-wrap">
@@ -124,7 +124,7 @@ export default function ExplorePage() {
           </h3>
 
           <p className="text-[color:var(--color-muted)] mb-6 max-w-xl">
-            Get your business featured and connect with visitors looking for places to eat, stay, and explore in Glenwood.
+            Get your business featured in front of visitors planning Caddo River floats, Lake Greeson trips, cabin stays, camping weekends, outdoor adventures, and day trips around Glenwood and southwest Arkansas.
           </p>
 
           <a
