@@ -17,44 +17,52 @@ const playfair = Playfair_Display({
 
 const siteUrl = "https://glenwoodarkansas.org";
 
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
   title: {
-    default: "Visit Glenwood Arkansas | Things to Do, Dining & Local Guide",
-    template: "%s | Visit Glenwood Arkansas",
+    default:
+      "Things to Do in Glenwood, Arkansas | Restaurants, Cabins & Local Guide",
+    template: "%s | Glenwood Arkansas Guide",
   },
 
   description:
-    "Explore Glenwood, Arkansas — things to do, local restaurants, outdoor recreation, events, history, and small-town charm near the Caddo River and Lake Greeson.",
+    "Plan your trip to Glenwood, Arkansas. Find things to do, local restaurants, cabins, places to stay, and outdoor activities near the Caddo River and Lake Greeson.",
 
   keywords: [
     "Glenwood Arkansas",
-    "things to do in Glenwood AR",
-    "Glenwood Arkansas attractions",
+    "things to do in Glenwood Arkansas",
     "restaurants in Glenwood Arkansas",
-    "Caddo River Arkansas",
-    "Lake Greeson",
-    "Glenwood AR events",
-    "Glenwood Arkansas tourism",
-    "small towns in Arkansas",
-    "visit Glenwood Arkansas",
+    "cabins in Glenwood Arkansas",
+    "places to stay Glenwood AR",
+    "Caddo River cabins",
+    "Lake Greeson cabins",
+    "Glenwood AR tourism",
+    "Glenwood Arkansas attractions",
+    "where to eat Glenwood AR",
+    "where to stay Glenwood AR",
+    "Caddo River float trips",
+    "Lake Greeson Arkansas",
+    "Ouachita Mountains Arkansas",
+    "southwest Arkansas travel",
   ],
 
-  authors: [{ name: "Visit Glenwood Arkansas" }],
-  creator: "Visit Glenwood Arkansas",
-  publisher: "Visit Glenwood Arkansas",
+  authors: [{ name: "Glenwood Arkansas Guide" }],
+  creator: "Glenwood Arkansas Guide",
+  publisher: "Glenwood Arkansas Guide",
 
   alternates: {
     canonical: siteUrl,
   },
 
   openGraph: {
-    title: "Visit Glenwood Arkansas | Local Guide & Attractions",
+    title:
+      "Things to Do in Glenwood Arkansas | Restaurants, Cabins & Attractions",
     description:
-      "Discover Glenwood, Arkansas — outdoor recreation, dining, events, local businesses, and small-town charm near the Caddo River and Lake Greeson.",
+      "Explore Glenwood, Arkansas — find restaurants, cabins, outdoor activities, and local spots near the Caddo River and Lake Greeson.",
     url: siteUrl,
-    siteName: "Visit Glenwood Arkansas",
+    siteName: "Glenwood Arkansas Guide",
     locale: "en_US",
     type: "website",
     images: [
@@ -62,16 +70,17 @@ export const metadata: Metadata = {
         url: "/images/og-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "Glenwood Arkansas local guide and attractions",
+        alt: "Glenwood Arkansas cabins, restaurants, and outdoor attractions",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Visit Glenwood Arkansas",
+    title:
+      "Glenwood Arkansas Guide | Restaurants, Cabins & Things to Do",
     description:
-      "Your local guide to Glenwood, Arkansas — things to do, places to eat, events, and outdoor attractions.",
+      "Find places to eat, cabins, and things to do in Glenwood, Arkansas near the Caddo River and Lake Greeson.",
     images: ["/images/og-cover.jpg"],
   },
 
