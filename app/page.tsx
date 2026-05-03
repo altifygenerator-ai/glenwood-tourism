@@ -46,21 +46,23 @@ export default function Page() {
 
       <Hero data={glenwoodHero} />
 
-      <div className="flex gap-4 justify-center mt-4">
-        <a
-          href="/explore"
-          className="bg-white text-black px-6 py-3 rounded-md font-medium"
-        >
-          Explore
-        </a>
+  <div className="flex gap-4 justify-center mt-6 flex-wrap">
 
-        <a
-          href="/history"
-          className="border border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-black transition"
-        >
-          Our History
-        </a>
-      </div>
+  <Link
+    href="/explore"
+    className="px-6 py-3 rounded-full bg-[color:var(--color-accent)] text-white font-medium shadow-md hover:shadow-lg transition hover:scale-[1.02]"
+  >
+    Explore Things To Do
+  </Link>
+
+  <Link
+    href="/history"
+    className="px-6 py-3 rounded-full border border-[color:var(--color-accent)] text-[color:var(--color-accent)] font-medium hover:bg-[color:var(--color-accent)] hover:text-white transition"
+  >
+    Local History
+  </Link>
+
+</div>
 
       <Section>
         <Highlights items={glenwoodHighlights} />
