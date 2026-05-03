@@ -26,7 +26,7 @@ export const glenwoodHero = {
   eyebrow: "Southwest Arkansas • Ouachita Region",
   title: "Visit Glenwood, Arkansas",
   description:
-    "A scenic Arkansas town in the foothills of the Ouachita Mountains with direct access to the Caddo River, nearby lakes, and some of the region’s best outdoor recreation.",
+    "Plan a simple trip around the Caddo River with local restaurants, cabins, river access, nearby lakes, and outdoor spots all in one place.",
   image: "/images/glenwood/river2.webp",
 };
 

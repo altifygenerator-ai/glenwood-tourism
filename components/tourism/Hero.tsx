@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero({ data }: any) {
   return (
@@ -12,18 +13,47 @@ export default function Hero({ data }: any) {
         priority
       />
 
-      <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/15" />
 
       <div className="absolute inset-0 flex items-end">
-        <div className="px-6 pb-12">
-          <div className="max-w-2xl rounded-2xl bg-black/60 p-8 shadow-2xl backdrop-blur-md text-white">
-            <h1 className="text-4xl font-semibold drop-shadow-xl md:text-6xl">
+        <div className="w-full px-6 pb-12 md:px-10">
+          <div className="max-w-3xl rounded-2xl bg-black/60 p-8 text-white shadow-2xl backdrop-blur-md md:p-10">
+            {data.eyebrow && (
+              <p className="mb-3 text-sm font-medium uppercase tracking-[0.22em] text-white/75">
+                {data.eyebrow}
+              </p>
+            )}
+
+            <h1 className="text-4xl font-semibold leading-tight drop-shadow-xl md:text-6xl">
               {data.title}
             </h1>
 
-            <p className="mt-4 text-lg text-white/95 drop-shadow-md">
+            <p className="mt-4 max-w-2xl text-lg leading-relaxed text-white/95 drop-shadow-md md:text-xl">
               {data.description}
             </p>
+
+         <div className="mt-7 flex flex-wrap gap-3">
+  <Link
+    href="/glenwood-ar-restaurants"
+    className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-white/90"
+  >
+    View Restaurants
+  </Link>
+
+  <Link
+    href="/glenwood-ar-cabins"
+    className="rounded-full border border-white/40 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/20"
+  >
+    Find Cabins
+  </Link>
+
+  <Link
+    href="/explore"
+    className="rounded-full border border-white/30 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+  >
+    Things To Do
+  </Link>
+</div>
           </div>
         </div>
       </div>
