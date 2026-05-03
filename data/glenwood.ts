@@ -175,5 +175,67 @@ export const glenwoodHistory = {
         "/images/glenwood/oldtown3.jpg",
       ],
     },
+        {
+      title: "From Industry to Outdoor Identity",
+      text:
+        "Like many timber towns, Glenwood experienced changes as lumber production slowed and large operations declined through the mid-1900s. While the early boom years faded, the town adapted rather than disappearing. Schools, small businesses, and local services kept the community stable, while its location near the Caddo River, Lake Greeson, and the Ouachita Mountains gradually shifted its identity. Today, Glenwood is known less for industry and more for its connection to outdoor recreation, including floating the Caddo River, camping, fishing, and scenic travel routes. It remains a small but important community in southwest Arkansas, carrying its railroad and timber history forward into a more tourism-driven future.",
+      images: [
+        "/images/glenwood/rivercanoes.jpg",
+        "/images/glenwood/oldtown.jpg",
+        "/images/glenwood/oldtown3.jpg",
+      ],
+    },
   ],
 };
+
+export const glenwoodFeaturedLocalSpots = [
+  {
+  name: "Your Business Here",
+  type: "⭐ Featured Spot",
+  description: "Be the first business visitors see when planning a trip to Glenwood.",
+  image: "/images/placeholder.png",
+  href: "/contact",
+},
+  {
+    name: "Caddo Cafe",
+    type: "Restaurant",
+    description: "Breakfast, lunch, and comfort food near the Caddo River.",
+    image: "/images/glenwood/restaurants/caddo-cafe.jpg",
+    href: "/glenwood-ar-restaurants",
+  },
+  {
+    name: "Fish Nest Family Restaurant",
+    type: "Restaurant",
+    description: "A local favorite for seafood, fried fish, and family meals.",
+    image: "/images/glenwood/restaurants/fishnest.webp",
+    href: "/glenwood-ar-restaurants",
+  },
+  {
+    name: "Ari’s Little Italy",
+    type: "Restaurant",
+    description: "Italian food, pizza, and casual dining in Glenwood.",
+    image: "/images/glenwood/restaurants/aris.jpg",
+    href: "/glenwood-ar-restaurants",
+  },
+  {
+    name: "Caddo River Camping & Canoe Rental",
+    type: "Cabins & Camping",
+    description: "Cabins, camping, and river access for Caddo River trips.",
+    image: "/images/glenwood/cabins/caddo-river-camping.avif",
+    href: "/glenwood-ar-cabins",
+  },
+  {
+    name: "Arrowhead Cabins and Camping",
+    type: "Cabins & Camping",
+    description: "Cabins and camping near the Caddo River area.",
+    image: "/images/glenwood/cabins/arrowhead.webp",
+    href: "/glenwood-ar-cabins",
+  },
+  {
+    name: "Riverwood Inn of Glenwood",
+    type: "Lodging",
+    description: "A simple local stay close to restaurants and outdoor spots.",
+    image: "/images/glenwood/cabins/riverwood.webp",
+    href: "/glenwood-ar-cabins",
+  },
+];

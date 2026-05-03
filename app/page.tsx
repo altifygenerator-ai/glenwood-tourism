@@ -5,6 +5,7 @@ import Itinerary from "@/components/tourism/Itinerary";
 import Section from "@/components/tourism/Section";
 import Intro from "@/components/tourism/Intro";
 import FAQ from "@/components/tourism/FAQ";
+import FeaturedLocalSpots from "@/components/tourism/FeaturedLocalSpots";
 import BackgroundSection from "@/components/tourism/BackgroundSection";
 import {
   glenwoodHero,
@@ -14,6 +15,7 @@ import {
   glenwoodSEO,
   glenwoodIntro,
   glenwoodFAQ,
+  glenwoodFeaturedLocalSpots,
 } from "@/data/glenwood";
 import Link from "next/link";
 import { generateMetadata } from "@/lib/seo";
@@ -64,10 +66,12 @@ export default function Page() {
         <Highlights items={glenwoodHighlights} />
       </Section>
 
-      <Section>
-        <Intro data={glenwoodIntro} />
-      </Section>
+      
+<Section>
+  <Intro data={glenwoodIntro} />
+</Section>
 
+<FeaturedLocalSpots items={glenwoodFeaturedLocalSpots} />
       <BackgroundSection image="/images/glenwood/rivercanoe.jpg">
         <h2 className="text-4xl font-semibold max-w-2xl">
           Float the Caddo River and enjoy the outdoor beauty around Glenwood.
@@ -101,11 +105,18 @@ export default function Page() {
             Support Local Events in Glenwood
           </h2>
 
-          <p className="mb-6">
-            Glenwood is building a stronger spotlight for local businesses,
-            vendors, and events. We are growing the platform to help visitors
-            discover more of what the town has to offer.
-          </p>
+         <p className="mb-6">
+  Glenwood is building a stronger spotlight for local businesses,
+  vendors, and events. We are growing the platform to help visitors
+  discover more of what the town has to offer, including{" "}
+  <Link href="/glenwood-ar-restaurants" className="underline">
+    local restaurants
+  </Link>{" "}
+  and{" "}
+  <Link href="/glenwood-ar-cabins" className="underline">
+    cabins and places to stay
+  </Link>.
+</p>
 
           <div className="flex justify-end">
             <Link

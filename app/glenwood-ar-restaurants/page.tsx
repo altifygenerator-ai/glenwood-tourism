@@ -1,5 +1,5 @@
 import Section from "@/components/tourism/Section";
-
+import Link from "next/link";
 export const metadata = {
   title: "Best Restaurants in Glenwood, Arkansas | Places to Eat Near the Caddo River",
   description:
@@ -66,12 +66,17 @@ export default function GlenwoodRestaurantsPage() {
         Best Restaurants in Glenwood, Arkansas
       </h1>
 
-      <p className="text-[color:var(--color-muted)] mb-12 max-w-2xl">
-        Looking for places to eat in Glenwood, Arkansas? Whether you’re floating
-        the Caddo River, staying near Lake Greeson, visiting family, camping, or
-        passing through town, Glenwood has a small but useful mix of local cafes,
-        family restaurants, Mexican food, Italian food, seafood, and quick meals.
-      </p>
+     <p className="text-[color:var(--color-muted)] mb-12 max-w-2xl">
+  Looking for places to eat in Glenwood, Arkansas? Whether you’re floating
+  the Caddo River, staying near{" "}
+  <Link href="/glenwood-ar-cabins" className="underline">
+    cabins near Lake Greeson
+  </Link>, visiting family, camping, or
+  passing through town, Glenwood has a small but useful mix of{" "}
+  <Link href="/glenwood-ar-restaurants" className="underline">
+    local restaurants
+  </Link>, cafes, Mexican food, Italian food, seafood, and quick meals.
+</p>
 
       <Section>
         <div className="space-y-6">
