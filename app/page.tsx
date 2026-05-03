@@ -144,14 +144,14 @@ export default function Page() {
         </h2>
       </BackgroundSection>
       <div className="flex justify-center mt-6">
-  <a
-    href="https://amityarkansas.org"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-md font-medium shadow hover:shadow-lg transition hover:scale-[1.02]"
-  >
-    Explore Nearby Town: Amity →
-  </a>
+<a
+  href="https://amityarkansas.org"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-2 bg-[color:var(--color-accent)] text-white px-6 py-3 rounded-full font-medium shadow-md hover:shadow-lg transition hover:scale-[1.02]"
+>
+  Explore Nearby Town: Amity →
+</a>
 </div>
     </main>
   );
