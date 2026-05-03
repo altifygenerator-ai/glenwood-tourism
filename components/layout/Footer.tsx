@@ -52,8 +52,21 @@ export default function Footer() {
         <div>
           © {new Date().getFullYear()} Glenwood Tourism. All rights reserved.
         </div>
+          <div className="text-white/50">
+    Site by{" "}
+    <a
+      href="https://hometownwebservicesar.cc"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-white transition underline"
+    >
+      Hometown Web Services AR
+    </a>
+  </div>
 
-      </div>
+</div>
+
+      
     </footer>
   )
 }
