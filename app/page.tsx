@@ -152,6 +152,15 @@ export default function Page() {
 >
   Explore Nearby Town: Amity →
 </a>
+
+<a
+  href="https://mt-ida-tourism.vercel.app"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-2 bg-[color:var(--color-accent)] text-white px-6 py-3 rounded-full font-medium shadow-md hover:shadow-lg transition hover:scale-[1.02]"
+>
+  Visit Mount Ida →
+</a>
 </div>
     </main>
   );
