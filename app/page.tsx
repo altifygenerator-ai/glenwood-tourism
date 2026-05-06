@@ -26,34 +26,87 @@ export default function Page() {
   return (
     <main>
       <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Place",
-            name: "Glenwood, Arkansas",
-            description:
-              "A scenic southwest Arkansas town known for the Caddo River, nearby lakes, and outdoor recreation.",
-            address: {
-              "@type": "PostalAddress",
-              addressLocality: "Glenwood",
-              addressRegion: "AR",
-              addressCountry: "US",
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "TouristDestination",
+        name: "Glenwood, Arkansas",
+        description:
+          "Travel guide for Glenwood, Arkansas featuring restaurants, cabins, the Caddo River, Lake Greeson, local attractions, and outdoor activities.",
+        url: "https://glenwoodarkansas.org",
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name: "Glenwood Arkansas Guide",
+        url: "https://glenwoodarkansas.org",
+        potentialAction: {
+          "@type": "SearchAction",
+          target:
+            "https://glenwoodarkansas.org/search?q={search_term_string}",
+          "query-input": "required name=search_term_string",
+        },
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "What is Glenwood Arkansas known for?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Glenwood is known for the Caddo River, nearby Lake Greeson, floating, fishing, cabins, camping, outdoor recreation, and small-town Arkansas tourism.",
             },
-          }),
-        }}
-      />
+          },
+          {
+            "@type": "Question",
+            name: "What can you do in Glenwood Arkansas?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Visitors come to Glenwood for river floats, camping, cabins, fishing, hiking, Lake Greeson trips, restaurants, and Ouachita mountain scenery.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Are there cabins and restaurants near the Caddo River?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes. Glenwood has cabins, campgrounds, motels, restaurants, cafes, and local businesses close to the Caddo River and nearby outdoor attractions.",
+            },
+          },
+        ],
+      },
+    ]),
+  }}
+/>
 
       <Hero data={glenwoodHero} />
 
   <div className="flex gap-4 justify-center mt-6 flex-wrap">
 
-  <Link
-    href="/explore"
-    className="px-6 py-3 rounded-full bg-[color:var(--color-accent)] text-white font-medium shadow-md hover:shadow-lg transition hover:scale-[1.02]"
-  >
-    Explore Things To Do
-  </Link>
+ <Link
+  href="/glenwood-ar-restaurants"
+  className="px-6 py-3 rounded-full bg-[color:var(--color-accent)] text-white font-medium shadow-md hover:shadow-lg transition hover:scale-[1.02]"
+>
+  Restaurants
+</Link>
+
+<Link
+  href="/glenwood-ar-cabins"
+  className="px-6 py-3 rounded-full border border-[color:var(--color-accent)] text-[color:var(--color-accent)] font-medium hover:bg-[color:var(--color-accent)] hover:text-white transition"
+>
+  Cabins & Stays
+</Link>
+
+<Link
+  href="/explore"
+  className="px-6 py-3 rounded-full border border-[color:var(--color-accent)] text-[color:var(--color-accent)] font-medium hover:bg-[color:var(--color-accent)] hover:text-white transition"
+>
+  Things To Do
+</Link>
 
   <Link
     href="/history"
@@ -74,6 +127,78 @@ export default function Page() {
 </Section>
 
 <FeaturedLocalSpots items={glenwoodFeaturedLocalSpots} />
+<Section>
+  <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] items-center">
+    <div>
+      <p
+        className="text-sm font-semibold uppercase tracking-wide mb-3"
+        style={{ color: "var(--color-accent)" }}
+      >
+        Plan Your Glenwood Trip
+      </p>
+
+      <h2
+        className="text-3xl md:text-5xl font-semibold leading-tight mb-5"
+        style={{ color: "var(--color-muted)" }}
+      >
+        Find cabins, restaurants, and local places near Glenwood, Arkansas.
+      </h2>
+
+      <p className="text-[color:var(--color-muted)] leading-relaxed">
+        Glenwood is a popular stop for Caddo River float trips, Lake Greeson
+        weekends, cabin getaways, camping, fishing, and small-town dining. Use
+        these local guides to find places to eat, places to stay, and nearby
+        stops before your trip.
+      </p>
+    </div>
+
+    <div className="grid gap-5 md:grid-cols-2">
+      <Link
+        href="/glenwood-ar-restaurants"
+        className="group rounded-2xl overflow-hidden bg-[color:var(--bg-card)] border shadow-sm hover:shadow-lg transition"
+      >
+        <div
+          className="h-48 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/glenwood/oldtown.jpg')" }}
+        />
+        <div className="p-6">
+          <h3 className="text-2xl font-semibold mb-2">
+            Glenwood Restaurants
+          </h3>
+          <p className="text-[color:var(--color-muted)] leading-relaxed">
+            Find local restaurants, cafes, Mexican food, pizza, seafood, and
+            places to eat near the Caddo River and Lake Greeson.
+          </p>
+          <span className="inline-block mt-4 font-medium text-[color:var(--color-accent)]">
+            View places to eat →
+          </span>
+        </div>
+      </Link>
+
+      <Link
+        href="/glenwood-ar-cabins"
+        className="group rounded-2xl overflow-hidden bg-[color:var(--bg-card)] border shadow-sm hover:shadow-lg transition"
+      >
+        <div
+          className="h-48 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/glenwood/rivercanoe.jpg')" }}
+        />
+        <div className="p-6">
+          <h3 className="text-2xl font-semibold mb-2">
+            Cabins & Places to Stay
+          </h3>
+          <p className="text-[color:var(--color-muted)] leading-relaxed">
+            Browse cabins, campgrounds, motels, river stays, and lodging near
+            Glenwood, the Caddo River, and Lake Greeson.
+          </p>
+          <span className="inline-block mt-4 font-medium text-[color:var(--color-accent)]">
+            View places to stay →
+          </span>
+        </div>
+      </Link>
+    </div>
+  </div>
+</Section>
       <BackgroundSection image="/images/glenwood/rivercanoe.jpg">
         <h2 className="text-4xl font-semibold max-w-2xl">
           Float the Caddo River and enjoy the outdoor beauty around Glenwood.
