@@ -1,5 +1,5 @@
 import Section from "@/components/tourism/Section";
-
+import Link from "next/link";
 export const metadata = {
   title:
     "Cabins and Places to Stay Near Glenwood, Arkansas | Caddo River & Lake Greeson",
@@ -47,6 +47,116 @@ const stays = [
     phone: "870-356-4567",
     directions:
       "https://www.google.com/maps/search/?api=1&query=Riverwood+Inn+363+Hwy+70+E+Glenwood+AR+71943",
+  },
+    {
+    name: "Hangout Properties",
+    type: "Luxury Cabins • Caddo River • Lake Greeson Area",
+    description:
+      "Luxury riverfront cabin rentals with Glenwood and Kirby-area locations near the Caddo River and Lake Greeson. A strong option for visitors wanting a more upscale cabin stay with outdoor space and river access.",
+    location: "Glenwood & Kirby, AR",
+    phone: "",
+    website: "https://www.hangoutpropertiesllc.com/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Hangout+Properties+Glenwood+AR",
+  },
+  {
+    name: "Caddo River Ranch",
+    type: "Cabin Rentals • Caddo River • Between Mt. Ida and Glenwood",
+    description:
+      "Cabin rentals located between Mt. Ida and Glenwood with cabins on the Caddo River. Good for visitors wanting a quiet river setting, covered porches, nature views, and access to the Ouachita area.",
+    location: "Between Mt. Ida and Glenwood, AR",
+    phone: "",
+    website: "https://atcaddoriverranch.com/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Caddo+River+Ranch+Arkansas",
+  },
+  {
+    name: "ScrappyJax Cozy Caddo River Cabin",
+    type: "Tiny Cabin • Caddo River • Glenwood",
+    description:
+      "A small cozy cabin stay in Glenwood near the Caddo River, useful for couples or solo travelers wanting a simple river-area getaway close to outdoor activities.",
+    location: "Glenwood, AR",
+    phone: "",
+    website: "https://www.airbnb.com/rooms/35063613",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=ScrappyJax+Cozy+Caddo+River+Cabin+Glenwood+AR",
+  },
+  {
+    name: "Highlife Ridge on the Caddo River",
+    type: "Vacation Rental • Riverfront Cabin • Glenwood",
+    description:
+      "A larger Caddo River vacation rental in Glenwood with mountain views and river access. Good for groups or families looking for a bigger cabin-style stay near town.",
+    location: "Glenwood, AR",
+    phone: "",
+    website: "https://www.airbnb.com/rooms/47175670",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Highlife+Ridge+Caddo+River+Glenwood+AR",
+  },
+  {
+    name: "Caddo River Shack",
+    type: "Vacation Rental • Riverfront • Kayaks",
+    description:
+      "A secluded Caddo River rental with river frontage, outdoor space, and kayak-friendly access. A good fit for visitors wanting a quieter river stay outside the normal motel setup.",
+    location: "Glenwood, AR",
+    phone: "",
+    website: "https://www.airbnb.com/rooms/997711434227133640",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Caddo+River+Shack+Glenwood+AR",
+  },
+  {
+    name: "Rocky Bottom Caddo Riverfront",
+    type: "Cabin Rental • Riverfront • Group Stay",
+    description:
+      "A larger Caddo Riverfront cabin option in Glenwood with multiple bedrooms and space for groups. Useful for families, reunions, and river weekends.",
+    location: "Glenwood, AR",
+    phone: "",
+    website: "https://www.airbnb.com/rooms/1046611688133157774",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Rocky+Bottom+Caddo+Riverfront+Glenwood+AR",
+  },
+  {
+    name: "The Bunkhouse on Caddo River",
+    type: "Riverfront Cabin • Group Rental • Glenwood",
+    description:
+      "A Glenwood riverfront retreat designed for larger groups, with a cabin-style setup on the Caddo River and space for family or friend trips.",
+    location: "Glenwood, AR",
+    phone: "",
+    website: "https://www.airbnb.com/rooms/987712492786764142",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=The+Bunkhouse+on+Caddo+River+Glenwood+AR",
+  },
+  {
+    name: "Southern Grace on the Caddo",
+    type: "Vacation Home • Caddo River • Hot Tub",
+    description:
+      "A Glenwood vacation home near the Caddo River with a hot tub and river-focused setting. Good for visitors comparing private rentals close to town and outdoor attractions.",
+    location: "Glenwood, AR",
+    phone: "",
+    website: "https://www.vrbo.com/3702301",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Southern+Grace+on+the+Caddo+Glenwood+AR",
+  },
+  {
+    name: "Caddo Patio",
+    type: "Cabin Rental • River Views • Glenwood",
+    description:
+      "A modern Caddo River cabin rental with river views, indoor-outdoor gathering space, and room for family or friend groups visiting Glenwood.",
+    location: "Glenwood, AR",
+    phone: "",
+    website: "https://www.airbnb.com/rooms/1020312282775191540",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Caddo+Patio+Glenwood+AR",
+  },
+  {
+    name: "Lazy Bear Cabin on Caddo River",
+    type: "Cabin Rental • Caddo River • Glenwood",
+    description:
+      "A Caddo River cabin retreat in Glenwood with a comfortable cabin feel and river setting. Useful for visitors looking for a private cabin close to floating, fishing, and relaxing.",
+    location: "Glenwood, AR",
+    phone: "",
+    website: "https://www.airbnb.com/rooms/982637080562006014",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Lazy+Bear+Cabin+on+Caddo+River+Glenwood+AR",
   },
 ];
 
@@ -294,20 +404,33 @@ export default function GlenwoodCabinsPage() {
           </div>
         </div>
       </Section>
+<div className="mt-6 rounded-xl border bg-[color:var(--bg-card)] p-5">
+  <p className="text-sm text-[color:var(--color-muted)] leading-relaxed">
+    Own a cabin, campground, restaurant, or local business near Glenwood?
+    Featured placements are available for businesses wanting additional exposure
+    to visitors planning trips around the Caddo River and Lake Greeson area.
+  </p>
 
-      <Section>
-        <div className="mb-8 max-w-3xl">
-          <h2 className="text-3xl font-semibold mb-4">
-            More Cabins, Campgrounds, and Places to Stay Near Glenwood
-          </h2>
+  <Link
+    href="/contact"
+    className="inline-block mt-4 text-sm underline underline-offset-4"
+  >
+    Ask About Featured Placement
+  </Link>
+</div>
+<Section>
+<div className="mb-8 max-w-3xl">
+  <h2 className="text-3xl font-semibold mb-4">
+    More Cabins, Vacation Rentals, and Places to Stay Near Glenwood
+  </h2>
 
-          <p className="text-[color:var(--color-muted)] leading-relaxed">
-            These additional lodging options are useful for visitors comparing
-            cabins, camping, canoe rentals, motels, and simple places to stay
-            close to the Caddo River, Lake Greeson, and Glenwood attractions.
-          </p>
-        </div>
-
+  <p className="text-[color:var(--color-muted)] leading-relaxed">
+    These additional cabins, vacation rentals, campgrounds, motels, and lodging
+    options are useful for visitors comparing places to stay near the Caddo
+    River, Lake Greeson, floating spots, fishing areas, and outdoor attractions
+    around Glenwood and southwest Arkansas.
+  </p>
+</div>
         <div className="space-y-6">
           {standardStays.map((stay, index) => (
             <div
@@ -330,23 +453,36 @@ export default function GlenwoodCabinsPage() {
                 📍 {stay.location}
               </p>
 
-              <div className="mt-4 flex flex-wrap gap-3">
-                <a
-                  href={`tel:${stay.phone.replace(/[^\d]/g, "")}`}
-                  className="bg-black text-white px-4 py-2 rounded-md text-sm"
-                >
-                  Call {stay.phone}
-                </a>
+            <div className="mt-4 flex flex-wrap gap-3">
+  {stay.phone && (
+    <a
+      href={`tel:${stay.phone.replace(/[^\d]/g, "")}`}
+      className="bg-black text-white px-4 py-2 rounded-md text-sm"
+    >
+      Call {stay.phone}
+    </a>
+  )}
 
-                <a
-                  href={stay.directions}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border px-4 py-2 rounded-md text-sm"
-                >
-                  Get Directions
-                </a>
-              </div>
+  {stay.website && (
+    <a
+      href={stay.website}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="bg-black text-white px-4 py-2 rounded-md text-sm"
+    >
+      View Listing
+    </a>
+  )}
+
+  <a
+    href={stay.directions}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="border px-4 py-2 rounded-md text-sm"
+  >
+    Get Directions
+  </a>
+</div>
             </div>
           ))}
         </div>
@@ -428,6 +564,7 @@ export default function GlenwoodCabinsPage() {
             </a>
           </div>
         </div>
+        
       </Section>
     </main>
   );

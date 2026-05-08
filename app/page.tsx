@@ -206,14 +206,46 @@ export default function Page() {
       </BackgroundSection>
 
       <Section>
-        <h2
-          className="text-3xl font-semibold mb-6"
-          style={{ color: "var(--color-muted)" }}
-        >
-          Things to do near Glenwood, Arkansas
-        </h2>
-        <AttractionGrid items={glenwoodAttractions} />
-      </Section>
+  <div className="mb-8 max-w-3xl">
+    <p
+      className="text-sm font-semibold uppercase tracking-wide mb-3"
+      style={{ color: "var(--color-accent)" }}
+    >
+      Explore Glenwood
+    </p>
+
+    <h2
+      className="text-3xl md:text-4xl font-semibold mb-4"
+      style={{ color: "var(--color-muted)" }}
+    >
+      Things to Do Near Glenwood, Arkansas
+    </h2>
+
+    <p className="text-[color:var(--color-muted)] leading-relaxed">
+      Explore the Caddo River, Lake Greeson, scenic Ouachita mountain drives,
+      local attractions, outdoor adventures, nearby parks, fishing spots,
+      camping areas, and small-town Arkansas experiences around Glenwood.
+    </p>
+  </div>
+
+  <AttractionGrid items={glenwoodAttractions} />
+
+  <div className="mt-8 flex flex-wrap gap-4">
+    <Link
+      href="/explore"
+      className="bg-black text-white px-6 py-3 rounded-md"
+    >
+      Explore More Things To Do
+    </Link>
+
+    <Link
+      href="/glenwood-ar-cabins"
+      className="border px-6 py-3 rounded-md"
+    >
+      Find Cabins & Places To Stay
+    </Link>
+  </div>
+</Section>
 
       <BackgroundSection image="/images/glenwood/oldtown.jpg">
         <h2 className="text-4xl font-semibold max-w-2xl">

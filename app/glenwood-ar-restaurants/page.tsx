@@ -59,6 +59,99 @@ const restaurants = [
     directions:
       "https://www.google.com/maps/search/?api=1&query=Pizza+Inn+104+1st+Street+Glenwood+AR+71943",
   },
+    {
+    name: "Donut Palace",
+    type: "Donuts • Breakfast • Coffee • Quick Stop",
+    description:
+      "A simple breakfast and donut stop in Glenwood for visitors wanting coffee, donuts, or something quick before heading to the Caddo River, Lake Greeson, cabins, or campgrounds.",
+    location: "2 Caddo Crossing Dr Ste D, Glenwood, AR 71943",
+    phone: "870-356-2294",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Donut+Palace+2+Caddo+Crossing+Dr+Ste+D+Glenwood+AR+71943",
+  },
+  {
+    name: "Wok N Roll Express",
+    type: "Chinese Food • Takeout • Quick Meal",
+    description:
+      "A local Chinese food option in Glenwood for takeout, quick meals, and visitors looking for something different from burgers, pizza, or Mexican food while staying in the area.",
+    location: "135 Hwy 70 W, Glenwood, AR 71943",
+    phone: "870-356-3817",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Wok+N+Roll+Express+135+Hwy+70+W+Glenwood+AR+71943",
+  },
+  {
+    name: "Ron's Barbecue",
+    type: "Barbecue • Casual Food • Local Stop",
+    description:
+      "A Glenwood barbecue option for visitors looking for smoked meats, casual plates, and a simple local meal while passing through town or staying near the river.",
+    location: "327 Hwy 70 E, Glenwood, AR 71943",
+    phone: "870-356-5250",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Rons+Barbecue+327+Hwy+70+E+Glenwood+AR+71943",
+  },
+  {
+    name: "The Daily Dish",
+    type: "American Food • Casual Dining • Local Restaurant",
+    description:
+      "A casual Glenwood restaurant option for visitors comparing local meals, American-style food, and easy dining close to Highway 70, the Caddo River, and area lodging.",
+    location: "371 Hwy 70 E Ste B, Glenwood, AR 71943",
+    phone: "870-356-0099",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=The+Daily+Dish+371+Hwy+70+E+Ste+B+Glenwood+AR+71943",
+  },
+  {
+    name: "OK Cafe",
+    type: "Cafe • Breakfast • Small-Town Food",
+    description:
+      "A small-town cafe option in Glenwood for breakfast, coffee, and classic local food. Useful for visitors wanting a simple meal before a river float or lake day.",
+    location: "228 Hwy 70 E, Glenwood, AR 71943",
+    phone: "870-356-3092",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=OK+Cafe+228+Hwy+70+E+Glenwood+AR+71943",
+  },
+  {
+    name: "The Pizza Shack",
+    type: "Pizza • Carryout • Casual Meal",
+    description:
+      "A local pizza option in Glenwood for families, groups, cabin stays, and visitors needing an easy meal after spending the day outside.",
+    location: "200 Hwy 70 E Ste 6, Glenwood, AR 71943",
+    phone: "870-356-3222",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=The+Pizza+Shack+200+Hwy+70+E+Ste+6+Glenwood+AR+71943",
+  },
+  {
+    name: "Subway",
+    type: "Sandwiches • Fast Food • Quick Stop",
+    description:
+      "A convenient sandwich stop in Glenwood for visitors who need a quick lunch, road-trip meal, or easy food before heading toward the river, lake, cabins, or campgrounds.",
+    location: "Glenwood, AR 71943",
+    phone: "",
+    website: "https://restaurants.subway.com/united-states/ar/glenwood",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Subway+Glenwood+AR",
+  },
+  {
+    name: "Sonic Drive-In",
+    type: "Fast Food • Burgers • Drinks • Drive-In",
+    description:
+      "A familiar drive-in option in Glenwood for burgers, drinks, ice cream, and quick meals. Useful for families, travelers, and visitors wanting something fast between outdoor stops.",
+    location: "Glenwood, AR 71943",
+    phone: "",
+    website: "https://www.sonicdrivein.com/locations/us/ar/glenwood/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Sonic+Drive-In+Glenwood+AR",
+  },
+  {
+    name: "Dairy Queen Grill & Chill",
+    type: "Fast Food • Burgers • Ice Cream • Family Stop",
+    description:
+      "A quick family-friendly stop for burgers, chicken, ice cream, and treats in the Glenwood area. Good for visitors traveling with kids or needing an easy meal.",
+    location: "Glenwood, AR 71943",
+    phone: "",
+    website: "https://www.dairyqueen.com/en-us/locations/ar/glenwood/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Dairy+Queen+Glenwood+AR",
+  },
 ];
 
 const standardRestaurants = restaurants.filter(
@@ -306,7 +399,20 @@ export default function GlenwoodRestaurantsPage() {
           </div>
         </div>
       </Section>
+<div className="mt-6 rounded-xl border bg-[color:var(--bg-card)] p-5">
+  <p className="text-sm text-[color:var(--color-muted)] leading-relaxed">
+    Own a cabin, campground, restaurant, or local business near Glenwood?
+    Featured placements are available for businesses wanting additional exposure
+    to visitors planning trips around the Caddo River and Lake Greeson area.
+  </p>
 
+  <Link
+    href="/contact"
+    className="inline-block mt-4 text-sm underline underline-offset-4"
+  >
+    Ask About Featured Placement
+  </Link>
+</div>
       <Section>
         <div className="mb-8 max-w-3xl">
           <h2 className="text-3xl font-semibold mb-4">
@@ -343,23 +449,36 @@ export default function GlenwoodRestaurantsPage() {
                 📍 {restaurant.location}
               </p>
 
-              <div className="mt-4 flex flex-wrap gap-3">
-                <a
-                  href={`tel:${restaurant.phone.replace(/[^\d]/g, "")}`}
-                  className="bg-black text-white px-4 py-2 rounded-md text-sm"
-                >
-                  Call {restaurant.phone}
-                </a>
+         <div className="mt-4 flex flex-wrap gap-3">
+  {restaurant.phone && (
+    <a
+      href={`tel:${restaurant.phone.replace(/[^\d]/g, "")}`}
+      className="bg-black text-white px-4 py-2 rounded-md text-sm"
+    >
+      Call {restaurant.phone}
+    </a>
+  )}
 
-                <a
-                  href={restaurant.directions}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border px-4 py-2 rounded-md text-sm"
-                >
-                  Get Directions
-                </a>
-              </div>
+  {restaurant.website && (
+    <a
+      href={restaurant.website}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="bg-black text-white px-4 py-2 rounded-md text-sm"
+    >
+      View Website
+    </a>
+  )}
+
+  <a
+    href={restaurant.directions}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="border px-4 py-2 rounded-md text-sm"
+  >
+    Get Directions
+  </a>
+</div>
             </div>
           ))}
         </div>
@@ -415,17 +534,16 @@ export default function GlenwoodRestaurantsPage() {
 
       <Section>
         <div className="rounded-3xl border bg-[color:var(--bg-card)] p-8 md:p-10">
-          <h2 className="text-3xl font-semibold mb-4">
-            Add Your Restaurant to This Guide
-          </h2>
+         <h2 className="text-3xl font-semibold mb-4">
+  Add Your Restaurant or Local Food Spot
+</h2>
 
-          <p className="text-[color:var(--color-muted)] mb-6 max-w-3xl leading-relaxed">
-            This Glenwood restaurant guide is built to help visitors find local
-            places to eat instead of digging through scattered search results.
-            If you own or manage a restaurant, cafe, food truck, bakery, or
-            local dining spot near Glenwood, you can request a standard listing
-            or ask about featured placement.
-          </p>
+<p className="text-[color:var(--color-muted)] mb-6 max-w-3xl leading-relaxed">
+  This Glenwood restaurant guide helps visitors find local places to eat while
+  exploring the Caddo River area, Lake Greeson, cabins, campgrounds, and nearby
+  attractions. Restaurants, cafes, bakeries, food trucks, and local dining
+  spots can request a listing or ask about featured placement.
+</p>
 
           <div className="flex flex-wrap gap-3">
             <a
