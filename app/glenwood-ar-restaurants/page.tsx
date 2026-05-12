@@ -75,7 +75,16 @@ const restaurants = [
     directions:
       "https://www.google.com/maps/search/?api=1&query=Donut+Palace+2+Caddo+Crossing+Dr+Ste+D+Glenwood+AR+71943",
   },
-
+{
+  name: "Flavor-Licious Glenwood",
+  type: "Ice Cream Shop • Sweets • Snacks • Local Treats",
+  description:
+    "A local Glenwood sweets and ice cream stop offering treats, snacks, drinks, and fun dessert-style items. A good stop for families, kids, visitors, and anyone wanting something sweet while passing through Glenwood or spending the day around the Caddo River area.",
+  location: "804 East Broadway, Glenwood, AR 71943",
+  phone: "870-279-4179",
+  directions:
+    "https://www.google.com/maps/search/?api=1&query=Flavor-Licious+Glenwood+804+East+Broadway+Glenwood+AR+71943",
+},
   
 
   {
