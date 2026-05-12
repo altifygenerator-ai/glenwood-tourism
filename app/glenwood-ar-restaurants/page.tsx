@@ -75,16 +75,7 @@ const restaurants = [
     directions:
       "https://www.google.com/maps/search/?api=1&query=Donut+Palace+2+Caddo+Crossing+Dr+Ste+D+Glenwood+AR+71943",
   },
-  {
-    name: "Wok N Roll Express",
-    type: "Chinese Food • Takeout • Quick Meal",
-    description:
-      "A local Chinese food option in Glenwood for takeout, quick meals, and visitors looking for something different from burgers, pizza, or Mexican food while staying in the area.",
-    location: "135 Hwy 70 W, Glenwood, AR 71943",
-    phone: "870-356-3817",
-    directions:
-      "https://www.google.com/maps/search/?api=1&query=Wok+N+Roll+Express+135+Hwy+70+W+Glenwood+AR+71943",
-  },
+
   {
     name: "Ron's Barbecue",
     type: "Barbecue • Casual Food • Local Stop",
@@ -95,16 +86,7 @@ const restaurants = [
     directions:
       "https://www.google.com/maps/search/?api=1&query=Rons+Barbecue+327+Hwy+70+E+Glenwood+AR+71943",
   },
-  {
-    name: "The Daily Dish",
-    type: "American Food • Casual Dining • Local Restaurant",
-    description:
-      "A casual Glenwood restaurant option for visitors comparing local meals, American-style food, and easy dining close to Highway 70, the Caddo River, and area lodging.",
-    location: "371 Hwy 70 E Ste B, Glenwood, AR 71943",
-    phone: "870-356-0099",
-    directions:
-      "https://www.google.com/maps/search/?api=1&query=The+Daily+Dish+371+Hwy+70+E+Ste+B+Glenwood+AR+71943",
-  },
+
   {
     name: "OK Cafe",
     type: "Cafe • Breakfast • Small-Town Food",
@@ -147,17 +129,7 @@ const restaurants = [
     directions:
       "https://www.google.com/maps/search/?api=1&query=Sonic+Drive-In+Glenwood+AR",
   },
-  {
-    name: "Dairy Queen Grill & Chill",
-    type: "Fast Food • Burgers • Ice Cream • Family Stop",
-    description:
-      "A quick family-friendly stop for burgers, chicken, ice cream, and treats in the Glenwood area. Good for visitors traveling with kids or needing an easy meal.",
-    location: "Glenwood, AR 71943",
-    phone: "",
-    website: "https://www.dairyqueen.com/en-us/locations/ar/glenwood/",
-    directions:
-      "https://www.google.com/maps/search/?api=1&query=Dairy+Queen+Glenwood+AR",
-  },
+
 ];
 
 const featuredNames = [
