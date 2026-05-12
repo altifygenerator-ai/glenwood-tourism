@@ -311,7 +311,7 @@ export default function Page() {
 </a>
 
 <a
-  href="https://mt-ida-tourism.vercel.app"
+  href="https://mountidaarkansas.org"
   target="_blank"
   rel="noopener noreferrer"
   className="inline-flex items-center gap-2 bg-[color:var(--color-accent)] text-white px-6 py-3 rounded-full font-medium shadow-md hover:shadow-lg transition hover:scale-[1.02]"
