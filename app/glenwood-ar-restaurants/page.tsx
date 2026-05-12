@@ -76,16 +76,7 @@ const restaurants = [
       "https://www.google.com/maps/search/?api=1&query=Donut+Palace+2+Caddo+Crossing+Dr+Ste+D+Glenwood+AR+71943",
   },
 
-  {
-    name: "Ron's Barbecue",
-    type: "Barbecue • Casual Food • Local Stop",
-    description:
-      "A Glenwood barbecue option for visitors looking for smoked meats, casual plates, and a simple local meal while passing through town or staying near the river.",
-    location: "327 Hwy 70 E, Glenwood, AR 71943",
-    phone: "870-356-5250",
-    directions:
-      "https://www.google.com/maps/search/?api=1&query=Rons+Barbecue+327+Hwy+70+E+Glenwood+AR+71943",
-  },
+  
 
   {
     name: "OK Cafe",
@@ -129,6 +120,18 @@ const restaurants = [
     directions:
       "https://www.google.com/maps/search/?api=1&query=Sonic+Drive-In+Glenwood+AR",
   },
+  {
+    name: "Bayou Bella’s & Biscuits",
+  type: "Food Truck • Cajun Food • Biscuits • Local Food Spot",
+  description:
+    "A local Glenwood food truck serving Cajun-inspired food, biscuits, rotating menu items, and casual meals. A good stop for visitors looking for something local, quick, and different while passing through Glenwood or exploring the Caddo River area.",
+  location: "22 Hwy 70, Glenwood, AR 71943",
+  phone: "870-828-8588",
+  email: "bayoubellas@yahoo.com",
+  alt: "Bayou Bella’s and Biscuits food truck in Glenwood Arkansas",
+  directions:
+    "https://www.google.com/maps/search/?api=1&query=Bayou+Bella%27s+and+Biscuits+22+Hwy+70+Glenwood+AR+71943",
+},
 
 ];
 
