@@ -58,6 +58,12 @@ export default function Navbar() {
               >
                 Glenwood History
               </Link>
+              <Link
+  href="/caddo-river"
+  className="block px-4 py-2 hover:bg-black/5"
+>
+  Caddo River
+</Link>
             </div>
           </div>
 
@@ -135,6 +141,12 @@ export default function Navbar() {
                 >
                   Cabins & Places to Stay
                 </Link>
+                <Link
+  href="/caddo-river"
+  className="block px-4 py-2 hover:bg-black/5"
+>
+  Caddo River
+</Link>
 
                 <Link
                   href="/history"

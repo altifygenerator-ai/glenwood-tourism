@@ -19,6 +19,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
 
     {
+      url: `${baseUrl}/caddo-river`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+
+    {
       url: `${baseUrl}/history`,
       lastModified: new Date(),
       changeFrequency: "monthly",
@@ -40,7 +47,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
 
-    // OPTIONAL (if exists)
     {
       url: `${baseUrl}/local-business`,
       lastModified: new Date(),

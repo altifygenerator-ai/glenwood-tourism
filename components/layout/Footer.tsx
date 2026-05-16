@@ -86,9 +86,17 @@ export default function Footer() {
           </ul>
 
           <p className="mt-5 text-xs leading-relaxed text-white/50">
-            Part of the <strong>Natural State Tourism Project</strong>, an
-            independent local tourism guide network.
-          </p>
+  Part of the{" "}
+  <a
+    href="https://naturalstatetourismproject.org"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="font-semibold text-white/70 underline underline-offset-4 hover:text-white transition"
+  >
+    Natural State Tourism Project
+  </a>
+  , an independent local tourism guide network.
+</p>
         </div>
 
         {/* Contact CTA */}

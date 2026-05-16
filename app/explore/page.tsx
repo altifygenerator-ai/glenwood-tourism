@@ -11,7 +11,80 @@ export const metadata = {
   description:
     "Explore the best things to do in Glenwood, Arkansas including the Caddo River, Lake Greeson, Ouachita Mountains, Crater of Diamonds, cabins, restaurants, camping, floating, fishing, and nearby day trips.",
 };
-
+const suggestedBusinessCards = [
+  {
+    title: "For a Caddo River Day",
+    text: "Good local stops for floats, cabins, camping, food, and river weekends around Glenwood.",
+    links: [
+      {
+        label: "Caddo River Camping & Canoe Rental",
+        href: "/glenwood-ar-cabins",
+      },
+      {
+        label: "Caddo Cafe",
+        href: "/glenwood-ar-restaurants",
+      },
+      {
+        label: "Bayou Bella’s & Biscuits",
+        href: "/glenwood-ar-restaurants",
+      },
+    ],
+  },
+  {
+    title: "For a Lake Greeson Weekend",
+    text: "Helpful places for lake stays, food, camping, boating, and nearby outdoor trips around Kirby, Daisy, and Murfreesboro.",
+    links: [
+      {
+        label: "Swaha Lodge & Marina",
+        href: "/glenwood-ar-cabins",
+      },
+      {
+        label: "Fish Nest Family Restaurant",
+        href: "/glenwood-ar-restaurants",
+      },
+      {
+        label: "Cabins & Places to Stay",
+        href: "/glenwood-ar-cabins",
+      },
+    ],
+  },
+  {
+    title: "For Coffee, Breakfast & Quick Stops",
+    text: "Easy local stops before heading to the river, lake, cabins, campgrounds, or nearby attractions.",
+    links: [
+      {
+        label: "Arrow 6 Coffee Co.",
+        href: "/glenwood-ar-restaurants",
+      },
+      {
+        label: "Caddo Cafe",
+        href: "/glenwood-ar-restaurants",
+      },
+      {
+        label: "Flavor-Licious Glenwood",
+        href: "/glenwood-ar-restaurants",
+      },
+    ],
+  },
+  {
+    title: "For a Cabin Getaway",
+    text: "Lodging options for visitors wanting cabins, river access, wooded stays, or a quieter outdoor trip.",
+    links: [
+      {
+        label: "Bean Creek Cabins",
+        href: "/glenwood-ar-cabins",
+      },
+      {
+        label: "Caddo River Cabins",
+        href: "/glenwood-ar-cabins",
+      },
+      {
+        label: "Arrowhead Cabins and Camping",
+        href: "/glenwood-ar-cabins",
+      },
+    ],
+  },
+];
 export default function ExplorePage() {
   return (
     <main className="max-w-6xl mx-auto px-6 py-16">
@@ -105,7 +178,104 @@ export default function ExplorePage() {
           Get Featured
         </Link>
       </div>
+<Section>
+  <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+    <div>
+      <p
+        className="text-sm font-semibold uppercase tracking-wide mb-3"
+        style={{ color: "var(--color-accent)" }}
+      >
+        How To Use This Guide
+      </p>
 
+      <h2 className="text-3xl md:text-4xl font-semibold mb-5">
+        Pick the kind of Glenwood trip you are planning.
+      </h2>
+
+      <p className="text-[color:var(--color-muted)] leading-relaxed">
+        Glenwood is not just one attraction. Most visitors come for a mix of
+        river time, lake time, cabins, camping, fishing, family stops, and
+        nearby day trips. Use this page to decide what kind of trip makes the
+        most sense before choosing where to stay or eat.
+      </p>
+    </div>
+
+    <div className="grid gap-4">
+      {[
+        {
+          title: "River weekend",
+          text: "Best for Caddo River floats, kayak trips, swimming, fishing, cabins, campgrounds, and easy food after a day outside.",
+        },
+        {
+          title: "Lake and camping trip",
+          text: "Best for Lake Greeson, Daisy State Park, boating, fishing, swimming, campsites, and quiet outdoor weekends.",
+        },
+        {
+          title: "Day trip base",
+          text: "Best for travelers adding Crater of Diamonds, Mount Ida, Amity, Hot Springs, or other nearby small towns.",
+        },
+      ].map((item) => (
+        <div
+          key={item.title}
+          className="rounded-2xl bg-[color:var(--bg-card)] border border-black/5 p-6 shadow-sm"
+        >
+          <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+          <p className="text-[color:var(--color-muted)] leading-relaxed">
+            {item.text}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</Section>
+<Section>
+  <div className="mb-8 max-w-3xl">
+    <p
+      className="text-sm font-semibold uppercase tracking-wide mb-3"
+      style={{ color: "var(--color-accent)" }}
+    >
+      Suggested Local Stops
+    </p>
+
+    <h2 className="text-3xl md:text-4xl font-semibold mb-4">
+      Pair your Glenwood plans with nearby local businesses.
+    </h2>
+
+    <p className="text-[color:var(--color-muted)] leading-relaxed">
+      Whether you are planning a river float, lake weekend, cabin stay, coffee
+      stop, or quick day trip, these local businesses can help round out the
+      visit with food, lodging, rentals, and places worth knowing about.
+    </p>
+  </div>
+
+  <div className="grid gap-6 md:grid-cols-2">
+    {suggestedBusinessCards.map((card) => (
+      <div
+        key={card.title}
+        className="rounded-3xl border border-black/5 bg-[color:var(--bg-card)] p-6 shadow-sm"
+      >
+        <h3 className="text-2xl font-semibold mb-3">{card.title}</h3>
+
+        <p className="text-[color:var(--color-muted)] leading-relaxed mb-5">
+          {card.text}
+        </p>
+
+        <div className="space-y-3">
+          {card.links.map((link) => (
+            <Link
+              key={link.label}
+              href={link.href}
+              className="flex items-center justify-between gap-4 rounded-2xl bg-white/70 px-4 py-3 text-sm font-medium transition hover:bg-white hover:shadow-sm"
+            >
+              <span>{link.label}</span>
+              <span style={{ color: "var(--color-accent)" }}>→</span>
+            </Link>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</Section>
       <Section>
         <div className="mb-8 max-w-3xl">
           <h2 className="text-3xl font-semibold mb-4">
@@ -165,7 +335,44 @@ export default function ExplorePage() {
           campsite stays, and visitors who want more than just a river float.
         </p>
       </Section>
+<Section>
+  <div className="rounded-3xl border border-black/5 bg-[color:var(--bg-card)] p-8 md:p-10">
+    <p
+      className="text-sm font-semibold uppercase tracking-wide mb-3"
+      style={{ color: "var(--color-accent)" }}
+    >
+      Nearby Outdoor Areas
+    </p>
 
+    <h2 className="text-3xl md:text-4xl font-semibold mb-5">
+      Glenwood connects several southwest Arkansas outdoor stops.
+    </h2>
+
+    <p className="text-[color:var(--color-muted)] leading-relaxed mb-8 max-w-3xl">
+      Part of what makes Glenwood useful for visitors is how many outdoor areas
+      are within reach. You can stay close to the Caddo River, spend a day at
+      Lake Greeson, drive toward the Ouachita Mountains, or add a nearby town or
+      state park without turning the trip into a long haul.
+    </p>
+
+    <div className="grid gap-4 md:grid-cols-3">
+      {[
+        "Caddo River for floating, kayaking, swimming, and fishing.",
+        "Lake Greeson for boating, camping, hiking, and lake weekends.",
+        "Crater of Diamonds and Murfreesboro for a memorable day trip.",
+        "Ouachita forest roads and mountain scenery for slower exploring.",
+        "Amity and Mount Ida for small-town stops and nearby attractions.",
+        "Hot Springs for restaurants, shopping, Bathhouse Row, and extra activities.",
+      ].map((item) => (
+        <div key={item} className="rounded-2xl bg-white/70 p-5">
+          <p className="text-sm text-[color:var(--color-muted)] leading-relaxed">
+            {item}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</Section>
       <BackgroundSection image="/images/glenwood/forest.jpg">
         <h2 className="text-4xl font-semibold max-w-2xl">
           Explore the Ouachita Mountains, forest trails, scenic drives, and the

@@ -199,6 +199,66 @@ export default function Page() {
     </div>
   </div>
 </Section>
+<Section>
+  <div className="grid gap-8 lg:grid-cols-[1fr_1fr] items-center">
+    <div>
+      <p
+        className="text-sm font-semibold uppercase tracking-wide mb-3"
+        style={{ color: "var(--color-accent)" }}
+      >
+        Why Glenwood Works
+      </p>
+
+      <h2
+        className="text-3xl md:text-5xl font-semibold leading-tight mb-5"
+        style={{ color: "var(--color-muted)" }}
+      >
+        A small town base for river weekends, lake trips, and outdoor Arkansas.
+      </h2>
+
+      <p className="text-[color:var(--color-muted)] leading-relaxed mb-4">
+        Glenwood sits in a useful spot for travelers who want more than one
+        kind of trip. You can float the Caddo River, stay in a cabin, drive
+        toward Lake Greeson, visit nearby Murfreesboro, or use town as a quiet
+        base for exploring the Ouachita region.
+      </p>
+
+      <p className="text-[color:var(--color-muted)] leading-relaxed">
+        It is not a big resort town, and that is part of the appeal. Visitors
+        come for river access, local restaurants, family weekends, campgrounds,
+        small-town stops, and easy drives to nearby lakes, parks, and scenic
+        areas.
+      </p>
+    </div>
+
+    <div className="grid gap-4">
+      {[
+        {
+          title: "Caddo River trips",
+          text: "Float, kayak, swim, fish, or plan a cabin weekend around one of southwest Arkansas’ favorite rivers.",
+        },
+        {
+          title: "Lake Greeson nearby",
+          text: "Add boating, camping, fishing, swimming, and lake views around Kirby, Daisy, and Murfreesboro.",
+        },
+        {
+          title: "Easy regional day trips",
+          text: "Use Glenwood as a base for Crater of Diamonds, Mount Ida, Amity, Hot Springs, and other Ouachita stops.",
+        },
+      ].map((item) => (
+        <div
+          key={item.title}
+          className="rounded-2xl bg-[color:var(--bg-card)] border border-black/5 p-6 shadow-sm"
+        >
+          <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+          <p className="text-[color:var(--color-muted)] leading-relaxed">
+            {item.text}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</Section>
       <BackgroundSection image="/images/glenwood/rivercanoe.jpg">
         <h2 className="text-4xl font-semibold max-w-2xl">
           Float the Caddo River and enjoy the outdoor beauty around Glenwood.
@@ -287,7 +347,48 @@ export default function Page() {
           </div>
         </div>
       </BackgroundSection>
+<Section>
+  <div className="rounded-3xl bg-[color:var(--bg-card)] border border-black/5 p-8 md:p-10">
+    <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+      <div>
+        <p
+          className="text-sm font-semibold uppercase tracking-wide mb-3"
+          style={{ color: "var(--color-accent)" }}
+        >
+          Good To Know
+        </p>
 
+        <h2 className="text-3xl md:text-4xl font-semibold mb-4">
+          Glenwood is best planned around the outdoors.
+        </h2>
+
+        <p className="text-[color:var(--color-muted)] leading-relaxed">
+          A Glenwood trip usually works best when you plan the river, lake,
+          cabin, campground, or day trip first, then build meals and local stops
+          around that.
+        </p>
+      </div>
+
+      <div className="grid gap-4 md:grid-cols-2">
+        {[
+          "Spring and summer weekends are popular for Caddo River floats.",
+          "Cabins and campgrounds can book faster around warm-weather weekends.",
+          "Lake Greeson is a strong add-on for boating, fishing, and camping.",
+          "Restaurants and local stops are part of the trip, especially before or after river time.",
+        ].map((item) => (
+          <div
+            key={item}
+            className="rounded-2xl bg-white/70 border border-black/5 p-5"
+          >
+            <p className="text-sm font-medium text-[color:var(--color-muted)]">
+              {item}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</Section>
       <Section>
         <h2 className="text-3xl font-semibold mb-6">
           Frequently asked questions
