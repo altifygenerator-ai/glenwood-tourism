@@ -141,6 +141,31 @@ const restaurants = [
   directions:
     "https://www.google.com/maps/search/?api=1&query=Bayou+Bella%27s+and+Biscuits+22+Hwy+70+Glenwood+AR+71943",
 },
+{
+  name: "Mercado Restaurant",
+  type: "Mexican Restaurant • Meat Market • Produce • Local Food Stop",
+  description:
+    "A Glenwood Mexican restaurant, meat market, and produce stop serving Mexican food in a casual local setting. A good option for visitors looking for tacos, plates, quick meals, and something local while passing through town or staying near the Caddo River area.",
+  location: "240 US-70, Glenwood, AR 71943",
+  phone: "870-356-0113",
+  image: "/images/glenwood/restaurants/mercado-restaurant.jpg",
+  alt: "Mercado Restaurant in Glenwood Arkansas",
+  directions:
+    "https://www.google.com/maps/search/?api=1&query=Mercado+Restaurant+240+US-70+Glenwood+AR+71943",
+},
+{
+  name: "Arrow 6 Coffee Co.",
+  type: "Coffee Shop • Local Coffee • Drinks • Morning Stop",
+  description:
+    "A local Glenwood coffee shop serving coffee, specialty drinks, seasonal lattes, baked goods, and quick morning favorites. A strong stop for visitors needing coffee before heading to the Caddo River, Lake Greeson, cabins, campgrounds, or nearby outdoor destinations.",
+  location: "3 Caddo Crossing Dr, Glenwood, AR 71943",
+  phone: "",
+  website: "https://arrow6coffeeco.com/",
+  image: "/images/glenwood/restaurants/arrow-6-coffee-co.jpg",
+  alt: "Arrow 6 Coffee Co. in Glenwood Arkansas",
+  directions:
+    "https://www.google.com/maps/search/?api=1&query=Arrow+6+Coffee+Co+3+Caddo+Crossing+Dr+Glenwood+AR+71943",
+},
 
 ];
 

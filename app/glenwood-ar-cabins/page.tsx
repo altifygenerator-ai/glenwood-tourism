@@ -167,6 +167,32 @@ const stays = [
     directions:
       "https://www.google.com/maps/search/?api=1&query=Lazy+Bear+Cabin+on+Caddo+River+Glenwood+AR",
   },
+  {
+  name: "Bean Creek Cabins",
+  type: "Historic Cabins • Caddo Gap • Caddo River Area",
+  description:
+    "Restored historic log cabins in Caddo Gap near the Caddo River and Glenwood area. A good fit for visitors wanting a rustic cabin stay, quiet woods, river access nearby, and a slower Ouachita Mountain getaway.",
+  location: "Caddo Gap, AR",
+  phone: "",
+  website: "https://www.thebeancreekcabins.com/",
+  image: "/images/glenwood/cabins/bean-creek-cabins.webp",
+  alt: "Bean Creek Cabins in Caddo Gap near Glenwood Arkansas",
+  directions:
+    "https://www.google.com/maps/search/?api=1&query=Bean+Creek+Cabins+Caddo+Gap+AR",
+},
+{
+  name: "Swaha Lodge & Marina",
+  type: "Lodge • Marina • Cabins • Lake Greeson",
+  description:
+    "A family-owned Lake Greeson lodge and full-service marina near Murfreesboro with cabins, condos, treehouses, boat rentals, marina access, food service, and easy access to fishing, swimming, hiking, and nearby outdoor attractions.",
+  location: "205 Dynamite Hill Road, Murfreesboro, AR 71958",
+  phone: "870-285-2272",
+  website: "https://swahacabins.com/",
+  image: "/images/glenwood/cabins/swaha-lodge-marina.jpg",
+  alt: "Swaha Lodge and Marina on Lake Greeson near Murfreesboro Arkansas",
+  directions:
+    "https://www.google.com/maps/search/?api=1&query=Swaha+Lodge+and+Marina+205+Dynamite+Hill+Road+Murfreesboro+AR+71958",
+},
 ];
 
 const featuredNames = [
