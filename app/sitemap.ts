@@ -1,59 +1,70 @@
 import { MetadataRoute } from "next";
+import { supabaseAdmin } from "@/lib/supabase/server";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://www.glenwoodarkansas.org";
 
-  return [
+  const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
     },
-
     {
       url: `${baseUrl}/explore`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
     },
-
+    {
+      url: `${baseUrl}/events`,
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/this-weekend`,
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/submit-event`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
     {
       url: `${baseUrl}/caddo-river`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
     },
-
     {
       url: `${baseUrl}/history`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
-
-    // 🔥 MONEY PAGES
     {
       url: `${baseUrl}/glenwood-ar-restaurants`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
     },
-
     {
       url: `${baseUrl}/glenwood-ar-cabins`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
     },
-
     {
       url: `${baseUrl}/local-business`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
-
     {
       url: `${baseUrl}/contact`,
       lastModified: new Date(),
@@ -61,4 +72,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
   ];
+
+  const { data: events } = await supabaseAdmin
+    .from("events")
+    .select("slug, updated_at")
+    .eq("status", "approved");
+
+  const eventRoutes: MetadataRoute.Sitemap =
+    events?.map((event) => ({
+      url: `${baseUrl}/events/${event.slug}`,
+      lastModified: event.updated_at ? new Date(event.updated_at) : new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    })) || [];
+
+  return [...staticRoutes, ...eventRoutes];
 }

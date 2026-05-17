@@ -1,6 +1,6 @@
 import Section from "@/components/tourism/Section";
 import Link from "next/link";
-
+import EventsCTA from "@/components/events/EventsCTA";
 export const metadata = {
   title:
     "Cabins and Places to Stay Near Glenwood, Arkansas | Caddo River & Lake Greeson",
@@ -517,7 +517,7 @@ export default function GlenwoodCabinsPage() {
           stops across southwest Arkansas.
         </p>
       </Section>
-
+<EventsCTA />
       <Section>
         <h2 className="mb-6 text-3xl font-semibold">
           Glenwood Cabin and Lodging FAQs

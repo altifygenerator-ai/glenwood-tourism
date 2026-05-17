@@ -1,3 +1,4 @@
+import EventsCTA from "@/components/events/EventsCTA";
 const featuredBusiness = {
   name: "Caddo River Camping & Canoe Rental",
   type: "Cabins • Camping • Canoe & Kayak Rentals",
@@ -251,7 +252,7 @@ export default function LocalBusinessesPage() {
             ))}
           </div>
         </section>
-
+<EventsCTA />
         {/* CTA */}
         <section className="mt-16 rounded-3xl bg-[#2d2a26] text-white p-8 md:p-10 text-center">
           <h2 className="text-3xl font-semibold mb-4">

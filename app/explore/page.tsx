@@ -4,7 +4,7 @@ import Section from "@/components/tourism/Section";
 import BackgroundSection from "@/components/tourism/BackgroundSection";
 import { glenwoodAttractions, glenwoodItinerary } from "@/data/glenwood";
 import Link from "next/link";
-
+import EventsCTA from "@/components/events/EventsCTA";
 export const metadata = {
   title:
     "Things to Do in Glenwood, Arkansas | Caddo River, Lake Greeson & Outdoor Attractions",
@@ -228,6 +228,10 @@ export default function ExplorePage() {
     </div>
   </div>
 </Section>
+<EventsCTA
+  title="Coming to float the Caddo River?"
+  text="Check what’s happening around Glenwood before your trip. River-season weekends often include live music, local events, food stops, and community gatherings."
+/>
 <Section>
   <div className="mb-8 max-w-3xl">
     <p

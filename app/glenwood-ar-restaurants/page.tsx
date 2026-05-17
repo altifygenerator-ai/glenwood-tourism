@@ -1,6 +1,6 @@
 import Section from "@/components/tourism/Section";
 import Link from "next/link";
-
+import EventsCTA from "@/components/events/EventsCTA";
 export const metadata = {
   title:
     "Best Restaurants in Glenwood, Arkansas | Places to Eat Near the Caddo River",
@@ -496,7 +496,7 @@ export default function GlenwoodRestaurantsPage() {
           casual, local, and easy to work into a simple weekend itinerary.
         </p>
       </Section>
-
+<EventsCTA />
       <Section>
         <h2 className="mb-6 text-3xl font-semibold">
           Glenwood Restaurant FAQs

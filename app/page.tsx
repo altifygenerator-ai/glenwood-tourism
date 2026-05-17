@@ -19,7 +19,7 @@ import {
 } from "@/data/glenwood";
 import Link from "next/link";
 import { generateMetadata } from "@/lib/seo";
-
+import HomeEventsPreview from "@/components/events/HomeEventsPreview";
 export const metadata = generateMetadata(glenwoodSEO);
 
 export default function Page() {
@@ -125,7 +125,7 @@ export default function Page() {
 <Section>
   <Intro data={glenwoodIntro} />
 </Section>
-
+<HomeEventsPreview />
 <FeaturedLocalSpots items={glenwoodFeaturedLocalSpots} />
 <Section>
   <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] items-center">
@@ -199,6 +199,7 @@ export default function Page() {
     </div>
   </div>
 </Section>
+
 <Section>
   <div className="grid gap-8 lg:grid-cols-[1fr_1fr] items-center">
     <div>
