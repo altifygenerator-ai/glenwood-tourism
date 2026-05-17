@@ -1,7 +1,8 @@
 import Link from "next/link";
 import AdminEventTable from "@/components/events/AdminEventTable";
 import { getAllEventsForAdmin } from "@/lib/events";
-
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 export default async function AdminEventsPage() {
   const events = await getAllEventsForAdmin();
 
