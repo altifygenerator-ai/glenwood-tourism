@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/og-cover.jpg",
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "Glenwood Arkansas cabins, restaurants, and outdoor attractions",
