@@ -15,8 +15,8 @@ const playfair = Playfair_Display({
   variable: "--font-heading",
 });
 
-const siteUrl = "https://glenwoodarkansas.org";
-
+const siteUrl = "https://www.glenwoodarkansas.org";
+const ogImage = "/images/og-image.png";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/og-image.png",
+        url: ogImage,
         width: 1200,
         height: 630,
         alt: "Glenwood Arkansas cabins, restaurants, and outdoor attractions",
@@ -77,11 +77,10 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title:
-      "Glenwood Arkansas Guide | Restaurants, Cabins & Things to Do",
+    title: "Glenwood Arkansas Guide | Restaurants, Cabins & Things to Do",
     description:
       "Find places to eat, cabins, and things to do in Glenwood, Arkansas near the Caddo River and Lake Greeson.",
-    images: ["/images/og-cover.jpg"],
+    images: [ogImage],
   },
 
   robots: {
@@ -99,14 +98,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <body className="min-h-screen flex flex-col">
+      <body>
         <Navbar />
-        <main className="flex-grow">{children}</main>
+        {children}
         <Footer />
         <Analytics />
       </body>
