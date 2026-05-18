@@ -8,17 +8,25 @@ export const glenwoodSEO = {
     title: "Visit Glenwood Arkansas",
     description:
       "Explore the Caddo River, Lake Greeson, and outdoor adventures in Glenwood, Arkansas.",
-    url: "https://glenwoodtourism.vercel.app/",
-    siteName: "Glenwood Tourism",
+    url: "https://www.glenwoodarkansas.org/",
+    siteName: "Glenwood Arkansas Guide",
     images: [
       {
-        url: "/images/glenwood/TownSquare.jpg",
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
+        alt: "Glenwood Arkansas tourism guide",
       },
     ],
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Glenwood Arkansas Guide | Restaurants, Cabins & Things to Do",
+    description:
+      "Find places to eat, cabins, and things to do in Glenwood, Arkansas near the Caddo River and Lake Greeson.",
+    images: ["/images/og-image.png"],
   },
 };
 
