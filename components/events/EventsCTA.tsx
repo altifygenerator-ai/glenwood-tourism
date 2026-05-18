@@ -11,34 +11,48 @@ export default function EventsCTA({
 }: EventsCTAProps) {
   return (
     <section className="mx-auto max-w-6xl px-6 py-10">
-      <div className="rounded-3xl bg-[#2d2a26] p-8 text-white md:p-10">
-        <div className="grid gap-6 md:grid-cols-[1.4fr_0.7fr] md:items-center">
+      <div className="overflow-hidden rounded-3xl bg-[#2d2a26] text-white shadow-sm">
+        <div className="grid gap-8 p-8 md:grid-cols-[1.35fr_0.75fr] md:items-center md:p-10">
           <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-white/70">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-white/55">
               Before You Go
             </p>
 
-            <h2 className="mb-4 text-3xl font-semibold text-white md:text-4xl">
+            <h2 className="mb-4 text-3xl font-semibold leading-tight text-white md:text-4xl">
               {title}
             </h2>
 
             <p className="max-w-2xl leading-relaxed text-white/75">{text}</p>
           </div>
 
-          <div className="flex flex-wrap gap-3 md:justify-end">
-            <Link
-              href="/this-weekend"
-              className="rounded-md bg-white px-5 py-3 text-sm font-medium text-black"
-            >
-              This Weekend
-            </Link>
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <p className="mb-4 text-sm leading-relaxed text-white/70">
+              Events help locals and visitors find more reasons to stop, shop,
+              eat, stay, and explore around Glenwood.
+            </p>
 
-            <Link
-              href="/events"
-              className="rounded-md border border-white/30 px-5 py-3 text-sm font-medium text-white"
-            >
-              View Events
-            </Link>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/this-weekend"
+                className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-white/90"
+              >
+                This Weekend
+              </Link>
+
+              <Link
+                href="/events"
+                className="rounded-full border border-white/25 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+              >
+                View Events
+              </Link>
+
+              <Link
+                href="/submit-event"
+                className="rounded-full border border-white/20 px-5 py-3 text-sm font-semibold text-white/85 transition hover:bg-white/10 hover:text-white"
+              >
+                Submit Event
+              </Link>
+            </div>
           </div>
         </div>
       </div>

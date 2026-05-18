@@ -1,6 +1,7 @@
 import Section from "@/components/tourism/Section";
 import Link from "next/link";
 import EventsCTA from "@/components/events/EventsCTA";
+
 export const metadata = {
   title:
     "Cabins and Places to Stay Near Glenwood, Arkansas | Caddo River & Lake Greeson",
@@ -168,31 +169,31 @@ const stays = [
       "https://www.google.com/maps/search/?api=1&query=Lazy+Bear+Cabin+on+Caddo+River+Glenwood+AR",
   },
   {
-  name: "Bean Creek Cabins",
-  type: "Historic Cabins • Caddo Gap • Caddo River Area",
-  description:
-    "Restored historic log cabins in Caddo Gap near the Caddo River and Glenwood area. A good fit for visitors wanting a rustic cabin stay, quiet woods, river access nearby, and a slower Ouachita Mountain getaway.",
-  location: "Caddo Gap, AR",
-  phone: "",
-  website: "https://www.thebeancreekcabins.com/",
-  image: "/images/glenwood/cabins/bean-creek-cabins.webp",
-  alt: "Bean Creek Cabins in Caddo Gap near Glenwood Arkansas",
-  directions:
-    "https://www.google.com/maps/search/?api=1&query=Bean+Creek+Cabins+Caddo+Gap+AR",
-},
-{
-  name: "Swaha Lodge & Marina",
-  type: "Lodge • Marina • Cabins • Lake Greeson",
-  description:
-    "A family-owned Lake Greeson lodge and full-service marina near Murfreesboro with cabins, condos, treehouses, boat rentals, marina access, food service, and easy access to fishing, swimming, hiking, and nearby outdoor attractions.",
-  location: "205 Dynamite Hill Road, Murfreesboro, AR 71958",
-  phone: "870-285-2272",
-  website: "https://swahacabins.com/",
-  image: "/images/glenwood/cabins/swaha-lodge-marina.jpg",
-  alt: "Swaha Lodge and Marina on Lake Greeson near Murfreesboro Arkansas",
-  directions:
-    "https://www.google.com/maps/search/?api=1&query=Swaha+Lodge+and+Marina+205+Dynamite+Hill+Road+Murfreesboro+AR+71958",
-},
+    name: "Bean Creek Cabins",
+    type: "Historic Cabins • Caddo Gap • Caddo River Area",
+    description:
+      "Restored historic log cabins in Caddo Gap near the Caddo River and Glenwood area. A good fit for visitors wanting a rustic cabin stay, quiet woods, river access nearby, and a slower Ouachita Mountain getaway.",
+    location: "Caddo Gap, AR",
+    phone: "",
+    website: "https://www.thebeancreekcabins.com/",
+    image: "/images/glenwood/cabins/bean-creek-cabins.webp",
+    alt: "Bean Creek Cabins in Caddo Gap near Glenwood Arkansas",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Bean+Creek+Cabins+Caddo+Gap+AR",
+  },
+  {
+    name: "Swaha Lodge & Marina",
+    type: "Lodge • Marina • Cabins • Lake Greeson",
+    description:
+      "A family-owned Lake Greeson lodge and full-service marina near Murfreesboro with cabins, condos, treehouses, boat rentals, marina access, food service, and easy access to fishing, swimming, hiking, and nearby outdoor attractions.",
+    location: "205 Dynamite Hill Road, Murfreesboro, AR 71958",
+    phone: "870-285-2272",
+    website: "https://swahacabins.com/",
+    image: "/images/glenwood/cabins/swaha-lodge-marina.jpg",
+    alt: "Swaha Lodge and Marina on Lake Greeson near Murfreesboro Arkansas",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Swaha+Lodge+and+Marina+205+Dynamite+Hill+Road+Murfreesboro+AR+71958",
+  },
 ];
 
 const featuredNames = [
@@ -213,17 +214,92 @@ const riverwood = stays.find(
   (stay) => stay.name === "Riverwood Inn of Glenwood"
 );
 
-const standardStays = stays.filter(
-  (stay) => !featuredNames.includes(stay.name)
-);
+const standardStays = stays.filter((stay) => !featuredNames.includes(stay.name));
+
+const tripStyles = [
+  {
+    title: "Riverfront cabin weekend",
+    text: "Best if the Caddo River is the whole point of the trip. Look for river access, outdoor space, float planning, fire pits, and enough room to relax after a day on the water.",
+  },
+  {
+    title: "Camping and float trip",
+    text: "Good for groups, families, and visitors who want a lower-friction outdoor weekend with rentals, campsites, and river logistics close together.",
+  },
+  {
+    title: "Motel or simple local stay",
+    text: "Works well if you need easy highway access, restaurants nearby, and a practical place to sleep between river time, Lake Greeson, and day trips.",
+  },
+  {
+    title: "Lake Greeson add-on",
+    text: "Better for visitors planning boating, fishing, marina access, swimming, or a lake-heavy weekend around Murfreesboro, Daisy, Kirby, and the Lake Greeson area.",
+  },
+];
+
+const lodgingFaqs = [
+  {
+    question: "Where can I stay near Glenwood, Arkansas?",
+    answer:
+      "Visitors can find cabins, campgrounds, motels, private rentals, riverfront stays, and Lake Greeson lodging around Glenwood, Caddo Gap, Murfreesboro, Kirby, and nearby southwest Arkansas communities.",
+  },
+  {
+    question: "Are there cabins near the Caddo River?",
+    answer:
+      "Yes. The Glenwood and Caddo Gap area has several cabins and camping options near the Caddo River for visitors planning floating, fishing, swimming, kayaking, and weekend trips.",
+  },
+  {
+    question: "When should I book a cabin near Glenwood?",
+    answer:
+      "Spring and summer weekends can fill up faster because of Caddo River floats, Lake Greeson trips, camping, and outdoor travel. Booking earlier is usually better for warm-weather weekends, holidays, and group trips.",
+  },
+  {
+    question: "Should I stay near the Caddo River or Lake Greeson?",
+    answer:
+      "Stay near the Caddo River if floating, kayaking, fishing, or river time is your main plan. Stay closer to Lake Greeson if boating, marina access, lake camping, or a Murfreesboro-area trip is the priority.",
+  },
+];
 
 function phoneHref(phone: string) {
   return `tel:${phone.replace(/[^\d]/g, "")}`;
 }
 
+function StayActions({ stay }: { stay: (typeof stays)[number] }) {
+  return (
+    <div className="mt-5 flex flex-wrap gap-3">
+      {stay.phone && (
+        <a
+          href={phoneHref(stay.phone)}
+          className="rounded-full bg-[color:var(--color-accent)] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+        >
+          Call {stay.phone}
+        </a>
+      )}
+
+      {stay.website && (
+        <a
+          href={stay.website}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-full bg-[color:var(--color-accent)] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+        >
+          View Listing
+        </a>
+      )}
+
+      <a
+        href={stay.directions}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="rounded-full border border-[color:var(--color-accent)] px-5 py-2.5 text-sm font-semibold text-[color:var(--color-accent)] transition hover:bg-[color:var(--color-accent)] hover:text-white"
+      >
+        Directions
+      </a>
+    </div>
+  );
+}
+
 export default function GlenwoodCabinsPage() {
   return (
-    <main className="mx-auto max-w-6xl px-6 py-16">
+    <main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -256,51 +332,143 @@ export default function GlenwoodCabinsPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "Where can I stay near Glenwood, Arkansas?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Visitors can find cabins, campgrounds, motels, and river stays near Glenwood, Arkansas, especially around the Caddo River, Caddo Gap, and Lake Greeson area.",
-                },
+            mainEntity: lodgingFaqs.map((item) => ({
+              "@type": "Question",
+              name: item.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: item.answer,
               },
-              {
-                "@type": "Question",
-                name: "Are there cabins near the Caddo River?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes. The Glenwood area has cabins and camping options near the Caddo River for visitors planning floating, fishing, swimming, and weekend trips.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "When should I book a cabin near Glenwood?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Spring and summer weekends can fill up faster because of Caddo River floats, Lake Greeson trips, camping, and outdoor travel. Booking earlier is usually better for busy weekends.",
-                },
-              },
-            ],
+            })),
           }),
         }}
       />
 
-      <h1 className="mb-6 text-4xl font-semibold md:text-5xl">
-        Cabins and Places to Stay Near Glenwood, Arkansas
-      </h1>
+      <section className="relative overflow-hidden bg-[#2d2a26] text-white">
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-45"
+          style={{
+            backgroundImage: "url('/images/glenwood/cabins/caddo-river-cabins.png')",
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/25" />
 
-      <p className="mb-12 max-w-3xl leading-relaxed text-[color:var(--color-muted)]">
-        Looking for a place to stay near Glenwood, Arkansas? Whether you're
-        planning a Caddo River float trip, a Lake Greeson weekend, or a quiet
-        getaway in the Ouachita region, there are cabins, campgrounds, motels,
-        and lodging options in and around the area.
-      </p>
+        <div className="relative mx-auto max-w-6xl px-6 py-20 md:py-28">
+          <div className="max-w-3xl">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-white/70">
+              Cabins & Places To Stay
+            </p>
+
+            <h1 className="text-4xl font-semibold leading-tight md:text-6xl">
+              Cabins and places to stay near Glenwood, Arkansas
+            </h1>
+
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85">
+              Compare riverfront cabins, campgrounds, motels, private rentals,
+              and Lake Greeson lodging for Caddo River floats, fishing trips,
+              family weekends, and southwest Arkansas getaways.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                href="/caddo-river"
+                className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-white/90"
+              >
+                Caddo River Guide
+              </Link>
+
+              <Link
+                href="/glenwood-ar-restaurants"
+                className="rounded-full border border-white/30 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/20"
+              >
+                View Restaurants
+              </Link>
+
+              <Link
+                href="/events"
+                className="rounded-full border border-white/25 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+              >
+                Local Events
+              </Link>
+
+              <Link
+                href="/contact"
+                className="rounded-full border border-white/20 px-5 py-3 text-sm font-semibold text-white/85 transition hover:bg-white/10 hover:text-white"
+              >
+                Add Your Stay
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <Section>
+        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
+              Choose Your Stay
+            </p>
+
+            <h2 className="mb-5 text-3xl font-semibold leading-tight md:text-4xl">
+              Start with the kind of trip you are planning.
+            </h2>
+
+            <div className="space-y-4 leading-relaxed text-[color:var(--color-muted)]">
+              <p>
+                Glenwood lodging is easiest to sort when you know what kind of
+                trip you want first. A riverfront cabin weekend is different
+                from a quick motel stay, and a Lake Greeson fishing trip may
+                need a different location than a Caddo River float.
+              </p>
+
+              <p>
+                Use this page to compare cabins, campgrounds, motels, private
+                rentals, river-area stays, and Lake Greeson options before you
+                build the rest of the trip around food, events, and nearby
+                attractions.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-2">
+            {tripStyles.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-2xl border border-black/10 bg-[color:var(--bg-card)] p-5 shadow-sm"
+              >
+                <div className="mb-3 h-1 w-10 rounded-full bg-[color:var(--color-accent)]" />
+                <h3 className="mb-2 text-lg font-semibold">{item.title}</h3>
+                <p className="text-sm leading-6 text-[color:var(--color-muted)]">
+                  {item.text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      <Section>
+        <div className="mb-8 grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+          <div>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
+              Featured Stays
+            </p>
+
+            <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
+              Good starting points for Glenwood lodging.
+            </h2>
+          </div>
+
+          <p className="leading-relaxed text-[color:var(--color-muted)]">
+            These featured options cover the main ways people usually stay near
+            Glenwood: river cabins, camping near the Caddo, and a practical
+            local motel close to restaurants, roads, and outdoor stops.
+          </p>
+        </div>
+
         <div className="space-y-8">
           {caddoRiverCabins && (
-            <div className="overflow-hidden rounded-3xl border bg-[color:var(--bg-card)] shadow-lg">
+            <div className="overflow-hidden rounded-3xl border border-black/10 bg-[color:var(--bg-card)] shadow-lg">
               <div className="grid lg:grid-cols-[1.1fr_0.9fr]">
                 <div
                   role="img"
@@ -312,15 +480,15 @@ export default function GlenwoodCabinsPage() {
                 />
 
                 <div className="flex flex-col justify-center p-8 lg:p-10">
-                  <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-[color:var(--color-accent)]">
+                  <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[color:var(--color-accent)]">
                     Premium Featured Stay
                   </p>
 
-                  <h2 className="mb-4 text-4xl font-semibold">
+                  <h2 className="mb-4 text-4xl font-semibold leading-tight">
                     {caddoRiverCabins.name}
                   </h2>
 
-                  <p className="mb-5 text-sm text-[color:var(--color-muted)]">
+                  <p className="mb-5 text-sm font-medium text-[color:var(--color-muted)]">
                     {caddoRiverCabins.type}
                   </p>
 
@@ -328,28 +496,12 @@ export default function GlenwoodCabinsPage() {
                     {caddoRiverCabins.description}
                   </p>
 
-                  <div className="mb-8 space-y-2 text-sm text-[color:var(--color-muted)]">
+                  <div className="space-y-2 text-sm text-[color:var(--color-muted)]">
                     <p>📍 {caddoRiverCabins.location}</p>
-                    <p>📞 {caddoRiverCabins.phone}</p>
+                    {caddoRiverCabins.phone && <p>📞 {caddoRiverCabins.phone}</p>}
                   </div>
 
-                  <div className="flex flex-wrap gap-3">
-                    <a
-                      href={phoneHref(caddoRiverCabins.phone)}
-                      className="rounded-md bg-black px-6 py-3 text-white"
-                    >
-                      Call Now
-                    </a>
-
-                    <a
-                      href={caddoRiverCabins.directions}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="rounded-md border px-6 py-3"
-                    >
-                      Get Directions
-                    </a>
-                  </div>
+                  <StayActions stay={caddoRiverCabins} />
                 </div>
               </div>
             </div>
@@ -361,25 +513,27 @@ export default function GlenwoodCabinsPage() {
                 stay && (
                   <div
                     key={stay.name}
-                    className="overflow-hidden rounded-2xl border bg-[color:var(--bg-card)]"
+                    className="overflow-hidden rounded-3xl border border-black/10 bg-[color:var(--bg-card)] shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
                   >
-                    <div
-                      role="img"
-                      aria-label={stay.alt}
-                      className="h-64 bg-cover bg-center"
-                      style={{
-                        backgroundImage: `url('${stay.image}')`,
-                      }}
-                    />
+                    {stay.image && (
+                      <div
+                        role="img"
+                        aria-label={stay.alt}
+                        className="h-64 bg-cover bg-center"
+                        style={{
+                          backgroundImage: `url('${stay.image}')`,
+                        }}
+                      />
+                    )}
 
                     <div className="p-6">
-                      <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[color:var(--color-accent)]">
+                      <p className="mb-2 text-sm font-semibold uppercase tracking-[0.16em] text-[color:var(--color-accent)]">
                         Featured Stay
                       </p>
 
                       <h3 className="text-2xl font-semibold">{stay.name}</h3>
 
-                      <p className="mt-2 text-sm text-[color:var(--color-muted)]">
+                      <p className="mt-2 text-sm font-medium text-[color:var(--color-muted)]">
                         {stay.type}
                       </p>
 
@@ -391,23 +545,7 @@ export default function GlenwoodCabinsPage() {
                         📍 {stay.location}
                       </p>
 
-                      <div className="mt-5 flex flex-wrap gap-3">
-                        <a
-                          href={phoneHref(stay.phone)}
-                          className="rounded-md bg-black px-4 py-2 text-sm text-white"
-                        >
-                          Call {stay.phone}
-                        </a>
-
-                        <a
-                          href={stay.directions}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="rounded-md border px-4 py-2 text-sm"
-                        >
-                          Directions
-                        </a>
-                      </div>
+                      <StayActions stay={stay} />
                     </div>
                   </div>
                 )
@@ -416,135 +554,125 @@ export default function GlenwoodCabinsPage() {
         </div>
       </Section>
 
-      <div className="mt-6 rounded-xl border bg-[color:var(--bg-card)] p-5">
-        <p className="text-sm leading-relaxed text-[color:var(--color-muted)]">
-          Own a cabin, campground, restaurant, or local business near Glenwood?
-          Featured placements are available for businesses wanting additional
-          exposure to visitors planning trips around the Caddo River and Lake
-          Greeson area.
-        </p>
-
-        <Link
-          href="/contact"
-          className="mt-4 inline-block text-sm underline underline-offset-4"
-        >
-          Ask About Featured Placement
-        </Link>
-      </div>
+      <EventsCTA
+        title="Staying in Glenwood for the weekend?"
+        text="Check local events before you book the whole trip. A river weekend or cabin stay can line up with live music, markets, community events, food stops, and reasons to explore more of the Glenwood area."
+      />
 
       <Section>
-        <div className="mb-8 max-w-3xl">
-          <h2 className="mb-4 text-3xl font-semibold">
-            More Cabins, Vacation Rentals, and Places to Stay Near Glenwood
-          </h2>
+        <div className="mb-8 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+          <div>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
+              More Places To Stay
+            </p>
+
+            <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
+              More cabins, vacation rentals, campgrounds, and lodging options.
+            </h2>
+          </div>
 
           <p className="leading-relaxed text-[color:var(--color-muted)]">
-            These additional cabins, vacation rentals, campgrounds, motels, and
-            lodging options are useful for visitors comparing places to stay
-            near the Caddo River, Lake Greeson, floating spots, fishing areas,
-            and outdoor attractions around Glenwood and southwest Arkansas.
+            These additional stays are useful for visitors comparing riverfront
+            cabins, private rentals, camping options, motels, Lake Greeson
+            lodging, and places close to Glenwood’s outdoor attractions.
           </p>
         </div>
 
-        <div className="space-y-6">
-          {standardStays.map((stay, index) => (
-            <div
+        <div className="grid gap-5 lg:grid-cols-2">
+          {standardStays.map((stay) => (
+            <article
               key={stay.name}
-              className="rounded-xl border bg-[color:var(--bg-card)] p-6"
+              className="rounded-2xl border border-black/10 bg-[color:var(--bg-card)] p-6 shadow-sm"
             >
-              <h2 className="text-2xl font-semibold">
-                {index + 1}. {stay.name}
-              </h2>
-
-              <p className="mt-1 text-sm text-[color:var(--color-muted)]">
-                {stay.type}
-              </p>
-
-              <p className="mt-4 leading-relaxed text-[color:var(--color-muted)]">
-                {stay.description}
-              </p>
-
-              <p className="mt-4 text-sm text-[color:var(--color-muted)]">
-                📍 {stay.location}
-              </p>
-
-              <div className="mt-4 flex flex-wrap gap-3">
-                {stay.phone && (
-                  <a
-                    href={phoneHref(stay.phone)}
-                    className="rounded-md bg-black px-4 py-2 text-sm text-white"
-                  >
-                    Call {stay.phone}
-                  </a>
+              <div className="flex flex-col gap-5 md:flex-row">
+                {stay.image && (
+                  <div
+                    role="img"
+                    aria-label={stay.alt || stay.name}
+                    className="h-40 shrink-0 rounded-xl bg-cover bg-center md:w-44"
+                    style={{
+                      backgroundImage: `url('${stay.image}')`,
+                    }}
+                  />
                 )}
 
-                {stay.website && (
-                  <a
-                    href={stay.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-md bg-black px-4 py-2 text-sm text-white"
-                  >
-                    View Listing
-                  </a>
-                )}
+                <div>
+                  <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-[color:var(--color-accent)]">
+                    {stay.type}
+                  </p>
 
-                <a
-                  href={stay.directions}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-md border px-4 py-2 text-sm"
-                >
-                  Get Directions
-                </a>
+                  <h3 className="text-2xl font-semibold leading-tight">
+                    {stay.name}
+                  </h3>
+
+                  <p className="mt-3 text-sm leading-6 text-[color:var(--color-muted)]">
+                    {stay.description}
+                  </p>
+
+                  <p className="mt-3 text-sm text-[color:var(--color-muted)]">
+                    📍 {stay.location}
+                  </p>
+
+                  <StayActions stay={stay} />
+                </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </Section>
 
       <Section>
-        <h2 className="mb-4 text-2xl font-semibold">
-          Staying Near the Caddo River and Lake Greeson
-        </h2>
+        <div className="rounded-3xl border border-black/10 bg-[color:var(--bg-card)] p-8 shadow-sm md:p-10">
+          <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+            <div>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
+                Good To Know
+              </p>
 
-        <p className="mb-6 max-w-3xl leading-relaxed text-[color:var(--color-muted)]">
-          Most visitors stay near the Caddo River for floating and fishing or
-          closer to Lake Greeson for boating and camping. Cabins and rentals in
-          this area can fill up quickly during spring and summer, especially on
-          weekends. Glenwood also works well as a base for visitors looking for
-          river access, small-town restaurants, nearby campgrounds, and outdoor
-          stops across southwest Arkansas.
-        </p>
+              <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
+                Staying near the Caddo River and Lake Greeson.
+              </h2>
+            </div>
+
+            <div className="space-y-4 leading-relaxed text-[color:var(--color-muted)]">
+              <p>
+                Most visitors choose lodging based on their main outdoor plan.
+                Stay near the Caddo River if floating, kayaking, fishing, or
+                riverfront time matters most. Look closer to Lake Greeson if
+                boating, marina access, lake camping, or fishing is the center
+                of the trip.
+              </p>
+
+              <p>
+                Cabins and rentals can fill faster during spring, summer, and
+                warm-weather weekends. If you are planning for a group, a
+                holiday, or a river-heavy weekend, it is usually better to book
+                earlier and then build food, events, and day trips around the
+                place you choose to stay.
+              </p>
+            </div>
+          </div>
+        </div>
       </Section>
-<EventsCTA />
-      <Section>
-        <h2 className="mb-6 text-3xl font-semibold">
-          Glenwood Cabin and Lodging FAQs
-        </h2>
 
-        <div className="space-y-4">
-          {[
-            {
-              question: "Where can I stay near Glenwood, Arkansas?",
-              answer:
-                "Visitors can find cabins, campgrounds, motels, and river stays near Glenwood, especially around the Caddo River, Caddo Gap, and Lake Greeson area.",
-            },
-            {
-              question: "Are there cabins near the Caddo River?",
-              answer:
-                "Yes. The Glenwood area has cabins and camping options near the Caddo River for floating, fishing, swimming, and weekend trips.",
-            },
-            {
-              question: "When should I book a cabin near Glenwood?",
-              answer:
-                "Spring and summer weekends can fill up faster because of river floats, Lake Greeson trips, camping, and outdoor travel. Booking earlier is usually better.",
-            },
-          ].map((item) => (
+      <Section>
+        <div className="mb-8 max-w-3xl">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
+            FAQs
+          </p>
+
+          <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
+            Glenwood cabin and lodging FAQs
+          </h2>
+        </div>
+
+        <div className="grid gap-4 md:grid-cols-2">
+          {lodgingFaqs.map((item) => (
             <div
               key={item.question}
-              className="rounded-xl border bg-[color:var(--bg-card)] p-6"
+              className="rounded-2xl border border-black/10 bg-[color:var(--bg-card)] p-6 shadow-sm"
             >
+              <div className="mb-4 h-1 w-10 rounded-full bg-[color:var(--color-accent)]" />
               <h3 className="text-xl font-semibold">{item.question}</h3>
 
               <p className="mt-3 leading-relaxed text-[color:var(--color-muted)]">
@@ -556,29 +684,41 @@ export default function GlenwoodCabinsPage() {
       </Section>
 
       <Section>
-        <div className="rounded-3xl border bg-[color:var(--bg-card)] p-8 md:p-10">
-          <h2 className="mb-4 text-3xl font-semibold">
-            Add Your Cabin, Campground, Motel, or Rental
-          </h2>
+        <div className="rounded-3xl bg-[#2d2a26] p-8 text-white shadow-sm md:p-10">
+          <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
+            <div>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-white/55">
+                Local Visibility
+              </p>
 
-          <p className="mb-6 max-w-3xl leading-relaxed text-[color:var(--color-muted)]">
-            This page is built to help visitors find cabins, campgrounds,
-            motels, and places to stay in Glenwood without digging through
-            multiple sites. If you own a rental or property in the area, you can
-            request a standard listing or ask about featured placement.
-          </p>
+              <h2 className="mb-4 text-3xl font-semibold leading-tight text-white md:text-4xl">
+                Add your cabin, campground, motel, or rental.
+              </h2>
 
-          <div className="flex flex-wrap gap-3">
-            <Link
-              href="/contact"
-              className="rounded-md bg-black px-6 py-3 text-white"
-            >
-              Get Listed
-            </Link>
+              <p className="max-w-3xl leading-relaxed text-white/75">
+                This page helps visitors compare cabins, campgrounds, motels,
+                private rentals, and places to stay around Glenwood without
+                digging through multiple sites. If you own a rental or lodging
+                property in the area, you can request a standard listing or ask
+                about featured placement.
+              </p>
+            </div>
 
-            <Link href="/contact" className="rounded-md border px-6 py-3">
-              Ask About Featured Placement
-            </Link>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/contact"
+                className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-white/90"
+              >
+                Get Listed
+              </Link>
+
+              <Link
+                href="/contact"
+                className="rounded-full border border-white/20 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+              >
+                Featured Placement
+              </Link>
+            </div>
           </div>
         </div>
       </Section>

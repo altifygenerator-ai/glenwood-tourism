@@ -1,6 +1,7 @@
 import Section from "@/components/tourism/Section";
 import Link from "next/link";
 import EventsCTA from "@/components/events/EventsCTA";
+
 export const metadata = {
   title:
     "Best Restaurants in Glenwood, Arkansas | Places to Eat Near the Caddo River",
@@ -13,7 +14,7 @@ const restaurants = [
     name: "Caddo Cafe",
     type: "Cafe • Breakfast • Comfort Food • Local Stop",
     description:
-      "A local Glenwood cafe serving breakfast, lunch, and comfort food in a casual small-town setting. A solid stop for visitors heading to or from the Caddo River, Lake Greeson, cabins, and campgrounds.",
+      "A local Glenwood cafe serving breakfast, lunch, Mexican food, American plates, catfish, burgers, and casual comfort food in a small-town setting. A solid stop before or after the Caddo River, Lake Greeson, cabins, campgrounds, and nearby outdoor attractions.",
     location: "53 US-70 Ste. C, Glenwood, AR 71943",
     phone: "870-356-2397",
     image: "/images/glenwood/restaurants/caddo-cafe.jpg",
@@ -25,7 +26,7 @@ const restaurants = [
     name: "Fish Nest Family Restaurant",
     type: "Seafood • Family Restaurant • Local Favorite",
     description:
-      "A long-running local favorite known for seafood, fried fish, burgers, steaks, chicken, and family-style meals. Fish Nest is one of the main names visitors see when looking for classic Glenwood restaurants.",
+      "A long-running local favorite known for seafood, fried fish, burgers, steaks, chicken, and family-style meals. Fish Nest is one of the main Glenwood restaurant names visitors see when looking for a classic sit-down meal after time outside.",
     location: "164 US-70, Glenwood, AR 71943",
     phone: "870-356-3875",
     image: "/images/glenwood/restaurants/fishnest.webp",
@@ -37,7 +38,7 @@ const restaurants = [
     name: "Ari’s Little Italy",
     type: "Italian • Pizza • Casual Dining",
     description:
-      "Ari’s Little Italy gives visitors another sit-down option in Glenwood, with Italian-style food, pizza, pasta, and casual dining for families, travelers, and locals looking for something besides fast food.",
+      "Ari’s Little Italy gives visitors another sit-down option in Glenwood, with Italian-style food, pizza, pasta, calzones, and casual dining for families, travelers, and locals wanting something besides fast food.",
     location: "180 Old Highway 70 East #13, Glenwood, AR 71943",
     phone: "870-356-4587",
     image: "/images/glenwood/restaurants/aris.jpg",
@@ -59,7 +60,7 @@ const restaurants = [
     name: "Pizza Inn",
     type: "Pizza • Carryout • Quick Meal",
     description:
-      "A convenient pizza option in Glenwood for families, groups, and visitors wanting something easy after a river float, lake day, or long drive through southwest Arkansas.",
+      "A convenient pizza option in Glenwood for families, groups, and visitors wanting something easy after a river float, lake day, cabin stay, or long drive through southwest Arkansas.",
     location: "104 1st Street, Glenwood, AR 71943",
     phone: "870-356-7466",
     directions:
@@ -75,23 +76,21 @@ const restaurants = [
     directions:
       "https://www.google.com/maps/search/?api=1&query=Donut+Palace+2+Caddo+Crossing+Dr+Ste+D+Glenwood+AR+71943",
   },
-{
-  name: "Flavor-Licious Glenwood",
-  type: "Ice Cream Shop • Sweets • Snacks • Local Treats",
-  description:
-    "A local Glenwood sweets and ice cream stop offering treats, snacks, drinks, and fun dessert-style items. A good stop for families, kids, visitors, and anyone wanting something sweet while passing through Glenwood or spending the day around the Caddo River area.",
-  location: "804 East Broadway, Glenwood, AR 71943",
-  phone: "870-279-4179",
-  directions:
-    "https://www.google.com/maps/search/?api=1&query=Flavor-Licious+Glenwood+804+East+Broadway+Glenwood+AR+71943",
-},
-  
-
+  {
+    name: "Flavor-Licious Glenwood",
+    type: "Ice Cream Shop • Sweets • Snacks • Local Treats",
+    description:
+      "A local Glenwood sweets and ice cream stop offering treats, snacks, drinks, and fun dessert-style items. A good stop for families, kids, visitors, and anyone wanting something sweet while passing through Glenwood or spending the day around the Caddo River area.",
+    location: "804 East Broadway, Glenwood, AR 71943",
+    phone: "870-279-4179",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Flavor-Licious+Glenwood+804+East+Broadway+Glenwood+AR+71943",
+  },
   {
     name: "OK Cafe",
     type: "Cafe • Breakfast • Small-Town Food",
     description:
-      "A small-town cafe option in Glenwood for breakfast, coffee, and classic local food. Useful for visitors wanting a simple meal before a river float or lake day.",
+      "A small-town cafe option in Glenwood for breakfast, coffee, and classic local food. Useful for visitors wanting a simple meal before a river float, lake day, or drive through the Ouachita region.",
     location: "228 Hwy 70 E, Glenwood, AR 71943",
     phone: "870-356-3092",
     directions:
@@ -131,42 +130,40 @@ const restaurants = [
   },
   {
     name: "Bayou Bella’s & Biscuits",
-  type: "Food Truck • Cajun Food • Biscuits • Local Food Spot",
-  description:
-    "A local Glenwood food truck serving Cajun-inspired food, biscuits, rotating menu items, and casual meals. A good stop for visitors looking for something local, quick, and different while passing through Glenwood or exploring the Caddo River area.",
-  location: "22 Hwy 70, Glenwood, AR 71943",
-  phone: "870-828-8588",
-  email: "bayoubellas@yahoo.com",
-  alt: "Bayou Bella’s and Biscuits food truck in Glenwood Arkansas",
-  directions:
-    "https://www.google.com/maps/search/?api=1&query=Bayou+Bella%27s+and+Biscuits+22+Hwy+70+Glenwood+AR+71943",
-},
-{
-  name: "Mercado Restaurant",
-  type: "Mexican Restaurant • Meat Market • Produce • Local Food Stop",
-  description:
-    "A Glenwood Mexican restaurant, meat market, and produce stop serving Mexican food in a casual local setting. A good option for visitors looking for tacos, plates, quick meals, and something local while passing through town or staying near the Caddo River area.",
-  location: "240 US-70, Glenwood, AR 71943",
-  phone: "870-356-0113",
-  image: "/images/glenwood/restaurants/mercado-restaurant.jpg",
-  alt: "Mercado Restaurant in Glenwood Arkansas",
-  directions:
-    "https://www.google.com/maps/search/?api=1&query=Mercado+Restaurant+240+US-70+Glenwood+AR+71943",
-},
-{
-  name: "Arrow 6 Coffee Co.",
-  type: "Coffee Shop • Local Coffee • Drinks • Morning Stop",
-  description:
-    "A local Glenwood coffee shop serving coffee, specialty drinks, seasonal lattes, baked goods, and quick morning favorites. A strong stop for visitors needing coffee before heading to the Caddo River, Lake Greeson, cabins, campgrounds, or nearby outdoor destinations.",
-  location: "3 Caddo Crossing Dr, Glenwood, AR 71943",
-  phone: "",
-  website: "https://arrow6coffeeco.com/",
-  image: "/images/glenwood/restaurants/arrow-6-coffee-co.jpg",
-  alt: "Arrow 6 Coffee Co. in Glenwood Arkansas",
-  directions:
-    "https://www.google.com/maps/search/?api=1&query=Arrow+6+Coffee+Co+3+Caddo+Crossing+Dr+Glenwood+AR+71943",
-},
-
+    type: "Food Truck • Cajun Food • Biscuits • Local Food Spot",
+    description:
+      "A local Glenwood food truck serving Cajun-inspired food, biscuits, rotating menu items, and casual meals. A good stop for visitors looking for something local, quick, and different while passing through Glenwood or exploring the Caddo River area.",
+    location: "22 Hwy 70, Glenwood, AR 71943",
+    phone: "870-828-8588",
+    email: "bayoubellas@yahoo.com",
+    alt: "Bayou Bella’s and Biscuits food truck in Glenwood Arkansas",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Bayou+Bella%27s+and+Biscuits+22+Hwy+70+Glenwood+AR+71943",
+  },
+  {
+    name: "Mercado Restaurant",
+    type: "Mexican Restaurant • Meat Market • Produce • Local Food Stop",
+    description:
+      "A Glenwood Mexican restaurant, meat market, and produce stop serving Mexican food in a casual local setting. A good option for visitors looking for tacos, plates, quick meals, and something local while passing through town or staying near the Caddo River area.",
+    location: "240 US-70, Glenwood, AR 71943",
+    phone: "870-356-0113",
+    image: "/images/glenwood/cabins/mercado-restaurant.jpg",
+    alt: "Mercado Restaurant in Glenwood Arkansas",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Mercado+Restaurant+240+US-70+Glenwood+AR+71943",
+  },
+  {
+    name: "Arrow 6 Coffee Co.",
+    type: "Coffee Shop • Local Coffee • Drinks • Morning Stop",
+    description:
+      "A local Glenwood coffee shop serving coffee, specialty drinks, seasonal lattes, baked goods, and quick morning favorites. A strong stop for visitors needing coffee before heading to the Caddo River, Lake Greeson, cabins, campgrounds, or nearby outdoor destinations.",
+    location: "3 Caddo Crossing Dr, Glenwood, AR 71943",
+    phone: "",
+    website: "https://arrow6coffeeco.com/",
+    alt: "Arrow 6 Coffee Co. in Glenwood Arkansas",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Arrow+6+Coffee+Co+3+Caddo+Crossing+Dr+Glenwood+AR+71943",
+  },
 ];
 
 const featuredNames = [
@@ -191,13 +188,94 @@ const standardRestaurants = restaurants.filter(
   (restaurant) => !featuredNames.includes(restaurant.name)
 );
 
+const mealStyles = [
+  {
+    title: "Before the river",
+    text: "Look for coffee, breakfast, donuts, biscuits, or something easy before you head toward the Caddo River, cabins, or campgrounds.",
+  },
+  {
+    title: "After a float",
+    text: "A sit-down meal, pizza, Mexican food, seafood, or comfort food usually works best after a full day outside.",
+  },
+  {
+    title: "Family and group meals",
+    text: "Pizza, casual restaurants, and simple local spots are useful for cabin groups, families, teams, and weekend visitors.",
+  },
+  {
+    title: "Quick stops",
+    text: "Fast food, sandwiches, sweets, coffee, and drive-through options help when you are passing through or trying to keep the trip moving.",
+  },
+];
+
+const restaurantFaqs = [
+  {
+    question: "What are the best restaurants in Glenwood, Arkansas?",
+    answer:
+      "Glenwood has local cafes, seafood, Mexican food, Italian food, pizza, coffee, sweets, and quick meal options that work well for locals and visitors planning river trips, cabin weekends, and lake days.",
+  },
+  {
+    question: "Where can I eat near the Caddo River?",
+    answer:
+      "Glenwood is a convenient food stop near the Caddo River, with casual restaurants and dining options close to river trips, cabins, campgrounds, Lake Greeson, and nearby outdoor attractions.",
+  },
+  {
+    question: "Are there family-friendly restaurants in Glenwood?",
+    answer:
+      "Yes. Glenwood has several casual, family-friendly restaurants that work well for river trips, lake weekends, cabin stays, and local meals.",
+  },
+  {
+    question: "What should I plan for food on a river weekend?",
+    answer:
+      "For a river weekend, it usually helps to plan breakfast or coffee before the float, something easy after the river, and a backup meal option for groups or cabins in case everyone is tired after being outside.",
+  },
+];
+
 function phoneHref(phone: string) {
   return `tel:${phone.replace(/[^\d]/g, "")}`;
 }
 
+function RestaurantActions({
+  restaurant,
+}: {
+  restaurant: (typeof restaurants)[number];
+}) {
+  return (
+    <div className="mt-5 flex flex-wrap gap-3">
+      {restaurant.phone && (
+        <a
+          href={phoneHref(restaurant.phone)}
+          className="rounded-full bg-[color:var(--color-accent)] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+        >
+          Call {restaurant.phone}
+        </a>
+      )}
+
+      {restaurant.website && (
+        <a
+          href={restaurant.website}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-full bg-[color:var(--color-accent)] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+        >
+          View Website
+        </a>
+      )}
+
+      <a
+        href={restaurant.directions}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="rounded-full border border-[color:var(--color-accent)] px-5 py-2.5 text-sm font-semibold text-[color:var(--color-accent)] transition hover:bg-[color:var(--color-accent)] hover:text-white"
+      >
+        Directions
+      </a>
+    </div>
+  );
+}
+
 export default function GlenwoodRestaurantsPage() {
   return (
-    <main className="mx-auto max-w-6xl px-6 py-16">
+    <main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -206,7 +284,7 @@ export default function GlenwoodRestaurantsPage() {
             "@type": "ItemList",
             name: "Best Restaurants in Glenwood, Arkansas",
             description:
-              "Local restaurants, cafes, seafood, Mexican food, Italian food, pizza, and places to eat near Glenwood, Arkansas.",
+              "Local restaurants, cafes, seafood, Mexican food, Italian food, pizza, coffee, sweets, quick meals, and places to eat near Glenwood, Arkansas.",
             itemListElement: restaurants.map((restaurant, index) => ({
               "@type": "ListItem",
               position: index + 1,
@@ -231,75 +309,165 @@ export default function GlenwoodRestaurantsPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "What are the best restaurants in Glenwood, Arkansas?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Glenwood has local restaurants, cafes, seafood, Mexican food, Italian food, pizza, and quick meal options for visitors and locals.",
-                },
+            mainEntity: restaurantFaqs.map((item) => ({
+              "@type": "Question",
+              name: item.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: item.answer,
               },
-              {
-                "@type": "Question",
-                name: "Where can I eat near the Caddo River?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Glenwood is a convenient food stop near the Caddo River, with casual restaurants and local dining options close to river trips, cabins, campgrounds, and Lake Greeson.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Are there family-friendly restaurants in Glenwood?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes. Glenwood has several casual, family-friendly restaurants that work well for river trips, lake weekends, cabin stays, and local meals.",
-                },
-              },
-            ],
+            })),
           }),
         }}
       />
 
-      <h1 className="mb-6 text-4xl font-semibold md:text-5xl">
-        Best Restaurants in Glenwood, Arkansas
-      </h1>
+      <section className="relative overflow-hidden bg-[#2d2a26] text-white">
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-45"
+          style={{
+            backgroundImage: "url('/images/glenwood/restaurants/caddo-cafe.jpg')",
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/25" />
 
-      <p className="mb-12 max-w-3xl leading-relaxed text-[color:var(--color-muted)]">
-        Looking for places to eat in Glenwood, Arkansas? Whether you’re floating
-        the Caddo River, staying near{" "}
-        <Link href="/glenwood-ar-cabins" className="underline">
-          cabins near Lake Greeson
-        </Link>
-        , visiting family, camping, or passing through town, Glenwood has a
-        small but useful mix of local restaurants, cafes, Mexican food, Italian
-        food, seafood, pizza, and quick meals.
-      </p>
+        <div className="relative mx-auto max-w-6xl px-6 py-20 md:py-28">
+          <div className="max-w-3xl">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-white/70">
+              Restaurants & Local Food
+            </p>
+
+            <h1 className="text-4xl font-semibold leading-tight md:text-6xl">
+              Best restaurants in Glenwood, Arkansas
+            </h1>
+
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85">
+              Find local cafes, seafood, Mexican food, Italian food, pizza,
+              coffee, sweets, quick meals, and places to eat near the Caddo
+              River, cabins, campgrounds, and Lake Greeson.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                href="/caddo-river"
+                className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-white/90"
+              >
+                Caddo River Guide
+              </Link>
+
+              <Link
+                href="/glenwood-ar-cabins"
+                className="rounded-full border border-white/30 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/20"
+              >
+                Cabins & Stays
+              </Link>
+
+              <Link
+                href="/events"
+                className="rounded-full border border-white/25 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+              >
+                Local Events
+              </Link>
+
+              <Link
+                href="/contact"
+                className="rounded-full border border-white/20 px-5 py-3 text-sm font-semibold text-white/85 transition hover:bg-white/10 hover:text-white"
+              >
+                Add Your Restaurant
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <Section>
+        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
+              Plan Around Food
+            </p>
+
+            <h2 className="mb-5 text-3xl font-semibold leading-tight md:text-4xl">
+              Pick the kind of meal that fits your Glenwood trip.
+            </h2>
+
+            <div className="space-y-4 leading-relaxed text-[color:var(--color-muted)]">
+              <p>
+                Glenwood restaurants work best when you plan them around what
+                you are doing that day. A river morning needs something
+                different than a tired cabin group after a long float, and a
+                quick road-trip stop is different from a sit-down family meal.
+              </p>
+
+              <p>
+                Use this guide to find breakfast, coffee, seafood, Mexican food,
+                Italian food, pizza, sweets, quick meals, and casual local
+                places near the Caddo River, Lake Greeson, cabins, campgrounds,
+                and nearby outdoor stops.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-2">
+            {mealStyles.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-2xl border border-black/10 bg-[color:var(--bg-card)] p-5 shadow-sm"
+              >
+                <div className="mb-3 h-1 w-10 rounded-full bg-[color:var(--color-accent)]" />
+                <h3 className="mb-2 text-lg font-semibold">{item.title}</h3>
+                <p className="text-sm leading-6 text-[color:var(--color-muted)]">
+                  {item.text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      <Section>
+        <div className="mb-8 grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+          <div>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
+              Featured Restaurants
+            </p>
+
+            <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
+              Good starting points for eating around Glenwood.
+            </h2>
+          </div>
+
+          <p className="leading-relaxed text-[color:var(--color-muted)]">
+            These featured options cover the way many visitors eat around town:
+            a classic family restaurant, an easy cafe stop, and a casual pizza
+            and Italian option for families, cabin groups, and travelers.
+          </p>
+        </div>
+
         <div className="space-y-8">
           {fishNest && (
-            <div className="overflow-hidden rounded-3xl border bg-[color:var(--bg-card)] shadow-lg">
+            <div className="overflow-hidden rounded-3xl border border-black/10 bg-[color:var(--bg-card)] shadow-lg">
               <div className="grid lg:grid-cols-[1.1fr_0.9fr]">
-                <div
-                  role="img"
-                  aria-label={fishNest.alt}
-                  className="min-h-[420px] bg-cover bg-center"
-                  style={{
-                    backgroundImage: `url('${fishNest.image}')`,
-                  }}
-                />
+                {fishNest.image && (
+                  <div
+                    role="img"
+                    aria-label={fishNest.alt}
+                    className="min-h-[420px] bg-cover bg-center"
+                    style={{
+                      backgroundImage: `url('${fishNest.image}')`,
+                    }}
+                  />
+                )}
 
                 <div className="flex flex-col justify-center p-8 lg:p-10">
-                  <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-[color:var(--color-accent)]">
+                  <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[color:var(--color-accent)]">
                     Premium Featured Restaurant
                   </p>
 
-                  <h2 className="mb-4 text-4xl font-semibold">
+                  <h2 className="mb-4 text-4xl font-semibold leading-tight">
                     {fishNest.name}
                   </h2>
 
-                  <p className="mb-5 text-sm text-[color:var(--color-muted)]">
+                  <p className="mb-5 text-sm font-medium text-[color:var(--color-muted)]">
                     {fishNest.type}
                   </p>
 
@@ -307,28 +475,12 @@ export default function GlenwoodRestaurantsPage() {
                     {fishNest.description}
                   </p>
 
-                  <div className="mb-8 space-y-2 text-sm text-[color:var(--color-muted)]">
+                  <div className="space-y-2 text-sm text-[color:var(--color-muted)]">
                     <p>📍 {fishNest.location}</p>
-                    <p>📞 {fishNest.phone}</p>
+                    {fishNest.phone && <p>📞 {fishNest.phone}</p>}
                   </div>
 
-                  <div className="flex flex-wrap gap-3">
-                    <a
-                      href={phoneHref(fishNest.phone)}
-                      className="rounded-md bg-black px-6 py-3 text-white"
-                    >
-                      Call Now
-                    </a>
-
-                    <a
-                      href={fishNest.directions}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="rounded-md border px-6 py-3"
-                    >
-                      Get Directions
-                    </a>
-                  </div>
+                  <RestaurantActions restaurant={fishNest} />
                 </div>
               </div>
             </div>
@@ -340,19 +492,21 @@ export default function GlenwoodRestaurantsPage() {
                 restaurant && (
                   <div
                     key={restaurant.name}
-                    className="overflow-hidden rounded-2xl border bg-[color:var(--bg-card)]"
+                    className="overflow-hidden rounded-3xl border border-black/10 bg-[color:var(--bg-card)] shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
                   >
-                    <div
-                      role="img"
-                      aria-label={restaurant.alt}
-                      className="h-64 bg-cover bg-center"
-                      style={{
-                        backgroundImage: `url('${restaurant.image}')`,
-                      }}
-                    />
+                    {restaurant.image && (
+                      <div
+                        role="img"
+                        aria-label={restaurant.alt}
+                        className="h-64 bg-cover bg-center"
+                        style={{
+                          backgroundImage: `url('${restaurant.image}')`,
+                        }}
+                      />
+                    )}
 
                     <div className="p-6">
-                      <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[color:var(--color-accent)]">
+                      <p className="mb-2 text-sm font-semibold uppercase tracking-[0.16em] text-[color:var(--color-accent)]">
                         Featured Restaurant
                       </p>
 
@@ -360,7 +514,7 @@ export default function GlenwoodRestaurantsPage() {
                         {restaurant.name}
                       </h3>
 
-                      <p className="mt-2 text-sm text-[color:var(--color-muted)]">
+                      <p className="mt-2 text-sm font-medium text-[color:var(--color-muted)]">
                         {restaurant.type}
                       </p>
 
@@ -372,23 +526,7 @@ export default function GlenwoodRestaurantsPage() {
                         📍 {restaurant.location}
                       </p>
 
-                      <div className="mt-5 flex flex-wrap gap-3">
-                        <a
-                          href={phoneHref(restaurant.phone)}
-                          className="rounded-md bg-black px-4 py-2 text-sm text-white"
-                        >
-                          Call {restaurant.phone}
-                        </a>
-
-                        <a
-                          href={restaurant.directions}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="rounded-md border px-4 py-2 text-sm"
-                        >
-                          Directions
-                        </a>
-                      </div>
+                      <RestaurantActions restaurant={restaurant} />
                     </div>
                   </div>
                 )
@@ -397,133 +535,125 @@ export default function GlenwoodRestaurantsPage() {
         </div>
       </Section>
 
-      <div className="mt-6 rounded-xl border bg-[color:var(--bg-card)] p-5">
-        <p className="text-sm leading-relaxed text-[color:var(--color-muted)]">
-          Own a cabin, campground, restaurant, or local business near Glenwood?
-          Featured placements are available for businesses wanting additional
-          exposure to visitors planning trips around the Caddo River and Lake
-          Greeson area.
-        </p>
-
-        <Link
-          href="/contact"
-          className="mt-4 inline-block text-sm underline underline-offset-4"
-        >
-          Ask About Featured Placement
-        </Link>
-      </div>
+      <EventsCTA
+        title="Eating in Glenwood during a weekend trip?"
+        text="Check local events before you plan the whole day. A river float, cabin stay, or restaurant stop can line up with live music, community events, markets, food trucks, and local happenings around Glenwood."
+      />
 
       <Section>
-        <div className="mb-8 max-w-3xl">
-          <h2 className="mb-4 text-3xl font-semibold">
-            More Places to Eat Near Glenwood
-          </h2>
+        <div className="mb-8 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+          <div>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
+              More Places To Eat
+            </p>
+
+            <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
+              More restaurants, cafes, coffee stops, sweets, and quick meals.
+            </h2>
+          </div>
 
           <p className="leading-relaxed text-[color:var(--color-muted)]">
-            These additional restaurants and quick food options are useful for
-            visitors comparing Mexican food, pizza, carryout, casual meals, and
+            These additional food options are useful for visitors comparing
+            Mexican food, pizza, carryout, coffee, sweets, quick meals, and
             places to eat close to the Caddo River, Lake Greeson, cabins, and
             campgrounds.
           </p>
         </div>
 
-        <div className="space-y-6">
-          {standardRestaurants.map((restaurant, index) => (
-            <div
+        <div className="grid gap-5 lg:grid-cols-2">
+          {standardRestaurants.map((restaurant) => (
+            <article
               key={restaurant.name}
-              className="rounded-xl border bg-[color:var(--bg-card)] p-6"
+              className="rounded-2xl border border-black/10 bg-[color:var(--bg-card)] p-6 shadow-sm"
             >
-              <h2 className="text-2xl font-semibold">
-                {index + 1}. {restaurant.name}
-              </h2>
-
-              <p className="mt-1 text-sm text-[color:var(--color-muted)]">
-                {restaurant.type}
-              </p>
-
-              <p className="mt-4 leading-relaxed text-[color:var(--color-muted)]">
-                {restaurant.description}
-              </p>
-
-              <p className="mt-4 text-sm text-[color:var(--color-muted)]">
-                📍 {restaurant.location}
-              </p>
-
-              <div className="mt-4 flex flex-wrap gap-3">
-                {restaurant.phone && (
-                  <a
-                    href={phoneHref(restaurant.phone)}
-                    className="rounded-md bg-black px-4 py-2 text-sm text-white"
-                  >
-                    Call {restaurant.phone}
-                  </a>
+              <div className="flex flex-col gap-5 md:flex-row">
+                {restaurant.image && (
+                  <div
+                    role="img"
+                    aria-label={restaurant.alt || restaurant.name}
+                    className="h-40 shrink-0 rounded-xl bg-cover bg-center md:w-44"
+                    style={{
+                      backgroundImage: `url('${restaurant.image}')`,
+                    }}
+                  />
                 )}
 
-                {restaurant.website && (
-                  <a
-                    href={restaurant.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-md bg-black px-4 py-2 text-sm text-white"
-                  >
-                    View Website
-                  </a>
-                )}
+                <div>
+                  <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-[color:var(--color-accent)]">
+                    {restaurant.type}
+                  </p>
 
-                <a
-                  href={restaurant.directions}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-md border px-4 py-2 text-sm"
-                >
-                  Get Directions
-                </a>
+                  <h3 className="text-2xl font-semibold leading-tight">
+                    {restaurant.name}
+                  </h3>
+
+                  <p className="mt-3 text-sm leading-6 text-[color:var(--color-muted)]">
+                    {restaurant.description}
+                  </p>
+
+                  <p className="mt-3 text-sm text-[color:var(--color-muted)]">
+                    📍 {restaurant.location}
+                  </p>
+
+                  <RestaurantActions restaurant={restaurant} />
+                </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </Section>
 
       <Section>
-        <h2 className="mb-4 text-2xl font-semibold">
-          Where to Eat Near the Caddo River and Lake Greeson
-        </h2>
+        <div className="rounded-3xl border border-black/10 bg-[color:var(--bg-card)] p-8 shadow-sm md:p-10">
+          <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+            <div>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
+                Good To Know
+              </p>
 
-        <p className="mb-6 max-w-3xl leading-relaxed text-[color:var(--color-muted)]">
-          Glenwood is a convenient food stop for visitors coming in for Caddo
-          River floats, Lake Greeson fishing trips, cabin weekends, camping, and
-          day trips around the Ouachita region. Most restaurants here are
-          casual, local, and easy to work into a simple weekend itinerary.
-        </p>
+              <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
+                Where to eat near the Caddo River and Lake Greeson.
+              </h2>
+            </div>
+
+            <div className="space-y-4 leading-relaxed text-[color:var(--color-muted)]">
+              <p>
+                Glenwood is a convenient food stop for visitors coming in for
+                Caddo River floats, Lake Greeson fishing trips, cabin weekends,
+                camping, and day trips around the Ouachita region. Most places
+                here are casual, practical, and easy to work into a simple
+                weekend itinerary.
+              </p>
+
+              <p>
+                During busy river weekends, it helps to think ahead. Grab coffee
+                or breakfast before the float, plan an easy meal after the river,
+                and keep a backup option in mind for groups, kids, or cabin
+                stays where nobody wants to cook after being outside all day.
+              </p>
+            </div>
+          </div>
+        </div>
       </Section>
-<EventsCTA />
-      <Section>
-        <h2 className="mb-6 text-3xl font-semibold">
-          Glenwood Restaurant FAQs
-        </h2>
 
-        <div className="space-y-4">
-          {[
-            {
-              question: "What are the best restaurants in Glenwood, Arkansas?",
-              answer:
-                "Glenwood has local restaurants, cafes, seafood, Mexican food, Italian food, pizza, and quick meal options for visitors and locals.",
-            },
-            {
-              question: "Where can I eat near the Caddo River?",
-              answer:
-                "Glenwood is a convenient food stop near the Caddo River, with casual restaurants and dining options close to river trips, cabins, campgrounds, and Lake Greeson.",
-            },
-            {
-              question: "Are there family-friendly restaurants in Glenwood?",
-              answer:
-                "Yes. Glenwood has several casual, family-friendly restaurants that work well for river trips, lake weekends, cabin stays, and local meals.",
-            },
-          ].map((item) => (
+      <Section>
+        <div className="mb-8 max-w-3xl">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
+            FAQs
+          </p>
+
+          <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
+            Glenwood restaurant FAQs
+          </h2>
+        </div>
+
+        <div className="grid gap-4 md:grid-cols-2">
+          {restaurantFaqs.map((item) => (
             <div
               key={item.question}
-              className="rounded-xl border bg-[color:var(--bg-card)] p-6"
+              className="rounded-2xl border border-black/10 bg-[color:var(--bg-card)] p-6 shadow-sm"
             >
+              <div className="mb-4 h-1 w-10 rounded-full bg-[color:var(--color-accent)]" />
               <h3 className="text-xl font-semibold">{item.question}</h3>
               <p className="mt-3 leading-relaxed text-[color:var(--color-muted)]">
                 {item.answer}
@@ -534,30 +664,41 @@ export default function GlenwoodRestaurantsPage() {
       </Section>
 
       <Section>
-        <div className="rounded-3xl border bg-[color:var(--bg-card)] p-8 md:p-10">
-          <h2 className="mb-4 text-3xl font-semibold">
-            Add Your Restaurant or Local Food Spot
-          </h2>
+        <div className="rounded-3xl bg-[#2d2a26] p-8 text-white shadow-sm md:p-10">
+          <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
+            <div>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-white/55">
+                Local Visibility
+              </p>
 
-          <p className="mb-6 max-w-3xl leading-relaxed text-[color:var(--color-muted)]">
-            This Glenwood restaurant guide helps visitors find local places to
-            eat while exploring the Caddo River area, Lake Greeson, cabins,
-            campgrounds, and nearby attractions. Restaurants, cafes, bakeries,
-            food trucks, and local dining spots can request a listing or ask
-            about featured placement.
-          </p>
+              <h2 className="mb-4 text-3xl font-semibold leading-tight text-white md:text-4xl">
+                Add your restaurant or local food spot.
+              </h2>
 
-          <div className="flex flex-wrap gap-3">
-            <Link
-              href="/contact"
-              className="rounded-md bg-black px-6 py-3 text-white"
-            >
-              Get Listed
-            </Link>
+              <p className="max-w-3xl leading-relaxed text-white/75">
+                This Glenwood restaurant guide helps visitors find local places
+                to eat while exploring the Caddo River area, Lake Greeson,
+                cabins, campgrounds, and nearby attractions. Restaurants, cafes,
+                bakeries, food trucks, coffee shops, and local dining spots can
+                request a listing or ask about featured placement.
+              </p>
+            </div>
 
-            <Link href="/contact" className="rounded-md border px-6 py-3">
-              Ask About Featured Placement
-            </Link>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/contact"
+                className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-white/90"
+              >
+                Get Listed
+              </Link>
+
+              <Link
+                href="/contact"
+                className="rounded-full border border-white/20 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+              >
+                Featured Placement
+              </Link>
+            </div>
           </div>
         </div>
       </Section>

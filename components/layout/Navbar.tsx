@@ -16,54 +16,86 @@ const eventLinks = [
   { href: "/submit-event", label: "Submit an Event" },
 ];
 
-const sisterSites = [
-  { href: "https://amityarkansas.org", label: "Visit Amity" },
-  { href: "https://mountidaarkansas.org", label: "Visit Mount Ida" },
-  { href: "https://hotspringsarkansas.org", label: "Visit Hot Springs" },
-];
-
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-black/5 bg-[color:var(--color-bg)]/80 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-black/10 bg-[color:var(--color-bg)]/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="text-lg font-semibold tracking-wide">
-          🌿 Glenwood Arkansas
+        <Link
+          href="/"
+          className="group flex items-center gap-2 text-base font-semibold tracking-wide text-[color:var(--color-text)]"
+        >
+          <span className="grid h-9 w-9 place-items-center rounded-full bg-[color:var(--color-accent)] text-white shadow-sm">
+            🌿
+          </span>
+          <span className="leading-tight">
+            Glenwood Arkansas
+            <span className="block text-xs font-medium tracking-normal text-[color:var(--color-muted)]">
+              Local Tourism Guide
+            </span>
+          </span>
         </Link>
 
-        <nav className="hidden items-center gap-6 text-sm md:flex">
-          <Link href="/explore" className="hover:opacity-70">
+        <nav className="hidden items-center gap-5 text-sm md:flex">
+          <Link
+            href="/explore"
+            className="font-medium text-[color:var(--color-text)] transition hover:text-[color:var(--color-accent)]"
+          >
             Things To Do
           </Link>
 
           <div className="group relative">
-            <button className="hover:opacity-70">Plan Your Trip ▾</button>
-            <div className="absolute left-0 top-full hidden min-w-[220px] rounded-md border bg-white py-2 text-black shadow-lg group-hover:block">
-              {planLinks.map((link) => (
-                <Link key={link.href} href={link.href} className="block px-4 py-2 hover:bg-black/5">
-                  {link.label}
-                </Link>
-              ))}
+            <button className="font-medium text-[color:var(--color-text)] transition hover:text-[color:var(--color-accent)]">
+              Plan Your Trip ▾
+            </button>
+
+            <div className="absolute left-0 top-full hidden min-w-[230px] pt-3 group-hover:block">
+              <div className="overflow-hidden rounded-xl border border-black/10 bg-[color:var(--bg-card)] py-2 text-[color:var(--color-text)] shadow-xl">
+                {planLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="block px-4 py-2.5 transition hover:bg-[color:var(--color-bg)]"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
 
           <div className="group relative">
-            <button className="hover:opacity-70">Events ▾</button>
-            <div className="absolute left-0 top-full hidden min-w-[190px] rounded-md border bg-white py-2 text-black shadow-lg group-hover:block">
-              {eventLinks.map((link) => (
-                <Link key={link.href} href={link.href} className="block px-4 py-2 hover:bg-black/5">
-                  {link.label}
-                </Link>
-              ))}
+            <button className="font-medium text-[color:var(--color-text)] transition hover:text-[color:var(--color-accent)]">
+              Events ▾
+            </button>
+
+            <div className="absolute left-0 top-full hidden min-w-[200px] pt-3 group-hover:block">
+              <div className="overflow-hidden rounded-xl border border-black/10 bg-[color:var(--bg-card)] py-2 text-[color:var(--color-text)] shadow-xl">
+                {eventLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="block px-4 py-2.5 transition hover:bg-[color:var(--color-bg)]"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
 
-          <Link href="/local-business" className="hover:opacity-70">
+          <Link
+            href="/local-business"
+            className="font-medium text-[color:var(--color-text)] transition hover:text-[color:var(--color-accent)]"
+          >
             Local Businesses
           </Link>
 
-          <Link href="/contact" className="rounded-md bg-[color:var(--color-accent)] px-4 py-2 font-medium text-white hover:opacity-90">
+          <Link
+            href="/contact"
+            className="rounded-full bg-[color:var(--color-accent)] px-4 py-2.5 font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+          >
             Promote Your Business
           </Link>
         </nav>
@@ -71,42 +103,72 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setOpen((prev) => !prev)}
-          className="rounded-md border border-black/10 px-3 py-2 text-sm font-medium hover:bg-black/5 md:hidden"
+          className="rounded-full border border-black/10 bg-[color:var(--bg-card)] px-4 py-2 text-sm font-semibold text-[color:var(--color-text)] shadow-sm transition hover:bg-white md:hidden"
+          aria-expanded={open}
+          aria-label="Toggle navigation menu"
         >
           {open ? "Close" : "Menu"}
         </button>
       </div>
 
       {open && (
-        <div className="border-t border-black/5 bg-[color:var(--color-bg)] px-6 pb-6 md:hidden">
-          <nav className="mx-auto flex max-w-6xl flex-col gap-2 pt-4 text-sm">
-            <Link href="/explore" onClick={() => setOpen(false)} className="rounded-md px-3 py-2 hover:bg-black/5">
+        <div className="border-t border-black/10 bg-[color:var(--color-bg)] px-6 pb-6 md:hidden">
+          <nav className="mx-auto flex max-w-6xl flex-col gap-3 pt-4 text-sm">
+            <Link
+              href="/explore"
+              onClick={() => setOpen(false)}
+              className="rounded-xl bg-[color:var(--bg-card)] px-4 py-3 font-medium shadow-sm"
+            >
               Things To Do
             </Link>
 
-            <div className="rounded-md border border-black/5 bg-white/50 p-3">
-              <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-black/50">Plan Your Trip</p>
+            <div className="rounded-xl border border-black/10 bg-[color:var(--bg-card)] p-3 shadow-sm">
+              <p className="mb-2 px-2 text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--color-muted)]">
+                Plan Your Trip
+              </p>
+
               {planLinks.map((link) => (
-                <Link key={link.href} href={link.href} onClick={() => setOpen(false)} className="block rounded-md px-3 py-2 hover:bg-black/5">
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className="block rounded-lg px-3 py-2.5 font-medium transition hover:bg-[color:var(--color-bg)]"
+                >
                   {link.label}
                 </Link>
               ))}
             </div>
 
-            <div className="rounded-md border border-black/5 bg-white/50 p-3">
-              <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-black/50">Events</p>
+            <div className="rounded-xl border border-black/10 bg-[color:var(--bg-card)] p-3 shadow-sm">
+              <p className="mb-2 px-2 text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--color-muted)]">
+                Events
+              </p>
+
               {eventLinks.map((link) => (
-                <Link key={link.href} href={link.href} onClick={() => setOpen(false)} className="block rounded-md px-3 py-2 hover:bg-black/5">
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className="block rounded-lg px-3 py-2.5 font-medium transition hover:bg-[color:var(--color-bg)]"
+                >
                   {link.label}
                 </Link>
               ))}
             </div>
 
-            <Link href="/local-business" onClick={() => setOpen(false)} className="rounded-md px-3 py-2 hover:bg-black/5">
+            <Link
+              href="/local-business"
+              onClick={() => setOpen(false)}
+              className="rounded-xl bg-[color:var(--bg-card)] px-4 py-3 font-medium shadow-sm"
+            >
               Local Businesses
             </Link>
 
-            <Link href="/contact" onClick={() => setOpen(false)} className="mt-2 rounded-md bg-[color:var(--color-accent)] px-4 py-3 text-center font-medium text-white hover:opacity-90">
+            <Link
+              href="/contact"
+              onClick={() => setOpen(false)}
+              className="rounded-full bg-[color:var(--color-accent)] px-4 py-3 text-center font-semibold text-white shadow-sm"
+            >
               Promote Your Business
             </Link>
           </nav>
