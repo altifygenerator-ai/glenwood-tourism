@@ -10,7 +10,8 @@ import BackgroundSection from "@/components/tourism/BackgroundSection";
 import HomeEventsPreview from "@/components/events/HomeEventsPreview";
 import Link from "next/link";
 import { generateMetadata } from "@/lib/seo";
-
+import CaddoRiverHomeFeature from "@/components/CaddoRiverHomeFeature";
+import RecentUpdates from "@/components/RecentUpdates";
 import {
   glenwoodHero,
   glenwoodHighlights,
@@ -86,7 +87,9 @@ export default function Page() {
       />
 
       <Hero data={glenwoodHero} />
+<RecentUpdates />
 
+<CaddoRiverHomeFeature />
       <Section>
         <Highlights items={glenwoodHighlights} />
       </Section>
