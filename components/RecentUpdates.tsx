@@ -2,22 +2,22 @@ import Link from "next/link";
 
 const updates = [
   {
-    label: "New guide",
+    label: "River guide",
     title: "Caddo River Guide",
     text: "A practical Glenwood river guide covering floats, tubing, launches, pickups, outfitters, what to bring, and weekend planning.",
     href: "/caddo-river",
   },
   {
-    label: "Events",
-    title: "This Weekend in Glenwood",
-    text: "Check local events, community happenings, and things going on around Glenwood this weekend.",
-    href: "/this-weekend",
+    label: "Local outdoor spot",
+    title: "John Benjamin Fishing Pond",
+    text: "A simple local guide to one of Glenwood’s community fishing spots, with notes on fishing, kids, park use, and slowing down by the water.",
+    href: "/john-benjamin-pond",
   },
   {
-    label: "Trip planning",
-    title: "Cabins, Food & Local Stops",
-    text: "Browse places to stay, restaurants, local businesses, and easy stops to build a full Glenwood trip around the river.",
-    href: "/glenwood-ar-cabins",
+    label: "New article",
+    title: "What Happened to Bard Springs?",
+    text: "A local feature on Bard Springs, the history people remember, what it used to be, storm damage, and the question of restoration.",
+    href: "/bard-springs",
   },
 ];
 

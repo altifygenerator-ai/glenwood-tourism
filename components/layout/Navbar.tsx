@@ -3,11 +3,20 @@
 import Link from "next/link";
 import { useState } from "react";
 
+const thingsToDoLinks = [
+  { href: "/explore", label: "Things To Do" },
+  { href: "/john-benjamin-pond", label: "John Benjamin Fishing Pond" },
+];
+
 const planLinks = [
   { href: "/glenwood-ar-restaurants", label: "Restaurants" },
   { href: "/glenwood-ar-cabins", label: "Cabins & Places to Stay" },
   { href: "/caddo-river", label: "Caddo River" },
   { href: "/history", label: "Glenwood History" },
+];
+
+const articleLinks = [
+  { href: "/bard-springs", label: "Bard Springs Recreation Area" },
 ];
 
 const eventLinks = [
@@ -38,12 +47,25 @@ export default function Navbar() {
         </Link>
 
         <nav className="hidden items-center gap-5 text-sm md:flex">
-          <Link
-            href="/explore"
-            className="font-medium text-[color:var(--color-text)] transition hover:text-[color:var(--color-accent)]"
-          >
-            Things To Do
-          </Link>
+          <div className="group relative">
+            <button className="font-medium text-[color:var(--color-text)] transition hover:text-[color:var(--color-accent)]">
+              Things To Do ▾
+            </button>
+
+            <div className="absolute left-0 top-full hidden min-w-[240px] pt-3 group-hover:block">
+              <div className="overflow-hidden rounded-xl border border-black/10 bg-[color:var(--bg-card)] py-2 text-[color:var(--color-text)] shadow-xl">
+                {thingsToDoLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="block px-4 py-2.5 transition hover:bg-[color:var(--color-bg)]"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
 
           <div className="group relative">
             <button className="font-medium text-[color:var(--color-text)] transition hover:text-[color:var(--color-accent)]">
@@ -53,6 +75,26 @@ export default function Navbar() {
             <div className="absolute left-0 top-full hidden min-w-[230px] pt-3 group-hover:block">
               <div className="overflow-hidden rounded-xl border border-black/10 bg-[color:var(--bg-card)] py-2 text-[color:var(--color-text)] shadow-xl">
                 {planLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="block px-4 py-2.5 transition hover:bg-[color:var(--color-bg)]"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="group relative">
+            <button className="font-medium text-[color:var(--color-text)] transition hover:text-[color:var(--color-accent)]">
+              Articles ▾
+            </button>
+
+            <div className="absolute left-0 top-full hidden min-w-[250px] pt-3 group-hover:block">
+              <div className="overflow-hidden rounded-xl border border-black/10 bg-[color:var(--bg-card)] py-2 text-[color:var(--color-text)] shadow-xl">
+                {articleLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
@@ -114,13 +156,22 @@ export default function Navbar() {
       {open && (
         <div className="border-t border-black/10 bg-[color:var(--color-bg)] px-6 pb-6 md:hidden">
           <nav className="mx-auto flex max-w-6xl flex-col gap-3 pt-4 text-sm">
-            <Link
-              href="/explore"
-              onClick={() => setOpen(false)}
-              className="rounded-xl bg-[color:var(--bg-card)] px-4 py-3 font-medium shadow-sm"
-            >
-              Things To Do
-            </Link>
+            <div className="rounded-xl border border-black/10 bg-[color:var(--bg-card)] p-3 shadow-sm">
+              <p className="mb-2 px-2 text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--color-muted)]">
+                Things To Do
+              </p>
+
+              {thingsToDoLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className="block rounded-lg px-3 py-2.5 font-medium transition hover:bg-[color:var(--color-bg)]"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
 
             <div className="rounded-xl border border-black/10 bg-[color:var(--bg-card)] p-3 shadow-sm">
               <p className="mb-2 px-2 text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--color-muted)]">
@@ -128,6 +179,23 @@ export default function Navbar() {
               </p>
 
               {planLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className="block rounded-lg px-3 py-2.5 font-medium transition hover:bg-[color:var(--color-bg)]"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+
+            <div className="rounded-xl border border-black/10 bg-[color:var(--bg-card)] p-3 shadow-sm">
+              <p className="mb-2 px-2 text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--color-muted)]">
+                Articles
+              </p>
+
+              {articleLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
