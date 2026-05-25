@@ -38,8 +38,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     {
       url: `${baseUrl}/caddo-river`,
       lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/john-benjamin-pond`,
+      lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.9,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/bard-springs`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.85,
     },
     {
       url: `${baseUrl}/history`,
