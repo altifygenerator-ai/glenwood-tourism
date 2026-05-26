@@ -1,7 +1,7 @@
 import Section from "@/components/tourism/Section";
 import Link from "next/link";
 import EventsCTA from "@/components/events/EventsCTA";
-
+import NearbyAmitySection from "@/components/NearbyAmitySection";
 export const metadata = {
   title:
     "Best Restaurants in Glenwood, Arkansas | Places to Eat Near the Caddo River",
@@ -662,7 +662,7 @@ export default function GlenwoodRestaurantsPage() {
           ))}
         </div>
       </Section>
-
+<NearbyAmitySection />
       <Section>
         <div className="rounded-3xl bg-[#2d2a26] p-8 text-white shadow-sm md:p-10">
           <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">

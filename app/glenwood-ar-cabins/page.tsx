@@ -1,6 +1,7 @@
 import Section from "@/components/tourism/Section";
 import Link from "next/link";
 import EventsCTA from "@/components/events/EventsCTA";
+import NearbyAmitySection from "@/components/NearbyAmitySection";
 
 export const metadata = {
   title:
@@ -10,6 +11,19 @@ export const metadata = {
 };
 
 const stays = [
+  {
+    name: "At Living Water Cabins",
+    type: "Waterfront Cabins • Family Lodge • Ouachita Mountains",
+    description:
+      "A clean waterfront cabin and lodge stay located between Glenwood and Mount Ida in the Arkansas Ouachita Region. Guests can choose from a family lodge or four cozy creekside cabins named Love, Faith, Hope, and Peace, with full kitchens, air conditioning, and a quiet setting close to outdoor adventures.",
+    location: "136 Living Water Dr., Norman, AR 71960",
+    phone: "903-782-9184",
+    website: "https://atlivingwatercabins.com/",
+    image: "/images/glenwood/cabins/at-living-water-cabins.jpg",
+    alt: "At Living Water Cabins near Glenwood and Mount Ida Arkansas",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=At+Living+Water+Cabins+136+Living+Water+Dr+Norman+AR+71960",
+  },
   {
     name: "Caddo River Camping & Canoe Rental",
     type: "Cabins • Camping • Canoe & Kayak Rentals",
@@ -197,10 +211,14 @@ const stays = [
 ];
 
 const featuredNames = [
+  "At Living Water Cabins",
   "Caddo River Cabins",
   "Arrowhead Cabins and Camping",
-  "Riverwood Inn of Glenwood",
 ];
+
+const atLivingWater = stays.find(
+  (stay) => stay.name === "At Living Water Cabins"
+);
 
 const caddoRiverCabins = stays.find(
   (stay) => stay.name === "Caddo River Cabins"
@@ -208,10 +226,6 @@ const caddoRiverCabins = stays.find(
 
 const arrowhead = stays.find(
   (stay) => stay.name === "Arrowhead Cabins and Camping"
-);
-
-const riverwood = stays.find(
-  (stay) => stay.name === "Riverwood Inn of Glenwood"
 );
 
 const standardStays = stays.filter((stay) => !featuredNames.includes(stay.name));
@@ -467,15 +481,15 @@ export default function GlenwoodCabinsPage() {
         </div>
 
         <div className="space-y-8">
-          {caddoRiverCabins && (
+          {atLivingWater && (
             <div className="overflow-hidden rounded-3xl border border-black/10 bg-[color:var(--bg-card)] shadow-lg">
               <div className="grid lg:grid-cols-[1.1fr_0.9fr]">
                 <div
                   role="img"
-                  aria-label={caddoRiverCabins.alt}
+                  aria-label={atLivingWater.alt}
                   className="min-h-[420px] bg-cover bg-center"
                   style={{
-                    backgroundImage: `url('${caddoRiverCabins.image}')`,
+                    backgroundImage: `url('${atLivingWater.image}')`,
                   }}
                 />
 
@@ -485,30 +499,30 @@ export default function GlenwoodCabinsPage() {
                   </p>
 
                   <h2 className="mb-4 text-4xl font-semibold leading-tight">
-                    {caddoRiverCabins.name}
+                    {atLivingWater.name}
                   </h2>
 
                   <p className="mb-5 text-sm font-medium text-[color:var(--color-muted)]">
-                    {caddoRiverCabins.type}
+                    {atLivingWater.type}
                   </p>
 
                   <p className="mb-6 leading-relaxed text-[color:var(--color-muted)]">
-                    {caddoRiverCabins.description}
+                    {atLivingWater.description}
                   </p>
 
                   <div className="space-y-2 text-sm text-[color:var(--color-muted)]">
-                    <p>📍 {caddoRiverCabins.location}</p>
-                    {caddoRiverCabins.phone && <p>📞 {caddoRiverCabins.phone}</p>}
+                    <p>📍 {atLivingWater.location}</p>
+                    {atLivingWater.phone && <p>📞 {atLivingWater.phone}</p>}
                   </div>
 
-                  <StayActions stay={caddoRiverCabins} />
+                  <StayActions stay={atLivingWater} />
                 </div>
               </div>
             </div>
           )}
 
           <div className="grid gap-6 lg:grid-cols-2">
-            {[arrowhead, riverwood].map(
+            {[caddoRiverCabins, arrowhead].map(
               (stay) =>
                 stay && (
                   <div
@@ -620,6 +634,8 @@ export default function GlenwoodCabinsPage() {
           ))}
         </div>
       </Section>
+
+      <NearbyAmitySection />
 
       <Section>
         <div className="rounded-3xl border border-black/10 bg-[color:var(--bg-card)] p-8 shadow-sm md:p-10">
