@@ -19,11 +19,12 @@ export default function SubmitEventPage() {
 
       <p className="mb-12 max-w-3xl text-lg leading-relaxed text-[color:var(--color-muted)]">
         Know about a local event, live music night, river-season gathering,
-        market, festival, or family-friendly activity around Glenwood? Submit it
-        here and it can be reviewed for the local events guide.
+        market, festival, fundraiser, church event, school event, or
+        family-friendly activity around Glenwood? Submit it here and it can be
+        reviewed for the local events guide.
       </p>
 
-      <EventForm />
+      <EventForm site="glenwood" defaultCity="Glenwood" />
     </main>
   );
 }

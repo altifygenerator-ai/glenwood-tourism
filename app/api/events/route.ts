@@ -8,12 +8,36 @@ function cleanString(value: unknown) {
   return trimmed.length ? trimmed : null;
 }
 
+function cleanSite(value: unknown) {
+  const site = cleanString(value);
+
+  if (
+    site === "glenwood" ||
+    site === "mount-ida" ||
+    site === "hot-springs" ||
+    site === "amity"
+  ) {
+    return site;
+  }
+
+  return "glenwood";
+}
+
+function defaultCityForSite(site: string) {
+  if (site === "mount-ida") return "Mount Ida";
+  if (site === "hot-springs") return "Hot Springs";
+  if (site === "amity") return "Amity";
+  return "Glenwood";
+}
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
 
     const title = cleanString(body.title);
     const startDate = cleanString(body.start_date);
+    const site = cleanSite(body.site);
+    const defaultCity = defaultCityForSite(site);
 
     if (!title || !startDate) {
       return NextResponse.json(
@@ -26,13 +50,14 @@ export async function POST(request: Request) {
     const slug = `${slugBase}-${Date.now().toString().slice(-5)}`;
 
     const event = {
+      site,
       title,
       slug,
 
       raw_description: cleanString(body.raw_description),
       description: cleanString(body.description),
 
-      city: cleanString(body.city) || "Glenwood",
+      city: cleanString(body.city) || defaultCity,
       location_name: cleanString(body.location_name),
       address: cleanString(body.address),
 

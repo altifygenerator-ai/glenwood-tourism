@@ -10,6 +10,13 @@ type RouteBody = {
   eventId?: string;
 };
 
+function guideNameFromSite(site?: string | null) {
+  if (site === "mount-ida") return "Mount Ida, Arkansas travel guide";
+  if (site === "hot-springs") return "Hot Springs, Arkansas travel guide";
+  if (site === "amity") return "Amity, Arkansas travel guide";
+  return "Glenwood, Arkansas travel guide";
+}
+
 export async function POST(request: Request) {
   try {
     const body = (await request.json()) as RouteBody;
@@ -28,7 +35,10 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Event not found." }, { status: 404 });
     }
 
+    const guideName = guideNameFromSite(event.site);
+
     const rawText = `
+Site: ${event.site || "glenwood"}
 Title: ${event.title || ""}
 Category: ${event.category || ""}
 City: ${event.city || "Glenwood"}
@@ -46,8 +56,7 @@ Source URL: ${event.source_url || ""}
       input: [
         {
           role: "system",
-          content:
-            "You clean up tourism event listings for a local Glenwood, Arkansas travel guide. Do not invent facts, prices, dates, times, addresses, performers, or links. Keep the tone human, local, useful, and conversational. Avoid hype, corporate language, and phrases like unforgettable experience.",
+          content: `You clean up tourism event listings for a local ${guideName}. Do not invent facts, prices, dates, times, addresses, performers, or links. Keep the tone human, local, useful, and conversational. Avoid hype, corporate language, and phrases like unforgettable experience.`,
         },
         {
           role: "user",

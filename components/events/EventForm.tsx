@@ -6,10 +6,14 @@ type FormStatus = "idle" | "loading" | "success" | "error";
 
 type EventFormProps = {
   sourceType?: "submission" | "manual";
+  site?: "glenwood" | "mount-ida" | "hot-springs" | "amity";
+  defaultCity?: string;
 };
 
 export default function EventForm({
   sourceType = "submission",
+  site = "glenwood",
+  defaultCity = "Glenwood",
 }: EventFormProps) {
   const [status, setStatus] = useState<FormStatus>("idle");
   const [message, setMessage] = useState("");
@@ -23,10 +27,11 @@ export default function EventForm({
     const formData = new FormData(form);
 
     const payload = {
+      site,
       title: String(formData.get("title") || ""),
       raw_description: String(formData.get("raw_description") || ""),
       description: String(formData.get("raw_description") || ""),
-      city: String(formData.get("city") || "Glenwood"),
+      city: String(formData.get("city") || defaultCity),
       location_name: String(formData.get("location_name") || ""),
       address: String(formData.get("address") || ""),
       start_date: String(formData.get("start_date") || ""),
@@ -164,7 +169,7 @@ export default function EventForm({
             </span>
             <input
               name="city"
-              defaultValue="Glenwood"
+              defaultValue={defaultCity}
               className="w-full rounded-xl border border-black/10 bg-white px-4 py-3"
             />
           </label>

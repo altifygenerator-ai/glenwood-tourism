@@ -2,8 +2,11 @@ import { supabaseAdmin } from "@/lib/supabase/server";
 
 export type EventStatus = "draft" | "pending" | "approved" | "rejected";
 
+export type EventSite = "glenwood" | "mount-ida" | "hot-springs" | "amity";
+
 export type TourismEvent = {
   id: string;
+  site?: EventSite | string | null;
   title: string;
   slug: string;
   raw_description?: string | null;
@@ -45,12 +48,16 @@ export function createEventSlug(title: string, date?: string) {
   return `${base}-${date}`.replace(/(^-|-$)+/g, "");
 }
 
-export async function getUpcomingApprovedEvents(limit = 12) {
+export async function getUpcomingApprovedEvents(
+  limit = 12,
+  site: EventSite = "glenwood"
+) {
   const today = new Date().toISOString().slice(0, 10);
 
   const { data, error } = await supabaseAdmin
     .from("events")
     .select("*")
+    .eq("site", site)
     .eq("status", "approved")
     .gte("start_date", today)
     .order("start_date", { ascending: true })
@@ -65,7 +72,7 @@ export async function getUpcomingApprovedEvents(limit = 12) {
   return data as TourismEvent[];
 }
 
-export async function getWeekendEvents() {
+export async function getWeekendEvents(site: EventSite = "glenwood") {
   const now = new Date();
   const day = now.getDay();
   const daysUntilFriday = (5 - day + 7) % 7;
@@ -82,6 +89,7 @@ export async function getWeekendEvents() {
   const { data, error } = await supabaseAdmin
     .from("events")
     .select("*")
+    .eq("site", site)
     .eq("status", "approved")
     .gte("start_date", start)
     .lte("start_date", end)
@@ -96,10 +104,14 @@ export async function getWeekendEvents() {
   return data as TourismEvent[];
 }
 
-export async function getEventBySlug(slug: string) {
+export async function getEventBySlug(
+  slug: string,
+  site: EventSite = "glenwood"
+) {
   const { data, error } = await supabaseAdmin
     .from("events")
     .select("*")
+    .eq("site", site)
     .eq("slug", slug)
     .eq("status", "approved")
     .single();
@@ -112,11 +124,17 @@ export async function getEventBySlug(slug: string) {
   return data as TourismEvent;
 }
 
-export async function getAllEventsForAdmin() {
-  const { data, error } = await supabaseAdmin
+export async function getAllEventsForAdmin(site?: EventSite) {
+  let query = supabaseAdmin
     .from("events")
     .select("*")
     .order("created_at", { ascending: false });
+
+  if (site) {
+    query = query.eq("site", site);
+  }
+
+  const { data, error } = await query;
 
   if (error) {
     console.error("Error fetching admin events:", error);
