@@ -165,7 +165,32 @@ const restaurants = [
       "https://www.google.com/maps/search/?api=1&query=Arrow+6+Coffee+Co+3+Caddo+Crossing+Dr+Glenwood+AR+71943",
   },
 ];
-
+const riverMealLinks = [
+  {
+    title: "Before the river",
+    text: "Coffee, donuts, breakfast, biscuits, or something quick before heading toward the Caddo River, cabins, campgrounds, or Lake Greeson.",
+    href: "/caddo-river",
+    label: "Plan River Time",
+  },
+  {
+    title: "After the float",
+    text: "After a day outside, most visitors want something easy and filling: seafood, pizza, Mexican food, Italian food, burgers, or a sit-down local meal.",
+    href: "/this-weekend",
+    label: "Check Weekend Events",
+  },
+  {
+    title: "Cabin meals and group food",
+    text: "Pizza, takeout, quick stops, and casual restaurants work well for families, cabin groups, teams, and people staying close to the river.",
+    href: "/glenwood-ar-cabins",
+    label: "See Cabins & Stays",
+  },
+  {
+    title: "Sweet stops and coffee",
+    text: "Coffee, donuts, ice cream, and snacks can fill the gaps between river time, lake stops, shopping, and slower afternoons around Glenwood.",
+    href: "/explore",
+    label: "Explore Glenwood",
+  },
+];
 const featuredNames = [
   "Fish Nest Family Restaurant",
   "Caddo Cafe",
@@ -333,18 +358,18 @@ export default function GlenwoodRestaurantsPage() {
         <div className="relative mx-auto max-w-6xl px-6 py-20 md:py-28">
           <div className="max-w-3xl">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-white/70">
-              Restaurants & Local Food
-            </p>
+  Restaurants & Local Food
+</p>
 
-            <h1 className="text-4xl font-semibold leading-tight md:text-6xl">
-              Best restaurants in Glenwood, Arkansas
-            </h1>
+<h1 className="text-4xl font-semibold leading-tight md:text-6xl">
+  Where to eat around Glenwood and the Caddo River
+</h1>
 
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85">
-              Find local cafes, seafood, Mexican food, Italian food, pizza,
-              coffee, sweets, quick meals, and places to eat near the Caddo
-              River, cabins, campgrounds, and Lake Greeson.
-            </p>
+<p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85">
+  Find breakfast, coffee, seafood, Mexican food, Italian food, pizza, sweets,
+  quick meals, and local restaurants before or after a Caddo River day, cabin
+  weekend, Lake Greeson stop, or slower trip through Glenwood.
+</p>
 
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -378,7 +403,48 @@ export default function GlenwoodRestaurantsPage() {
           </div>
         </div>
       </section>
+<Section>
+  <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+    <div>
+      <p className="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-[color:var(--color-accent)]">
+        River Trip Food Guide
+      </p>
 
+      <h2 className="max-w-2xl text-4xl font-semibold leading-tight text-[color:var(--color-text)] md:text-5xl">
+        Plan food around the river, not the other way around.
+      </h2>
+    </div>
+
+    <p className="max-w-2xl leading-relaxed text-[color:var(--color-muted)]">
+      A Glenwood food stop usually fits into the rest of the day: breakfast
+      before the river, something filling after a float, pizza or takeout for a
+      cabin group, or coffee and sweets while passing through town.
+    </p>
+  </div>
+
+  <div className="mt-10 grid gap-6 md:grid-cols-2">
+    {riverMealLinks.map((item) => (
+      <Link
+        key={item.href}
+        href={item.href}
+        className="group flex h-full flex-col rounded-3xl border bg-[color:var(--bg-card)] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+        style={{ borderColor: "rgba(0,0,0,0.08)" }}
+      >
+        <h3 className="text-2xl font-semibold text-[color:var(--color-text)]">
+          {item.title}
+        </h3>
+
+        <p className="mt-4 leading-relaxed text-[color:var(--color-muted)]">
+          {item.text}
+        </p>
+
+        <span className="mt-auto inline-block pt-5 font-bold text-[color:var(--color-accent)]">
+          {item.label} →
+        </span>
+      </Link>
+    ))}
+  </div>
+</Section>
       <Section>
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
@@ -387,15 +453,15 @@ export default function GlenwoodRestaurantsPage() {
             </p>
 
             <h2 className="mb-5 text-3xl font-semibold leading-tight md:text-4xl">
-              Pick the kind of meal that fits your Glenwood trip.
+              Choose the food stop that fits your river day.
             </h2>
 
             <div className="space-y-4 leading-relaxed text-[color:var(--color-muted)]">
               <p>
-                Glenwood restaurants work best when you plan them around what
-                you are doing that day. A river morning needs something
-                different than a tired cabin group after a long float, and a
-                quick road-trip stop is different from a sit-down family meal.
+                Glenwood restaurants are easiest to think about by timing. Some places work
+better before you head toward the Caddo River, some make more sense after a
+float, and some are just simple stops for families, cabin groups, and people
+passing through town.
               </p>
 
               <p>
