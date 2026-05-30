@@ -12,6 +12,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 1,
     },
     {
+      url: `${baseUrl}/plan-my-day`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.95,
+    },
+    {
       url: `${baseUrl}/explore`,
       lastModified: new Date(),
       changeFrequency: "weekly",
@@ -85,10 +91,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  const { data: events } = await supabaseAdmin
+  const { data: events, error } = await supabaseAdmin
     .from("events")
     .select("slug, updated_at")
-    .eq("status", "approved");
+    .eq("status", "approved")
+    .eq("site", "glenwood");
+
+  if (error) {
+    console.error("Sitemap event query failed:", error.message);
+  }
 
   const eventRoutes: MetadataRoute.Sitemap =
     events?.map((event) => ({
