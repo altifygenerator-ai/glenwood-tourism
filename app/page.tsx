@@ -8,6 +8,7 @@ import FAQ from "@/components/tourism/FAQ";
 import FeaturedLocalSpots from "@/components/tourism/FeaturedLocalSpots";
 import BackgroundSection from "@/components/tourism/BackgroundSection";
 import HomeEventsPreview from "@/components/events/HomeEventsPreview";
+import PlanMyDayTeaser from "@/components/PlanMyDayTeaser";
 import Link from "next/link";
 import { generateMetadata } from "@/lib/seo";
 import CaddoRiverHomeFeature from "@/components/CaddoRiverHomeFeature";
@@ -88,7 +89,7 @@ export default function Page() {
 
       <Hero data={glenwoodHero} />
 <RecentUpdates />
-
+<PlanMyDayTeaser />
 <CaddoRiverHomeFeature />
       <Section>
         <Highlights items={glenwoodHighlights} />

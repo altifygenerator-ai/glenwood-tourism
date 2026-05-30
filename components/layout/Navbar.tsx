@@ -10,6 +10,7 @@ const thingsToDoLinks = [
 ];
 
 const planLinks = [
+  { href: "/plan-my-day", label: "Plan My Day" },
   { href: "/glenwood-ar-restaurants", label: "Restaurants" },
   { href: "/glenwood-ar-cabins", label: "Cabins & Places to Stay" },
   { href: "/caddo-river", label: "Caddo River" },

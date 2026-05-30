@@ -6,6 +6,7 @@ const exploreLinks = [
 ];
 
 const visitorLinks = [
+  { href: "/plan-my-day", label: "Plan a Glenwood Day" },
   { href: "/glenwood-ar-restaurants", label: "Restaurants" },
   { href: "/glenwood-ar-cabins", label: "Cabins & Places to Stay" },
   { href: "/local-business", label: "Local Businesses" },

@@ -177,3 +177,564 @@ p {
     margin-inline: 0;
   }
 }
+/* Plan My Glenwood Day */
+
+.plan-teaser-section {
+  padding-top: 56px;
+  padding-bottom: 24px;
+}
+
+.plan-teaser-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) auto;
+  gap: 2rem;
+  align-items: center;
+  border: 1px solid rgba(45, 42, 38, 0.14);
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at top left, rgba(63, 92, 74, 0.14), transparent 28rem),
+    linear-gradient(135deg, rgba(255, 250, 240, 0.92), rgba(255, 255, 255, 0.48));
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  box-shadow: 0 24px 70px rgba(45, 42, 38, 0.08);
+}
+
+.plan-teaser-card h2 {
+  margin: 0.4rem 0 1rem;
+  font-size: clamp(2.2rem, 5vw, 4.2rem);
+  line-height: 0.95;
+}
+
+.plan-teaser-card p {
+  max-width: 62rem;
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.plan-teaser-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+.plan-page-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 92px 0;
+  background:
+    linear-gradient(90deg, rgba(45, 42, 38, 0.9), rgba(45, 42, 38, 0.62)),
+    url("/images/glenwood/rivercanoe.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.plan-page-hero h1,
+.plan-page-hero h2,
+.plan-page-hero p {
+  color: white;
+}
+
+.plan-page-hero .eyebrow {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.plan-page-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.42fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.plan-page-hero h1 {
+  max-width: 56rem;
+  margin: 0.5rem 0 1.25rem;
+  font-size: clamp(3rem, 7vw, 6.5rem);
+  line-height: 0.9;
+}
+
+.plan-page-hero p {
+  max-width: 48rem;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.08rem;
+  line-height: 1.85;
+}
+
+.plan-page-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.7rem;
+}
+
+.plan-page-card {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(12px);
+}
+
+.plan-page-card span {
+  display: inline-flex;
+  margin-bottom: 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  padding: 0.4rem 0.75rem;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.plan-page-card h2 {
+  margin: 0 0 0.8rem;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.plan-tool-section {
+  background:
+    radial-gradient(circle at 12% 0%, rgba(63, 92, 74, 0.09), transparent 28rem),
+    radial-gradient(circle at 88% 18%, rgba(255, 250, 240, 0.9), transparent 24rem);
+}
+
+.plan-tool-shell {
+  display: grid;
+  grid-template-columns: minmax(18rem, 0.36fr) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.plan-tool-sidebar {
+  position: sticky;
+  top: 96px;
+  border: 1px solid rgba(45, 42, 38, 0.14);
+  border-radius: 28px;
+  background:
+    linear-gradient(145deg, rgba(63, 92, 74, 0.96), rgba(45, 42, 38, 0.9)),
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.18), transparent 10rem);
+  padding: 1.5rem;
+  color: white;
+  box-shadow: 0 24px 70px rgba(45, 42, 38, 0.12);
+}
+
+.plan-tool-sidebar h2,
+.plan-tool-sidebar p {
+  color: white;
+}
+
+.plan-tool-sidebar .eyebrow {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.plan-tool-sidebar h2 {
+  margin: 0.4rem 0 1rem;
+  font-size: clamp(2rem, 4vw, 3.35rem);
+  line-height: 0.95;
+}
+
+.plan-tool-sidebar p {
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.75;
+}
+
+.plan-best-for {
+  margin-top: 1.5rem;
+}
+
+.plan-best-for span {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.plan-best-for div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.plan-best-for strong {
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 0.4rem 0.65rem;
+  color: white;
+  font-size: 0.78rem;
+}
+
+.plan-tool-main {
+  display: grid;
+  gap: 1rem;
+}
+
+.plan-control-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.plan-control-group,
+.plan-result-card {
+  border: 1px solid rgba(45, 42, 38, 0.14);
+  border-radius: 28px;
+  background: rgba(255, 250, 240, 0.78);
+  padding: 1.25rem;
+  box-shadow: 0 18px 55px rgba(45, 42, 38, 0.07);
+}
+
+.plan-control-heading {
+  margin-bottom: 1rem;
+}
+
+.plan-control-heading span {
+  display: inline-flex;
+  margin-bottom: 0.55rem;
+  border-radius: 999px;
+  background: rgba(63, 92, 74, 0.1);
+  color: var(--color-accent);
+  padding: 0.3rem 0.65rem;
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.plan-control-heading h3 {
+  margin: 0;
+  font-size: 1.55rem;
+  line-height: 1.05;
+}
+
+.plan-option-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.plan-choice,
+.plan-small-choice {
+  width: 100%;
+  border: 1px solid rgba(45, 42, 38, 0.12);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.54);
+  padding: 1rem;
+  color: var(--color-text);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    background 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.plan-choice:hover,
+.plan-small-choice:hover {
+  transform: translateY(-2px);
+  background: white;
+  box-shadow: 0 14px 35px rgba(45, 42, 38, 0.08);
+}
+
+.plan-choice.active,
+.plan-small-choice.active {
+  border-color: rgba(63, 92, 74, 0.46);
+  background: rgba(63, 92, 74, 0.1);
+  box-shadow: inset 0 0 0 1px rgba(63, 92, 74, 0.12);
+}
+
+.plan-choice span {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: var(--color-accent);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.plan-choice strong,
+.plan-small-choice strong {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.15;
+}
+
+.plan-choice small,
+.plan-small-choice small {
+  display: block;
+  margin-top: 0.45rem;
+  color: var(--color-muted);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.plan-small-options {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.plan-result-card {
+  background:
+    linear-gradient(145deg, rgba(255, 250, 240, 0.94), rgba(255, 255, 255, 0.62)),
+    radial-gradient(circle at top right, rgba(63, 92, 74, 0.08), transparent 16rem);
+}
+
+.plan-result-header {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+  margin-bottom: 1.25rem;
+}
+
+.plan-pill {
+  margin: 0;
+  border-radius: 999px;
+  background: var(--color-accent);
+  color: white;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.plan-result-header h2 {
+  margin: 0 0 0.45rem;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 0.95;
+}
+
+.plan-result-header p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.plan-advice-grid,
+.plan-note-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin: 1rem 0;
+}
+
+.plan-advice-grid div,
+.plan-note {
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.58);
+  padding: 1rem;
+}
+
+.plan-advice-grid span {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--color-accent);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.plan-advice-grid p,
+.plan-note p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.plan-step-list {
+  display: grid;
+  gap: 0.8rem;
+  margin: 1.25rem 0;
+}
+
+.plan-step {
+  display: grid;
+  grid-template-columns: 5rem minmax(0, 1fr);
+  gap: 1rem;
+  border-bottom: 1px solid rgba(45, 42, 38, 0.12);
+  padding-bottom: 0.8rem;
+}
+
+.plan-step:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.plan-step > span {
+  color: var(--color-accent);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.plan-step h3,
+.plan-note h3,
+.plan-link-section h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.25rem;
+}
+
+.plan-step p {
+  margin: 0;
+  line-height: 1.65;
+}
+
+.plan-link-section {
+  margin-top: 1.25rem;
+}
+
+.plan-link-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin-top: 0.8rem;
+}
+
+.plan-link-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-radius: 16px;
+  background: rgba(63, 92, 74, 0.1);
+  color: var(--color-accent);
+  padding: 0.9rem 1rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition:
+    transform 0.18s ease,
+    background 0.18s ease;
+}
+
+.plan-link-card:hover {
+  transform: translateY(-2px);
+  background: rgba(63, 92, 74, 0.16);
+}
+
+.plan-seo-section {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.22), transparent),
+    radial-gradient(circle at bottom left, rgba(63, 92, 74, 0.08), transparent 30rem);
+}
+
+.plan-seo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.plan-seo-card {
+  padding: 1.25rem;
+}
+
+.plan-seo-card h3 {
+  margin: 0 0 0.7rem;
+  font-size: 1.45rem;
+}
+
+.plan-seo-card p {
+  line-height: 1.65;
+}
+
+.plan-seo-card a {
+  display: inline-flex;
+  margin-top: 1rem;
+  color: var(--color-accent);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.plan-community-section {
+  padding-top: 0;
+}
+
+.plan-community-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: center;
+  border-radius: 30px;
+  background: #2d2a26;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  color: white;
+}
+
+.plan-community-card h2,
+.plan-community-card p {
+  color: white;
+}
+
+.plan-community-card .eyebrow {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.plan-community-card h2 {
+  margin: 0.4rem 0 1rem;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 0.95;
+}
+
+.plan-community-card p {
+  max-width: 48rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.75;
+}
+
+.plan-community-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+@media (max-width: 1020px) {
+  .plan-teaser-card,
+  .plan-page-hero-grid,
+  .plan-tool-shell,
+  .plan-control-grid,
+  .plan-community-card {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-tool-sidebar {
+    position: static;
+  }
+
+  .plan-teaser-actions,
+  .plan-community-actions {
+    justify-content: flex-start;
+  }
+
+  .plan-seo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .plan-option-grid,
+  .plan-advice-grid,
+  .plan-note-grid,
+  .plan-link-grid,
+  .plan-seo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-result-header,
+  .plan-step {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-page-hero {
+    padding: 72px 0;
+  }
+}
