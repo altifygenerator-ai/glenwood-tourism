@@ -1,9 +1,9 @@
 import Link from "next/link";
 import EventCard from "@/components/events/EventCard";
-import { getUpcomingApprovedEvents } from "@/lib/events";
+import { getHomePreviewEvents } from "@/lib/events";
 
 export default async function HomeEventsPreview() {
-  const events = await getUpcomingApprovedEvents(3);
+  const events = await getHomePreviewEvents(3, "glenwood");
 
   return (
     <section className="mx-auto max-w-6xl px-6 py-16">

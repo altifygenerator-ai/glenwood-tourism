@@ -1,3 +1,4 @@
+import { unstable_noStore as noStore } from "next/cache";
 import { supabaseAdmin } from "@/lib/supabase/server";
 
 export type EventStatus = "draft" | "pending" | "approved" | "rejected";
@@ -52,6 +53,8 @@ export async function getUpcomingApprovedEvents(
   limit = 12,
   site: EventSite = "glenwood"
 ) {
+  noStore();
+
   const today = new Date().toISOString().slice(0, 10);
 
   const { data, error } = await supabaseAdmin
@@ -72,7 +75,36 @@ export async function getUpcomingApprovedEvents(
   return data as TourismEvent[];
 }
 
+export async function getHomePreviewEvents(
+  limit = 3,
+  site: EventSite = "glenwood"
+) {
+  noStore();
+
+  const today = new Date().toISOString().slice(0, 10);
+
+  const { data, error } = await supabaseAdmin
+    .from("events")
+    .select("*")
+    .eq("site", site)
+    .eq("status", "approved")
+    .gte("start_date", today)
+    .order("featured", { ascending: false })
+    .order("start_date", { ascending: true })
+    .order("start_time", { ascending: true })
+    .limit(limit);
+
+  if (error) {
+    console.error("Error fetching homepage preview events:", error);
+    return [];
+  }
+
+  return data as TourismEvent[];
+}
+
 export async function getWeekendEvents(site: EventSite = "glenwood") {
+  noStore();
+
   const now = new Date();
   const day = now.getDay();
   const daysUntilFriday = (5 - day + 7) % 7;
@@ -108,6 +140,8 @@ export async function getEventBySlug(
   slug: string,
   site: EventSite = "glenwood"
 ) {
+  noStore();
+
   const { data, error } = await supabaseAdmin
     .from("events")
     .select("*")
@@ -125,6 +159,8 @@ export async function getEventBySlug(
 }
 
 export async function getAllEventsForAdmin(site?: EventSite) {
+  noStore();
+
   let query = supabaseAdmin
     .from("events")
     .select("*")
