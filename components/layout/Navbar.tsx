@@ -19,6 +19,10 @@ const planLinks = [
 
 const articleLinks = [
   { href: "/bard-springs", label: "Bard Springs Recreation Area" },
+  {
+    href: "/caddo-river-swimming-access",
+    label: "Best Caddo River Swimming Spots & Easy River Access",
+  },
 ];
 
 const eventLinks = [

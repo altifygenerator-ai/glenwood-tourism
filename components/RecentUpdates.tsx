@@ -2,6 +2,12 @@ import Link from "next/link";
 
 const updates = [
   {
+    label: "River access guide",
+    title: "Best Caddo River Swimming Spots & Easy River Access",
+    text: "A practical guide to getting in the Caddo around Glenwood, with notes on swimming spots, public access, float routes, outfitters, private land, and river levels.",
+    href: "/caddo-river-swimming-access",
+  },
+  {
     label: "River guide",
     title: "Caddo River Guide",
     text: "A practical Glenwood river guide covering floats, tubing, launches, pickups, outfitters, what to bring, and weekend planning.",
@@ -14,7 +20,7 @@ const updates = [
     href: "/john-benjamin-pond",
   },
   {
-    label: "New article",
+    label: "Local history",
     title: "What Happened to Bard Springs?",
     text: "A local feature on Bard Springs, the history people remember, what it used to be, storm damage, and the question of restoration.",
     href: "/bard-springs",
@@ -45,7 +51,7 @@ export default function RecentUpdates() {
             </Link>
           </div>
 
-          <div className="grid gap-4 lg:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             {updates.map((update) => (
               <Link
                 key={update.title}
