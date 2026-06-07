@@ -5,6 +5,7 @@ import { useState } from "react";
 
 const thingsToDoLinks = [
   { href: "/explore", label: "Things To Do" },
+  { href: "/things-to-do-in-glenwood-with-kids", label: "Things To Do With Kids" },
   { href: "/john-benjamin-pond", label: "John Benjamin Fishing Pond" },
   { href: "/caddo-river-weekend-guide", label: "Caddo River Weekend Guide" },
 ];
@@ -28,6 +29,7 @@ const articleLinks = [
 const eventLinks = [
   { href: "/events", label: "Events" },
   { href: "/this-weekend", label: "This Weekend" },
+ 
   { href: "/submit-event", label: "Submit an Event" },
 ];
 

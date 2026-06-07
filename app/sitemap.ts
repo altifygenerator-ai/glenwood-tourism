@@ -24,6 +24,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/things-to-do-in-glenwood-with-kids`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.88,
+    },
+    {
       url: `${baseUrl}/events`,
       lastModified: new Date(),
       changeFrequency: "daily",
@@ -34,6 +40,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/glenwood-fourth-of-july`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.86,
     },
     {
       url: `${baseUrl}/submit-event`,

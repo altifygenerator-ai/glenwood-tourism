@@ -11,6 +11,7 @@ import HomeEventsPreview from "@/components/events/HomeEventsPreview";
 import PlanMyDayTeaser from "@/components/PlanMyDayTeaser";
 import Link from "next/link";
 import { generateMetadata } from "@/lib/seo";
+import GlenwoodFourthOfJulyFeature from "@/components/GlenwoodFourthOfJulyFeature";
 import CaddoRiverHomeFeature from "@/components/CaddoRiverHomeFeature";
 import RecentUpdates from "@/components/RecentUpdates";
 import {
@@ -156,9 +157,11 @@ export default function Page() {
         </div>
       </Section>
 
-      <HomeEventsPreview />
+     <HomeEventsPreview />
 
-      <FeaturedLocalSpots items={glenwoodFeaturedLocalSpots} />
+<GlenwoodFourthOfJulyFeature />
+
+<FeaturedLocalSpots items={glenwoodFeaturedLocalSpots} />
 
       <Section>
         <div className="grid items-center gap-8 lg:grid-cols-[0.9fr_1.1fr]">

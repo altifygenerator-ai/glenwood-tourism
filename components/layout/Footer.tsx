@@ -1,6 +1,7 @@
 const exploreLinks = [
   { href: "/", label: "Home" },
   { href: "/explore", label: "Things To Do" },
+  { href: "/things-to-do-in-glenwood-with-kids", label: "Things To Do With Kids" },
   { href: "/caddo-river", label: "Caddo River" },
   { href: "/history", label: "Glenwood History" },
 ];
@@ -15,6 +16,7 @@ const visitorLinks = [
 const eventLinks = [
   { href: "/events", label: "Events" },
   { href: "/this-weekend", label: "This Weekend" },
+  
   { href: "/submit-event", label: "Submit an Event" },
 ];
 
