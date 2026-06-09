@@ -11,19 +11,20 @@ export const metadata = {
 };
 
 const stays = [
-  {
-    name: "At Living Water Cabins",
-    type: "Waterfront Cabins • Family Lodge • Ouachita Mountains",
-    description:
-      "A clean waterfront cabin and lodge stay located between Glenwood and Mount Ida in the Arkansas Ouachita Region. Guests can choose from a family lodge or four cozy creekside cabins named Love, Faith, Hope, and Peace, with full kitchens, air conditioning, and a quiet setting close to outdoor adventures.",
-    location: "136 Living Water Dr., Norman, AR 71960",
-    phone: "903-782-9184",
-    website: "https://atlivingwatercabins.com/",
-    image: "/images/glenwood/cabins/at-living-water-cabins.jpg",
-    alt: "At Living Water Cabins near Glenwood and Mount Ida Arkansas",
-    directions:
-      "https://www.google.com/maps/search/?api=1&query=At+Living+Water+Cabins+136+Living+Water+Dr+Norman+AR+71960",
-  },
+{
+  name: "At Living Water Cabins",
+  type: "Waterfront Cabins • Family Lodge • Ouachita Mountains",
+  description:
+    "A clean waterfront cabin and lodge stay located between Glenwood and Mount Ida in the Arkansas Ouachita Region. Guests can choose from a family lodge or four cozy creekside cabins named Love, Faith, Hope, and Peace, with full kitchens, air conditioning, and a quiet setting close to outdoor adventures.",
+  location: "136 Living Water Dr., Norman, AR 71960",
+  phone: "318-461-2650",
+  website: "https://atlivingwatercabins.com/",
+  featureHref: "/at-living-water-cabins",
+  image: "/images/glenwood/cabins/at-living-water-cabins.jpg",
+  alt: "At Living Water Cabins near Glenwood and Mount Ida Arkansas",
+  directions:
+    "https://www.google.com/maps/search/?api=1&query=At+Living+Water+Cabins+136+Living+Water+Dr+Norman+AR+71960",
+},
   {
     name: "Caddo River Camping & Canoe Rental",
     type: "Cabins • Camping • Canoe & Kayak Rentals",
@@ -556,63 +557,145 @@ export default function GlenwoodCabinsPage() {
           <div>
             <p className={eyebrowClass}>Featured Stays</p>
 
-            <h2 className={sectionTitleClass}>
-              Good starting points for Glenwood lodging.
-            </h2>
+          <h2 className={sectionTitleClass}>
+  Featured places to stay near Glenwood.
+</h2>
           </div>
 
-          <p className={bodyTextClass}>
-            These featured options cover the main ways people usually stay near
-            Glenwood: river cabins, camping near the Caddo, and a practical
-            local motel close to restaurants, roads, and outdoor stops.
-          </p>
+        <p className={bodyTextClass}>
+  These featured options highlight local stays that fit the way visitors
+  actually plan Glenwood trips: waterfront cabins, river weekends, camping near
+  the Caddo, and lodging close to restaurants, roads, and outdoor stops.
+</p>
         </div>
 
         <div className="space-y-8">
-          {atLivingWater && (
-            <div className="overflow-hidden rounded-3xl border border-black/10 bg-[color:var(--bg-card)] shadow-lg">
-              <div className="grid lg:grid-cols-[1.1fr_0.9fr]">
-                <div
-                  role="img"
-                  aria-label={atLivingWater.alt}
-                  className="min-h-[420px] bg-cover bg-center"
-                  style={{
-                    backgroundImage: `url('${atLivingWater.image}')`,
-                  }}
-                />
+     {atLivingWater && (
+  <div className="overflow-hidden rounded-[2rem] border border-[color:var(--color-accent)]/40 bg-[color:var(--bg-card)] shadow-2xl">
+    <div className="grid lg:grid-cols-[1.08fr_0.92fr]">
+      <div className="relative min-h-[460px] overflow-hidden bg-[color:var(--color-accent)]">
+        <div
+          role="img"
+          aria-label={atLivingWater.alt}
+          className="absolute inset-0 bg-cover bg-center transition duration-700 hover:scale-105"
+          style={{
+            backgroundImage: `url('${atLivingWater.image}')`,
+          }}
+        />
 
-                <div className="flex flex-col justify-center p-8 lg:p-10">
-                  <p className={eyebrowClass}>Premium Featured Stay</p>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
 
-                  <h2 className="mb-4 text-4xl font-semibold leading-tight text-[color:var(--color-text)]">
-                    {atLivingWater.name}
-                  </h2>
+        <div className="absolute left-5 top-5 flex flex-wrap gap-2">
+          <span className="rounded-full bg-[color:var(--color-accent)] px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-white shadow-sm">
+            Featured Cabin Partner
+          </span>
 
-                  <p className="mb-5 text-sm font-medium !text-[color:var(--color-muted)]">
-                    {atLivingWater.type}
-                  </p>
+          <span className="rounded-full bg-white/90 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--color-text)] shadow-sm">
+            Spotlight Stay
+          </span>
+        </div>
 
-                  <p className={`mb-6 ${bodyTextClass}`}>
-                    {atLivingWater.description}
-                  </p>
+        <div className="absolute bottom-5 left-5 right-5 rounded-2xl border border-white/15 bg-black/50 p-5 text-white backdrop-blur-md">
+          <p className="text-sm font-semibold !text-white">
+            Creekside cabins and a family lodge between Glenwood and Mount Ida.
+          </p>
 
-                  <div className="space-y-2 text-sm">
-                    <p className="!text-[color:var(--color-muted)]">
-                      📍 {atLivingWater.location}
-                    </p>
+          <p className="mt-2 text-xs leading-5 !text-white/85">
+            A peaceful Ouachita Mountain stay with easy access to the Caddo
+            River, Lake Greeson, Mount Ida, Glenwood, and nearby outdoor trips.
+          </p>
+        </div>
+      </div>
 
-                    {atLivingWater.phone && (
-                      <p className="!text-[color:var(--color-muted)]">
-                        📞 {atLivingWater.phone}
-                      </p>
-                    )}
-                  </div>
+      <div className="flex flex-col justify-center p-8 lg:p-10">
+        <p className={eyebrowClass}>Premium Featured Stay</p>
 
-                  <StayActions stay={atLivingWater} />
-                </div>
-              </div>
+        <h2 className="mb-4 text-4xl font-semibold leading-tight text-[color:var(--color-text)] md:text-5xl">
+          {atLivingWater.name}
+        </h2>
+
+        <p className="mb-5 text-sm font-semibold uppercase tracking-[0.12em] !text-[color:var(--color-accent)]">
+          {atLivingWater.type}
+        </p>
+
+        <p className={`mb-6 ${bodyTextClass}`}>
+          {atLivingWater.description}
+        </p>
+
+        <div className="mb-6 grid gap-3 sm:grid-cols-2">
+          {[
+            "Four cozy creekside cabins",
+            "Family lodge for larger stays",
+            "Full kitchens and comfortable cabin setup",
+            "Close to Glenwood, Mount Ida, and outdoor trips",
+          ].map((item) => (
+            <div
+              key={item}
+              className="rounded-2xl border border-black/10 bg-white/65 p-4"
+            >
+              <p className="text-sm font-semibold leading-5 !text-[color:var(--color-text)]">
+                {item}
+              </p>
             </div>
+          ))}
+        </div>
+
+        <div className="rounded-2xl border border-black/10 bg-white/60 p-4">
+          <p className="text-sm font-semibold !text-[color:var(--color-text)]">
+            Best for
+          </p>
+
+          <p className="mt-2 text-sm leading-6 !text-[color:var(--color-muted)]">
+            Families, couples, quiet cabin weekends, creekside stays, Caddo
+            River trips, Lake Greeson days, Mount Ida exploring, and travelers
+            wanting a clean, peaceful place in the Ouachita region.
+          </p>
+        </div>
+
+        <div className="mt-6 space-y-2 text-sm">
+          <p className="!text-[color:var(--color-muted)]">
+            📍 {atLivingWater.location}
+          </p>
+
+          {atLivingWater.phone && (
+            <p className="!text-[color:var(--color-muted)]">
+              📞 {atLivingWater.phone}
+            </p>
           )}
+        </div>
+
+        <div className="mt-6 flex flex-wrap gap-3">
+          <Link
+            href="/at-living-water-cabins"
+            className="inline-flex items-center justify-center rounded-full bg-[color:var(--color-accent)] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+          >
+            View Full Feature
+          </Link>
+
+          {atLivingWater.website && (
+            <a
+              href={atLivingWater.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-full border border-[color:var(--color-accent)] px-5 py-3 text-sm font-semibold text-[color:var(--color-accent)] transition hover:-translate-y-0.5 hover:bg-[color:var(--color-accent)] hover:text-white"
+            >
+              Book Direct
+            </a>
+          )}
+
+          {atLivingWater.phone && (
+            <a
+              href={phoneHref(atLivingWater.phone)}
+              className="inline-flex items-center justify-center rounded-full border border-black/10 px-5 py-3 text-sm font-semibold text-[color:var(--color-text)] transition hover:-translate-y-0.5 hover:bg-white/70"
+            >
+              Call to Book
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+  </div>
+)}
 
           <div className="grid gap-6 lg:grid-cols-2">
             {[caddoRiverCabins, arrowhead].map(
