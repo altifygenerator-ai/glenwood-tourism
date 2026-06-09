@@ -2,6 +2,7 @@ import Section from "@/components/tourism/Section";
 import Link from "next/link";
 import EventsCTA from "@/components/events/EventsCTA";
 import NearbyAmitySection from "@/components/NearbyAmitySection";
+
 export const metadata = {
   title:
     "Best Restaurants in Glenwood, Arkansas | Places to Eat Near the Caddo River",
@@ -165,6 +166,7 @@ const restaurants = [
       "https://www.google.com/maps/search/?api=1&query=Arrow+6+Coffee+Co+3+Caddo+Crossing+Dr+Glenwood+AR+71943",
   },
 ];
+
 const riverMealLinks = [
   {
     title: "Before the river",
@@ -191,6 +193,7 @@ const riverMealLinks = [
     label: "Explore Glenwood",
   },
 ];
+
 const featuredNames = [
   "Fish Nest Family Restaurant",
   "Caddo Cafe",
@@ -255,6 +258,45 @@ const restaurantFaqs = [
   },
 ];
 
+const eyebrowClass =
+  "mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[color:var(--color-accent)]";
+
+const darkEyebrowClass =
+  "mb-4 text-sm font-semibold uppercase tracking-[0.2em] !text-white/85";
+
+const sectionTitleClass =
+  "text-3xl font-semibold leading-tight text-[color:var(--color-text)] md:text-4xl";
+
+const largeSectionTitleClass =
+  "text-4xl font-semibold leading-tight text-[color:var(--color-text)] md:text-5xl";
+
+const bodyTextClass = "leading-relaxed !text-[color:var(--color-muted)]";
+
+const smallBodyTextClass = "text-sm leading-6 !text-[color:var(--color-muted)]";
+
+const strongBodyTextClass = "text-lg leading-relaxed !text-[color:var(--color-muted)]";
+
+const cardClass =
+  "rounded-2xl border border-black/10 bg-[color:var(--bg-card)] shadow-sm";
+
+const largeCardClass =
+  "rounded-3xl border border-black/10 bg-[color:var(--bg-card)] shadow-sm";
+
+const primaryButtonClass =
+  "inline-flex items-center justify-center rounded-full bg-[color:var(--color-accent)] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md";
+
+const outlineButtonClass =
+  "inline-flex items-center justify-center rounded-full border border-[color:var(--color-accent)] px-5 py-2.5 text-sm font-semibold text-[color:var(--color-accent)] transition hover:-translate-y-0.5 hover:bg-[color:var(--color-accent)] hover:text-white";
+
+const lightButtonClass =
+  "inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-[color:var(--color-text)] shadow-sm transition hover:-translate-y-0.5 hover:shadow-md";
+
+const darkOutlineButtonClass =
+  "inline-flex items-center justify-center rounded-full border border-white/35 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/20";
+
+const bottomCardLinkClass =
+  "mt-auto inline-flex pt-5 font-semibold text-[color:var(--color-accent)] transition group-hover:opacity-75";
+
 function phoneHref(phone: string) {
   return `tel:${phone.replace(/[^\d]/g, "")}`;
 }
@@ -267,10 +309,7 @@ function RestaurantActions({
   return (
     <div className="mt-5 flex flex-wrap gap-3">
       {restaurant.phone && (
-        <a
-          href={phoneHref(restaurant.phone)}
-          className="rounded-full bg-[color:var(--color-accent)] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
-        >
+        <a href={phoneHref(restaurant.phone)} className={primaryButtonClass}>
           Call {restaurant.phone}
         </a>
       )}
@@ -280,7 +319,7 @@ function RestaurantActions({
           href={restaurant.website}
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-full bg-[color:var(--color-accent)] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+          className={primaryButtonClass}
         >
           View Website
         </a>
@@ -290,7 +329,7 @@ function RestaurantActions({
         href={restaurant.directions}
         target="_blank"
         rel="noopener noreferrer"
-        className="rounded-full border border-[color:var(--color-accent)] px-5 py-2.5 text-sm font-semibold text-[color:var(--color-accent)] transition hover:bg-[color:var(--color-accent)] hover:text-white"
+        className={outlineButtonClass}
       >
         Directions
       </a>
@@ -346,144 +385,127 @@ export default function GlenwoodRestaurantsPage() {
         }}
       />
 
-      <section className="relative overflow-hidden bg-[#2d2a26] text-white">
+      <section className="relative overflow-hidden bg-[color:var(--color-text)] text-white">
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-45"
+          className="absolute inset-0 bg-cover bg-center opacity-50"
           style={{
-            backgroundImage: "url('/images/glenwood/restaurants/caddo-cafe.jpg')",
+            backgroundImage:
+              "url('/images/glenwood/restaurants/caddo-cafe.jpg')",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/25" />
+
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
 
         <div className="relative mx-auto max-w-6xl px-6 py-20 md:py-28">
           <div className="max-w-3xl">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-white/70">
-  Restaurants & Local Food
-</p>
+            <p className={darkEyebrowClass}>Restaurants & Local Food</p>
 
-<h1 className="text-4xl font-semibold leading-tight md:text-6xl">
-  Where to eat around Glenwood and the Caddo River
-</h1>
+            <h1 className="text-4xl font-semibold leading-tight text-white md:text-6xl">
+              Where to eat around Glenwood and the Caddo River
+            </h1>
 
-<p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85">
-  Find breakfast, coffee, seafood, Mexican food, Italian food, pizza, sweets,
-  quick meals, and local restaurants before or after a Caddo River day, cabin
-  weekend, Lake Greeson stop, or slower trip through Glenwood.
-</p>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed !text-white/90">
+              Find breakfast, coffee, seafood, Mexican food, Italian food,
+              pizza, sweets, quick meals, and local restaurants before or after a
+              Caddo River day, cabin weekend, Lake Greeson stop, or slower trip
+              through Glenwood.
+            </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                href="/caddo-river"
-                className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-white/90"
-              >
+              <Link href="/caddo-river" className={lightButtonClass}>
                 Caddo River Guide
               </Link>
 
-              <Link
-                href="/glenwood-ar-cabins"
-                className="rounded-full border border-white/30 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/20"
-              >
+              <Link href="/glenwood-ar-cabins" className={darkOutlineButtonClass}>
                 Cabins & Stays
               </Link>
 
-              <Link
-                href="/events"
-                className="rounded-full border border-white/25 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-              >
+              <Link href="/events" className={darkOutlineButtonClass}>
                 Local Events
               </Link>
 
-              <Link
-                href="/contact"
-                className="rounded-full border border-white/20 px-5 py-3 text-sm font-semibold text-white/85 transition hover:bg-white/10 hover:text-white"
-              >
+              <Link href="/contact" className={darkOutlineButtonClass}>
                 Add Your Restaurant
               </Link>
             </div>
           </div>
         </div>
       </section>
-<Section>
-  <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
-    <div>
-      <p className="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-[color:var(--color-accent)]">
-        River Trip Food Guide
-      </p>
 
-      <h2 className="max-w-2xl text-4xl font-semibold leading-tight text-[color:var(--color-text)] md:text-5xl">
-        Plan food around the river, not the other way around.
-      </h2>
-    </div>
+      <Section>
+        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+          <div>
+            <p className={eyebrowClass}>River Trip Food Guide</p>
 
-    <p className="max-w-2xl leading-relaxed text-[color:var(--color-muted)]">
-      A Glenwood food stop usually fits into the rest of the day: breakfast
-      before the river, something filling after a float, pizza or takeout for a
-      cabin group, or coffee and sweets while passing through town.
-    </p>
-  </div>
+            <h2 className={`max-w-2xl ${largeSectionTitleClass}`}>
+              Plan food around the river, not the other way around.
+            </h2>
+          </div>
 
-  <div className="mt-10 grid gap-6 md:grid-cols-2">
-    {riverMealLinks.map((item) => (
-      <Link
-        key={item.href}
-        href={item.href}
-        className="group flex h-full flex-col rounded-3xl border bg-[color:var(--bg-card)] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
-        style={{ borderColor: "rgba(0,0,0,0.08)" }}
-      >
-        <h3 className="text-2xl font-semibold text-[color:var(--color-text)]">
-          {item.title}
-        </h3>
+          <p className={`max-w-2xl ${strongBodyTextClass}`}>
+            A Glenwood food stop usually fits into the rest of the day:
+            breakfast before the river, something filling after a float, pizza
+            or takeout for a cabin group, or coffee and sweets while passing
+            through town.
+          </p>
+        </div>
 
-        <p className="mt-4 leading-relaxed text-[color:var(--color-muted)]">
-          {item.text}
-        </p>
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          {riverMealLinks.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="group flex h-full flex-col rounded-3xl border border-black/10 bg-[color:var(--bg-card)] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+            >
+              <h3 className="text-2xl font-semibold text-[color:var(--color-text)]">
+                {item.title}
+              </h3>
 
-        <span className="mt-auto inline-block pt-5 font-bold text-[color:var(--color-accent)]">
-          {item.label} →
-        </span>
-      </Link>
-    ))}
-  </div>
-</Section>
+              <p className={`mt-4 ${bodyTextClass}`}>{item.text}</p>
+
+              <span className={bottomCardLinkClass}>{item.label} →</span>
+            </Link>
+          ))}
+        </div>
+      </Section>
+
       <Section>
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
-              Plan Around Food
-            </p>
+            <p className={eyebrowClass}>Plan Around Food</p>
 
-            <h2 className="mb-5 text-3xl font-semibold leading-tight md:text-4xl">
+            <h2 className={`mb-5 ${sectionTitleClass}`}>
               Choose the food stop that fits your river day.
             </h2>
 
-            <div className="space-y-4 leading-relaxed text-[color:var(--color-muted)]">
+            <div className={`space-y-4 ${bodyTextClass}`}>
               <p>
-                Glenwood restaurants are easiest to think about by timing. Some places work
-better before you head toward the Caddo River, some make more sense after a
-float, and some are just simple stops for families, cabin groups, and people
-passing through town.
+                Glenwood restaurants are easiest to think about by timing. Some
+                places work better before you head toward the Caddo River, some
+                make more sense after a float, and some are just simple stops for
+                families, cabin groups, and people passing through town.
               </p>
 
               <p>
                 Use this guide to find breakfast, coffee, seafood, Mexican food,
-                Italian food, pizza, sweets, quick meals, and casual local
-                places near the Caddo River, Lake Greeson, cabins, campgrounds,
-                and nearby outdoor stops.
+                Italian food, pizza, sweets, quick meals, and casual local places
+                near the Caddo River, Lake Greeson, cabins, campgrounds, and
+                nearby outdoor stops.
               </p>
             </div>
           </div>
 
           <div className="grid gap-4 md:grid-cols-2">
             {mealStyles.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-2xl border border-black/10 bg-[color:var(--bg-card)] p-5 shadow-sm"
-              >
+              <div key={item.title} className={`${cardClass} p-5`}>
                 <div className="mb-3 h-1 w-10 rounded-full bg-[color:var(--color-accent)]" />
-                <h3 className="mb-2 text-lg font-semibold">{item.title}</h3>
-                <p className="text-sm leading-6 text-[color:var(--color-muted)]">
-                  {item.text}
-                </p>
+
+                <h3 className="mb-2 text-lg font-semibold text-[color:var(--color-text)]">
+                  {item.title}
+                </h3>
+
+                <p className={smallBodyTextClass}>{item.text}</p>
               </div>
             ))}
           </div>
@@ -493,16 +515,14 @@ passing through town.
       <Section>
         <div className="mb-8 grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
           <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
-              Featured Restaurants
-            </p>
+            <p className={eyebrowClass}>Featured Restaurants</p>
 
-            <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
+            <h2 className={sectionTitleClass}>
               Good starting points for eating around Glenwood.
             </h2>
           </div>
 
-          <p className="leading-relaxed text-[color:var(--color-muted)]">
+          <p className={bodyTextClass}>
             These featured options cover the way many visitors eat around town:
             a classic family restaurant, an easy cafe stop, and a casual pizza
             and Italian option for families, cabin groups, and travelers.
@@ -525,25 +545,30 @@ passing through town.
                 )}
 
                 <div className="flex flex-col justify-center p-8 lg:p-10">
-                  <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[color:var(--color-accent)]">
-                    Premium Featured Restaurant
-                  </p>
+                  <p className={eyebrowClass}>Premium Featured Restaurant</p>
 
-                  <h2 className="mb-4 text-4xl font-semibold leading-tight">
+                  <h2 className="mb-4 text-4xl font-semibold leading-tight text-[color:var(--color-text)]">
                     {fishNest.name}
                   </h2>
 
-                  <p className="mb-5 text-sm font-medium text-[color:var(--color-muted)]">
+                  <p className="mb-5 text-sm font-medium !text-[color:var(--color-muted)]">
                     {fishNest.type}
                   </p>
 
-                  <p className="mb-6 leading-relaxed text-[color:var(--color-muted)]">
+                  <p className={`mb-6 ${bodyTextClass}`}>
                     {fishNest.description}
                   </p>
 
-                  <div className="space-y-2 text-sm text-[color:var(--color-muted)]">
-                    <p>📍 {fishNest.location}</p>
-                    {fishNest.phone && <p>📞 {fishNest.phone}</p>}
+                  <div className="space-y-2 text-sm">
+                    <p className="!text-[color:var(--color-muted)]">
+                      📍 {fishNest.location}
+                    </p>
+
+                    {fishNest.phone && (
+                      <p className="!text-[color:var(--color-muted)]">
+                        📞 {fishNest.phone}
+                      </p>
+                    )}
                   </div>
 
                   <RestaurantActions restaurant={fishNest} />
@@ -558,7 +583,7 @@ passing through town.
                 restaurant && (
                   <div
                     key={restaurant.name}
-                    className="overflow-hidden rounded-3xl border border-black/10 bg-[color:var(--bg-card)] shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                    className="flex h-full flex-col overflow-hidden rounded-3xl border border-black/10 bg-[color:var(--bg-card)] shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
                   >
                     {restaurant.image && (
                       <div
@@ -571,24 +596,24 @@ passing through town.
                       />
                     )}
 
-                    <div className="p-6">
+                    <div className="flex flex-1 flex-col p-6">
                       <p className="mb-2 text-sm font-semibold uppercase tracking-[0.16em] text-[color:var(--color-accent)]">
                         Featured Restaurant
                       </p>
 
-                      <h3 className="text-2xl font-semibold">
+                      <h3 className="text-2xl font-semibold text-[color:var(--color-text)]">
                         {restaurant.name}
                       </h3>
 
-                      <p className="mt-2 text-sm font-medium text-[color:var(--color-muted)]">
+                      <p className="mt-2 text-sm font-medium !text-[color:var(--color-muted)]">
                         {restaurant.type}
                       </p>
 
-                      <p className="mt-4 leading-relaxed text-[color:var(--color-muted)]">
+                      <p className={`mt-4 ${bodyTextClass}`}>
                         {restaurant.description}
                       </p>
 
-                      <p className="mt-4 text-sm text-[color:var(--color-muted)]">
+                      <p className="mt-4 text-sm !text-[color:var(--color-muted)]">
                         📍 {restaurant.location}
                       </p>
 
@@ -609,16 +634,14 @@ passing through town.
       <Section>
         <div className="mb-8 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
-              More Places To Eat
-            </p>
+            <p className={eyebrowClass}>More Places To Eat</p>
 
-            <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
+            <h2 className={sectionTitleClass}>
               More restaurants, cafes, coffee stops, sweets, and quick meals.
             </h2>
           </div>
 
-          <p className="leading-relaxed text-[color:var(--color-muted)]">
+          <p className={bodyTextClass}>
             These additional food options are useful for visitors comparing
             Mexican food, pizza, carryout, coffee, sweets, quick meals, and
             places to eat close to the Caddo River, Lake Greeson, cabins, and
@@ -630,9 +653,9 @@ passing through town.
           {standardRestaurants.map((restaurant) => (
             <article
               key={restaurant.name}
-              className="rounded-2xl border border-black/10 bg-[color:var(--bg-card)] p-6 shadow-sm"
+              className={`${cardClass} flex h-full flex-col p-6`}
             >
-              <div className="flex flex-col gap-5 md:flex-row">
+              <div className="flex flex-1 flex-col gap-5 md:flex-row">
                 {restaurant.image && (
                   <div
                     role="img"
@@ -644,20 +667,20 @@ passing through town.
                   />
                 )}
 
-                <div>
+                <div className="flex flex-1 flex-col">
                   <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-[color:var(--color-accent)]">
                     {restaurant.type}
                   </p>
 
-                  <h3 className="text-2xl font-semibold leading-tight">
+                  <h3 className="text-2xl font-semibold leading-tight text-[color:var(--color-text)]">
                     {restaurant.name}
                   </h3>
 
-                  <p className="mt-3 text-sm leading-6 text-[color:var(--color-muted)]">
+                  <p className={`mt-3 ${smallBodyTextClass}`}>
                     {restaurant.description}
                   </p>
 
-                  <p className="mt-3 text-sm text-[color:var(--color-muted)]">
+                  <p className="mt-3 text-sm !text-[color:var(--color-muted)]">
                     📍 {restaurant.location}
                   </p>
 
@@ -670,19 +693,17 @@ passing through town.
       </Section>
 
       <Section>
-        <div className="rounded-3xl border border-black/10 bg-[color:var(--bg-card)] p-8 shadow-sm md:p-10">
+        <div className={`${largeCardClass} p-8 md:p-10`}>
           <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
             <div>
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
-                Good To Know
-              </p>
+              <p className={eyebrowClass}>Good To Know</p>
 
-              <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
+              <h2 className={sectionTitleClass}>
                 Where to eat near the Caddo River and Lake Greeson.
               </h2>
             </div>
 
-            <div className="space-y-4 leading-relaxed text-[color:var(--color-muted)]">
+            <div className={`space-y-4 ${bodyTextClass}`}>
               <p>
                 Glenwood is a convenient food stop for visitors coming in for
                 Caddo River floats, Lake Greeson fishing trips, cabin weekends,
@@ -704,44 +725,39 @@ passing through town.
 
       <Section>
         <div className="mb-8 max-w-3xl">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
-            FAQs
-          </p>
+          <p className={eyebrowClass}>FAQs</p>
 
-          <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
-            Glenwood restaurant FAQs
-          </h2>
+          <h2 className={sectionTitleClass}>Glenwood restaurant FAQs</h2>
         </div>
 
         <div className="grid gap-4 md:grid-cols-2">
           {restaurantFaqs.map((item) => (
-            <div
-              key={item.question}
-              className="rounded-2xl border border-black/10 bg-[color:var(--bg-card)] p-6 shadow-sm"
-            >
+            <div key={item.question} className={`${cardClass} p-6`}>
               <div className="mb-4 h-1 w-10 rounded-full bg-[color:var(--color-accent)]" />
-              <h3 className="text-xl font-semibold">{item.question}</h3>
-              <p className="mt-3 leading-relaxed text-[color:var(--color-muted)]">
-                {item.answer}
-              </p>
+
+              <h3 className="text-xl font-semibold text-[color:var(--color-text)]">
+                {item.question}
+              </h3>
+
+              <p className={`mt-3 ${bodyTextClass}`}>{item.answer}</p>
             </div>
           ))}
         </div>
       </Section>
-<NearbyAmitySection />
+
+      <NearbyAmitySection />
+
       <Section>
-        <div className="rounded-3xl bg-[#2d2a26] p-8 text-white shadow-sm md:p-10">
+        <div className="rounded-3xl bg-[color:var(--color-text)] p-8 text-white shadow-sm md:p-10">
           <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
             <div>
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-white/55">
-                Local Visibility
-              </p>
+              <p className={darkEyebrowClass}>Local Visibility</p>
 
               <h2 className="mb-4 text-3xl font-semibold leading-tight text-white md:text-4xl">
                 Add your restaurant or local food spot.
               </h2>
 
-              <p className="max-w-3xl leading-relaxed text-white/75">
+              <p className="max-w-3xl leading-relaxed !text-white/85">
                 This Glenwood restaurant guide helps visitors find local places
                 to eat while exploring the Caddo River area, Lake Greeson,
                 cabins, campgrounds, and nearby attractions. Restaurants, cafes,
@@ -750,18 +766,12 @@ passing through town.
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-3">
-              <Link
-                href="/contact"
-                className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-white/90"
-              >
+            <div className="flex flex-wrap gap-3 lg:justify-end">
+              <Link href="/contact" className={lightButtonClass}>
                 Get Listed
               </Link>
 
-              <Link
-                href="/contact"
-                className="rounded-full border border-white/20 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-              >
+              <Link href="/contact" className={darkOutlineButtonClass}>
                 Featured Placement
               </Link>
             </div>

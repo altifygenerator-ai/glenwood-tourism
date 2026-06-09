@@ -135,6 +135,43 @@ const exploreFaqs = [
   },
 ];
 
+const eyebrowClass =
+  "mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[color:var(--color-accent)]";
+
+const darkEyebrowClass =
+  "mb-4 text-sm font-semibold uppercase tracking-[0.2em] !text-white/85";
+
+const sectionTitleClass =
+  "text-3xl font-semibold leading-tight text-[color:var(--color-text)] md:text-4xl";
+
+const largeSectionTitleClass =
+  "text-3xl font-semibold leading-tight text-[color:var(--color-text)] md:text-5xl";
+
+const bodyTextClass = "leading-relaxed !text-[color:var(--color-muted)]";
+
+const strongBodyTextClass = "text-lg leading-relaxed !text-[color:var(--color-muted)]";
+
+const cardClass =
+  "rounded-2xl border border-black/10 bg-[color:var(--bg-card)] shadow-sm";
+
+const largeCardClass =
+  "rounded-3xl border border-black/10 bg-[color:var(--bg-card)] shadow-sm";
+
+const primaryButtonClass =
+  "inline-flex items-center justify-center rounded-full bg-[color:var(--color-accent)] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md";
+
+const outlineButtonClass =
+  "inline-flex items-center justify-center rounded-full border border-[color:var(--color-accent)] px-5 py-3 text-sm font-semibold text-[color:var(--color-accent)] transition hover:-translate-y-0.5 hover:bg-[color:var(--color-accent)] hover:text-white";
+
+const lightButtonClass =
+  "inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-[color:var(--color-text)] shadow-sm transition hover:-translate-y-0.5 hover:shadow-md";
+
+const darkOutlineButtonClass =
+  "inline-flex items-center justify-center rounded-full border border-white/35 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/20";
+
+const bottomCardLinkClass =
+  "mt-auto inline-flex pt-5 font-semibold text-[color:var(--color-accent)] transition group-hover:opacity-75";
+
 export default function ExplorePage() {
   return (
     <main>
@@ -182,57 +219,48 @@ export default function ExplorePage() {
         }}
       />
 
-      <section className="relative overflow-hidden bg-[#2d2a26] text-white">
+      <section className="relative overflow-hidden bg-[color:var(--color-text)] text-white">
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-45"
+          className="absolute inset-0 bg-cover bg-center opacity-50"
           style={{
             backgroundImage: "url('/images/glenwood/rivercanoe.jpg')",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/25" />
+
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
 
         <div className="relative mx-auto max-w-6xl px-6 py-20 md:py-28">
           <div className="max-w-3xl">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-white/70">
-              Explore Glenwood
-            </p>
+            <p className={darkEyebrowClass}>Explore Glenwood</p>
 
-            <h1 className="text-4xl font-semibold leading-tight md:text-6xl">
+            <h1 className="text-4xl font-semibold leading-tight text-white md:text-6xl">
               Things to Do in Glenwood, Arkansas
             </h1>
 
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85">
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed !text-white/90">
               Plan a Glenwood trip around the Caddo River, Lake Greeson, cabins,
               camping, local restaurants, outdoor stops, and nearby day trips
               across southwest Arkansas.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                href="/glenwood-ar-cabins"
-                className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-white/90"
-              >
+              <Link href="/glenwood-ar-cabins" className={lightButtonClass}>
                 Find Cabins & Stays
               </Link>
 
               <Link
                 href="/glenwood-ar-restaurants"
-                className="rounded-full border border-white/30 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/20"
+                className={darkOutlineButtonClass}
               >
                 View Restaurants
               </Link>
 
-              <Link
-                href="/events"
-                className="rounded-full border border-white/25 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-              >
+              <Link href="/events" className={darkOutlineButtonClass}>
                 Local Events
               </Link>
 
-              <Link
-                href="/contact"
-                className="rounded-full border border-white/20 px-5 py-3 text-sm font-semibold text-white/85 transition hover:bg-white/10 hover:text-white"
-              >
+              <Link href="/contact" className={darkOutlineButtonClass}>
                 Get Featured
               </Link>
             </div>
@@ -243,15 +271,13 @@ export default function ExplorePage() {
       <Section>
         <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
           <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
-              How To Use This Guide
-            </p>
+            <p className={eyebrowClass}>How To Use This Guide</p>
 
-            <h2 className="mb-5 text-3xl font-semibold leading-tight md:text-4xl">
+            <h2 className={`mb-5 ${sectionTitleClass}`}>
               Pick the kind of Glenwood trip you are planning.
             </h2>
 
-            <div className="space-y-4 leading-relaxed text-[color:var(--color-muted)]">
+            <div className={`space-y-4 ${bodyTextClass}`}>
               <p>
                 Glenwood is not just one attraction. Most visitors come for a
                 mix of river time, lake time, cabins, camping, fishing, family
@@ -268,14 +294,12 @@ export default function ExplorePage() {
 
           <div className="grid gap-4">
             {tripTypes.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-2xl border border-black/10 bg-[color:var(--bg-card)] p-6 shadow-sm"
-              >
-                <h3 className="mb-2 text-xl font-semibold">{item.title}</h3>
-                <p className="leading-relaxed text-[color:var(--color-muted)]">
-                  {item.text}
-                </p>
+              <div key={item.title} className={`${cardClass} p-6`}>
+                <h3 className="mb-2 text-xl font-semibold text-[color:var(--color-text)]">
+                  {item.title}
+                </h3>
+
+                <p className={bodyTextClass}>{item.text}</p>
               </div>
             ))}
           </div>
@@ -290,16 +314,14 @@ export default function ExplorePage() {
       <Section>
         <div className="mb-8 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
-              Suggested Local Stops
-            </p>
+            <p className={eyebrowClass}>Suggested Local Stops</p>
 
-            <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
+            <h2 className={sectionTitleClass}>
               Pair your Glenwood plans with nearby local businesses.
             </h2>
           </div>
 
-          <p className="leading-relaxed text-[color:var(--color-muted)]">
+          <p className={bodyTextClass}>
             Whether you are planning a river float, lake weekend, cabin stay,
             coffee stop, or quick day trip, these local businesses can help
             round out the visit with food, lodging, rentals, and places worth
@@ -311,22 +333,22 @@ export default function ExplorePage() {
           {suggestedBusinessCards.map((card) => (
             <div
               key={card.title}
-              className="rounded-3xl border border-black/10 bg-[color:var(--bg-card)] p-6 shadow-sm"
+              className={`${largeCardClass} flex h-full flex-col p-6`}
             >
               <div className="mb-4 h-1 w-12 rounded-full bg-[color:var(--color-accent)]" />
 
-              <h3 className="mb-3 text-2xl font-semibold">{card.title}</h3>
+              <h3 className="mb-3 text-2xl font-semibold text-[color:var(--color-text)]">
+                {card.title}
+              </h3>
 
-              <p className="mb-5 leading-relaxed text-[color:var(--color-muted)]">
-                {card.text}
-              </p>
+              <p className={`mb-5 ${bodyTextClass}`}>{card.text}</p>
 
-              <div className="space-y-3">
+              <div className="mt-auto space-y-3">
                 {card.links.map((link) => (
                   <Link
                     key={link.label}
                     href={link.href}
-                    className="flex items-center justify-between gap-4 rounded-2xl border border-black/5 bg-white/65 px-4 py-3 text-sm font-medium transition hover:bg-white hover:shadow-sm"
+                    className="flex items-center justify-between gap-4 rounded-2xl border border-black/10 bg-white/70 px-4 py-3 text-sm font-semibold text-[color:var(--color-text)] transition hover:bg-white hover:shadow-sm"
                   >
                     <span>{link.label}</span>
                     <span className="text-[color:var(--color-accent)]">→</span>
@@ -341,16 +363,14 @@ export default function ExplorePage() {
       <Section>
         <div className="mb-8 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
-              Outdoor Stops
-            </p>
+            <p className={eyebrowClass}>Outdoor Stops</p>
 
-            <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
+            <h2 className={sectionTitleClass}>
               Popular attractions and outdoor stops near Glenwood
             </h2>
           </div>
 
-          <p className="leading-relaxed text-[color:var(--color-muted)]">
+          <p className={bodyTextClass}>
             These are some of the main places visitors look for when planning a
             Glenwood trip, from river floats and lake days to scenic drives,
             hiking, camping, fishing, and family-friendly day trips.
@@ -361,7 +381,7 @@ export default function ExplorePage() {
       </Section>
 
       <BackgroundSection image="/images/glenwood/rivercanoe.jpg">
-        <h2 className="max-w-2xl text-4xl font-semibold">
+        <h2 className="max-w-2xl text-4xl font-semibold text-white">
           Float the Caddo River, one of Arkansas’ favorite scenic rivers for
           canoeing, kayaking, tubing, and fishing.
         </h2>
@@ -370,17 +390,15 @@ export default function ExplorePage() {
       <Section>
         <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
-              Caddo River
-            </p>
+            <p className={eyebrowClass}>Caddo River</p>
 
-            <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
+            <h2 className={sectionTitleClass}>
               River floats, kayaking, swimming, and fishing
             </h2>
           </div>
 
-          <div className="rounded-2xl border border-black/10 bg-[color:var(--bg-card)] p-6 shadow-sm md:p-8">
-            <p className="leading-relaxed text-[color:var(--color-muted)]">
+          <div className={`${cardClass} p-6 md:p-8`}>
+            <p className={bodyTextClass}>
               Glenwood is known for easy access to the Caddo River, where
               visitors can canoe, kayak, raft, tube, swim, and fish. The river
               is popular with families and casual floaters, with calm stretches
@@ -389,7 +407,7 @@ export default function ExplorePage() {
 
             <Link
               href="/glenwood-ar-cabins"
-              className="mt-6 inline-flex font-semibold text-[color:var(--color-accent)] underline underline-offset-4"
+              className="mt-6 inline-flex font-semibold text-[color:var(--color-accent)] underline underline-offset-4 transition hover:opacity-75"
             >
               Find cabins and places to stay near the Caddo River
             </Link>
@@ -398,7 +416,7 @@ export default function ExplorePage() {
       </Section>
 
       <BackgroundSection image="/images/glenwood/lagegreeson.jpg">
-        <h2 className="max-w-2xl text-4xl font-semibold">
+        <h2 className="max-w-2xl text-4xl font-semibold text-white">
           Spend the day on Lake Greeson with boating, fishing, camping,
           swimming, hiking, and wide-open water views.
         </h2>
@@ -407,16 +425,14 @@ export default function ExplorePage() {
       <Section>
         <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
-              Lake Greeson
-            </p>
+            <p className={eyebrowClass}>Lake Greeson</p>
 
-            <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
+            <h2 className={sectionTitleClass}>
               Lake days, camping, fishing, and outdoor weekends
             </h2>
           </div>
 
-          <p className="leading-relaxed text-[color:var(--color-muted)]">
+          <p className={strongBodyTextClass}>
             Lake Greeson adds even more options near Glenwood with boating,
             swimming, camping, hiking, and fishing surrounded by public land and
             mountain scenery. It works well for family weekends, fishing trips,
@@ -426,17 +442,15 @@ export default function ExplorePage() {
       </Section>
 
       <Section>
-        <div className="rounded-3xl border border-black/10 bg-[color:var(--bg-card)] p-8 shadow-sm md:p-10">
+        <div className={`${largeCardClass} p-8 md:p-10`}>
           <div className="mb-8 max-w-3xl">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
-              Nearby Outdoor Areas
-            </p>
+            <p className={eyebrowClass}>Nearby Outdoor Areas</p>
 
-            <h2 className="mb-5 text-3xl font-semibold leading-tight md:text-4xl">
+            <h2 className={`mb-5 ${sectionTitleClass}`}>
               Glenwood connects several southwest Arkansas outdoor stops.
             </h2>
 
-            <p className="leading-relaxed text-[color:var(--color-muted)]">
+            <p className={bodyTextClass}>
               Part of what makes Glenwood useful for visitors is how many
               outdoor areas are within reach. You can stay close to the Caddo
               River, spend a day at Lake Greeson, drive toward the Ouachita
@@ -449,9 +463,9 @@ export default function ExplorePage() {
             {nearbyOutdoorStops.map((item) => (
               <div
                 key={item}
-                className="rounded-2xl border border-black/5 bg-white/70 p-5"
+                className="rounded-2xl border border-black/10 bg-white/70 p-5"
               >
-                <p className="text-sm leading-relaxed text-[color:var(--color-muted)]">
+                <p className="text-sm leading-relaxed !text-[color:var(--color-muted)]">
                   {item}
                 </p>
               </div>
@@ -461,7 +475,7 @@ export default function ExplorePage() {
       </Section>
 
       <BackgroundSection image="/images/glenwood/forest.jpg">
-        <h2 className="max-w-2xl text-4xl font-semibold">
+        <h2 className="max-w-2xl text-4xl font-semibold text-white">
           Explore the Ouachita Mountains, forest roads, scenic drives, and the
           natural beauty surrounding Glenwood.
         </h2>
@@ -470,16 +484,14 @@ export default function ExplorePage() {
       <Section>
         <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
-              Nature Around Glenwood
-            </p>
+            <p className={eyebrowClass}>Nature Around Glenwood</p>
 
-            <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
+            <h2 className={sectionTitleClass}>
               Forest scenery, quiet drives, and room to slow down
             </h2>
           </div>
 
-          <p className="leading-relaxed text-[color:var(--color-muted)]">
+          <p className={strongBodyTextClass}>
             Glenwood sits in the Ouachita region, making it a good starting
             point for scenic drives, forest roads, hiking, camping, wildlife
             watching, and quiet days outside. Visitors can explore nearby lakes,
@@ -490,7 +502,7 @@ export default function ExplorePage() {
       </Section>
 
       <BackgroundSection image="/images/glenwood/crater.jpg">
-        <h2 className="max-w-2xl text-4xl font-semibold">
+        <h2 className="max-w-2xl text-4xl font-semibold text-white">
           Search for real diamonds at Crater of Diamonds State Park, one of
           Arkansas’ most unique attractions.
         </h2>
@@ -499,16 +511,14 @@ export default function ExplorePage() {
       <Section>
         <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
-              Day Trips
-            </p>
+            <p className={eyebrowClass}>Day Trips</p>
 
-            <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
+            <h2 className={sectionTitleClass}>
               Unique day trips near Glenwood
             </h2>
           </div>
 
-          <p className="leading-relaxed text-[color:var(--color-muted)]">
+          <p className={strongBodyTextClass}>
             Glenwood is close to some of Arkansas’ most memorable day trips. At
             Crater of Diamonds State Park in Murfreesboro, visitors can search a
             37-acre field for real diamonds and keep what they find. You can
@@ -521,15 +531,13 @@ export default function ExplorePage() {
 
       <Section>
         <div className="mb-8 max-w-3xl">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
-            Weekend Planning
-          </p>
+          <p className={eyebrowClass}>Weekend Planning</p>
 
-          <h2 className="mb-4 text-3xl font-semibold leading-tight md:text-4xl">
+          <h2 className={`mb-4 ${sectionTitleClass}`}>
             Plan a Glenwood weekend trip
           </h2>
 
-          <p className="leading-relaxed text-[color:var(--color-muted)]">
+          <p className={bodyTextClass}>
             Use this simple trip outline to plan a weekend around the Caddo
             River, Lake Greeson, local food, cabins, campgrounds, and nearby
             Arkansas attractions.
@@ -540,20 +548,18 @@ export default function ExplorePage() {
       </Section>
 
       <Section>
-        <div className="rounded-3xl border border-black/10 bg-[color:var(--bg-card)] p-8 shadow-sm md:p-10">
+        <div className={`${largeCardClass} p-8 md:p-10`}>
           <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
             <div>
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
-                Nearby Towns
-              </p>
+              <p className={eyebrowClass}>Nearby Towns</p>
 
-              <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
+              <h2 className={sectionTitleClass}>
                 Add a nearby town or regional stop to your trip.
               </h2>
             </div>
 
             <div>
-              <p className="mb-6 leading-relaxed text-[color:var(--color-muted)]">
+              <p className={`mb-6 ${bodyTextClass}`}>
                 Glenwood is surrounded by small Arkansas towns and regional
                 stops that are easy to add to a weekend trip. Visit Amity for a
                 quiet small-town stop, head toward Murfreesboro for Crater of
@@ -567,7 +573,7 @@ export default function ExplorePage() {
                   href="https://amityarkansas.org"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-full bg-[color:var(--color-accent)] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+                  className={primaryButtonClass}
                 >
                   Visit Amity →
                 </a>
@@ -576,12 +582,12 @@ export default function ExplorePage() {
                   href="https://mountidaarkansas.org"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-full border border-[color:var(--color-accent)] px-5 py-3 text-sm font-semibold text-[color:var(--color-accent)] transition hover:bg-[color:var(--color-accent)] hover:text-white"
+                  className={outlineButtonClass}
                 >
                   Visit Mount Ida →
                 </a>
 
-                <div className="rounded-full border border-black/10 px-5 py-3 text-sm font-semibold text-[color:var(--color-muted)]">
+                <div className="inline-flex items-center justify-center rounded-full border border-black/10 px-5 py-3 text-sm font-semibold text-[color:var(--color-muted)]">
                   Murfreesboro Coming Soon
                 </div>
               </div>
@@ -592,44 +598,37 @@ export default function ExplorePage() {
 
       <Section>
         <div className="mb-8 max-w-3xl">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
-            FAQs
-          </p>
+          <p className={eyebrowClass}>FAQs</p>
 
-          <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
-            Glenwood things to do FAQs
-          </h2>
+          <h2 className={sectionTitleClass}>Glenwood things to do FAQs</h2>
         </div>
 
         <div className="grid gap-4 md:grid-cols-2">
           {exploreFaqs.map((item) => (
-            <div
-              key={item.question}
-              className="rounded-2xl border border-black/10 bg-[color:var(--bg-card)] p-6 shadow-sm"
-            >
+            <div key={item.question} className={`${cardClass} p-6`}>
               <div className="mb-4 h-1 w-10 rounded-full bg-[color:var(--color-accent)]" />
-              <h3 className="text-xl font-semibold">{item.question}</h3>
-              <p className="mt-3 leading-relaxed text-[color:var(--color-muted)]">
-                {item.answer}
-              </p>
+
+              <h3 className="text-xl font-semibold text-[color:var(--color-text)]">
+                {item.question}
+              </h3>
+
+              <p className={`mt-3 ${bodyTextClass}`}>{item.answer}</p>
             </div>
           ))}
         </div>
       </Section>
 
       <Section>
-        <div className="rounded-3xl bg-[#2d2a26] p-8 text-white shadow-sm md:p-10">
+        <div className="rounded-3xl bg-[color:var(--color-text)] p-8 text-white shadow-sm md:p-10">
           <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
             <div>
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-white/55">
-                Local Visibility
-              </p>
+              <p className={darkEyebrowClass}>Local Visibility</p>
 
               <h2 className="mb-4 text-3xl font-semibold leading-tight text-white md:text-4xl">
                 Promote your Glenwood business or attraction.
               </h2>
 
-              <p className="max-w-3xl leading-relaxed text-white/75">
+              <p className="max-w-3xl leading-relaxed !text-white/85">
                 This Glenwood travel guide helps visitors find things to do,
                 places to stay, restaurants, river outfitters, local shops,
                 attractions, and outdoor stops around the Caddo River and Lake
@@ -639,18 +638,12 @@ export default function ExplorePage() {
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-3">
-              <Link
-                href="/contact"
-                className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-white/90"
-              >
+            <div className="flex flex-wrap gap-3 lg:justify-end">
+              <Link href="/contact" className={lightButtonClass}>
                 Get Listed
               </Link>
 
-              <Link
-                href="/contact"
-                className="rounded-full border border-white/20 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-              >
+              <Link href="/contact" className={darkOutlineButtonClass}>
                 Ask About Featured Placement
               </Link>
             </div>

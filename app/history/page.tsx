@@ -4,7 +4,8 @@ import { glenwoodHistory } from "@/data/glenwood";
 import Section from "@/components/tourism/Section";
 
 export const metadata = {
-  title: "History of Glenwood Arkansas | Railroad, Timber, Caddo River & Local Heritage",
+  title:
+    "History of Glenwood Arkansas | Railroad, Timber, Caddo River & Local Heritage",
   description:
     "Discover the history of Glenwood, Arkansas — from its railroad and timber roots to life along the Caddo River, the Ouachita foothills, and its modern outdoor tourism identity.",
   keywords: [
@@ -37,6 +38,41 @@ const historyHighlights = [
   },
 ];
 
+const eyebrowClass =
+  "mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[color:var(--color-accent)]";
+
+const darkEyebrowClass =
+  "mb-4 text-sm font-semibold uppercase tracking-[0.2em] !text-white/85";
+
+const sectionTitleClass =
+  "text-3xl font-semibold leading-tight text-[color:var(--color-text)] md:text-4xl";
+
+const bodyTextClass = "leading-relaxed !text-[color:var(--color-muted)]";
+
+const strongBodyTextClass =
+  "leading-8 !text-[color:var(--color-muted)]";
+
+const cardClass =
+  "rounded-2xl border border-black/10 bg-[color:var(--bg-card)] shadow-sm";
+
+const largeCardClass =
+  "rounded-3xl border border-black/10 bg-[color:var(--bg-card)] shadow-sm";
+
+const primaryButtonClass =
+  "inline-flex items-center justify-center rounded-full bg-[color:var(--color-accent)] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md";
+
+const outlineButtonClass =
+  "inline-flex items-center justify-center rounded-full border border-[color:var(--color-accent)] px-5 py-3 text-sm font-semibold text-[color:var(--color-accent)] transition hover:-translate-y-0.5 hover:bg-[color:var(--color-accent)] hover:text-white";
+
+const lightButtonClass =
+  "inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-[color:var(--color-text)] shadow-sm transition hover:-translate-y-0.5 hover:shadow-md";
+
+const darkOutlineButtonClass =
+  "inline-flex items-center justify-center rounded-full border border-white/35 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/20";
+
+const softButtonClass =
+  "inline-flex items-center justify-center rounded-full border border-black/10 px-5 py-3 text-sm font-semibold text-[color:var(--color-text)] transition hover:-translate-y-0.5 hover:bg-white/70";
+
 export default function HistoryPage() {
   return (
     <main>
@@ -59,49 +95,43 @@ export default function HistoryPage() {
         }}
       />
 
-      <section className="relative overflow-hidden bg-[#2d2a26] text-white">
+      <section className="relative overflow-hidden bg-[color:var(--color-text)] text-white">
         <Image
           src={glenwoodHistory.hero.image}
           alt="Historic Glenwood Arkansas"
           fill
-          className="object-cover opacity-45"
+          className="object-cover opacity-50"
           priority
+          sizes="100vw"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/25" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
 
         <div className="relative mx-auto max-w-6xl px-6 py-20 md:py-28">
           <div className="max-w-3xl">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-white/70">
-              Local History
-            </p>
+            <p className={darkEyebrowClass}>Local History</p>
 
-            <h1 className="text-4xl font-semibold leading-tight md:text-6xl">
+            <h1 className="text-4xl font-semibold leading-tight text-white md:text-6xl">
               {glenwoodHistory.hero.title}
             </h1>
 
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85">
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed !text-white/90">
               {glenwoodHistory.hero.description}
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                href="/explore"
-                className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-white/90"
-              >
+              <Link href="/explore" className={lightButtonClass}>
                 Explore Things To Do
               </Link>
 
-              <Link
-                href="/caddo-river"
-                className="rounded-full border border-white/30 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/20"
-              >
+              <Link href="/caddo-river" className={darkOutlineButtonClass}>
                 Caddo River Guide
               </Link>
 
               <Link
                 href="/glenwood-ar-restaurants"
-                className="rounded-full border border-white/25 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                className={darkOutlineButtonClass}
               >
                 Local Restaurants
               </Link>
@@ -113,15 +143,13 @@ export default function HistoryPage() {
       <Section>
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
-              Glenwood’s Story
-            </p>
+            <p className={eyebrowClass}>Glenwood’s Story</p>
 
-            <h2 className="mb-5 text-3xl font-semibold leading-tight md:text-4xl">
+            <h2 className={`mb-5 ${sectionTitleClass}`}>
               A town shaped by railroads, timber, the river, and the outdoors.
             </h2>
 
-            <div className="space-y-4 leading-relaxed text-[color:var(--color-muted)]">
+            <div className={`space-y-4 ${bodyTextClass}`}>
               <p>
                 Glenwood’s history gives the town more depth than just being a
                 stop near the Caddo River. Its early growth came through
@@ -130,22 +158,23 @@ export default function HistoryPage() {
               </p>
 
               <p>
-                Over time, the same natural setting that supported local life —
+                Over time, the same natural setting that supported local life,
                 the river, the foothills, the roads, the forests, and the nearby
-                lakes — became part of Glenwood’s modern visitor identity.
+                lakes, became part of Glenwood’s modern visitor identity.
               </p>
             </div>
           </div>
 
           <div className="grid gap-4 md:grid-cols-2">
             {historyHighlights.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-2xl border border-black/10 bg-[color:var(--bg-card)] p-5 shadow-sm"
-              >
+              <div key={item.title} className={`${cardClass} p-5`}>
                 <div className="mb-3 h-1 w-10 rounded-full bg-[color:var(--color-accent)]" />
-                <h3 className="mb-2 text-lg font-semibold">{item.title}</h3>
-                <p className="text-sm leading-6 text-[color:var(--color-muted)]">
+
+                <h3 className="mb-2 text-lg font-semibold text-[color:var(--color-text)]">
+                  {item.title}
+                </h3>
+
+                <p className="text-sm leading-6 !text-[color:var(--color-muted)]">
                   {item.text}
                 </p>
               </div>
@@ -162,12 +191,13 @@ export default function HistoryPage() {
               className="grid gap-8 lg:grid-cols-2 lg:items-center"
             >
               <div className={index % 2 === 1 ? "lg:order-2" : ""}>
-                <div className="overflow-hidden rounded-3xl border border-black/10 bg-[color:var(--bg-card)] shadow-sm">
+                <div className={`${largeCardClass} overflow-hidden`}>
                   <div className="relative h-[300px] md:h-[380px]">
                     <Image
                       src={section.images[0]}
                       alt={section.title}
                       fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
                     />
                   </div>
@@ -183,6 +213,7 @@ export default function HistoryPage() {
                             src={img}
                             alt={`${section.title} image ${i + 2}`}
                             fill
+                            sizes="(max-width: 1024px) 50vw, 25vw"
                             className="object-cover"
                           />
                         </div>
@@ -193,17 +224,13 @@ export default function HistoryPage() {
               </div>
 
               <div className={index % 2 === 1 ? "lg:order-1" : ""}>
-                <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
-                  Chapter {index + 1}
-                </p>
+                <p className={eyebrowClass}>Chapter {index + 1}</p>
 
-                <h2 className="mb-5 text-3xl font-semibold leading-tight md:text-4xl">
+                <h2 className={`mb-5 ${sectionTitleClass}`}>
                   {section.title}
                 </h2>
 
-                <p className="leading-8 text-[color:var(--color-muted)]">
-                  {section.text}
-                </p>
+                <p className={strongBodyTextClass}>{section.text}</p>
               </div>
             </article>
           ))}
@@ -211,19 +238,17 @@ export default function HistoryPage() {
       </Section>
 
       <Section>
-        <div className="rounded-3xl border border-black/10 bg-[color:var(--bg-card)] p-8 shadow-sm md:p-10">
+        <div className={`${largeCardClass} p-8 md:p-10`}>
           <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
             <div>
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
-                History Meets Tourism
-              </p>
+              <p className={eyebrowClass}>History Meets Tourism</p>
 
-              <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
+              <h2 className={sectionTitleClass}>
                 Glenwood’s past still shapes the way people experience it today.
               </h2>
             </div>
 
-            <div className="space-y-4 leading-relaxed text-[color:var(--color-muted)]">
+            <div className={`space-y-4 ${bodyTextClass}`}>
               <p>
                 The older story of Glenwood helps explain why the town sits
                 where it does and why it still works as a practical stop for
@@ -241,24 +266,15 @@ export default function HistoryPage() {
               </p>
 
               <div className="flex flex-wrap gap-3 pt-3">
-                <Link
-                  href="/explore"
-                  className="rounded-full bg-[color:var(--color-accent)] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
-                >
+                <Link href="/explore" className={primaryButtonClass}>
                   Explore Glenwood
                 </Link>
 
-                <Link
-                  href="/glenwood-ar-cabins"
-                  className="rounded-full border border-[color:var(--color-accent)] px-5 py-3 text-sm font-semibold text-[color:var(--color-accent)] transition hover:bg-[color:var(--color-accent)] hover:text-white"
-                >
+                <Link href="/glenwood-ar-cabins" className={outlineButtonClass}>
                   Cabins & Stays
                 </Link>
 
-                <Link
-                  href="/events"
-                  className="rounded-full border border-black/10 px-5 py-3 text-sm font-semibold text-[color:var(--color-text)] transition hover:bg-white/70"
-                >
+                <Link href="/events" className={softButtonClass}>
                   Local Events
                 </Link>
               </div>

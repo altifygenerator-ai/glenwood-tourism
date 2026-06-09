@@ -248,12 +248,12 @@ export const glenwoodFeaturedLocalSpots = [
     href: "/glenwood-ar-cabins",
   },
   {
-    name: "Arrowhead Cabins and Camping",
+    name: "At Living Waters Cabins",
     type: "Cabins & Camping",
-    badge: "Cabins & Camping",
+    badge: "Cabins",
     description:
-      "A lodging and camping option for travelers who want to stay close to the Glenwood outdoor scene. It fits the kind of weekend where the cabin, campground, river, food, and local exploring all work together.",
-    image: "/images/glenwood/cabins/arrowhead.webp",
+      "A local cabin locatoin with several rental options, a quiet setting, and a convenient location for visitors who want to stay near the river, restaurants, and local shops. It works well for travelers who want a simple cabin weekend without having to drive far for meals or river access.",
+    image: "/images/glenwood/cabins/at-living-water-cabins.jpg",
     href: "/glenwood-ar-cabins",
   },
   {
@@ -264,14 +264,5 @@ export const glenwoodFeaturedLocalSpots = [
       "A simple local lodging option for visitors who want to stay near restaurants, shops, river access, and the main roads leading toward Lake Greeson, Murfreesboro, Hot Springs, and other area stops.",
     image: "/images/glenwood/cabins/riverwood.webp",
     href: "/glenwood-ar-cabins",
-  },
-  {
-    name: "Feature Your Business",
-    type: "Advertising",
-    badge: "Featured Placement",
-    description:
-      "Get your restaurant, cabin, campground, shop, attraction, event, or local service in front of people who are already planning a Glenwood trip.",
-    image: "/images/placeholder.png",
-    href: "/contact",
   },
 ];

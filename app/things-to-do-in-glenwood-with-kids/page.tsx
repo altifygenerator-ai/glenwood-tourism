@@ -34,7 +34,12 @@ const familyStops = [
       "A simple Glenwood stop for fishing, walking around, slowing down by the water, and giving kids an easy outdoor place without turning the day into a big production.",
     image: images.pond,
     href: "/john-benjamin-pond",
-    bestFor: ["Fishing", "Short visits", "Younger kids", "Low-pressure outdoor time"],
+    bestFor: [
+      "Fishing",
+      "Short visits",
+      "Younger kids",
+      "Low-pressure outdoor time",
+    ],
   },
   {
     title: "Caddo River",
@@ -140,6 +145,43 @@ const faqs = [
   },
 ];
 
+const eyebrowClass =
+  "mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[color:var(--color-accent)]";
+
+const darkEyebrowClass =
+  "mb-4 text-sm font-semibold uppercase tracking-[0.2em] !text-white/85";
+
+const sectionTitleClass =
+  "text-3xl font-semibold leading-tight text-[color:var(--color-text)] md:text-5xl";
+
+const smallSectionTitleClass =
+  "text-3xl font-semibold leading-tight text-[color:var(--color-text)] md:text-4xl";
+
+const bodyTextClass = "leading-7 !text-[color:var(--color-muted)]";
+
+const strongBodyTextClass = "text-lg leading-8 !text-[color:var(--color-muted)]";
+
+const cardClass =
+  "rounded-3xl border border-black/10 bg-[color:var(--bg-card)] shadow-sm";
+
+const cardLinkClass =
+  "group flex h-full flex-col rounded-3xl border border-black/10 bg-[color:var(--bg-card)] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg";
+
+const primaryButtonClass =
+  "inline-flex items-center justify-center rounded-full bg-[color:var(--color-accent)] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md";
+
+const outlineButtonClass =
+  "inline-flex items-center justify-center rounded-full border border-[color:var(--color-accent)] px-5 py-3 text-sm font-semibold text-[color:var(--color-accent)] transition hover:-translate-y-0.5 hover:bg-[color:var(--color-accent)] hover:text-white";
+
+const lightButtonClass =
+  "inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-[color:var(--color-text)] shadow-sm transition hover:-translate-y-0.5 hover:shadow-md";
+
+const darkOutlineButtonClass =
+  "inline-flex items-center justify-center rounded-full border border-white/35 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/20";
+
+const bottomCardLinkClass =
+  "mt-auto inline-flex pt-5 font-semibold text-[color:var(--color-accent)] transition group-hover:opacity-75";
+
 export default function ThingsToDoInGlenwoodWithKidsPage() {
   return (
     <main>
@@ -158,28 +200,41 @@ export default function ThingsToDoInGlenwoodWithKidsPage() {
         }}
       />
 
-      <section className="relative overflow-hidden bg-[#2d2a26] text-white">
+      <section className="relative overflow-hidden bg-[color:var(--color-text)] text-white">
         <Image
           src={images.hero}
           alt="Things to do in Glenwood Arkansas with kids"
           fill
           priority
           sizes="100vw"
-          className="object-cover opacity-55"
+          className="object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/88 via-black/68 to-black/25" />
+
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/30" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent" />
 
         <div className="relative mx-auto max-w-6xl px-6 py-24 md:py-32">
           <div className="max-w-3xl">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-white/70">Family Guide</p>
-            <h1 className="text-4xl font-semibold leading-tight md:text-6xl">Things to do in Glenwood, Arkansas with kids.</h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85">
-              Plan a simple family trip around the Caddo River, John Benjamin Fishing Pond, Lake Greeson, cabins, restaurants, local events, and outdoor stops that make sense for kids.
+            <p className={darkEyebrowClass}>Family Guide</p>
+
+            <h1 className="text-4xl font-semibold leading-tight text-white md:text-6xl">
+              Things to do in Glenwood, Arkansas with kids.
+            </h1>
+
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed !text-white/90">
+              Plan a simple family trip around the Caddo River, John Benjamin
+              Fishing Pond, Lake Greeson, cabins, restaurants, local events, and
+              outdoor stops that make sense for kids.
             </p>
+
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#family-stops" className="btn btn-light">Family Stops</a>
-              <Link href="/plan-my-day" className="rounded-full border border-white/30 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/20">Plan My Day</Link>
+              <a href="#family-stops" className={lightButtonClass}>
+                Family Stops
+              </a>
+
+              <Link href="/plan-my-day" className={darkOutlineButtonClass}>
+                Plan My Day
+              </Link>
             </div>
           </div>
         </div>
@@ -190,12 +245,26 @@ export default function ThingsToDoInGlenwoodWithKidsPage() {
           <div className="rounded-[2rem] border border-black/10 bg-[color:var(--bg-card)] p-7 shadow-sm md:p-10">
             <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
               <div>
-                <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">Easy Family Planning</p>
-                <h2 className="text-3xl font-semibold leading-tight md:text-5xl">Glenwood is best with kids when the plan stays simple.</h2>
+                <p className={eyebrowClass}>Easy Family Planning</p>
+
+                <h2 className={sectionTitleClass}>
+                  Glenwood is best with kids when the plan stays simple.
+                </h2>
               </div>
-              <div className="space-y-4 text-lg leading-8 text-[color:var(--color-muted)]">
-                <p>This is not a big-city attraction list. Glenwood works better as an outdoorsy family base where you can fish, float, swim, eat, stay in a cabin, visit the lake, and keep the day moving at a calmer pace.</p>
-                <p>The key is choosing the right stop for the age of your kids, the weather, the river conditions, and how much driving you actually want to do.</p>
+
+              <div className={`space-y-4 ${strongBodyTextClass}`}>
+                <p>
+                  This is not a big-city attraction list. Glenwood works better
+                  as an outdoorsy family base where you can fish, float, swim,
+                  eat, stay in a cabin, visit the lake, and keep the day moving
+                  at a calmer pace.
+                </p>
+
+                <p>
+                  The key is choosing the right stop for the age of your kids,
+                  the weather, the river conditions, and how much driving you
+                  actually want to do.
+                </p>
               </div>
             </div>
           </div>
@@ -205,27 +274,59 @@ export default function ThingsToDoInGlenwoodWithKidsPage() {
       <section id="family-stops" className="section">
         <div className="container">
           <div className="section-heading">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">Start Here</p>
+            <p className={eyebrowClass}>Start Here</p>
+
             <h2>Family-friendly places to build around.</h2>
-            <p>These are the easiest starting points for a Glenwood family day, especially when you want outdoor time without overcomplicating the trip.</p>
+
+            <p>
+              These are the easiest starting points for a Glenwood family day,
+              especially when you want outdoor time without overcomplicating the
+              trip.
+            </p>
           </div>
 
           <div className="grid gap-6 lg:grid-cols-3">
             {familyStops.map((stop) => (
-              <Link key={stop.title} href={stop.href} className="group flex h-full flex-col overflow-hidden rounded-[2rem] border border-black/10 bg-[color:var(--bg-card)] shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+              <Link
+                key={stop.title}
+                href={stop.href}
+                className="group flex h-full flex-col overflow-hidden rounded-[2rem] border border-black/10 bg-[color:var(--bg-card)] shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+              >
                 <div className="relative h-64 overflow-hidden bg-[color:var(--color-accent)]">
-                  <Image src={stop.image} alt={stop.title} fill sizes="(max-width: 900px) 100vw, 33vw" className="object-cover transition duration-700 group-hover:scale-105" />
-                  <div className="absolute left-4 top-4 rounded-full bg-black/70 px-3 py-1 text-xs font-bold uppercase tracking-[0.14em] text-white backdrop-blur">{stop.label}</div>
+                  <Image
+                    src={stop.image}
+                    alt={stop.title}
+                    fill
+                    sizes="(max-width: 900px) 100vw, 33vw"
+                    className="object-cover transition duration-700 group-hover:scale-105"
+                  />
+
+                  <div className="absolute left-4 top-4 rounded-full bg-black/75 px-3 py-1 text-xs font-bold uppercase tracking-[0.14em] text-white backdrop-blur">
+                    {stop.label}
+                  </div>
                 </div>
+
                 <div className="flex flex-1 flex-col p-6">
-                  <h3 className="text-2xl font-semibold leading-tight">{stop.title}</h3>
-                  <p className="mt-4 leading-7 text-[color:var(--color-muted)]">{stop.description}</p>
+                  <h3 className="text-2xl font-semibold leading-tight text-[color:var(--color-text)]">
+                    {stop.title}
+                  </h3>
+
+                  <p className={`mt-4 ${bodyTextClass}`}>
+                    {stop.description}
+                  </p>
+
                   <div className="mt-5 flex flex-wrap gap-2">
                     {stop.bestFor.map((item) => (
-                      <span key={item} className="rounded-full border border-black/10 bg-white/55 px-3 py-1 text-xs font-semibold text-[color:var(--color-text)]">{item}</span>
+                      <span
+                        key={item}
+                        className="rounded-full border border-black/10 bg-white/65 px-3 py-1 text-xs font-semibold text-[color:var(--color-text)]"
+                      >
+                        {item}
+                      </span>
                     ))}
                   </div>
-                  <span className="mt-auto pt-6 font-semibold text-[color:var(--color-accent)]">Open guide →</span>
+
+                  <span className={bottomCardLinkClass}>Open guide →</span>
                 </div>
               </Link>
             ))}
@@ -233,19 +334,31 @@ export default function ThingsToDoInGlenwoodWithKidsPage() {
         </div>
       </section>
 
-      <section className="section bg-white/35">
+      <section className="section bg-white/20">
         <div className="container">
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
             <div>
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">Practical Tips</p>
-              <h2 className="text-3xl font-semibold leading-tight md:text-5xl">Make the day fit the kids, not the other way around.</h2>
-              <p className="mt-5 text-lg leading-8 text-[color:var(--color-muted)]">A Glenwood family trip goes better when you leave room for heat, snacks, bathroom breaks, naps, weather, and changing river plans.</p>
+              <p className={eyebrowClass}>Practical Tips</p>
+
+              <h2 className={sectionTitleClass}>
+                Make the day fit the kids, not the other way around.
+              </h2>
+
+              <p className={`mt-5 ${strongBodyTextClass}`}>
+                A Glenwood family trip goes better when you leave room for heat,
+                snacks, bathroom breaks, naps, weather, and changing river
+                plans.
+              </p>
             </div>
+
             <div className="grid gap-4 md:grid-cols-2">
               {easyIdeas.map((idea) => (
-                <div key={idea.title} className="rounded-3xl border border-black/10 bg-[color:var(--bg-card)] p-6 shadow-sm">
-                  <h3 className="text-2xl font-semibold">{idea.title}</h3>
-                  <p className="mt-3 leading-7 text-[color:var(--color-muted)]">{idea.text}</p>
+                <div key={idea.title} className={`${cardClass} p-6`}>
+                  <h3 className="text-2xl font-semibold text-[color:var(--color-text)]">
+                    {idea.title}
+                  </h3>
+
+                  <p className={`mt-3 ${bodyTextClass}`}>{idea.text}</p>
                 </div>
               ))}
             </div>
@@ -256,33 +369,48 @@ export default function ThingsToDoInGlenwoodWithKidsPage() {
       <section className="section">
         <div className="container">
           <div className="section-heading">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">By Age and Trip Type</p>
+            <p className={eyebrowClass}>By Age and Trip Type</p>
+
             <h2>Choose the right pace for your family.</h2>
           </div>
+
           <div className="grid gap-5 md:grid-cols-3">
             {ageGroups.map((group) => (
-              <div key={group.title} className="rounded-3xl border border-black/10 bg-[color:var(--bg-card)] p-6 shadow-sm">
-                <h3 className="text-2xl font-semibold">{group.title}</h3>
-                <p className="mt-3 leading-7 text-[color:var(--color-muted)]">{group.text}</p>
+              <div key={group.title} className={`${cardClass} p-6`}>
+                <h3 className="text-2xl font-semibold text-[color:var(--color-text)]">
+                  {group.title}
+                </h3>
+
+                <p className={`mt-3 ${bodyTextClass}`}>{group.text}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section bg-white/35">
+      <section className="section bg-white/20">
         <div className="container">
           <div className="section-heading">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">Build the Trip</p>
+            <p className={eyebrowClass}>Build the Trip</p>
+
             <h2>Food, cabins, events, and a simple itinerary.</h2>
-            <p>Use these Glenwood guides to turn a kid-friendly activity into a full day or weekend without bouncing all over the map.</p>
+
+            <p>
+              Use these Glenwood guides to turn a kid-friendly activity into a
+              full day or weekend without bouncing all over the map.
+            </p>
           </div>
+
           <div className="grid gap-5 md:grid-cols-2">
             {tripBuilders.map((item) => (
-              <Link key={item.title} href={item.href} className="rounded-3xl border border-black/10 bg-[color:var(--bg-card)] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-                <h3 className="text-2xl font-semibold">{item.title}</h3>
-                <p className="mt-3 leading-7 text-[color:var(--color-muted)]">{item.text}</p>
-                <span className="mt-5 inline-block font-semibold text-[color:var(--color-accent)]">{item.cta} →</span>
+              <Link key={item.title} href={item.href} className={cardLinkClass}>
+                <h3 className="text-2xl font-semibold text-[color:var(--color-text)]">
+                  {item.title}
+                </h3>
+
+                <p className={`mt-3 ${bodyTextClass}`}>{item.text}</p>
+
+                <span className={bottomCardLinkClass}>{item.cta} →</span>
               </Link>
             ))}
           </div>
@@ -293,32 +421,62 @@ export default function ThingsToDoInGlenwoodWithKidsPage() {
         <div className="container">
           <div className="grid gap-8 rounded-[2rem] border border-black/10 bg-[color:var(--bg-card)] p-7 shadow-sm md:p-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <div className="relative min-h-[320px] overflow-hidden rounded-[1.5rem] bg-[color:var(--color-accent)]">
-              <Image src={images.river} alt="Caddo River family trip near Glenwood Arkansas" fill sizes="(max-width: 900px) 100vw, 50vw" className="object-cover" />
+              <Image
+                src={images.river}
+                alt="Caddo River family trip near Glenwood Arkansas"
+                fill
+                sizes="(max-width: 900px) 100vw, 50vw"
+                className="object-cover"
+              />
             </div>
+
             <div>
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">River Safety Note</p>
-              <h2 className="text-3xl font-semibold leading-tight md:text-5xl">The Caddo can be a great family day, but check it first.</h2>
-              <p className="mt-5 text-lg leading-8 text-[color:var(--color-muted)]">River conditions are not the same every weekend. Before taking kids to float, swim, or play near the water, check the weather, current flow, outfitters, access points, and whether the spot you are using is public.</p>
+              <p className={eyebrowClass}>River Safety Note</p>
+
+              <h2 className={sectionTitleClass}>
+                The Caddo can be a great family day, but check it first.
+              </h2>
+
+              <p className={`mt-5 ${strongBodyTextClass}`}>
+                River conditions are not the same every weekend. Before taking
+                kids to float, swim, or play near the water, check the weather,
+                current flow, outfitters, access points, and whether the spot
+                you are using is public.
+              </p>
+
               <div className="mt-7 flex flex-wrap gap-3">
-                <Link href="/caddo-river-swimming-access" className="btn">Swimming Access Guide</Link>
-                <Link href="/caddo-river" className="btn btn-light">Caddo River Guide</Link>
+                <Link
+                  href="/caddo-river-swimming-access"
+                  className={primaryButtonClass}
+                >
+                  Swimming Access Guide
+                </Link>
+
+                <Link href="/caddo-river" className={outlineButtonClass}>
+                  Caddo River Guide
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section bg-white/35">
+      <section className="section bg-white/20">
         <div className="container">
           <div className="section-heading">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">Questions</p>
+            <p className={eyebrowClass}>Questions</p>
+
             <h2>Glenwood with kids FAQ</h2>
           </div>
+
           <div className="mx-auto max-w-4xl space-y-4">
             {faqs.map((faq) => (
-              <div key={faq.question} className="rounded-3xl border border-black/10 bg-[color:var(--bg-card)] p-6 shadow-sm">
-                <h3 className="text-2xl font-semibold">{faq.question}</h3>
-                <p className="mt-3 leading-7 text-[color:var(--color-muted)]">{faq.answer}</p>
+              <div key={faq.question} className={`${cardClass} p-6`}>
+                <h3 className="text-2xl font-semibold text-[color:var(--color-text)]">
+                  {faq.question}
+                </h3>
+
+                <p className={`mt-3 ${bodyTextClass}`}>{faq.answer}</p>
               </div>
             ))}
           </div>
