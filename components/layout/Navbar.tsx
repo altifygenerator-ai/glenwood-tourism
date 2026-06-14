@@ -24,6 +24,14 @@ const articleLinks = [
     href: "/caddo-river-swimming-access",
     label: "Best Caddo River Swimming Spots & Easy River Access",
   },
+  {
+    href: "/lake-greeson-near-glenwood",
+    label: "Lake Greeson Near Glenwood",
+  },
+  {
+    href: "/lake-greeson-crater-of-diamonds-day-trip",
+    label: "Lake Greeson & Crater Day Trip",
+  },
 ];
 
 const eventLinks = [

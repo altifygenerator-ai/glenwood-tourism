@@ -2,6 +2,18 @@ import Link from "next/link";
 
 const updates = [
   {
+    label: "Lake guide",
+    title: "Lake Greeson Near Glenwood",
+    text: "A practical guide to deciding whether Lake Greeson is worth adding to a Glenwood trip, with notes on boating, fishing, swimming, Swaha, Dam Grill, and pairing it with a Caddo River weekend.",
+    href: "/lake-greeson-near-glenwood",
+  },
+  {
+    label: "Day trip guide",
+    title: "Lake Greeson & Crater of Diamonds Day Trip",
+    text: "A bigger Glenwood-area day trip guide connecting Lake Greeson, Swaha Lodge N Marina, Dam Grill, Murfreesboro, and Crater of Diamonds without making the day feel rushed.",
+    href: "/lake-greeson-crater-of-diamonds-day-trip",
+  },
+  {
     label: "River access guide",
     title: "Best Caddo River Swimming Spots & Easy River Access",
     text: "A practical guide to getting in the Caddo around Glenwood, with notes on swimming spots, public access, float routes, outfitters, private land, and river levels.",
@@ -12,12 +24,6 @@ const updates = [
     title: "Caddo River Guide",
     text: "A practical Glenwood river guide covering floats, tubing, launches, pickups, outfitters, what to bring, and weekend planning.",
     href: "/caddo-river",
-  },
-  {
-    label: "Local outdoor spot",
-    title: "John Benjamin Fishing Pond",
-    text: "A simple local guide to one of Glenwood’s community fishing spots, with notes on fishing, kids, park use, and slowing down by the water.",
-    href: "/john-benjamin-pond",
   },
   {
     label: "Local history",
@@ -41,6 +47,12 @@ export default function RecentUpdates() {
               <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
                 New and updated Glenwood guides.
               </h2>
+
+              <p className="mt-3 max-w-3xl text-sm leading-7 text-[color:var(--color-muted)]">
+                New local guides are being added around Glenwood, the Caddo
+                River, Lake Greeson, nearby day trips, family stops, river
+                access, and outdoor places worth knowing about.
+              </p>
             </div>
 
             <Link
@@ -51,7 +63,7 @@ export default function RecentUpdates() {
             </Link>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {updates.map((update) => (
               <Link
                 key={update.title}
