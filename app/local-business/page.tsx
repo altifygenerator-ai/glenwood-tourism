@@ -96,12 +96,23 @@ const localBusinesses = [
     directions:
       "https://www.google.com/maps/search/?api=1&query=Bean+Creek+Cabins+Caddo+Gap+AR",
   },
+  {
+  name: "Bear Creek UTV Rentals & Repair LLC",
+  type: "UTV Rentals • ATV Rentals • Dirt Bike Repair • Outdoor Recreation",
+  description:
+    "A Kirby-area outdoor recreation business offering UTV rentals, ATV rentals, and repair or maintenance for UTVs, ATVs, and dirt bikes. A good fit for visitors staying around Glenwood, Kirby, Lake Greeson, Bear Creek, or nearby cabin areas who want another outdoor activity beyond floating the Caddo or spending time at the lake.",
+  location: "337 Kirby Landing Rd, Kirby, AR 71950",
+  phone: "870-828-3093",
+  website: "https://bearcreekutv.com/",
+  directions:
+    "https://www.google.com/maps/search/?api=1&query=Bear+Creek+UTV+Rentals+and+Repair+337+Kirby+Landing+Rd+Kirby+AR+71950",
+},
 ];
 
 export const metadata = {
   title: "Local Businesses in Glenwood Arkansas | Restaurants, Cabins & Shops",
   description:
-    "Find local businesses in Glenwood, Arkansas including restaurants, cafes, cabins, lodging, outdoor outfitters, sweets, coffee, and Caddo River area stops.",
+    "Find local businesses in Glenwood, Arkansas including restaurants, cafes, cabins, lodging, outdoor outfitters, UTV rentals, repair services, sweets, coffee, and Caddo River area stops.",
 };
 
 export default function LocalBusinessesPage() {
