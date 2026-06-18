@@ -40,7 +40,7 @@ export default function Hero({ data }: any) {
           <div className="mx-auto max-w-6xl">
             <div className="max-w-3xl rounded-2xl bg-black/60 p-7 text-white shadow-2xl backdrop-blur-md md:p-10">
               {data.eyebrow && (
-                <p className="mb-3 text-sm font-medium uppercase tracking-[0.22em] text-white/75">
+                <p className="mb-3 text-sm font-medium uppercase tracking-[0.22em] !text-white/75">
                   {data.eyebrow}
                 </p>
               )}
@@ -49,7 +49,7 @@ export default function Hero({ data }: any) {
                 {data.title}
               </h1>
 
-              <p className="mt-4 max-w-2xl text-lg leading-relaxed text-white/95 drop-shadow-md md:text-xl">
+              <p className="mt-4 max-w-2xl text-lg leading-relaxed !text-white/95 drop-shadow-md md:text-xl">
                 {data.description}
               </p>
 
@@ -77,7 +77,7 @@ export default function Hero({ data }: any) {
               </div>
 
               <div className="mt-7 border-t border-white/15 pt-5">
-                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/60">
+                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] !text-white/60">
                   Start Planning
                 </p>
 

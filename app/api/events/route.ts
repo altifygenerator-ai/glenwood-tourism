@@ -2,31 +2,47 @@ import { NextResponse } from "next/server";
 import { createEventSlug } from "@/lib/events";
 import { supabaseAdmin } from "@/lib/supabase/server";
 
+const allowedSites = [
+  "glenwood",
+  "mount-ida",
+  "hot-springs",
+  "amity",
+  "murfreesboro",
+] as const;
+
+type SiteKey = (typeof allowedSites)[number];
+
 function cleanString(value: unknown) {
   if (typeof value !== "string") return null;
   const trimmed = value.trim();
   return trimmed.length ? trimmed : null;
 }
 
-function cleanSite(value: unknown) {
-  const site = cleanString(value);
-
-  if (
-    site === "glenwood" ||
-    site === "mount-ida" ||
-    site === "hot-springs" ||
-    site === "amity"
-  ) {
-    return site;
-  }
-
-  return "glenwood";
+function isAllowedSite(value: unknown): value is SiteKey {
+  return typeof value === "string" && allowedSites.includes(value as SiteKey);
 }
 
-function defaultCityForSite(site: string) {
+function resolveSite(value: unknown): SiteKey | null {
+  const submittedSite = cleanString(value);
+
+  if (isAllowedSite(submittedSite)) {
+    return submittedSite;
+  }
+
+  const envSite = process.env.SITE_KEY;
+
+  if (isAllowedSite(envSite)) {
+    return envSite;
+  }
+
+  return null;
+}
+
+function defaultCityForSite(site: SiteKey) {
   if (site === "mount-ida") return "Mount Ida";
   if (site === "hot-springs") return "Hot Springs";
   if (site === "amity") return "Amity";
+  if (site === "murfreesboro") return "Murfreesboro";
   return "Glenwood";
 }
 
@@ -36,7 +52,18 @@ export async function POST(request: Request) {
 
     const title = cleanString(body.title);
     const startDate = cleanString(body.start_date);
-    const site = cleanSite(body.site);
+    const site = resolveSite(body.site);
+
+    if (!site) {
+      return NextResponse.json(
+        {
+          error:
+            "Missing or invalid site. Set SITE_KEY in .env.local or send a valid site with the form.",
+        },
+        { status: 400 }
+      );
+    }
+
     const defaultCity = defaultCityForSite(site);
 
     if (!title || !startDate) {
