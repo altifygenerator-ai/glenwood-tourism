@@ -2,7 +2,7 @@ import Section from "@/components/tourism/Section";
 import Link from "next/link";
 import EventsCTA from "@/components/events/EventsCTA";
 import NearbyAmitySection from "@/components/NearbyAmitySection";
-
+import TrackedFeatureLink from "@/components/TrackedFeatureLink";
 export const metadata = {
   title:
     "Cabins and Places to Stay Near Glenwood, Arkansas | Caddo River & Lake Greeson",
@@ -665,23 +665,33 @@ export default function GlenwoodCabinsPage() {
         </div>
 
         <div className="mt-6 flex flex-wrap gap-3">
-          <Link
-            href="/at-living-water-cabins"
-            className="inline-flex items-center justify-center rounded-full bg-[color:var(--color-accent)] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
-          >
-            View Full Feature
-          </Link>
+          <TrackedFeatureLink
+  href="/at-living-water-cabins"
+  business={atLivingWater.name}
+  city="Glenwood"
+  page="Cabins and Places to Stay"
+  placement="Premium Featured Stay"
+  action="View Full Feature"
+  className="inline-flex items-center justify-center rounded-full bg-[color:var(--color-accent)] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+>
+  View Full Feature
+</TrackedFeatureLink>
 
           {atLivingWater.website && (
-            <a
-              href={atLivingWater.website}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full border border-[color:var(--color-accent)] px-5 py-3 text-sm font-semibold text-[color:var(--color-accent)] transition hover:-translate-y-0.5 hover:bg-[color:var(--color-accent)] hover:text-white"
-            >
-              Book Direct
-            </a>
-          )}
+  <TrackedFeatureLink
+    href={atLivingWater.website}
+    newTab
+    business={atLivingWater.name}
+    city="Glenwood"
+    page="Cabins and Places to Stay"
+    placement="Premium Featured Stay"
+    action="Book Direct"
+    className="inline-flex items-center justify-center rounded-full border border-[color:var(--color-accent)] px-5 py-3 text-sm font-semibold text-[color:var(--color-accent)] transition hover:-translate-y-0.5 hover:bg-[color:var(--color-accent)] hover:text-white"
+  >
+    Book Direct
+  </TrackedFeatureLink>
+)}
+          
 
           {atLivingWater.phone && (
             <a
