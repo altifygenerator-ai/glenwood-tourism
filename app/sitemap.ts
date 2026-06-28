@@ -30,6 +30,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.88,
     },
     {
+      url: `${baseUrl}/visitor-essentials-glenwood-ar`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/pet-friendly-glenwood-ar`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.86,
+    },
+    {
+      url: `${baseUrl}/rainy-day-things-to-do-glenwood-ar`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.86,
+    },
+    {
       url: `${baseUrl}/events`,
       lastModified: new Date(),
       changeFrequency: "daily",
@@ -58,6 +76,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/caddo-river-swimming-access`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/caddo-river-weekend-guide`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/lake-greeson-near-glenwood`,
@@ -112,6 +142,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/search`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.5,
     },
     {
       url: `${baseUrl}/contact`,

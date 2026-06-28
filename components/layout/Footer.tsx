@@ -6,13 +6,16 @@ const exploreLinks = [
     label: "Things To Do With Kids",
   },
   { href: "/caddo-river", label: "Caddo River" },
+  { href: "/rainy-day-things-to-do-glenwood-ar", label: "Rainy Day Ideas" },
   { href: "/history", label: "Glenwood History" },
 ];
 
 const visitorLinks = [
   { href: "/plan-my-day", label: "Plan a Glenwood Day" },
+  { href: "/visitor-essentials-glenwood-ar", label: "Visitor Essentials" },
   { href: "/glenwood-ar-restaurants", label: "Restaurants" },
   { href: "/glenwood-ar-cabins", label: "Cabins & Places to Stay" },
+  { href: "/pet-friendly-glenwood-ar", label: "Pet-Friendly Glenwood" },
   { href: "/local-business", label: "Local Businesses" },
 ];
 

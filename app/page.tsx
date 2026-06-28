@@ -12,6 +12,7 @@ import HomeEventsPreview from "@/components/events/HomeEventsPreview";
 import PlanMyDayTeaser from "@/components/PlanMyDayTeaser";
 import GlenwoodFourthOfJulyFeature from "@/components/GlenwoodFourthOfJulyFeature";
 import CaddoRiverHomeFeature from "@/components/CaddoRiverHomeFeature";
+import CaddoTripCheck from "@/components/CaddoTripCheck";
 import RecentUpdates from "@/components/RecentUpdates";
 import { generateMetadata } from "@/lib/seo";
 
@@ -146,6 +147,7 @@ export default function Page() {
       <RecentUpdates />
       <PlanMyDayTeaser />
       <CaddoRiverHomeFeature />
+      <CaddoTripCheck />
 
       <Section>
         <Highlights items={glenwoodHighlights} />

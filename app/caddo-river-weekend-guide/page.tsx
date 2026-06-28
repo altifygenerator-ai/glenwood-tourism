@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Section from "@/components/tourism/Section";
+import CaddoTripCheck from "@/components/CaddoTripCheck";
 import EventsCTA from "@/components/events/EventsCTA";
 
 export const metadata = {
@@ -150,6 +151,8 @@ export default function CaddoRiverWeekendGuidePage() {
           </div>
         </div>
       </section>
+
+      <CaddoTripCheck />
 
       <Section>
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">

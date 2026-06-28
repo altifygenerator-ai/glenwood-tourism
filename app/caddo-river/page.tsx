@@ -5,6 +5,7 @@ import CaddoRiverQuestions from "@/components/CaddoRiverQuestions";
 import CaddoRiverOutfitters from "@/components/CaddoRiverOutfitters";
 import CaddoRiverTripTips from "@/components/CaddoRiverTripTips";
 import CaddoRiverWeekend from "@/components/CaddoRiverWeekend";
+import CaddoTripCheck from "@/components/CaddoTripCheck";
 
 export const metadata: Metadata = {
   title:
@@ -21,6 +22,7 @@ export default function CaddoRiverPage() {
     <main>
       <CaddoRiverHero />
       <CaddoRiverGuideIntro />
+      <CaddoTripCheck />
       <CaddoRiverQuestions />
       <CaddoRiverOutfitters />
       <CaddoRiverTripTips />

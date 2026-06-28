@@ -14,7 +14,7 @@ export const metadata = {
 const planningLinks = [
   {
     label: "Things To Do",
-    href: "/things-to-do",
+    href: "/explore",
   },
   {
     label: "Caddo River",
@@ -22,11 +22,11 @@ const planningLinks = [
   },
   {
     label: "Places To Stay",
-    href: "/cabins",
+    href: "/glenwood-ar-cabins",
   },
   {
     label: "Restaurants",
-    href: "/restaurants",
+    href: "/glenwood-ar-restaurants",
   },
   {
     label: "Submit Event",
@@ -44,19 +44,19 @@ const weekendIdeas = [
   {
     title: "Find a local place to eat",
     text: "Plan a meal around Glenwood before or after river time, a cabin stay, a Lake Greeson stop, or a slower weekend drive through town.",
-    href: "/restaurants",
+    href: "/glenwood-ar-restaurants",
     label: "View Restaurants",
   },
   {
     title: "Make it an outdoor weekend",
     text: "Glenwood works well for a simple outdoor trip with river stops, nearby lake time, scenic drives, local food, and easy places to slow down.",
-    href: "/things-to-do",
+    href: "/explore",
     label: "Browse Things To Do",
   },
   {
     title: "Stay close to the river",
     text: "Cabins, campgrounds, and local stays can make the weekend easier if you’re planning a float trip, family visit, or quiet getaway.",
-    href: "/cabins",
+    href: "/glenwood-ar-cabins",
     label: "See Places To Stay",
   },
 ];
@@ -272,7 +272,7 @@ export default async function ThisWeekendPage() {
                 </p>
 
                 <div className="mt-7 flex flex-wrap justify-center gap-3">
-                  <Link href="/things-to-do" className="btn">
+                  <Link href="/explore" className="btn">
                     Browse Things To Do
                   </Link>
 

@@ -12,13 +12,16 @@ const thingsToDoLinks = [
 
 const planLinks = [
   { href: "/plan-my-day", label: "Plan My Day" },
+  { href: "/visitor-essentials-glenwood-ar", label: "Visitor Essentials" },
   { href: "/glenwood-ar-restaurants", label: "Restaurants" },
   { href: "/glenwood-ar-cabins", label: "Cabins & Places to Stay" },
+  { href: "/pet-friendly-glenwood-ar", label: "Pet-Friendly Glenwood" },
   { href: "/caddo-river", label: "Caddo River" },
   { href: "/history", label: "Glenwood History" },
 ];
 
 const articleLinks = [
+  { href: "/rainy-day-things-to-do-glenwood-ar", label: "Rainy Day Backup Plans" },
   { href: "/bard-springs", label: "Bard Springs Recreation Area" },
   {
     href: "/caddo-river-swimming-access",

@@ -13,6 +13,28 @@ export const metadata = {
     "Explore things to do in Glenwood, Arkansas including the Caddo River, Lake Greeson, Ouachita Mountains, Crater of Diamonds, cabins, restaurants, camping, floating, fishing, and nearby day trips.",
 };
 
+
+const helpfulGuideCards = [
+  {
+    title: "Visitor essentials",
+    text: "A practical checklist for food, ice, river supplies, cleanup, access, and the little things that make a Glenwood day easier.",
+    href: "/visitor-essentials-glenwood-ar",
+    label: "View Essentials",
+  },
+  {
+    title: "Pet-friendly planning",
+    text: "Simple notes for dogs, cabins, patios, heat, river access, cleanup, and planning a Glenwood trip without assuming every stop allows pets.",
+    href: "/pet-friendly-glenwood-ar",
+    label: "Pet-Friendly Guide",
+  },
+  {
+    title: "Rainy day backup plans",
+    text: "Food, events, Lake Greeson, cabin downtime, nearby drives, and easy ways to save the day when the river is not right.",
+    href: "/rainy-day-things-to-do-glenwood-ar",
+    label: "Backup Ideas",
+  },
+];
+
 const suggestedBusinessCards = [
   {
     title: "For a Caddo River Day",
@@ -303,6 +325,45 @@ export default function ExplorePage() {
               </div>
             ))}
           </div>
+        </div>
+      </Section>
+
+
+      <Section>
+        <div className="mb-8 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+          <div>
+            <p className={eyebrowClass}>Helpful Visitor Guides</p>
+
+            <h2 className={sectionTitleClass}>
+              Practical pages for planning the parts people forget.
+            </h2>
+          </div>
+
+          <p className={bodyTextClass}>
+            These guides help with the details around the main trip: what to
+            grab before the river, what to do when the water is not right, and
+            how to plan around pets, lodging, food, and local stops.
+          </p>
+        </div>
+
+        <div className="grid gap-5 md:grid-cols-3">
+          {helpfulGuideCards.map((card) => (
+            <Link
+              key={card.href}
+              href={card.href}
+              className="group flex h-full flex-col rounded-3xl border border-black/10 bg-[color:var(--bg-card)] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+            >
+              <div className="mb-4 h-1 w-10 rounded-full bg-[color:var(--color-accent)]" />
+
+              <h3 className="text-2xl font-semibold leading-tight text-[color:var(--color-text)]">
+                {card.title}
+              </h3>
+
+              <p className={`mt-4 ${bodyTextClass}`}>{card.text}</p>
+
+              <span className={bottomCardLinkClass}>{card.label} →</span>
+            </Link>
+          ))}
         </div>
       </Section>
 

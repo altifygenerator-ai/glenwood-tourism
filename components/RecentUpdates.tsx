@@ -2,16 +2,28 @@ import Link from "next/link";
 
 const updates = [
   {
-    label: "Lake guide",
-    title: "Lake Greeson Near Glenwood",
-    text: "A practical guide to deciding whether Lake Greeson is worth adding to a Glenwood trip, with notes on boating, fishing, swimming, Swaha, Dam Grill, and pairing it with a Caddo River weekend.",
-    href: "/lake-greeson-near-glenwood",
+    label: "Visitor planning",
+    title: "Visitor Essentials in Glenwood",
+    text: "A new practical guide has been added for the little things visitors need before a Glenwood day outside, including food, ice, river supplies, cleanup, backup plans, and local planning links.",
+    href: "/visitor-essentials-glenwood-ar",
   },
   {
-    label: "Day trip guide",
-    title: "Lake Greeson & Crater of Diamonds Day Trip",
-    text: "A bigger Glenwood-area day trip guide connecting Lake Greeson, Swaha Lodge N Marina, Dam Grill, Murfreesboro, and Crater of Diamonds without making the day feel rushed.",
-    href: "/lake-greeson-crater-of-diamonds-day-trip",
+    label: "Pet-friendly guide",
+    title: "Pet-Friendly Glenwood Planning",
+    text: "A new pet-friendly page helps visitors plan around cabins, dogs on the river, patios, heat, cleanup, access rules, and simple ways to travel with pets around Glenwood.",
+    href: "/pet-friendly-glenwood-ar",
+  },
+  {
+    label: "Backup plans",
+    title: "Rainy Day Things To Do in Glenwood",
+    text: "A new backup-plan guide helps visitors save the day when the Caddo River is too low, too high, stormy, crowded, or just not the right fit for the group.",
+    href: "/rainy-day-things-to-do-glenwood-ar",
+  },
+  {
+    label: "Trip check",
+    title: "Caddo River Trip Check Added",
+    text: "The Caddo River pages now include a practical trip-check section for recent rain, water levels, outfitters, river access, and backup plans before visitors commit to the water.",
+    href: "/caddo-river",
   },
   {
     label: "River access guide",
@@ -20,16 +32,10 @@ const updates = [
     href: "/caddo-river-swimming-access",
   },
   {
-    label: "River guide",
-    title: "Caddo River Guide",
-    text: "A practical Glenwood river guide covering floats, tubing, launches, pickups, outfitters, what to bring, and weekend planning.",
-    href: "/caddo-river",
-  },
-  {
-    label: "Local history",
-    title: "What Happened to Bard Springs?",
-    text: "A local feature on Bard Springs, the history people remember, what it used to be, storm damage, and the question of restoration.",
-    href: "/bard-springs",
+    label: "Lake guide",
+    title: "Lake Greeson Near Glenwood",
+    text: "A practical guide to deciding whether Lake Greeson is worth adding to a Glenwood trip, with notes on boating, fishing, swimming, Swaha, Dam Grill, and pairing it with a Caddo River weekend.",
+    href: "/lake-greeson-near-glenwood",
   },
 ];
 
@@ -51,7 +57,8 @@ export default function RecentUpdates() {
               <p className="mt-3 max-w-3xl text-sm leading-7 text-[color:var(--color-muted)]">
                 New local guides are being added around Glenwood, the Caddo
                 River, Lake Greeson, nearby day trips, family stops, river
-                access, and outdoor places worth knowing about.
+                access, visitor essentials, pet-friendly planning, and outdoor
+                places worth knowing about.
               </p>
             </div>
 

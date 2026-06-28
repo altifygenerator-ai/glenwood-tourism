@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import CaddoTripCheck from "@/components/CaddoTripCheck";
 
 export const metadata: Metadata = {
   title:
@@ -187,6 +188,8 @@ export default function CaddoRiverSwimmingAccessPage() {
           </div>
         </div>
       </section>
+
+      <CaddoTripCheck />
 
       <section id="access-spots" className="section">
         <div className="container">
