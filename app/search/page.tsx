@@ -101,6 +101,48 @@ const searchablePages = [
     text: "A simple tool for planning a Glenwood day around weather, trip type, food, lodging, and nearby stops.",
     tags: ["plan", "itinerary", "day", "tool"],
   },
+  {
+    title: "At Living Water Cabins",
+    href: "/at-living-water-cabins",
+    text: "Cabins and family lodge near Glenwood, Mount Ida, the Caddo River, Lake Greeson, and Ouachita outdoor trips.",
+    tags: ["at living water", "cabins", "family lodge", "mount ida", "stay"],
+  },
+  {
+    title: "John Benjamin Fishing Pond",
+    href: "/john-benjamin-pond",
+    text: "Family-friendly fishing pond in Glenwood with simple outdoor time, kids fishing, and easy local planning notes.",
+    tags: ["john benjamin", "pond", "fishing", "kids", "family"],
+  },
+  {
+    title: "Bard Springs Recreation Area",
+    href: "/bard-springs",
+    text: "A quiet Ouachita National Forest recreation area near Glenwood for swimming holes, picnics, forest roads, and slower outdoor stops.",
+    tags: ["bard springs", "forest", "swimming", "picnic", "ouachita"],
+  },
+  {
+    title: "History of Glenwood",
+    href: "/history",
+    text: "Glenwood history, railroad roots, timber town story, Caddo River life, and how the town became an outdoor visitor base.",
+    tags: ["history", "railroad", "timber", "old glenwood", "heritage"],
+  },
+  {
+    title: "Fourth of July in Glenwood",
+    href: "/glenwood-fourth-of-july",
+    text: "Fourth of July planning in Glenwood with fireworks notes, Caddo River weekend ideas, food, cabins, and holiday trip tips.",
+    tags: ["fourth of july", "fireworks", "july 4", "holiday", "summer"],
+  },
+  {
+    title: "Get Listed or Suggest an Update",
+    href: "/contact",
+    text: "Request a business listing, featured placement, spotlight page, correction, or local suggestion for the Glenwood guide.",
+    tags: ["contact", "get listed", "advertise", "suggest", "business listing"],
+  },
+  {
+    title: "Submit a Glenwood Event",
+    href: "/submit-event",
+    text: "Submit a local Glenwood event, market, live music night, fundraiser, church event, festival, or family-friendly activity for review.",
+    tags: ["submit event", "event", "calendar", "festival", "live music"],
+  },
 ];
 
 type SearchPageProps = {
@@ -121,6 +163,8 @@ function scorePage(page: (typeof searchablePages)[number], query: string) {
     return 1;
   }
 
+  const exactPhraseScore = haystack.includes(query.toLowerCase()) ? 4 : 0;
+
   return terms.reduce((score, term) => {
     if (page.title.toLowerCase().includes(term)) {
       return score + 3;
@@ -131,7 +175,7 @@ function scorePage(page: (typeof searchablePages)[number], query: string) {
     }
 
     return score;
-  }, 0);
+  }, exactPhraseScore);
 }
 
 export default async function SearchPage({ searchParams }: SearchPageProps) {

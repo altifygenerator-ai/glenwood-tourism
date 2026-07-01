@@ -6,7 +6,10 @@ import EventsCTA from "@/components/events/EventsCTA";
 export const metadata = {
   title: "Caddo River Weekend Guide | Glenwood Arkansas Trip Planning",
   description:
-    "Plan a Caddo River weekend in Glenwood, Arkansas with river trip tips, cabins, restaurants, local events, Lake Greeson, and things to do nearby.",
+    "Plan a Caddo River weekend in Glenwood, Arkansas with river tips, places to stay, restaurants, events, Lake Greeson, and simple nearby trip ideas.",
+  alternates: {
+    canonical: "/caddo-river-weekend-guide",
+  },
 };
 
 const planningCards = [

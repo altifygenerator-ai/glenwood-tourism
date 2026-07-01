@@ -14,28 +14,10 @@ const updates = [
     href: "/pet-friendly-glenwood-ar",
   },
   {
-    label: "Backup plans",
-    title: "Rainy Day Things To Do in Glenwood",
-    text: "A new backup-plan guide helps visitors save the day when the Caddo River is too low, too high, stormy, crowded, or just not the right fit for the group.",
-    href: "/rainy-day-things-to-do-glenwood-ar",
-  },
-  {
-    label: "Trip check",
-    title: "Caddo River Trip Check Added",
-    text: "The Caddo River pages now include a practical trip-check section for recent rain, water levels, outfitters, river access, and backup plans before visitors commit to the water.",
-    href: "/caddo-river",
-  },
-  {
-    label: "River access guide",
-    title: "Best Caddo River Swimming Spots & Easy River Access",
-    text: "A practical guide to getting in the Caddo around Glenwood, with notes on swimming spots, public access, float routes, outfitters, private land, and river levels.",
-    href: "/caddo-river-swimming-access",
-  },
-  {
-    label: "Lake guide",
-    title: "Lake Greeson Near Glenwood",
-    text: "A practical guide to deciding whether Lake Greeson is worth adding to a Glenwood trip, with notes on boating, fishing, swimming, Swaha, Dam Grill, and pairing it with a Caddo River weekend.",
-    href: "/lake-greeson-near-glenwood",
+    label: "Site update",
+    title: "Search Added to the Glenwood Guide",
+    text: "A new site search has been added to help visitors find Glenwood guides faster, including Caddo River pages, cabins, restaurants, events, pet-friendly planning, rainy day ideas, visitor essentials, and nearby Arkansas travel stops.",
+    href: "/search",
   },
 ];
 

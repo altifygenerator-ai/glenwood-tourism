@@ -46,6 +46,9 @@ export async function generateMetadata({ params }: EventPageProps) {
       event.ai_summary ||
       event.description ||
       `Event details for ${event.title} near Glenwood, Arkansas.`,
+    alternates: {
+      canonical: `/events/${slug}`,
+    },
   };
 }
 

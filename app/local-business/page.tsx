@@ -110,9 +110,13 @@ const localBusinesses = [
 ];
 
 export const metadata = {
-  title: "Local Businesses in Glenwood Arkansas | Restaurants, Cabins & Shops",
+  title:
+    "Local Businesses in Glenwood Arkansas | Restaurants, Cabins & Visitor Stops",
   description:
-    "Find local businesses in Glenwood, Arkansas including restaurants, cafes, cabins, lodging, outdoor outfitters, UTV rentals, repair services, sweets, coffee, and Caddo River area stops.",
+    "Find Glenwood, Arkansas local businesses, including restaurants, cafes, cabins, lodging, outfitters, shops, repair services, sweets, coffee, and Caddo River stops.",
+  alternates: {
+    canonical: "/local-business",
+  },
 };
 
 export default function LocalBusinessesPage() {

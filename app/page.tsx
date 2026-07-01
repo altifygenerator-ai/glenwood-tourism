@@ -531,6 +531,15 @@ export default function Page() {
         </a>
 
         <a
+          href="https://murfreesboroarkansas.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={primaryButtonClass}
+        >
+          Visit Murfreesboro →
+        </a>
+
+        <a
           href="https://mountidaarkansas.org"
           target="_blank"
           rel="noopener noreferrer"

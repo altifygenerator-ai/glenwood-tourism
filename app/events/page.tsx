@@ -3,9 +3,12 @@ import { getUpcomingApprovedEvents } from "@/lib/events";
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 export const metadata = {
-  title: "Events in Glenwood Arkansas | Caddo River & Local Events",
+  title: "Events in Glenwood Arkansas | Local Events & Weekend Plans",
   description:
-    "Find upcoming events, weekend activities, live music, festivals, and things happening around Glenwood, Arkansas.",
+    "Find upcoming Glenwood, Arkansas events, weekend activities, live music, markets, community gatherings, river-season plans, and local things to do.",
+  alternates: {
+    canonical: "/events",
+  },
 };
 
 export default async function EventsPage() {

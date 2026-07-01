@@ -7,10 +7,12 @@ import Link from "next/link";
 import EventsCTA from "@/components/events/EventsCTA";
 
 export const metadata = {
-  title:
-    "Things to Do in Glenwood, Arkansas | Caddo River, Lake Greeson & Outdoor Attractions",
+  title: "Things to Do in Glenwood, Arkansas | Caddo River & Lake Greeson",
   description:
-    "Explore things to do in Glenwood, Arkansas including the Caddo River, Lake Greeson, Ouachita Mountains, Crater of Diamonds, cabins, restaurants, camping, floating, fishing, and nearby day trips.",
+    "Explore things to do in Glenwood, Arkansas, including the Caddo River, Lake Greeson, cabins, restaurants, camping, fishing, family stops, and nearby day trips.",
+  alternates: {
+    canonical: "/explore",
+  },
 };
 
 
@@ -648,9 +650,14 @@ export default function ExplorePage() {
                   Visit Mount Ida →
                 </a>
 
-                <div className="inline-flex items-center justify-center rounded-full border border-black/10 px-5 py-3 text-sm font-semibold text-[color:var(--color-muted)]">
-                  Murfreesboro Coming Soon
-                </div>
+                <a
+                  href="https://murfreesboroarkansas.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={outlineButtonClass}
+                >
+                  Visit Murfreesboro →
+                </a>
               </div>
             </div>
           </div>

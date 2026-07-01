@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export const metadata = {
   title:
-    "At Living Water Cabins Near Glenwood and Mount Ida, Arkansas | Waterfront Cabins & Family Lodge",
+    "At Living Water Cabins Near Glenwood & Mount Ida, Arkansas",
   description:
-    "Explore At Living Water Cabins near Glenwood and Mount Ida, Arkansas, featuring creekside cabins, a family lodge, full kitchens, peaceful outdoor space, and easy access to the Caddo River, Lake Greeson, Mount Ida, and the Ouachita region.",
+    "Explore At Living Water Cabins near Glenwood and Mount Ida, Arkansas, with creekside cabins, a family lodge, full kitchens, outdoor space, and access to the Caddo River and Lake Greeson.",
   alternates: {
     canonical: "/at-living-water-cabins",
   },

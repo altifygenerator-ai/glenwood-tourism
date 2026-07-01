@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Rainy Day Things To Do in Glenwood Arkansas | Backup Plans Near the Caddo River",
+  title: "Rainy Day Things To Do in Glenwood Arkansas | River Trip Backup Plans",
   description:
     "A practical rainy day and backup plan guide for Glenwood, Arkansas visitors when the Caddo River is too low, too high, stormy, crowded, or not right for the day.",
   alternates: {

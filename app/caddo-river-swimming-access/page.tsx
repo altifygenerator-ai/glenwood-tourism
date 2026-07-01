@@ -5,9 +5,9 @@ import CaddoTripCheck from "@/components/CaddoTripCheck";
 
 export const metadata: Metadata = {
   title:
-    "Best Caddo River Swimming Spots & Easy River Access Around Glenwood, Arkansas",
+    "Caddo River Swimming Spots & Access Near Glenwood Arkansas",
   description:
-    "A practical Glenwood, Arkansas guide to Caddo River swimming spots, public access, float put-ins, outfitters, river levels, family tips, and what to know before getting in the water.",
+    "A practical Glenwood, Arkansas guide to Caddo River swimming spots, public access, float put-ins, outfitters, family tips, and what to know before getting in the water.",
   alternates: {
     canonical: "/caddo-river-swimming-access",
   },

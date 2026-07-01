@@ -29,6 +29,9 @@ export const glenwoodSEO = {
       "Find places to eat, cabins, events, river access, and things to do in Glenwood, Arkansas near the Caddo River and Lake Greeson.",
     images: ["/images/og-image.png"],
   },
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export const glenwoodHero = {

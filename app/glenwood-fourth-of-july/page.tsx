@@ -4,9 +4,9 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "Fourth of July in Glenwood, Arkansas 2026 | Fireworks, Caddo River & Holiday Weekend Guide",
+    "Fourth of July in Glenwood, Arkansas 2026 | Fireworks & Caddo River",
   description:
-    "Plan Fourth of July in Glenwood, Arkansas with verified 2026 fireworks, Caddo River weekend ideas, family tips, local food, cabins, and nearby things to do.",
+    "Plan Fourth of July in Glenwood, Arkansas with 2026 fireworks notes, Caddo River weekend ideas, family tips, local food, cabins, and nearby things to do.",
   keywords: [
     "Fourth of July Glenwood Arkansas",
     "Glenwood Arkansas fireworks",

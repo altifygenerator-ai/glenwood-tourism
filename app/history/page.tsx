@@ -4,10 +4,9 @@ import { glenwoodHistory } from "@/data/glenwood";
 import Section from "@/components/tourism/Section";
 
 export const metadata = {
-  title:
-    "History of Glenwood Arkansas | Railroad, Timber, Caddo River & Local Heritage",
+  title: "History of Glenwood Arkansas | Railroad, Timber & Caddo River",
   description:
-    "Discover the history of Glenwood, Arkansas — from its railroad and timber roots to life along the Caddo River, the Ouachita foothills, and its modern outdoor tourism identity.",
+    "Learn about Glenwood, Arkansas history, from railroad and timber roots to life along the Caddo River, the Ouachita foothills, and the town’s outdoor identity today.",
   keywords: [
     "Glenwood Arkansas history",
     "Pike County Arkansas history",
@@ -17,6 +16,9 @@ export const metadata = {
     "Caddo River history",
     "Arkansas small towns",
   ],
+  alternates: {
+    canonical: "/history",
+  },
 };
 
 const historyHighlights = [

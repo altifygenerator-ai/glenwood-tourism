@@ -4,9 +4,9 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "Lake Greeson Near Glenwood Arkansas | Lake Day Guide, Fishing, Boating & Nearby Stops",
+    "Lake Greeson Near Glenwood Arkansas | Fishing, Boating & Lake Days",
   description:
-    "Plan a Lake Greeson day near Glenwood, Arkansas with practical tips for boating, fishing, swimming, camping, Swaha Lodge N Marina, Dam Grill, Caddo River weekends, and nearby day trips.",
+    "Plan a Lake Greeson day near Glenwood, Arkansas with boating, fishing, swimming, camping, Swaha Lodge N Marina, Dam Grill, Caddo River weekends, and nearby day trips.",
   keywords: [
     "Lake Greeson near Glenwood Arkansas",
     "Lake Greeson day trip",

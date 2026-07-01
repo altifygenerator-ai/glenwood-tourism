@@ -3,9 +3,12 @@ import Link from "next/link";
 import PlanMyDayTool from "@/components/PlanMyDayTool";
 
 export const metadata: Metadata = {
-  title: "Plan My Glenwood Day | Things To Do, Food, Events & Caddo River Stops",
+  title: "Plan My Glenwood Day | Caddo River, Food, Events & Local Stops",
   description:
-    "Build a simple Glenwood, Arkansas day plan with ideas for Caddo River trips, restaurants, cabins, family stops, events, outdoor activities, and nearby things to do.",
+    "Build a simple Glenwood, Arkansas day plan with Caddo River ideas, restaurants, cabins, family stops, local events, outdoor activities, and nearby things to do.",
+  alternates: {
+    canonical: "/plan-my-day",
+  },
 };
 
 export default function PlanMyDayPage() {

@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Pet-Friendly Glenwood Arkansas | Caddo River Trips, Cabins & Dog-Friendly Planning",
+  title: "Pet-Friendly Glenwood Arkansas | Caddo River, Cabins & Trip Tips",
   description:
     "Plan a pet-friendly Glenwood, Arkansas trip with notes on Caddo River days, cabins, outdoor stops, restaurants, heat, access, cleanup, and dog-friendly travel basics.",
   alternates: {

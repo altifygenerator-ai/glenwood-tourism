@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Visitor Essentials in Glenwood Arkansas | Food, Fuel, River Supplies & Trip Basics",
+  title: "Visitor Essentials in Glenwood Arkansas | Food, Fuel & River Supplies",
   description:
     "A practical Glenwood, Arkansas visitor essentials guide for food, fuel, river supplies, ice, groceries, local stops, cabins, events, and simple trip planning around the Caddo River.",
   alternates: {

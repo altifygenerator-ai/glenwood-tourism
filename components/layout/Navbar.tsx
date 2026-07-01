@@ -40,8 +40,14 @@ const articleLinks = [
 const eventLinks = [
   { href: "/events", label: "Events" },
   { href: "/this-weekend", label: "This Weekend" },
- 
   { href: "/submit-event", label: "Submit an Event" },
+];
+
+const nearbyGuideLinks = [
+  { href: "https://amityarkansas.org", label: "Amity" },
+  { href: "https://murfreesboroarkansas.org", label: "Murfreesboro" },
+  { href: "https://mountidaarkansas.org", label: "Mount Ida" },
+  { href: "https://hotspringsarkansas.org", label: "Hot Springs" },
 ];
 
 export default function Navbar() {
@@ -65,7 +71,7 @@ export default function Navbar() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-5 text-sm md:flex">
+        <nav className="hidden items-center gap-4 text-sm md:flex">
           <div className="group relative">
             <button className="font-medium text-[color:var(--color-text)] transition hover:text-[color:var(--color-accent)]">
               Things To Do ▾
@@ -146,6 +152,28 @@ export default function Navbar() {
             </div>
           </div>
 
+          <div className="group relative">
+            <button className="font-medium text-[color:var(--color-text)] transition hover:text-[color:var(--color-accent)]">
+              Nearby Guides ▾
+            </button>
+
+            <div className="absolute left-0 top-full hidden min-w-[190px] pt-3 group-hover:block">
+              <div className="overflow-hidden rounded-xl border border-black/10 bg-[color:var(--bg-card)] py-2 text-[color:var(--color-text)] shadow-xl">
+                {nearbyGuideLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-2.5 transition hover:bg-[color:var(--color-bg)]"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+
           <Link
             href="/local-business"
             className="font-medium text-[color:var(--color-text)] transition hover:text-[color:var(--color-accent)]"
@@ -170,6 +198,32 @@ export default function Navbar() {
         >
           {open ? "Close" : "Menu"}
         </button>
+      </div>
+
+      <div className="border-t border-black/10 bg-[color:var(--bg-card)]/70">
+        <form
+          action="/search"
+          className="mx-auto flex max-w-6xl items-center gap-2 px-6 py-2.5"
+          role="search"
+        >
+          <label htmlFor="site-search" className="sr-only">
+            Search Glenwood Arkansas Guide
+          </label>
+          <input
+            id="site-search"
+            type="search"
+            name="q"
+            placeholder="Search Caddo River, cabins, restaurants..."
+            aria-label="Search Glenwood Arkansas Guide"
+            className="min-h-10 flex-1 rounded-full border border-black/10 bg-white/80 px-4 text-sm text-[color:var(--color-text)] outline-none transition placeholder:text-[color:var(--color-muted)] focus:border-[color:var(--color-accent)] focus:bg-white"
+          />
+          <button
+            type="submit"
+            className="rounded-full bg-[color:var(--color-accent)] px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+          >
+            Search
+          </button>
+        </form>
       </div>
 
       {open && (
@@ -240,6 +294,25 @@ export default function Navbar() {
                 >
                   {link.label}
                 </Link>
+              ))}
+            </div>
+
+            <div className="rounded-xl border border-black/10 bg-[color:var(--bg-card)] p-3 shadow-sm">
+              <p className="mb-2 px-2 text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--color-muted)]">
+                Nearby Guides
+              </p>
+
+              {nearbyGuideLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setOpen(false)}
+                  className="block rounded-lg px-3 py-2.5 font-medium transition hover:bg-[color:var(--color-bg)]"
+                >
+                  {link.label}
+                </a>
               ))}
             </div>
 

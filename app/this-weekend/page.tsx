@@ -6,9 +6,12 @@ export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 export const metadata = {
-  title: "This Weekend in Glenwood Arkansas | Local Events & Things To Do",
+  title: "This Weekend in Glenwood Arkansas | Events & Things To Do",
   description:
-    "See what’s happening this weekend in Glenwood, Arkansas, including local events, outdoor activities, live music, markets, family-friendly things to do, river-season plans, and local places to visit.",
+    "See what is happening this weekend in Glenwood, Arkansas, including local events, outdoor activities, live music, markets, family-friendly plans, and river-season ideas.",
+  alternates: {
+    canonical: "/this-weekend",
+  },
 };
 
 const planningLinks = [

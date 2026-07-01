@@ -1,9 +1,12 @@
 import EventForm from "@/components/events/EventForm";
 
 export const metadata = {
-  title: "Submit an Event | Glenwood Arkansas",
+  title: "Submit an Event | Glenwood Arkansas Guide",
   description:
-    "Submit an event for the Glenwood Arkansas tourism guide. Events are reviewed before publishing.",
+    "Submit a Glenwood, Arkansas area event for the local tourism guide. Events are reviewed before being added to the community event listings.",
+  alternates: {
+    canonical: "/submit-event",
+  },
 };
 
 export default function SubmitEventPage() {

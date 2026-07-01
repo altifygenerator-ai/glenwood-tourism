@@ -4,10 +4,12 @@ import EventsCTA from "@/components/events/EventsCTA";
 import NearbyAmitySection from "@/components/NearbyAmitySection";
 import TrackedFeatureLink from "@/components/TrackedFeatureLink";
 export const metadata = {
-  title:
-    "Cabins and Places to Stay Near Glenwood, Arkansas | Caddo River & Lake Greeson",
+  title: "Cabins and Places to Stay Near Glenwood, Arkansas | Caddo River Stays",
   description:
-    "Find cabins, rentals, motels, and places to stay near Glenwood, Arkansas close to the Caddo River, Lake Greeson, camping, fishing, and outdoor attractions.",
+    "Find cabins, rentals, motels, campgrounds, and places to stay near Glenwood, Arkansas, the Caddo River, Lake Greeson, fishing, floating, and outdoor attractions.",
+  alternates: {
+    canonical: "/glenwood-ar-cabins",
+  },
 };
 
 const stays = [

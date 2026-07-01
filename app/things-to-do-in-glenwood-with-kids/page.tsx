@@ -4,9 +4,9 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "Things to Do in Glenwood, Arkansas With Kids | River, Fishing, Lake Days & Family Stops",
+    "Things to Do in Glenwood, Arkansas With Kids | River & Family Stops",
   description:
-    "Plan family-friendly things to do in Glenwood, Arkansas with kids, including the Caddo River, John Benjamin Pond, Lake Greeson, easy food stops, cabins, and nearby day trips.",
+    "Plan family-friendly things to do in Glenwood, Arkansas with kids, including the Caddo River, John Benjamin Pond, Lake Greeson, easy food stops, cabins, and day trips.",
   keywords: [
     "things to do in Glenwood Arkansas with kids",
     "Glenwood Arkansas family activities",
