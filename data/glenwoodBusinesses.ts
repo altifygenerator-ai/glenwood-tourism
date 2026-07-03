@@ -116,7 +116,7 @@ export const glenwoodBusinesses: GlenwoodBusiness[] = [
     type: "Gift Shop • Local Goods • Downtown Glenwood",
     description:
       "A downtown Glenwood shop with local goods, gifts, market items, and a small-town browsing stop for visitors looking for something local to take home.",
-    image: "/images/glenwood/oldtown.jpg",
+    image: "/images/glenwood/mercantile-broadway.jpg",
     address: "209 E Broadway, Glenwood, AR 71943",
     website: "https://www.facebook.com/p/Mercantile-on-Broadway-61561344606797/",
     directions:
@@ -128,7 +128,7 @@ export const glenwoodBusinesses: GlenwoodBusiness[] = [
     type: "Hardware • Lumber • Appliances • Building Supplies",
     description:
       "A long-running Glenwood home center with hardware, lumber, paint, plumbing, electrical, building materials, appliances, and supplies useful for locals, cabin owners, and property projects.",
-    image: "/images/glenwood/oldbuildings.webp",
+    image: "/images/glenwood/plylers.jpg",
     address: "Glenwood, AR",
     website: "https://www.johnplylerhomecenter.com/",
     directions:
@@ -140,7 +140,7 @@ export const glenwoodBusinesses: GlenwoodBusiness[] = [
     type: "Grocery Store • Food Supplies • Weekly Ad",
     description:
       "A Glenwood grocery stop for food, drinks, supplies, and cabin or river-trip basics before heading toward the Caddo River, Lake Greeson, campgrounds, or local stays.",
-    image: "/images/glenwood/glenwoodmain.jpg",
+    image: "/images/glenwood/wrights.jpg",
     phone: "870-356-2231",
     address: "102 West Broadway, Glenwood, AR 71943",
     website: "https://www.wrightsfoodcenter.com/",
@@ -153,7 +153,7 @@ export const glenwoodBusinesses: GlenwoodBusiness[] = [
     type: "Florist • Gifts • Local Delivery",
     description:
       "A Glenwood flower and gift shop for arrangements, gifts, home decor items, and local delivery needs around town and nearby communities.",
-    image: "/images/glenwood/oldtown2.jpg",
+    image: "/images/glenwood/glenwood-florist.jpg",
     phone: "870-356-3712",
     address: "621 East Broadway, Glenwood, AR 71943",
     website: "https://www.glenwoodfloristandgifts.com/",
@@ -166,7 +166,7 @@ export const glenwoodBusinesses: GlenwoodBusiness[] = [
     type: "General Store • Household Goods • Trip Supplies",
     description:
       "A familiar general store option in Glenwood for household goods, snacks, basic supplies, small trip needs, and items visitors may have forgotten to pack.",
-    image: "/images/glenwood/glenwood.jpg.webp",
+    image: "/images/glenwood/familydollar.webp",
     address: "180 Highway 70 E, Glenwood, AR 71943",
     website: "https://locations.familydollar.com/ar/glenwood/180-highway-70-e",
     directions:
@@ -178,7 +178,7 @@ export const glenwoodBusinesses: GlenwoodBusiness[] = [
     type: "Auto Parts • Vehicle Supplies • Local Parts Store",
     description:
       "A local auto parts store for vehicle supplies, parts, and advice. Useful for locals, travelers, RV visitors, and anyone dealing with a vehicle issue around Glenwood.",
-    image: "/images/glenwood/oldtown3.jpg",
+    image: "/images/glenwood/glenwood-auto.jpg",
     address: "Glenwood, AR",
     website: "https://locations.bumpertobumper.com/ar/glenwood/1820362/",
     directions:
@@ -190,7 +190,7 @@ export const glenwoodBusinesses: GlenwoodBusiness[] = [
     type: "Exterior Remodeling • Gutters • Siding • Decks • Fencing",
     description:
       "A Glenwood-area exterior remodeling company offering work such as gutters, siding, decks, fencing, fascia, soffits, and practical exterior improvements.",
-    image: "/images/glenwood/forest.jpg",
+    image: "/images/glenwood/thomas-renovations.png",
     phone: "870-997-1192",
     address: "Glenwood, AR",
     website: "https://www.thomasrenovations.com/",
@@ -203,7 +203,7 @@ export const glenwoodBusinesses: GlenwoodBusiness[] = [
     type: "Bank • Local Financial Services",
     description:
       "A Glenwood branch for banking and financial services, useful for residents, local businesses, and longer-stay visitors needing a nearby bank branch.",
-    image: "/images/glenwood/oldmain.jpg",
+    image: "/images/glenwood/southern-bancorp.jpg",
     phone: "870-356-2299",
     address: "218 Elm Street, Glenwood, AR 71943",
     website: "https://banksouthern.com/",
@@ -306,7 +306,7 @@ export const glenwoodBusinesses: GlenwoodBusiness[] = [
     type: "Ice Cream • Sweets • Snacks",
     description:
       "A Glenwood sweets and ice cream stop for treats, snacks, drinks, and family-friendly dessert stops while passing through or visiting the river area.",
-    image: "/images/glenwood/glenwoodriver2.jpg",
+    image: "/images/glenwood/flavor.jpg",
     phone: "870-279-4179",
     address: "804 East Broadway, Glenwood, AR 71943",
     directions:

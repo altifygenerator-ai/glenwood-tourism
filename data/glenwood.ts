@@ -215,6 +215,26 @@ export const glenwoodHistory = {
 
 export const glenwoodFeaturedLocalSpots = [
   {
+    name: "Slate Rock Brewing",
+    type: "Restaurant",
+    badge: "Featured Local Partner",
+    description:
+      "A nearby Amity brewery and tavern stop with locally brewed craft beer, food from the grill, a laid back taproom, and outdoor space. It works well as a Glenwood-area weekend add-on for visitors planning a Caddo River float, cabin stay, Lake Greeson day, or slower evening nearby.",
+    image: "/images/glenwood/slaterock.jpg",
+    href: "/glenwood-ar-restaurants",
+    tracked: true,
+  },
+    {
+    name: "At Living Waters Cabins",
+    type: "Cabins & Camping",
+    badge: "Featured Local Partner",
+    description:
+      "A local cabin location with several rental options, a quiet setting, and a convenient location for visitors who want to stay near the river, restaurants, and local shops. It works well for travelers who want a simple cabin weekend without having to drive far for meals or river access.",
+    image: "/images/glenwood/cabins/at-living-water-cabins.jpg",
+    href: "/glenwood-ar-cabins",
+    tracked: true,
+  },
+  {
     name: "Caddo Cafe",
     type: "Restaurant",
     badge: "Local Favorite",
@@ -233,30 +253,12 @@ export const glenwoodFeaturedLocalSpots = [
     href: "/glenwood-ar-restaurants",
   },
   {
-    name: "Ari’s Little Italy",
-    type: "Restaurant",
-    badge: "Pizza & Italian",
-    description:
-      "A small-town Italian and pizza stop that gives Glenwood visitors another easy dinner option beyond typical river food. Travelers mention it as a pleasant local surprise for pizza, pasta, calzones, bread, and casual family meals.",
-    image: "/images/glenwood/restaurants/aris.jpg",
-    href: "/glenwood-ar-restaurants",
-  },
-  {
     name: "Caddo River Camping & Canoe Rental",
     type: "Cabins & Camping",
     badge: "River Stay",
     description:
       "One of the key river-trip businesses in the Glenwood area, offering float support, canoeing, kayaking, tubing, camping, cabins, and access to the upper Caddo River experience. A strong starting point for visitors planning their trip around the water.",
     image: "/images/glenwood/cabins/caddo-river-camping.avif",
-    href: "/glenwood-ar-cabins",
-  },
-  {
-    name: "At Living Waters Cabins",
-    type: "Cabins & Camping",
-    badge: "Cabins",
-    description:
-      "A local cabin locatoin with several rental options, a quiet setting, and a convenient location for visitors who want to stay near the river, restaurants, and local shops. It works well for travelers who want a simple cabin weekend without having to drive far for meals or river access.",
-    image: "/images/glenwood/cabins/at-living-water-cabins.jpg",
     href: "/glenwood-ar-cabins",
   },
   {

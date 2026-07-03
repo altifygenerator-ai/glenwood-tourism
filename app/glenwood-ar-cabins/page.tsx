@@ -756,12 +756,14 @@ export default function GlenwoodCabinsPage() {
             )}
           </div>
         </div>
-      </Section>
+</Section>
 
-      <EventsCTA
-        title="Staying in Glenwood for the weekend?"
-        text="Check local events before you book the whole trip. A river weekend or cabin stay can line up with live music, markets, community events, food stops, and reasons to explore more of the Glenwood area."
-      />
+<div className="[&_h2]:!text-white [&_h3]:!text-white [&_p]:!text-white">
+  <EventsCTA
+    title="Staying in Glenwood for the weekend?"
+    text="Check local events before you book the whole trip. A river weekend or cabin stay can line up with live music, markets, community events, food stops, and reasons to explore more of the Glenwood area."
+  />
+</div>
 
       <Section>
         <div className="mb-8 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">

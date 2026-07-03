@@ -2,6 +2,7 @@ import Section from "@/components/tourism/Section";
 import Link from "next/link";
 import EventsCTA from "@/components/events/EventsCTA";
 import NearbyAmitySection from "@/components/NearbyAmitySection";
+import TrackedFeatureLink from "@/components/TrackedFeatureLink";
 
 export const metadata = {
   title: "Restaurants in Glenwood, Arkansas | Places to Eat Near the Caddo River",
@@ -13,6 +14,19 @@ export const metadata = {
 };
 
 const restaurants = [
+  {
+    name: "Slate Rock Brewing",
+    type: "Microbrewery • Tavern & Grill • Local Beer • Weekend Stop",
+    description:
+      "A nearby Amity brewery and tavern where visitors can enjoy locally brewed craft beer, food fresh off the grill, a laid-back taproom, and an outdoor space. It works well as a Glenwood-area weekend stop after a Caddo River float, cabin stay, Lake Greeson trip, or slower evening out.",
+    location: "113 S Main St, Amity, AR 71921",
+    phone: "870-342-5545",
+    website: "https://www.slaterockbrewing.com/home",
+    image: "/images/glenwood/slaterock.jpg",
+    alt: "Slate Rock Brewing near Glenwood Arkansas",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Slate+Rock+Brewing+113+S+Main+St+Amity+AR+71921",
+  },
   {
     name: "Caddo Cafe",
     type: "Cafe • Breakfast • Comfort Food • Local Stop",
@@ -197,21 +211,19 @@ const riverMealLinks = [
 ];
 
 const featuredNames = [
+  "Slate Rock Brewing",
   "Fish Nest Family Restaurant",
   "Caddo Cafe",
-  "Ari’s Little Italy",
 ];
-
+const slateRock = restaurants.find(
+  (restaurant) => restaurant.name === "Slate Rock Brewing"
+);
 const fishNest = restaurants.find(
   (restaurant) => restaurant.name === "Fish Nest Family Restaurant"
 );
 
 const caddoCafe = restaurants.find(
   (restaurant) => restaurant.name === "Caddo Cafe"
-);
-
-const aris = restaurants.find(
-  (restaurant) => restaurant.name === "Ari’s Little Italy"
 );
 
 const standardRestaurants = restaurants.filter(
@@ -335,6 +347,60 @@ function RestaurantActions({
       >
         Directions
       </a>
+    </div>
+  );
+}
+
+function TrackedRestaurantActions({
+  restaurant,
+  placement,
+}: {
+  restaurant: (typeof restaurants)[number];
+  placement: string;
+}) {
+  return (
+    <div className="mt-5 flex flex-wrap gap-3">
+      {restaurant.phone && (
+        <TrackedFeatureLink
+          href={phoneHref(restaurant.phone)}
+          business={restaurant.name}
+          city="Glenwood"
+          page="/glenwood-ar-restaurants"
+          placement={placement}
+          action="call"
+          className={primaryButtonClass}
+        >
+          Call {restaurant.phone}
+        </TrackedFeatureLink>
+      )}
+
+      {restaurant.website && (
+        <TrackedFeatureLink
+          href={restaurant.website}
+          business={restaurant.name}
+          city="Glenwood"
+          page="/glenwood-ar-restaurants"
+          placement={placement}
+          action="website"
+          newTab
+          className={primaryButtonClass}
+        >
+          View Website
+        </TrackedFeatureLink>
+      )}
+
+      <TrackedFeatureLink
+        href={restaurant.directions}
+        business={restaurant.name}
+        city="Glenwood"
+        page="/glenwood-ar-restaurants"
+        placement={placement}
+        action="directions"
+        newTab
+        className={outlineButtonClass}
+      >
+        Directions
+      </TrackedFeatureLink>
     </div>
   );
 }
@@ -526,61 +592,66 @@ export default function GlenwoodRestaurantsPage() {
 
           <p className={bodyTextClass}>
             These featured options cover the way many visitors eat around town:
-            a classic family restaurant, an easy cafe stop, and a casual pizza
-            and Italian option for families, cabin groups, and travelers.
+            a featured local partner, a classic family restaurant, and an easy
+            cafe stop for families, cabin groups, and travelers.
           </p>
         </div>
 
         <div className="space-y-8">
-          {fishNest && (
+          {slateRock && (
             <div className="overflow-hidden rounded-3xl border border-black/10 bg-[color:var(--bg-card)] shadow-lg">
               <div className="grid lg:grid-cols-[1.1fr_0.9fr]">
-                {fishNest.image && (
+                {slateRock.image && (
                   <div
                     role="img"
-                    aria-label={fishNest.alt}
-                    className="min-h-[420px] bg-cover bg-center"
-                    style={{
-                      backgroundImage: `url('${fishNest.image}')`,
-                    }}
+                    aria-label={slateRock.alt}
+                 className="min-h-[420px] bg-center bg-no-repeat"
+style={{
+  backgroundImage: `url('${slateRock.image}')`,
+  backgroundSize: "contain",
+  backgroundColor: "var(--color-text)",
+}}
                   />
                 )}
 
                 <div className="flex flex-col justify-center p-8 lg:p-10">
-                  <p className={eyebrowClass}>Premium Featured Restaurant</p>
+                  <p className={eyebrowClass}>Featured Local Partner</p>
 
                   <h2 className="mb-4 text-4xl font-semibold leading-tight text-[color:var(--color-text)]">
-                    {fishNest.name}
+                    {slateRock.name}
                   </h2>
 
                   <p className="mb-5 text-sm font-medium !text-[color:var(--color-muted)]">
-                    {fishNest.type}
+                    {slateRock.type}
                   </p>
 
                   <p className={`mb-6 ${bodyTextClass}`}>
-                    {fishNest.description}
+                    {slateRock.description}
                   </p>
 
                   <div className="space-y-2 text-sm">
                     <p className="!text-[color:var(--color-muted)]">
-                      📍 {fishNest.location}
+                      📍 {slateRock.location}
                     </p>
 
-                    {fishNest.phone && (
+                    {slateRock.phone && (
                       <p className="!text-[color:var(--color-muted)]">
-                        📞 {fishNest.phone}
+                        📞 {slateRock.phone}
                       </p>
                     )}
                   </div>
 
-                  <RestaurantActions restaurant={fishNest} />
+                  <TrackedRestaurantActions
+                    restaurant={slateRock}
+                    placement="featured-local-partner"
+                  />
                 </div>
               </div>
             </div>
           )}
 
           <div className="grid gap-6 lg:grid-cols-2">
-            {[caddoCafe, aris].map(
+            {[fishNest, caddoCafe].map(
               (restaurant) =>
                 restaurant && (
                   <div
@@ -591,7 +662,7 @@ export default function GlenwoodRestaurantsPage() {
                       <div
                         role="img"
                         aria-label={restaurant.alt}
-                        className="h-64 bg-cover bg-center"
+                        className="h-64 bg-contain bg-center"
                         style={{
                           backgroundImage: `url('${restaurant.image}')`,
                         }}
@@ -628,12 +699,14 @@ export default function GlenwoodRestaurantsPage() {
         </div>
       </Section>
 
-      <EventsCTA
-        title="Eating in Glenwood during a weekend trip?"
-        text="Check local events before you plan the whole day. A river float, cabin stay, or restaurant stop can line up with live music, community events, markets, food trucks, and local happenings around Glenwood."
-      />
+    <div className="[&_h2]:!text-white [&_h3]:!text-white [&_p]:!text-white [&_span]:!text-white [&_strong]:!text-white">
+  <EventsCTA
+    title="Eating in Glenwood during a weekend trip?"
+    text="Check local events before you plan the whole day. A river float, cabin stay, or restaurant stop can line up with live music, community events, markets, food trucks, and local happenings around Glenwood."
+  />
+</div>
 
-      <Section>
+<Section>
         <div className="mb-8 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div>
             <p className={eyebrowClass}>More Places To Eat</p>

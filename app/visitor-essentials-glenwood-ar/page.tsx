@@ -67,7 +67,7 @@ export default function VisitorEssentialsPage() {
     <main>
       <section className="relative min-h-[76vh] overflow-hidden dark-section">
         <Image
-          src="/images/glenwood/oldtown.jpg"
+          src="/images/glenwood/caddo-river-2.jpg"
           alt="Glenwood Arkansas local buildings and visitor stops"
           fill
           priority
@@ -221,35 +221,44 @@ export default function VisitorEssentialsPage() {
       </section>
 
       <section className="section pt-0">
-        <div className="container">
-          <div className="rounded-[34px] bg-[var(--color-text)] p-8 text-white md:p-12">
-            <div className="grid gap-8 md:grid-cols-[1fr_0.8fr] md:items-center">
-              <div>
-                <p className="mb-4 text-sm font-black uppercase tracking-[0.22em] text-white/60">
-                  Local updates welcome
-                </p>
-                <h2 className="mb-5 text-4xl leading-tight text-white md:text-5xl">
-                  Know a useful Glenwood visitor stop we should add?
-                </h2>
-                <p className="max-w-2xl text-lg leading-8 text-white/78">
-                  If there is a local business, river note, food stop, supply
-                  stop, or practical visitor tip that belongs in this guide,
-                  send it in so the page can stay useful.
-                </p>
-              </div>
+  <div className="container">
+    <div className="rounded-[34px] bg-[var(--color-text)] p-8 !text-white md:p-12 [&_h2]:!text-white [&_p]:!text-white">
+      <div className="grid gap-8 md:grid-cols-[1fr_0.8fr] md:items-center">
+        <div>
+          <p className="mb-4 text-sm font-black uppercase tracking-[0.22em] !text-white">
+            Local updates welcome
+          </p>
 
-              <div className="flex flex-wrap gap-3 md:justify-end">
-                <Link href="/contact" className="btn btn-light">
-                  Send an Update
-                </Link>
-                <Link href="/local-business" className="btn">
-                  Local Businesses
-                </Link>
-              </div>
-            </div>
-          </div>
+          <h2 className="mb-5 text-4xl font-black leading-tight !text-white md:text-5xl">
+            Know a useful Glenwood visitor stop we should add?
+          </h2>
+
+          <p className="max-w-2xl text-lg font-medium leading-8 !text-white">
+            If there is a local business, river note, food stop, supply
+            stop, or practical visitor tip that belongs in this guide,
+            send it in so the page can stay useful.
+          </p>
         </div>
-      </section>
+
+        <div className="flex flex-wrap gap-3 md:justify-end">
+          <Link
+            href="/contact"
+            className="inline-flex rounded-full bg-white px-6 py-3 font-black !text-[var(--color-text)] transition hover:bg-white/90"
+          >
+            Send an Update
+          </Link>
+
+          <Link
+            href="/local-business"
+            className="inline-flex rounded-full border border-white/35 bg-white/10 px-6 py-3 font-black !text-white transition hover:bg-white hover:!text-[var(--color-text)]"
+          >
+            Local Businesses
+          </Link>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
     </main>
   );
 }

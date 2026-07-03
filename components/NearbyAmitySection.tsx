@@ -1,6 +1,28 @@
 import Link from "next/link";
+import TrackedFeatureLink from "@/components/TrackedFeatureLink";
 
-const amityStops = [
+type AmityStop = {
+  name: string;
+  type: string;
+  description: string;
+  phone?: string;
+  website?: string;
+  directions?: string;
+  featuredLabel?: string;
+};
+
+const amityStops: AmityStop[] = [
+  {
+    name: "Slate Rock Brewing",
+    type: "Microbrewery • Tavern & Grill • Amity",
+    description:
+      "A nearby Amity brewery and tavern stop with locally brewed craft beer, food off the grill, a laid back taproom, and outdoor space. A good add-on for Glenwood visitors planning a Caddo River float, cabin weekend, Lake Greeson day, or slower evening nearby.",
+    phone: "870-342-5545",
+    website: "https://slaterockbrewing.com",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Slate+Rock+Brewing+113+S+Main+St+Amity+AR+71921",
+    featuredLabel: "Featured Local Partner",
+  },
   {
     name: "Hometown Pizza",
     type: "Pizza • Casual Food • Amity",
@@ -26,6 +48,10 @@ const amityStops = [
       "A local Amity business that fits better as a nearby local stop than a visitor attraction, but still helps show what is available around the area.",
   },
 ];
+
+function phoneHref(phone: string) {
+  return `tel:${phone.replace(/[^\d]/g, "")}`;
+}
 
 export default function NearbyAmitySection() {
   return (
@@ -82,6 +108,12 @@ export default function NearbyAmitySection() {
               >
                 <div className="mb-4 h-1 w-10 rounded-full bg-[color:var(--color-accent)]" />
 
+                {stop.featuredLabel && (
+                  <p className="mb-2 text-xs font-black uppercase tracking-[0.18em] text-[color:var(--color-accent)]">
+                    {stop.featuredLabel}
+                  </p>
+                )}
+
                 <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-[color:var(--color-accent)]">
                   {stop.type}
                 </p>
@@ -93,6 +125,54 @@ export default function NearbyAmitySection() {
                 <p className="mt-3 text-sm leading-relaxed text-[color:var(--color-muted)]">
                   {stop.description}
                 </p>
+
+                {(stop.phone || stop.website || stop.directions) && (
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {stop.phone && (
+                      <TrackedFeatureLink
+                        href={phoneHref(stop.phone)}
+                        business={stop.name}
+                        city="Glenwood"
+                        page="/glenwood-ar-restaurants"
+                        placement="nearby-amity-section"
+                        action="call"
+                        className="rounded-full bg-[color:var(--color-accent)] px-4 py-2 text-xs font-semibold text-white transition hover:opacity-90"
+                      >
+                        Call
+                      </TrackedFeatureLink>
+                    )}
+
+                    {stop.website && (
+                      <TrackedFeatureLink
+                        href={stop.website}
+                        business={stop.name}
+                        city="Glenwood"
+                        page="/glenwood-ar-restaurants"
+                        placement="nearby-amity-section"
+                        action="website"
+                        newTab
+                        className="rounded-full bg-[color:var(--color-accent)] px-4 py-2 text-xs font-semibold text-white transition hover:opacity-90"
+                      >
+                        Website
+                      </TrackedFeatureLink>
+                    )}
+
+                    {stop.directions && (
+                      <TrackedFeatureLink
+                        href={stop.directions}
+                        business={stop.name}
+                        city="Glenwood"
+                        page="/glenwood-ar-restaurants"
+                        placement="nearby-amity-section"
+                        action="directions"
+                        newTab
+                        className="rounded-full border border-black/10 px-4 py-2 text-xs font-semibold text-[color:var(--color-text)] transition hover:bg-black/5"
+                      >
+                        Directions
+                      </TrackedFeatureLink>
+                    )}
+                  </div>
+                )}
               </article>
             ))}
           </div>

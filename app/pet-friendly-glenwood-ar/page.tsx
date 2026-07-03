@@ -176,35 +176,38 @@ export default function PetFriendlyGlenwoodPage() {
       </section>
 
       <section className="section">
-        <div className="container">
-          <div className="rounded-[34px] bg-[var(--color-text)] p-8 text-white md:p-12">
-            <div className="grid gap-8 md:grid-cols-[1fr_0.8fr] md:items-center">
-              <div>
-                <p className="mb-4 text-sm font-black uppercase tracking-[0.22em] text-white/60">
-                  Local notes welcome
-                </p>
-                <h2 className="mb-5 text-4xl leading-tight text-white md:text-5xl">
-                  Know a pet-friendly local stop that should be listed?
-                </h2>
-                <p className="max-w-2xl text-lg leading-8 text-white/78">
-                  Pet rules can change, so this guide should stay practical. If
-                  you know a cabin, patio, shop, trail note, or local business
-                  that welcomes pets, send the details in.
-                </p>
-              </div>
+  <div className="container">
+    <div className="rounded-[34px] bg-[var(--color-text)] p-8 text-white md:p-12">
+      <div className="grid gap-8 md:grid-cols-[1fr_0.8fr] md:items-center">
+        <div className="[&_h2]:!text-white [&_p]:!text-white">
+          <p className="mb-4 text-sm font-black uppercase tracking-[0.22em]">
+            Local notes welcome
+          </p>
 
-              <div className="flex flex-wrap gap-3 md:justify-end">
-                <Link href="/contact" className="btn btn-light">
-                  Send an Update
-                </Link>
-                <Link href="/glenwood-ar-cabins" className="btn">
-                  View Stays
-                </Link>
-              </div>
-            </div>
-          </div>
+          <h2 className="mb-5 text-4xl font-black leading-tight md:text-5xl">
+            Know a pet-friendly local stop that should be listed?
+          </h2>
+
+          <p className="max-w-2xl text-lg font-medium leading-8">
+            Pet rules can change, so this guide should stay practical. If
+            you know a cabin, patio, shop, trail note, or local business
+            that welcomes pets, send the details in.
+          </p>
         </div>
-      </section>
+
+        <div className="flex flex-wrap gap-3 md:justify-end">
+          <Link href="/contact" className="btn btn-light">
+            Send an Update
+          </Link>
+
+          <Link href="/glenwood-ar-cabins" className="btn">
+            View Stays
+          </Link>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
     </main>
   );
 }

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import TrackedFeatureLink from "@/components/TrackedFeatureLink";
 
 type FeaturedSpot = {
   name: string;
@@ -8,6 +9,7 @@ type FeaturedSpot = {
   description?: string;
   image: string;
   href: string;
+  tracked?: boolean;
 };
 
 export default function FeaturedLocalSpots({
@@ -55,85 +57,100 @@ export default function FeaturedLocalSpots({
         {items.map((spot) => {
           const isAdvertising = spot.type === "Advertising";
 
-          return (
-            <Link
-              key={spot.name}
-              href={spot.href}
-              className={
-                isAdvertising
-                  ? "group flex min-h-[360px] flex-col justify-between rounded-2xl border border-[color:var(--color-accent)] bg-[color:var(--color-accent)] p-6 text-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
-                  : "group overflow-hidden rounded-2xl border border-black/10 bg-[color:var(--bg-card)] shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
-              }
-            >
-              {isAdvertising ? (
-                <>
-                  <div>
-                    {spot.badge && (
-                      <p className="mb-3 text-xs uppercase tracking-[0.16em] text-white/70">
-                        {spot.badge}
-                      </p>
-                    )}
+          const cardClassName = isAdvertising
+            ? "group flex min-h-[360px] flex-col justify-between rounded-2xl border border-[color:var(--color-accent)] bg-[color:var(--color-accent)] p-6 text-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+            : "group overflow-hidden rounded-2xl border border-black/10 bg-[color:var(--bg-card)] shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl";
 
-                    <h3 className="text-2xl font-semibold leading-tight text-white">
-                      {spot.name}
-                    </h3>
+          const cardInner = isAdvertising ? (
+            <>
+              <div>
+                {spot.badge && (
+                  <p className="mb-3 text-xs uppercase tracking-[0.16em] text-white/70">
+                    {spot.badge}
+                  </p>
+                )}
 
-                    {spot.description && (
-                      <p className="mt-4 text-sm leading-6 text-white/80">
-                        {spot.description}
-                      </p>
-                    )}
-                  </div>
+                <h3 className="text-2xl font-semibold leading-tight text-white">
+                  {spot.name}
+                </h3>
 
-                  <span className="mt-8 text-sm font-semibold text-white">
-                    Get listed →
-                  </span>
-                </>
-              ) : (
-                <>
-                  <div className="relative h-56 overflow-hidden">
-                    <Image
-                      src={spot.image}
-                      alt={`${spot.name} in Glenwood Arkansas`}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                      className="object-cover transition duration-700 group-hover:scale-105"
-                    />
+                {spot.description && (
+                  <p className="mt-4 text-sm leading-6 text-white/80">
+                    {spot.description}
+                  </p>
+                )}
+              </div>
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+              <span className="mt-8 text-sm font-semibold text-white">
+                Get listed →
+              </span>
+            </>
+          ) : (
+            <>
+              <div className="relative h-56 overflow-hidden">
+                <Image
+                  src={spot.image}
+                  alt={`${spot.name} in Glenwood Arkansas`}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover transition duration-700 group-hover:scale-105"
+                />
 
-                    <div className="absolute left-4 top-4 flex flex-wrap gap-2">
-                      {spot.badge && (
-                        <span className="rounded-full bg-[color:var(--color-accent)] px-3 py-1 text-[11px] uppercase tracking-wide text-white">
-                          {spot.badge}
-                        </span>
-                      )}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
 
-                      {spot.type && (
-                        <span className="rounded-full bg-black/45 px-3 py-1 text-[11px] uppercase tracking-wide text-white">
-                          {spot.type}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold transition group-hover:text-[color:var(--color-accent)]">
-                      {spot.name}
-                    </h3>
-
-                    {spot.description && (
-                      <p className="mt-3 text-sm leading-6 text-[color:var(--color-muted)]">
-                        {spot.description}
-                      </p>
-                    )}
-
-                    <span className="mt-4 inline-block text-sm font-semibold text-[color:var(--color-accent)]">
-                      View details →
+                <div className="absolute left-4 top-4 flex flex-wrap gap-2">
+                  {spot.badge && (
+                    <span className="rounded-full bg-[color:var(--color-accent)] px-3 py-1 text-[11px] uppercase tracking-wide text-white">
+                      {spot.badge}
                     </span>
-                  </div>
-                </>
-              )}
+                  )}
+
+                  {spot.type && (
+                    <span className="rounded-full bg-black/45 px-3 py-1 text-[11px] uppercase tracking-wide text-white">
+                      {spot.type}
+                    </span>
+                  )}
+                </div>
+              </div>
+
+              <div className="p-6">
+                <h3 className="text-xl font-semibold transition group-hover:text-[color:var(--color-accent)]">
+                  {spot.name}
+                </h3>
+
+                {spot.description && (
+                  <p className="mt-3 text-sm leading-6 text-[color:var(--color-muted)]">
+                    {spot.description}
+                  </p>
+                )}
+
+                <span className="mt-4 inline-block text-sm font-semibold text-[color:var(--color-accent)]">
+                  View details →
+                </span>
+              </div>
+            </>
+          );
+
+          if (spot.tracked) {
+            return (
+              <TrackedFeatureLink
+                key={spot.name}
+                href={spot.href}
+                business={spot.name}
+                city="Glenwood"
+                page="/"
+                placement="featured-local-spots"
+                action="view-details"
+                className={cardClassName}
+              >
+                {cardInner}
+              </TrackedFeatureLink>
+            );
+          }
+
+          return (
+            <Link key={spot.name} href={spot.href} className={cardClassName}>
+              {cardInner}
             </Link>
           );
         })}
