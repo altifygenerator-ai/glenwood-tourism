@@ -24,12 +24,28 @@ export default async function AdminEventsPage() {
           </p>
         </div>
 
-        <Link
-          href="/admin/events/new"
-          className="rounded-md bg-black px-6 py-3 text-white"
-        >
-          Add Event
-        </Link>
+        <div className="flex flex-wrap gap-3">
+          <Link
+            href="/admin/events/import"
+            className="rounded-md bg-black px-6 py-3 text-white"
+          >
+            Quick Import
+          </Link>
+
+          <Link
+            href="/admin/events/sources"
+            className="rounded-md border px-6 py-3"
+          >
+            Event Sources
+          </Link>
+
+          <Link
+            href="/admin/events/new"
+            className="rounded-md border px-6 py-3"
+          >
+            Add Event
+          </Link>
+        </div>
       </div>
 
       <AdminEventTable events={events} />

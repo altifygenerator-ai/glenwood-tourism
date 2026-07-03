@@ -1,294 +1,348 @@
+import Link from "next/link";
 import EventsCTA from "@/components/events/EventsCTA";
 import NearbyAmitySection from "@/components/NearbyAmitySection";
-const featuredBusiness = {
-  name: "Caddo River Camping & Canoe Rental",
-  type: "Cabins • Camping • Canoe & Kayak Rentals",
-  description:
-    "A well-known Glenwood-area stop for Caddo River trips, with cabins, camping, and watercraft rentals. Good for visitors planning floats, family weekends, and river-focused stays.",
-  location: "26 Hwy 8 East, Glenwood, AR 71943",
-  phone: "870-356-5336",
-  image: "/images/glenwood/cabins/caddo-river-camping.avif",
-  directions:
-    "https://www.google.com/maps/search/?api=1&query=Caddo+River+Camping+and+Canoe+Rental+26+Hwy+8+East+Glenwood+AR+71943",
-};
+import { allBusinessDirectoryListings } from "@/data/glenwoodBusinessDirectoryPages";
+import type { GlenwoodBusiness } from "@/data/glenwoodBusinesses";
 
-const localBusinesses = [
+const categoryCards = [
   {
-    name: "Caddo Cafe",
-    type: "Cafe • Breakfast • Comfort Food",
-    description:
-      "A local Glenwood cafe serving breakfast, lunch, and comfort food in a casual small-town setting.",
-    location: "53 US-70 Ste. C, Glenwood, AR 71943",
-    phone: "870-356-2397",
-    directions:
-      "https://www.google.com/maps/search/?api=1&query=Caddo+Cafe+53+US-70+Ste+C+Glenwood+AR+71943",
+    title: "Restaurants",
+    text: "Food, coffee, sweets, pizza, seafood, Mexican food, breakfast stops, and easy meals before or after the river.",
+    href: "/glenwood-ar-restaurants",
+    label: "Food & Drinks",
   },
   {
-    name: "Bayou Bella’s & Biscuits",
-    type: "Food Truck • Cajun Food • Biscuits",
-    description:
-      "A local Glenwood food truck serving Cajun-inspired food, biscuits, rotating menu items, and casual meals.",
-    location: "22 Hwy 70, Glenwood, AR 71943",
-    phone: "870-828-8588",
-    directions:
-      "https://www.google.com/maps/search/?api=1&query=Bayou+Bella%27s+and+Biscuits+22+Hwy+70+Glenwood+AR+71943",
+    title: "Cabins & Places to Stay",
+    text: "Cabins, campgrounds, motels, river stays, and nearby lodging around Glenwood, the Caddo River, and Lake Greeson.",
+    href: "/glenwood-ar-cabins",
+    label: "Stays",
   },
   {
-    name: "Mercado Restaurant",
-    type: "Mexican Restaurant • Meat Market • Produce",
-    description:
-      "A Glenwood Mexican restaurant, meat market, and produce stop serving Mexican food in a casual local setting.",
-    location: "240 US-70, Glenwood, AR 71943",
-    phone: "870-356-0113",
-    directions:
-      "https://www.google.com/maps/search/?api=1&query=Mercado+Restaurant+240+US-70+Glenwood+AR+71943",
+    title: "Shops & Supplies",
+    text: "Gifts, groceries, hardware, flowers, coffee, sweets, auto parts, and practical stops visitors may need in town.",
+    href: "/glenwood-ar-shops-supplies",
+    label: "New Guide",
   },
   {
-    name: "Arrow 6 Coffee Co.",
-    type: "Coffee Shop • Local Coffee • Morning Stop",
-    description:
-      "A local Glenwood coffee shop serving coffee, specialty drinks, seasonal lattes, baked goods, and quick morning favorites.",
-    location: "3 Caddo Crossing Dr, Glenwood, AR 71943",
-    phone: "",
-    website: "https://arrow6coffeeco.com/",
-    directions:
-      "https://www.google.com/maps/search/?api=1&query=Arrow+6+Coffee+Co+3+Caddo+Crossing+Dr+Glenwood+AR+71943",
+    title: "Outdoor Businesses",
+    text: "Caddo River outfitters, canoe and kayak rentals, golf, UTV rentals, Lake Greeson stops, and family outdoor ideas.",
+    href: "/glenwood-outdoor-businesses",
+    label: "New Guide",
   },
   {
-    name: "Flavor-Licious Glenwood",
-    type: "Ice Cream Shop • Sweets • Snacks",
-    description:
-      "A local Glenwood sweets and ice cream stop offering treats, snacks, drinks, and fun dessert-style items.",
-    location: "804 East Broadway, Glenwood, AR 71943",
-    phone: "870-279-4179",
-    directions:
-      "https://www.google.com/maps/search/?api=1&query=Flavor-Licious+Glenwood+804+East+Broadway+Glenwood+AR+71943",
+    title: "Local Services",
+    text: "Hardware, auto parts, remodeling, repairs, banking, property help, and useful local services around Glenwood.",
+    href: "/glenwood-local-services",
+    label: "New Guide",
   },
-  {
-    name: "Fish Nest Family Restaurant",
-    type: "Seafood • Family Restaurant • Local Favorite",
-    description:
-      "A long-running local favorite known for seafood, fried fish, burgers, steaks, chicken, and family-style meals.",
-    location: "164 US-70, Glenwood, AR 71943",
-    phone: "870-356-3875",
-    directions:
-      "https://www.google.com/maps/search/?api=1&query=Fish+Nest+Family+Restaurant+164+US-70+Glenwood+AR+71943",
-  },
-  {
-    name: "Swaha Lodge & Marina",
-    type: "Lodge • Marina • Cabins • Lake Greeson",
-    description:
-      "A Lake Greeson lodge and marina near Murfreesboro with cabins, marina access, boat rentals, and outdoor recreation nearby.",
-    location: "205 Dynamite Hill Road, Murfreesboro, AR 71958",
-    phone: "870-285-2272",
-    website: "https://swahacabins.com/",
-    directions:
-      "https://www.google.com/maps/search/?api=1&query=Swaha+Lodge+and+Marina+205+Dynamite+Hill+Road+Murfreesboro+AR+71958",
-  },
-  {
-    name: "Bean Creek Cabins",
-    type: "Historic Cabins • Caddo Gap • Caddo River Area",
-    description:
-      "Restored historic log cabins in Caddo Gap near the Caddo River and Glenwood area.",
-    location: "Caddo Gap, AR",
-    phone: "",
-    website: "https://www.thebeancreekcabins.com/",
-    directions:
-      "https://www.google.com/maps/search/?api=1&query=Bean+Creek+Cabins+Caddo+Gap+AR",
-  },
-  {
-  name: "Bear Creek UTV Rentals & Repair LLC",
-  type: "UTV Rentals • ATV Rentals • Dirt Bike Repair • Outdoor Recreation",
-  description:
-    "A Kirby-area outdoor recreation business offering UTV rentals, ATV rentals, and repair or maintenance for UTVs, ATVs, and dirt bikes. A good fit for visitors staying around Glenwood, Kirby, Lake Greeson, Bear Creek, or nearby cabin areas who want another outdoor activity beyond floating the Caddo or spending time at the lake.",
-  location: "337 Kirby Landing Rd, Kirby, AR 71950",
-  phone: "870-828-3093",
-  website: "https://bearcreekutv.com/",
-  directions:
-    "https://www.google.com/maps/search/?api=1&query=Bear+Creek+UTV+Rentals+and+Repair+337+Kirby+Landing+Rd+Kirby+AR+71950",
-},
 ];
+
+const featuredNames = [
+  "Caddo River Camping & Canoe Rental",
+  "Mercantile on Broadway",
+  "At Living Water Cabins",
+];
+
+const featuredBusinesses = featuredNames
+  .map((name) => allBusinessDirectoryListings.find((business) => business.name === name))
+  .filter((business): business is GlenwoodBusiness => Boolean(business));
+
+const regularBusinesses = allBusinessDirectoryListings.filter(
+  (business) => !featuredNames.includes(business.name)
+);
 
 export const metadata = {
   title:
-    "Local Businesses in Glenwood Arkansas | Restaurants, Cabins & Visitor Stops",
+    "Local Businesses in Glenwood Arkansas | Restaurants, Shops, Services & Visitor Stops",
   description:
-    "Find Glenwood, Arkansas local businesses, including restaurants, cafes, cabins, lodging, outfitters, shops, repair services, sweets, coffee, and Caddo River stops.",
+    "Find Glenwood, Arkansas local businesses including restaurants, cabins, shops, supplies, outdoor businesses, local services, Caddo River stops, and visitor-friendly places.",
   alternates: {
     canonical: "/local-business",
   },
 };
 
+function getBusinessHref(business: GlenwoodBusiness) {
+  return business.href ?? business.website ?? business.directions ?? "#";
+}
+
+function isExternalHref(href: string) {
+  return href.startsWith("http");
+}
+
+function BusinessCard({ business, featured = false }: { business: GlenwoodBusiness; featured?: boolean }) {
+  const href = getBusinessHref(business);
+  const external = isExternalHref(href);
+
+  return (
+    <article className="group overflow-hidden rounded-2xl border border-black/10 bg-[color:var(--bg-card)] shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+      <a href={href} target={external ? "_blank" : undefined} rel={external ? "noopener noreferrer" : undefined}>
+        <div className="relative h-48 overflow-hidden bg-[#e8e1d5]">
+          <img
+            src={business.image}
+            alt={business.name}
+            className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+          />
+
+          <span className="absolute left-4 top-4 rounded-full bg-black/70 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white backdrop-blur">
+            {featured ? "Our Pick" : "Basic Listing"}
+          </span>
+        </div>
+
+        <div className="p-6">
+          <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[color:var(--color-accent)]">
+            {business.category} • {business.type}
+          </p>
+
+          <h3 className="text-2xl font-semibold leading-tight text-[color:var(--color-text)]">
+            {business.name}
+          </h3>
+
+          <p className="mt-3 text-sm leading-7 text-[color:var(--color-muted)]">
+            {business.description}
+          </p>
+
+          {business.address && (
+            <p className="mt-4 text-sm font-semibold text-[color:var(--color-text)]">
+              Location: {business.address}
+            </p>
+          )}
+
+          <div className="mt-5 flex flex-wrap gap-3">
+            {business.phone && (
+              <span className="rounded-full bg-[rgba(63,92,74,0.1)] px-4 py-2 text-sm font-bold text-[color:var(--color-accent)]">
+                {business.phone}
+              </span>
+            )}
+
+            <span className="rounded-full bg-[rgba(139,94,52,0.1)] px-4 py-2 text-sm font-bold text-[color:var(--color-accent)]">
+              View details →
+            </span>
+          </div>
+        </div>
+      </a>
+    </article>
+  );
+}
+
 export default function LocalBusinessesPage() {
   return (
     <main>
-      <section className="max-w-6xl mx-auto px-6 py-16">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)] mb-3">
-          Local Business Guide
-        </p>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "Local Businesses in Glenwood, Arkansas",
+            description:
+              "Restaurants, cabins, shops, supplies, outdoor businesses, local services, and visitor stops in Glenwood, Arkansas.",
+            itemListElement: allBusinessDirectoryListings.map((business, index) => ({
+              "@type": "ListItem",
+              position: index + 1,
+              item: {
+                "@type": business.category === "Restaurant" ? "Restaurant" : "LocalBusiness",
+                name: business.name,
+                description: business.description,
+                address: business.address,
+                telephone: business.phone,
+                url: business.website ?? business.directions ?? business.href,
+              },
+            })),
+          }),
+        }}
+      />
 
-        <h1 className="text-4xl md:text-5xl font-semibold mb-6">
-          Local Businesses in Glenwood, Arkansas
-        </h1>
-
-        <p className="text-lg mb-12 text-[color:var(--color-muted)] max-w-3xl">
-          Find places to eat, shop, stay, and explore around Glenwood — from
-          local restaurants and coffee stops to cabins, river outfitters, Lake
-          Greeson stays, and Caddo River area businesses.
-        </p>
-
-        {/* Featured business */}
-        <section className="mb-16">
-          <div className="mb-6">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
-              Featured Local Business
-            </p>
-          </div>
-
-          <div className="grid overflow-hidden rounded-3xl bg-white shadow md:grid-cols-[1.1fr_0.9fr]">
-            <div className="relative min-h-[320px] bg-[#e8e1d5]">
-              <img
-                src={featuredBusiness.image}
-                alt={featuredBusiness.name}
-                className="h-full w-full object-cover"
-              />
-            </div>
-
-            <div className="p-8 md:p-10">
-              <p className="text-sm font-semibold text-[color:var(--color-accent)] mb-3">
-                {featuredBusiness.type}
+      <section className="relative overflow-hidden border-b border-black/10">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/glenwood/oldtown.jpg')" }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/25" />
+        <div className="relative z-10 px-6 py-24 md:py-32">
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-3xl rounded-2xl bg-black/60 p-7 text-white shadow-2xl backdrop-blur-md md:p-10">
+              <p className="mb-3 text-sm font-medium uppercase tracking-[0.22em] !text-white/75">
+                Local Business Guide
               </p>
 
-              <h2 className="text-3xl md:text-4xl font-semibold mb-4">
-                {featuredBusiness.name}
-              </h2>
+              <h1 className="text-4xl font-semibold leading-tight drop-shadow-xl md:text-6xl">
+                Local Businesses in Glenwood, Arkansas
+              </h1>
 
-              <p className="text-[color:var(--color-muted)] leading-relaxed mb-6">
-                {featuredBusiness.description}
+              <p className="mt-4 max-w-2xl text-lg leading-relaxed !text-white/95 drop-shadow-md md:text-xl">
+                Find places to eat, shop, stay, and explore around Glenwood, from restaurants and coffee stops to cabins, river outfitters, shops, supplies, services, and Caddo River area businesses.
               </p>
 
-              <div className="space-y-2 text-sm mb-6">
-                <p>
-                  <strong>Location:</strong> {featuredBusiness.location}
-                </p>
-                <p>
-                  <strong>Phone:</strong>{" "}
-                  <a
-                    href={`tel:${featuredBusiness.phone.replace(/\D/g, "")}`}
-                    className="text-[color:var(--color-accent)] font-medium"
-                  >
-                    {featuredBusiness.phone}
-                  </a>
-                </p>
+              <div className="mt-7 flex flex-wrap gap-3">
+                <Link href="#categories" className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-white/90">
+                  Browse Categories
+                </Link>
+
+                <Link href="/contact" className="rounded-full border border-white/40 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/20">
+                  Suggest a Business
+                </Link>
               </div>
-
-              <a
-                href={featuredBusiness.directions}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-[color:var(--color-accent)] text-white px-5 py-3 rounded-md font-medium hover:opacity-90 transition"
-              >
-                Get Directions
-              </a>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Regular businesses */}
-        <section>
-          <div className="mb-8">
-            <h2 className="text-3xl font-semibold mb-3">
-              More Glenwood Area Businesses
+      <section id="categories" className="py-16">
+        <div className="container">
+          <div className="mb-8 max-w-3xl">
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-[color:var(--color-accent)]">
+              Business Categories
+            </p>
+
+            <h2 className="text-3xl font-semibold leading-tight text-[color:var(--color-text)] md:text-5xl">
+              Find what you need around Glenwood.
             </h2>
 
-            <p className="text-[color:var(--color-muted)] max-w-2xl">
-              Browse more local restaurants, coffee shops, cabins, lodging, and
-              visitor-friendly stops around Glenwood and the surrounding area.
+            <p className="mt-4 leading-relaxed text-[color:var(--color-muted)]">
+              Start with the kind of stop you need, then keep planning from there. Restaurants, cabins, shops, outdoor businesses, local services, and visitor-friendly places are grouped so it is easier to find the right stop before a river day, cabin stay, lake trip, or drive through town.
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2">
-            {localBusinesses.map((business) => (
-              <article
-                key={business.name}
-                className="rounded-2xl bg-white p-6 shadow-sm border border-black/5"
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {categoryCards.map((card) => (
+              <Link
+                key={card.href}
+                href={card.href}
+                className="group rounded-2xl border border-black/10 bg-[color:var(--bg-card)] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
               >
-                <p className="text-sm font-semibold text-[color:var(--color-accent)] mb-2">
-                  {business.type}
+                <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[color:var(--color-accent)]">
+                  {card.label}
                 </p>
 
-                <h3 className="text-2xl font-semibold mb-3">
-                  {business.name}
+                <h3 className="text-2xl font-semibold leading-tight text-[color:var(--color-text)]">
+                  {card.title}
                 </h3>
 
-                <p className="text-sm text-[color:var(--color-muted)] leading-relaxed mb-5">
-                  {business.description}
+                <p className="mt-3 leading-relaxed text-[color:var(--color-muted)]">
+                  {card.text}
                 </p>
 
-                <div className="space-y-2 text-sm mb-5">
-                  <p>
-                    <strong>Location:</strong> {business.location}
-                  </p>
-
-                  {business.phone && (
-                    <p>
-                      <strong>Phone:</strong>{" "}
-                      <a
-                        href={`tel:${business.phone.replace(/\D/g, "")}`}
-                        className="text-[color:var(--color-accent)] font-medium"
-                      >
-                        {business.phone}
-                      </a>
-                    </p>
-                  )}
-                </div>
-
-                <div className="flex flex-wrap gap-3">
-                  <a
-                    href={business.directions}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-[color:var(--color-accent)] font-semibold"
-                  >
-                    Directions →
-                  </a>
-
-                  {business.website && (
-                    <a
-                      href={business.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm text-[color:var(--color-accent)] font-semibold"
-                    >
-                      Website →
-                    </a>
-                  )}
-                </div>
-              </article>
+                <span className="mt-5 inline-block text-sm font-bold text-[color:var(--color-accent)]">
+                  Open guide →
+                </span>
+              </Link>
             ))}
           </div>
-        </section>
-<EventsCTA />
-<NearbyAmitySection />
-        {/* CTA */}
-        <section className="mt-16 rounded-3xl bg-[#2d2a26] text-white p-8 md:p-10 text-center">
-          <h2 className="text-3xl font-semibold mb-4">
-            Own a Glenwood area business?
+        </div>
+      </section>
+
+      <section className="py-16">
+        <div className="container">
+          <div className="section-heading">
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-[color:var(--color-accent)]">
+              Helpful Starting Points
+            </p>
+
+            <h2>A few useful Glenwood stops to start with.</h2>
+            <p>
+              These local spots give visitors a quick place to start when planning food, shopping, stays, outdoor time, and simple stops around Glenwood.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            {featuredBusinesses.map((business) => (
+              <BusinessCard key={business.name} business={business} featured />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16">
+        <div className="container">
+          <div className="mb-8 max-w-3xl">
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-[color:var(--color-accent)]">
+              Full Directory
+            </p>
+
+            <h2 className="text-3xl font-semibold leading-tight text-[color:var(--color-text)] md:text-5xl">
+              More Glenwood area businesses.
+            </h2>
+
+            <p className="mt-4 leading-relaxed text-[color:var(--color-muted)]">
+              Browse restaurants, coffee shops, cabins, lodging, outdoor businesses, shops, supplies, services, and visitor-friendly stops around Glenwood and the surrounding area.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {regularBusinesses.map((business) => (
+              <BusinessCard key={`${business.name}-${business.category}`} business={business} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16">
+        <div className="container">
+          <div className="grid gap-5 rounded-[2rem] border border-black/10 bg-white/40 p-6 shadow-sm md:grid-cols-3 md:p-8">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-[color:var(--color-accent)]">
+                Plan Around The River
+              </p>
+              <h3 className="mt-2 text-2xl font-semibold">Start with the main trip.</h3>
+              <p className="mt-3 text-sm leading-7 text-[color:var(--color-muted)]">
+                Most Glenwood visits are built around the Caddo River, Lake Greeson, cabins, food, and a few practical stops. Start with the river and then add what fits the day.
+              </p>
+              <Link href="/caddo-river" className="mt-4 inline-block text-sm font-bold text-[color:var(--color-accent)]">
+                Open the Caddo River guide →
+              </Link>
+            </div>
+
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-[color:var(--color-accent)]">
+                Stock Up Before You Go
+              </p>
+              <h3 className="mt-2 text-2xl font-semibold">
+                Food, supplies, and quick stops
+              </h3>
+              <p className="mt-3 text-sm leading-7 text-[color:var(--color-muted)]">
+                Grab groceries, drinks, snacks, sunscreen, flowers, parts, or simple supplies before heading toward the river, lake, campground, or cabin.
+              </p>
+              <Link href="/visitor-essentials-glenwood-ar" className="mt-4 inline-block text-sm font-bold text-[color:var(--color-accent)]">
+                View visitor essentials →
+              </Link>
+            </div>
+
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-[color:var(--color-accent)]">
+                Keep Nearby Guides Handy
+              </p>
+              <h3 className="mt-2 text-2xl font-semibold">Jump to the next page.</h3>
+              <p className="mt-3 text-sm leading-7 text-[color:var(--color-muted)]">
+                Restaurants, stays, shops, outdoor stops, events, and trip tools all connect from here so visitors can keep planning without hunting around.
+              </p>
+              <Link href="/plan-my-day" className="mt-4 inline-block text-sm font-bold text-[color:var(--color-accent)]">
+                Plan a Glenwood day →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <EventsCTA />
+      <NearbyAmitySection />
+
+      <section className="mx-auto max-w-6xl px-6 py-16">
+        <div className="rounded-3xl bg-[#2d2a26] p-8 text-center text-white md:p-10">
+          <h2 className="mb-4 text-3xl font-semibold !text-white">
+            Know a Glenwood area business?
           </h2>
 
-          <p className="text-white/75 max-w-2xl mx-auto mb-6">
-            If you run a restaurant, cabin, shop, attraction, service business,
-            or local stop visitors should know about, reach out about getting
-            listed on the Glenwood Arkansas guide.
+          <p className="mx-auto mb-6 max-w-2xl !text-white/75">
+            If there is a restaurant, cabin, shop, attraction, service business, outdoor business, or local stop visitors should know about, send it our way so we can keep the Glenwood guide useful.
           </p>
 
-          <a
+          <Link
             href="/contact"
-            className="inline-block bg-white text-black px-5 py-3 rounded-md font-medium hover:opacity-90 transition"
+            className="inline-block rounded-md bg-white px-5 py-3 font-medium text-black transition hover:opacity-90"
           >
-            Get Listed
-          </a>
-        </section>
+            Send a Suggestion
+          </Link>
+        </div>
       </section>
     </main>
   );

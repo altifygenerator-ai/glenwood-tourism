@@ -15,6 +15,10 @@ const planLinks = [
   { href: "/visitor-essentials-glenwood-ar", label: "Visitor Essentials" },
   { href: "/glenwood-ar-restaurants", label: "Restaurants" },
   { href: "/glenwood-ar-cabins", label: "Cabins & Places to Stay" },
+  { href: "/local-business", label: "Local Businesses" },
+  { href: "/glenwood-ar-shops-supplies", label: "Shops & Supplies" },
+  { href: "/glenwood-outdoor-businesses", label: "Outdoor Businesses" },
+  { href: "/glenwood-local-services", label: "Local Services" },
   { href: "/pet-friendly-glenwood-ar", label: "Pet-Friendly Glenwood" },
   { href: "/caddo-river", label: "Caddo River" },
   { href: "/history", label: "Glenwood History" },
@@ -213,7 +217,7 @@ export default function Navbar() {
             id="site-search"
             type="search"
             name="q"
-            placeholder="Search Caddo River, cabins, restaurants..."
+            placeholder="Search Caddo River, cabins, shops, restaurants..."
             aria-label="Search Glenwood Arkansas Guide"
             className="min-h-10 flex-1 rounded-full border border-black/10 bg-white/80 px-4 text-sm text-[color:var(--color-text)] outline-none transition placeholder:text-[color:var(--color-muted)] focus:border-[color:var(--color-accent)] focus:bg-white"
           />

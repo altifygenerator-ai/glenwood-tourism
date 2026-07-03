@@ -24,6 +24,14 @@ export default function AdminPage() {
           Manage Events
         </Link>
 
+        <Link href="/admin/events/import" className="rounded-md border px-6 py-3">
+          Quick Import
+        </Link>
+
+        <Link href="/admin/events/sources" className="rounded-md border px-6 py-3">
+          Event Sources
+        </Link>
+
         <Link href="/admin/events/new" className="rounded-md border px-6 py-3">
           Add Event Manually
         </Link>

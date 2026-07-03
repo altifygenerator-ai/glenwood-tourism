@@ -141,7 +141,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${baseUrl}/local-business`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.8,
+      priority: 0.82,
+    },
+    {
+      url: `${baseUrl}/glenwood-ar-shops-supplies`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.78,
+    },
+    {
+      url: `${baseUrl}/glenwood-outdoor-businesses`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/glenwood-local-services`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.74,
     },
     {
       url: `${baseUrl}/search`,

@@ -88,6 +88,13 @@ export default function AdminEventTable({
             </div>
 
             <div className="flex flex-wrap gap-2">
+              <Link
+                href={`/admin/events/${event.id}/edit`}
+                className="rounded-md border px-4 py-2 text-sm"
+              >
+                Edit
+              </Link>
+
               <button
                 type="button"
                 onClick={() => cleanWithAI(event.id)}

@@ -214,7 +214,7 @@ export default function Page() {
           <div className="flex flex-col justify-center">
             <SectionHeading
               eyebrow="Plan Your Glenwood Trip"
-              title="Find cabins, restaurants, and local places near Glenwood, Arkansas."
+              title="Find cabins, restaurants, shops, outdoor stops, and local places near Glenwood, Arkansas."
             />
 
             <div className={`mt-5 space-y-4 ${bodyTextClass}`}>
@@ -226,9 +226,9 @@ export default function Page() {
               </p>
 
               <p>
-                Use the restaurant and lodging guides to plan around Caddo River
+                Use the restaurant, lodging, shopping, outdoor, and local business guides to plan around Caddo River
                 floats, Lake Greeson weekends, cabin stays, camping trips,
-                fishing, family visits, and small-town dining before or after a
+                fishing, family visits, supply stops, and small-town dining before or after a
                 day outside.
               </p>
             </div>
@@ -278,6 +278,52 @@ export default function Page() {
                 </p>
 
                 <span className={textLinkClass}>View places to stay →</span>
+              </div>
+            </Link>
+
+            <Link href="/glenwood-ar-shops-supplies" className={cardHoverClass}>
+              <div
+                className="h-48 bg-cover bg-center"
+                style={{
+                  backgroundImage: "url('/images/glenwood/oldtown2.jpg')",
+                }}
+              />
+
+              <div className="flex flex-1 flex-col p-6">
+                <h3 className="mb-2 text-2xl font-semibold text-[color:var(--color-text)]">
+                  Shops & Supplies
+                </h3>
+
+                <p className={bodyTextClass}>
+                  Find gifts, groceries, hardware, flowers, coffee, sweets,
+                  auto parts, and simple supply stops around Glenwood before a
+                  river day or cabin stay.
+                </p>
+
+                <span className={textLinkClass}>View shops and supplies →</span>
+              </div>
+            </Link>
+
+            <Link href="/glenwood-outdoor-businesses" className={cardHoverClass}>
+              <div
+                className="h-48 bg-cover bg-center"
+                style={{
+                  backgroundImage: "url('/images/glenwood/floats.webp')",
+                }}
+              />
+
+              <div className="flex flex-1 flex-col p-6">
+                <h3 className="mb-2 text-2xl font-semibold text-[color:var(--color-text)]">
+                  Outdoor Businesses
+                </h3>
+
+                <p className={bodyTextClass}>
+                  Compare Caddo River outfitters, canoe and kayak rentals,
+                  camping, golf, UTV rentals, Lake Greeson stops, and nearby
+                  outdoor recreation businesses.
+                </p>
+
+                <span className={textLinkClass}>View outdoor businesses →</span>
               </div>
             </Link>
           </div>

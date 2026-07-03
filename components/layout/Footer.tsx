@@ -15,6 +15,9 @@ const visitorLinks = [
   { href: "/visitor-essentials-glenwood-ar", label: "Visitor Essentials" },
   { href: "/glenwood-ar-restaurants", label: "Restaurants" },
   { href: "/glenwood-ar-cabins", label: "Cabins & Places to Stay" },
+  { href: "/glenwood-ar-shops-supplies", label: "Shops & Supplies" },
+  { href: "/glenwood-outdoor-businesses", label: "Outdoor Businesses" },
+  { href: "/glenwood-local-services", label: "Local Services" },
   { href: "/pet-friendly-glenwood-ar", label: "Pet-Friendly Glenwood" },
   { href: "/local-business", label: "Local Businesses" },
 ];

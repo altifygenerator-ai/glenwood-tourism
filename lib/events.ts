@@ -32,6 +32,13 @@ export type TourismEvent = {
   external_id?: string | null;
   confidence_score?: number | null;
   needs_review?: boolean | null;
+  source_id?: string | null;
+  source_hash?: string | null;
+  imported_at?: string | null;
+  is_recurring?: boolean | null;
+  recurrence_type?: string | null;
+  recurrence_days?: string[] | null;
+  recurrence_end_date?: string | null;
   created_at?: string | null;
   updated_at?: string | null;
 };
@@ -178,4 +185,56 @@ export async function getAllEventsForAdmin(site?: EventSite) {
   }
 
   return data as TourismEvent[];
+}
+
+export async function getEventForAdmin(id: string) {
+  noStore();
+
+  const { data, error } = await supabaseAdmin
+    .from("events")
+    .select("*")
+    .eq("id", id)
+    .single();
+
+  if (error) {
+    console.error("Error fetching admin event:", error);
+    return null;
+  }
+
+  return data as TourismEvent;
+}
+
+export async function getEventSourcesForAdmin(site: EventSite = "glenwood") {
+  noStore();
+
+  const { data, error } = await supabaseAdmin
+    .from("event_sources")
+    .select("*")
+    .eq("site", site)
+    .order("name", { ascending: true });
+
+  if (error) {
+    console.error("Error fetching event sources:", error);
+    return [];
+  }
+
+  return data;
+}
+
+export async function getRecentEventImportRuns(limit = 20, site: EventSite = "glenwood") {
+  noStore();
+
+  const { data, error } = await supabaseAdmin
+    .from("event_import_runs")
+    .select("*, event_sources!inner(name, site)")
+    .eq("event_sources.site", site)
+    .order("started_at", { ascending: false })
+    .limit(limit);
+
+  if (error) {
+    console.error("Error fetching event import runs:", error);
+    return [];
+  }
+
+  return data;
 }

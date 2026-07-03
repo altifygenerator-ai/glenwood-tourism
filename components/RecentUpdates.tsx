@@ -2,23 +2,34 @@ import Link from "next/link";
 
 const updates = [
   {
-    label: "Visitor planning",
-    title: "Visitor Essentials in Glenwood",
-    text: "A new practical guide has been added for the little things visitors need before a Glenwood day outside, including food, ice, river supplies, cleanup, backup plans, and local planning links.",
-    href: "/visitor-essentials-glenwood-ar",
+    label: "New business guide",
+    title: "Glenwood Shops & Supplies",
+    text: "A new shopping and supply guide has been added for visitors looking for gifts, groceries, hardware, flowers, coffee, sweets, auto parts, and practical stops before a river day or cabin stay.",
+    href: "/glenwood-ar-shops-supplies",
   },
   {
-    label: "Pet-friendly guide",
-    title: "Pet-Friendly Glenwood Planning",
-    text: "A new pet-friendly page helps visitors plan around cabins, dogs on the river, patios, heat, cleanup, access rules, and simple ways to travel with pets around Glenwood.",
-    href: "/pet-friendly-glenwood-ar",
+    label: "New business guide",
+    title: "Glenwood Outdoor Businesses",
+    text: "A new outdoor business guide brings together Caddo River outfitters, canoe and kayak rentals, golf, UTV rentals, Lake Greeson stops, and family-friendly outdoor places.",
+    href: "/glenwood-outdoor-businesses",
   },
   {
-    label: "Site update",
-    title: "Search Added to the Glenwood Guide",
-    text: "A new site search has been added to help visitors find Glenwood guides faster, including Caddo River pages, cabins, restaurants, events, pet-friendly planning, rainy day ideas, visitor essentials, and nearby Arkansas travel stops.",
-    href: "/search",
+    label: "New business guide",
+    title: "Glenwood Local Services",
+    text: "A new local services page gives useful Glenwood businesses a cleaner home, including hardware, auto parts, remodeling, banking, repairs, supplies, and practical local help.",
+    href: "/glenwood-local-services",
   },
+];
+
+const communityUpdateLinks = [
+  { href: "/search", label: "Search the Guide" },
+  { href: "/local-business", label: "Local Business Directory" },
+  { href: "/glenwood-ar-shops-supplies", label: "Shops & Supplies" },
+  { href: "/glenwood-outdoor-businesses", label: "Outdoor Businesses" },
+  { href: "/glenwood-local-services", label: "Local Services" },
+  { href: "/glenwood-ar-restaurants", label: "Restaurant Guide" },
+  { href: "/glenwood-ar-cabins", label: "Cabins & Stays" },
+  { href: "/events", label: "Events" },
 ];
 
 export default function RecentUpdates() {
@@ -37,19 +48,25 @@ export default function RecentUpdates() {
               </h2>
 
               <p className="mt-3 max-w-3xl text-sm leading-7 text-[color:var(--color-muted)]">
-                New local guides are being added around Glenwood, the Caddo
-                River, Lake Greeson, nearby day trips, family stops, river
-                access, visitor essentials, pet-friendly planning, and outdoor
-                places worth knowing about.
+                The Glenwood guide is getting easier to use with expanded local business categories, better visitor pages, shopping and supply stops, outdoor businesses, local services, restaurants, cabins, events, and helpful planning pages around town.
               </p>
             </div>
 
-            <Link
-              href="/explore"
-              className="text-sm font-bold text-[color:var(--color-accent)] underline"
-            >
-              Explore more guides
-            </Link>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/local-business"
+                className="rounded-full bg-[color:var(--color-accent)] px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+              >
+                Browse Local Businesses
+              </Link>
+
+              <Link
+                href="/search"
+                className="rounded-full border border-[color:var(--color-accent)] px-5 py-3 text-sm font-bold text-[color:var(--color-accent)] transition hover:bg-[color:var(--color-accent)] hover:text-white"
+              >
+                Search the Guide
+              </Link>
+            </div>
           </div>
 
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -77,6 +94,32 @@ export default function RecentUpdates() {
               </Link>
             ))}
           </div>
+
+          <article className="mt-4 rounded-[1.4rem] border border-black/10 bg-[color:var(--color-bg)] p-5">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[color:var(--color-accent)]">
+              Guide shortcuts
+            </p>
+
+            <h3 className="mb-3 text-2xl font-semibold leading-tight">
+              Find Glenwood pages faster
+            </h3>
+
+            <p className="text-sm leading-7 text-[color:var(--color-muted)]">
+              Visitors can search across the guide or jump straight into popular planning pages for local businesses, shops, outdoor stops, services, restaurants, cabins, events, and things to do.
+            </p>
+
+            <div className="mt-5 flex flex-wrap gap-2">
+              {communityUpdateLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="inline-flex rounded-full border border-black/10 bg-white/60 px-3 py-2 text-xs font-bold text-[color:var(--color-accent)] transition hover:-translate-y-0.5"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </article>
         </div>
       </div>
     </section>

@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Search the Glenwood Arkansas Guide",
   description:
-    "Search Glenwood Arkansas Guide pages for Caddo River trips, cabins, restaurants, events, Lake Greeson, local businesses, family activities, and visitor planning.",
+    "Search Glenwood Arkansas Guide pages for Caddo River trips, cabins, restaurants, events, Lake Greeson, local businesses, shops, outdoor businesses, local services, family activities, and visitor planning.",
   alternates: {
     canonical: "/search",
   },
@@ -92,8 +92,26 @@ const searchablePages = [
   {
     title: "Local Businesses",
     href: "/local-business",
-    text: "Local businesses, shops, services, visitor stops, and places around Glenwood worth knowing about.",
-    tags: ["business", "shops", "local"],
+    text: "Local businesses, shops, services, visitor stops, outdoor businesses, restaurants, cabins, and places around Glenwood worth knowing about.",
+    tags: ["business", "shops", "local", "services", "outdoor"],
+  },
+  {
+    title: "Glenwood Shops & Supplies",
+    href: "/glenwood-ar-shops-supplies",
+    text: "Gifts, groceries, hardware, flowers, coffee, sweets, auto parts, market stops, and practical visitor supplies around Glenwood.",
+    tags: ["shops", "shopping", "supplies", "grocery", "hardware", "gifts", "flowers", "auto parts"],
+  },
+  {
+    title: "Glenwood Outdoor Businesses",
+    href: "/glenwood-outdoor-businesses",
+    text: "Caddo River outfitters, canoe rentals, kayak rentals, tube floats, golf, UTV rentals, Lake Greeson stops, and outdoor recreation businesses.",
+    tags: ["outdoor", "outfitters", "canoe", "kayak", "tube", "golf", "utv", "lake greeson", "caddo river"],
+  },
+  {
+    title: "Glenwood Local Services",
+    href: "/glenwood-local-services",
+    text: "Hardware, auto parts, remodeling, banking, repairs, property help, supplies, and practical Glenwood local services.",
+    tags: ["services", "hardware", "auto parts", "remodeling", "bank", "repairs", "property", "local service"],
   },
   {
     title: "Plan My Day",
@@ -215,7 +233,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
             </p>
 
             <h1 className="text-5xl font-semibold leading-[0.95] text-[color:var(--color-text)] md:text-7xl">
-              Find Glenwood guides, places, and trip ideas.
+              Find Glenwood guides, businesses, places, and trip ideas.
             </h1>
 
             <p className="mt-7 max-w-2xl text-lg leading-relaxed text-[color:var(--color-muted)] md:text-xl">
