@@ -18,7 +18,7 @@ const amityStops: AmityStop[] = [
     description:
       "A nearby Amity brewery and tavern stop with locally brewed craft beer, food off the grill, a laid back taproom, and outdoor space. A good add-on for Glenwood visitors planning a Caddo River float, cabin weekend, Lake Greeson day, or slower evening nearby.",
     phone: "870-342-5545",
-    website: "https://slaterockbrewing.com",
+    website: "https://www.facebook.com/slaterockbrewing",
     directions:
       "https://www.google.com/maps/search/?api=1&query=Slate+Rock+Brewing+113+S+Main+St+Amity+AR+71921",
     featuredLabel: "Featured Local Partner",
@@ -153,7 +153,7 @@ export default function NearbyAmitySection() {
                         newTab
                         className="rounded-full bg-[color:var(--color-accent)] px-4 py-2 text-xs font-semibold text-white transition hover:opacity-90"
                       >
-                        Website
+                        View Facebook Page
                       </TrackedFeatureLink>
                     )}
 

@@ -21,7 +21,7 @@ const restaurants = [
       "A nearby Amity brewery and tavern where visitors can enjoy locally brewed craft beer, food fresh off the grill, a laid-back taproom, and an outdoor space. It works well as a Glenwood-area weekend stop after a Caddo River float, cabin stay, Lake Greeson trip, or slower evening out.",
     location: "113 S Main St, Amity, AR 71921",
     phone: "870-342-5545",
-    website: "https://www.slaterockbrewing.com/home",
+    website: "https://www.facebook.com/slaterockbrewing",
     image: "/images/glenwood/slaterock.jpg",
     alt: "Slate Rock Brewing near Glenwood Arkansas",
     directions:
@@ -385,7 +385,7 @@ function TrackedRestaurantActions({
           newTab
           className={primaryButtonClass}
         >
-          View Website
+          View Facebook Page
         </TrackedFeatureLink>
       )}
 
