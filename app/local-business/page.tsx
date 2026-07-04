@@ -1,6 +1,7 @@
 import Link from "next/link";
 import EventsCTA from "@/components/events/EventsCTA";
 import NearbyAmitySection from "@/components/NearbyAmitySection";
+import TrackedFeatureLink from "@/components/TrackedFeatureLink";
 import { allBusinessDirectoryListings } from "@/data/glenwoodBusinessDirectoryPages";
 import type { GlenwoodBusiness } from "@/data/glenwoodBusinesses";
 
@@ -73,53 +74,78 @@ function BusinessCard({ business, featured = false }: { business: GlenwoodBusine
   const href = getBusinessHref(business);
   const external = isExternalHref(href);
 
-  return (
-    <article className="group overflow-hidden rounded-2xl border border-black/10 bg-[color:var(--bg-card)] shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
-      <a href={href} target={external ? "_blank" : undefined} rel={external ? "noopener noreferrer" : undefined}>
-        <div className="relative h-48 overflow-hidden bg-[#e8e1d5]">
-          <img
-            src={business.image}
-            alt={business.name}
-            className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-          />
+  const cardInner = (
+    <>
+      <div className="relative h-48 overflow-hidden bg-[#e8e1d5]">
+        <img
+          src={business.image}
+          alt={business.name}
+          className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+        />
 
-          <span className="absolute left-4 top-4 rounded-full bg-black/70 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white backdrop-blur">
-            {featured ? "Our Pick" : "Basic Listing"}
-          </span>
-        </div>
+        <span className="absolute left-4 top-4 rounded-full bg-black/70 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white backdrop-blur">
+          {featured ? "Our Pick" : "Basic Listing"}
+        </span>
+      </div>
 
-        <div className="p-6">
-          <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[color:var(--color-accent)]">
-            {business.category} • {business.type}
+      <div className="p-6">
+        <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[color:var(--color-accent)]">
+          {business.category} • {business.type}
+        </p>
+
+        <h3 className="text-2xl font-semibold leading-tight text-[color:var(--color-text)]">
+          {business.name}
+        </h3>
+
+        <p className="mt-3 text-sm leading-7 text-[color:var(--color-muted)]">
+          {business.description}
+        </p>
+
+        {business.address && (
+          <p className="mt-4 text-sm font-semibold text-[color:var(--color-text)]">
+            Location: {business.address}
           </p>
+        )}
 
-          <h3 className="text-2xl font-semibold leading-tight text-[color:var(--color-text)]">
-            {business.name}
-          </h3>
-
-          <p className="mt-3 text-sm leading-7 text-[color:var(--color-muted)]">
-            {business.description}
-          </p>
-
-          {business.address && (
-            <p className="mt-4 text-sm font-semibold text-[color:var(--color-text)]">
-              Location: {business.address}
-            </p>
+        <div className="mt-5 flex flex-wrap gap-3">
+          {business.phone && (
+            <span className="rounded-full bg-[rgba(63,92,74,0.1)] px-4 py-2 text-sm font-bold text-[color:var(--color-accent)]">
+              {business.phone}
+            </span>
           )}
 
-          <div className="mt-5 flex flex-wrap gap-3">
-            {business.phone && (
-              <span className="rounded-full bg-[rgba(63,92,74,0.1)] px-4 py-2 text-sm font-bold text-[color:var(--color-accent)]">
-                {business.phone}
-              </span>
-            )}
-
-            <span className="rounded-full bg-[rgba(139,94,52,0.1)] px-4 py-2 text-sm font-bold text-[color:var(--color-accent)]">
-              View details →
-            </span>
-          </div>
+          <span className="rounded-full bg-[rgba(139,94,52,0.1)] px-4 py-2 text-sm font-bold text-[color:var(--color-accent)]">
+            View details →
+          </span>
         </div>
-      </a>
+      </div>
+    </>
+  );
+
+  return (
+    <article className="group overflow-hidden rounded-2xl border border-black/10 bg-[color:var(--bg-card)] shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+      {featured ? (
+        <TrackedFeatureLink
+          href={href}
+          business={business.name}
+          city="Glenwood"
+          page="/local-business"
+          placement="helpful-starting-points"
+          action="view-details"
+          placementType="editorial"
+          newTab={external}
+        >
+          {cardInner}
+        </TrackedFeatureLink>
+      ) : (
+        <a
+          href={href}
+          target={external ? "_blank" : undefined}
+          rel={external ? "noopener noreferrer" : undefined}
+        >
+          {cardInner}
+        </a>
+      )}
     </article>
   );
 }

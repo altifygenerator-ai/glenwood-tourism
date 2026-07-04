@@ -13,6 +13,7 @@ type TrackedFeatureLinkProps = {
   page: string;
   placement: string;
   action: string;
+  placementType?: string;
   newTab?: boolean;
 };
 
@@ -25,6 +26,7 @@ export default function TrackedFeatureLink({
   page,
   placement,
   action,
+  placementType,
   newTab = false,
 }: TrackedFeatureLinkProps) {
   function handleClick() {
@@ -34,6 +36,7 @@ export default function TrackedFeatureLink({
       page,
       placement,
       action,
+      ...(placementType ? { placementType } : {}),
     });
   }
 

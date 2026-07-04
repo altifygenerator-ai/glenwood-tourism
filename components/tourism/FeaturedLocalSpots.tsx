@@ -10,6 +10,7 @@ type FeaturedSpot = {
   image: string;
   href: string;
   tracked?: boolean;
+  placementType?: string;
 };
 
 export default function FeaturedLocalSpots({
@@ -141,6 +142,7 @@ export default function FeaturedLocalSpots({
                 page="/"
                 placement="featured-local-spots"
                 action="view-details"
+                placementType={spot.placementType}
                 className={cardClassName}
               >
                 {cardInner}

@@ -346,6 +346,66 @@ function phoneHref(phone: string) {
   return `tel:${phone.replace(/[^\d]/g, "")}`;
 }
 
+
+function TrackedStayActions({
+  stay,
+  placement,
+  placementType,
+}: {
+  stay: (typeof stays)[number];
+  placement: string;
+  placementType?: string;
+}) {
+  return (
+    <div className="mt-5 flex flex-wrap gap-3">
+      {stay.phone && (
+        <TrackedFeatureLink
+          href={phoneHref(stay.phone)}
+          business={stay.name}
+          city="Glenwood"
+          page="/glenwood-ar-cabins"
+          placement={placement}
+          action="call"
+          placementType={placementType}
+          className={primaryButtonClass}
+        >
+          Call {stay.phone}
+        </TrackedFeatureLink>
+      )}
+
+      {stay.website && (
+        <TrackedFeatureLink
+          href={stay.website}
+          business={stay.name}
+          city="Glenwood"
+          page="/glenwood-ar-cabins"
+          placement={placement}
+          action="website"
+          placementType={placementType}
+          newTab
+          className={primaryButtonClass}
+        >
+          View Listing
+        </TrackedFeatureLink>
+      )}
+
+      <TrackedFeatureLink
+        href={stay.directions}
+        business={stay.name}
+        city="Glenwood"
+        page="/glenwood-ar-cabins"
+        placement={placement}
+        action="directions"
+        placementType={placementType}
+        newTab
+        className={outlineButtonClass}
+      >
+        Directions
+      </TrackedFeatureLink>
+    </div>
+  );
+}
+
 function StayActions({ stay }: { stay: (typeof stays)[number] }) {
   return (
     <div className="mt-5 flex flex-wrap gap-3">
@@ -749,7 +809,11 @@ export default function GlenwoodCabinsPage() {
                         📍 {stay.location}
                       </p>
 
-                      <StayActions stay={stay} />
+                      <TrackedStayActions
+                        stay={stay}
+                        placement="featured-stay"
+                        placementType="editorial"
+                      />
                     </div>
                   </div>
                 )

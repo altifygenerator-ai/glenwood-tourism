@@ -242,6 +242,8 @@ export const glenwoodFeaturedLocalSpots = [
       "A familiar Glenwood stop for breakfast, lunch, Mexican food, American plates, catfish, burgers, and casual meals before or after a river day. It has the kind of small-town cafe feel visitors look for when they want something easy, filling, and local.",
     image: "/images/glenwood/restaurants/caddo-cafe.jpg",
     href: "/glenwood-ar-restaurants",
+    tracked: true,
+    placementType: "editorial",
   },
   {
     name: "Fish Nest Family Restaurant",
@@ -251,6 +253,8 @@ export const glenwoodFeaturedLocalSpots = [
       "A casual family restaurant known around the area for seafood, fried fish, and relaxed sit-down meals. It fits well for visitors who want a fuller meal after time on the river, at the lake, or driving through the Glenwood area.",
     image: "/images/glenwood/restaurants/fishnest.webp",
     href: "/glenwood-ar-restaurants",
+    tracked: true,
+    placementType: "editorial",
   },
   {
     name: "Caddo River Camping & Canoe Rental",
@@ -260,6 +264,8 @@ export const glenwoodFeaturedLocalSpots = [
       "One of the key river-trip businesses in the Glenwood area, offering float support, canoeing, kayaking, tubing, camping, cabins, and access to the upper Caddo River experience. A strong starting point for visitors planning their trip around the water.",
     image: "/images/glenwood/cabins/caddo-river-camping.avif",
     href: "/glenwood-ar-cabins",
+    tracked: true,
+    placementType: "editorial",
   },
   {
     name: "Riverwood Inn of Glenwood",
@@ -269,5 +275,7 @@ export const glenwoodFeaturedLocalSpots = [
       "A simple local lodging option for visitors who want to stay near restaurants, shops, river access, and the main roads leading toward Lake Greeson, Murfreesboro, Hot Springs, and other area stops.",
     image: "/images/glenwood/cabins/riverwood.webp",
     href: "/glenwood-ar-cabins",
+    tracked: true,
+    placementType: "editorial",
   },
 ];

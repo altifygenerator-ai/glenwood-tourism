@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TrackedFeatureLink from "@/components/TrackedFeatureLink";
 import type { GlenwoodBusiness } from "@/data/glenwoodBusinesses";
 
 type GuideLink = {
@@ -44,6 +45,7 @@ type GlenwoodBusinessDirectoryPageProps = {
   faqs: FAQ[];
   schemaName: string;
   schemaDescription: string;
+  trackingPage?: string;
   ctaTitle?: string;
   ctaText?: string;
 };
@@ -65,71 +67,95 @@ function DirectoryCard({
   business,
   index,
   featuredNames,
+  trackingPage,
 }: {
   business: GlenwoodBusiness;
   index?: number;
   featuredNames?: string[];
+  trackingPage?: string;
 }) {
   const href = getBusinessHref(business);
   const external = isExternalHref(href);
   const badge = getListingBadge(business, featuredNames);
+  const isFeatured = featuredNames?.includes(business.name) ?? false;
+
+  const cardInner = (
+    <>
+      <div className="relative h-48 overflow-hidden bg-[#e8e1d5]">
+        <img
+          src={business.image}
+          alt={business.name}
+          className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+        />
+
+        <div className="absolute left-4 top-4 rounded-full bg-black/70 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white backdrop-blur">
+          {badge}
+        </div>
+
+        <div className="absolute bottom-4 left-4 rounded-full bg-white/90 px-3 py-1 text-xs font-bold uppercase tracking-wide text-[color:var(--color-accent)] backdrop-blur">
+          {business.category}
+        </div>
+      </div>
+
+      <div className="p-5">
+        <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[color:var(--color-accent)]">
+          {business.type}
+        </p>
+
+        <h3 className="text-xl font-semibold leading-tight text-[color:var(--color-text)]">
+          {index ? `${index}. ` : ""}
+          {business.name}
+        </h3>
+
+        <p className="mt-3 leading-relaxed text-[color:var(--color-muted)]">
+          {business.description}
+        </p>
+
+        {business.address && (
+          <p className="mt-4 text-sm font-semibold text-[color:var(--color-text)]">
+            📍 {business.address}
+          </p>
+        )}
+
+        <div className="mt-5 flex flex-wrap gap-3">
+          {business.phone && (
+            <span className="rounded-full bg-[rgba(63,92,74,0.1)] px-4 py-2 text-sm font-bold text-[color:var(--color-accent)]">
+              {business.phone}
+            </span>
+          )}
+
+          <span className="rounded-full bg-[rgba(139,94,52,0.1)] px-4 py-2 text-sm font-bold text-[color:var(--color-accent)]">
+            View details →
+          </span>
+        </div>
+      </div>
+    </>
+  );
 
   return (
     <article className="group overflow-hidden rounded-[1.5rem] border border-black/10 bg-[color:var(--bg-card)] shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
-      <a
-        href={href}
-        target={external ? "_blank" : undefined}
-        rel={external ? "noopener noreferrer" : undefined}
-      >
-        <div className="relative h-48 overflow-hidden bg-[#e8e1d5]">
-          <img
-            src={business.image}
-            alt={business.name}
-            className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-          />
-
-          <div className="absolute left-4 top-4 rounded-full bg-black/70 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white backdrop-blur">
-            {badge}
-          </div>
-
-          <div className="absolute bottom-4 left-4 rounded-full bg-white/90 px-3 py-1 text-xs font-bold uppercase tracking-wide text-[color:var(--color-accent)] backdrop-blur">
-            {business.category}
-          </div>
-        </div>
-
-        <div className="p-5">
-          <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[color:var(--color-accent)]">
-            {business.type}
-          </p>
-
-          <h3 className="text-xl font-semibold leading-tight text-[color:var(--color-text)]">
-            {index ? `${index}. ` : ""}
-            {business.name}
-          </h3>
-
-          <p className="mt-3 leading-relaxed text-[color:var(--color-muted)]">
-            {business.description}
-          </p>
-
-          {business.address && (
-            <p className="mt-4 text-sm font-semibold text-[color:var(--color-text)]">
-              📍 {business.address}
-            </p>
-          )}
-
-          <div className="mt-5 flex flex-wrap gap-3">
-            {business.phone && (
-              <span className="rounded-full bg-[rgba(63,92,74,0.1)] px-4 py-2 text-sm font-bold text-[color:var(--color-accent)]">
-                {business.phone}
-              </span>
-            )}
-
-            <span className="rounded-full bg-[rgba(139,94,52,0.1)] px-4 py-2 text-sm font-bold text-[color:var(--color-accent)]">
-              View details →
-            </span>
-          </div>
-        </div>
-      </a>
+      {isFeatured && trackingPage ? (
+        <TrackedFeatureLink
+          href={href}
+          business={business.name}
+          city="Glenwood"
+          page={trackingPage}
+          placement="helpful-starting-points"
+          action="view-details"
+          placementType="editorial"
+          newTab={external}
+        >
+          {cardInner}
+        </TrackedFeatureLink>
+      ) : (
+        <a
+          href={href}
+          target={external ? "_blank" : undefined}
+          rel={external ? "noopener noreferrer" : undefined}
+        >
+          {cardInner}
+        </a>
+      )}
     </article>
   );
 }
@@ -162,6 +188,7 @@ export default function GlenwoodBusinessDirectoryPage({
   faqs,
   schemaName,
   schemaDescription,
+  trackingPage,
   ctaTitle = "Know a Glenwood spot visitors should find?",
   ctaText =
     "Send over local businesses, corrections, helpful stops, or places that should be added to the Glenwood guide so visitors can plan better trips.",
@@ -320,10 +347,15 @@ export default function GlenwoodBusinessDirectoryPage({
             </div>
 
             <div className="grid items-start gap-6 lg:grid-cols-[1.05fr_0.95fr]">
-              <a
+              <TrackedFeatureLink
                 href={getBusinessHref(mainBusiness)}
-                target={isExternalHref(getBusinessHref(mainBusiness)) ? "_blank" : undefined}
-                rel={isExternalHref(getBusinessHref(mainBusiness)) ? "noopener noreferrer" : undefined}
+                business={mainBusiness.name}
+                city="Glenwood"
+                page={trackingPage ?? "unknown"}
+                placement="helpful-starting-points-main"
+                action="view-details"
+                placementType="editorial"
+                newTab={isExternalHref(getBusinessHref(mainBusiness))}
                 className="group overflow-hidden rounded-[2rem] border border-black/10 bg-[color:var(--bg-card)] shadow-sm transition hover:-translate-y-1 hover:shadow-2xl"
               >
                 <div className="relative h-[340px] overflow-hidden">
@@ -361,7 +393,7 @@ export default function GlenwoodBusinessDirectoryPage({
                     View business →
                   </span>
                 </div>
-              </a>
+              </TrackedFeatureLink>
 
               <div className="grid gap-6">
                 {sideBusinesses.map((business) => (
@@ -369,6 +401,7 @@ export default function GlenwoodBusinessDirectoryPage({
                     key={business.name}
                     business={business}
                     featuredNames={featuredNames}
+                    trackingPage={trackingPage}
                   />
                 ))}
               </div>

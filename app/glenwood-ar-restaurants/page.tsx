@@ -354,9 +354,11 @@ function RestaurantActions({
 function TrackedRestaurantActions({
   restaurant,
   placement,
+  placementType,
 }: {
   restaurant: (typeof restaurants)[number];
   placement: string;
+  placementType?: string;
 }) {
   return (
     <div className="mt-5 flex flex-wrap gap-3">
@@ -368,6 +370,7 @@ function TrackedRestaurantActions({
           page="/glenwood-ar-restaurants"
           placement={placement}
           action="call"
+          placementType={placementType}
           className={primaryButtonClass}
         >
           Call {restaurant.phone}
@@ -382,6 +385,7 @@ function TrackedRestaurantActions({
           page="/glenwood-ar-restaurants"
           placement={placement}
           action="website"
+          placementType={placementType}
           newTab
           className={primaryButtonClass}
         >
@@ -396,6 +400,7 @@ function TrackedRestaurantActions({
         page="/glenwood-ar-restaurants"
         placement={placement}
         action="directions"
+        placementType={placementType}
         newTab
         className={outlineButtonClass}
       >
@@ -690,7 +695,11 @@ style={{
                         📍 {restaurant.location}
                       </p>
 
-                      <RestaurantActions restaurant={restaurant} />
+                      <TrackedRestaurantActions
+                        restaurant={restaurant}
+                        placement="featured-restaurant"
+                        placementType="editorial"
+                      />
                     </div>
                   </div>
                 )

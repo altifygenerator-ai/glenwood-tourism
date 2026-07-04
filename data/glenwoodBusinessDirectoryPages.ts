@@ -159,6 +159,7 @@ export const shoppingAndSuppliesPage = {
       },
     ],
     schemaName: "Shops and Supplies in Glenwood, Arkansas",
+    trackingPage: "/glenwood-ar-shops-supplies",
     schemaDescription:
       "Local shops, gift stops, groceries, hardware, flowers, auto parts, coffee, sweets, and visitor supplies in Glenwood, Arkansas.",
   },
@@ -252,6 +253,7 @@ export const outdoorBusinessesPage = {
       },
     ],
     schemaName: "Outdoor Businesses and Recreation in Glenwood, Arkansas",
+    trackingPage: "/glenwood-outdoor-businesses",
     schemaDescription:
       "Caddo River outfitters, canoe rentals, kayak rentals, camping, golf, UTV rentals, Lake Greeson stops, and outdoor recreation around Glenwood, Arkansas.",
   },
@@ -347,6 +349,7 @@ export const localServicesPage = {
       },
     ],
     schemaName: "Local Services in Glenwood, Arkansas",
+    trackingPage: "/glenwood-local-services",
     schemaDescription:
       "Hardware, auto parts, remodeling, repairs, banking, property help, supplies, and local service businesses in Glenwood, Arkansas.",
   },
