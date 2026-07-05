@@ -205,7 +205,7 @@ export default function Page() {
 
       <HomeEventsPreview />
 
-      <GlenwoodFourthOfJulyFeature />
+      
 
       <FeaturedLocalSpots items={glenwoodFeaturedLocalSpots} />
 
