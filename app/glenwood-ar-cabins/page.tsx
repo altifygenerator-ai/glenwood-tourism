@@ -198,6 +198,17 @@ const stays = [
     directions:
       "https://www.google.com/maps/search/?api=1&query=Bean+Creek+Cabins+Caddo+Gap+AR",
   },
+    {
+    name: "Wild Ride Retreat",
+    type: "Vacation Rental • Pet-Friendly Stay • Albert Pike Area",
+    description:
+      "A family-owned vacation rental near Caddo Gap, Albert Pike, and the Ouachita National Forest. Wild Ride Retreat is pet-friendly, sleeps up to six guests, and makes a peaceful base for hiking, ATV adventures, fishing, kayaking, crystal mining, and quiet Arkansas backroad getaways.",
+    location: "Caddo Gap / Albert Pike / Ouachita National Forest area",
+    phone: "870-223-1948",
+    website: "https://www.facebook.com/profile.php?id=61590278013776",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Wild+Ride+Retreat+Caddo+Gap+Albert+Pike+Arkansas",
+  },
   {
     name: "Swaha Lodge & Marina",
     type: "Lodge • Marina • Cabins • Lake Greeson",
