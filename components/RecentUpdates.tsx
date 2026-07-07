@@ -2,6 +2,12 @@ import Link from "next/link";
 
 const updates = [
   {
+    label: "New article",
+    title: "Fishing Near Glenwood",
+    text: "A new fishing guide compares John Benjamin Pond, the Caddo River, and Lake Greeson so visitors can pick the right kind of water for a quick family stop, a river day, or a full lake trip.",
+    href: "/fishing-near-glenwood-arkansas",
+  },
+  {
     label: "New business guide",
     title: "Glenwood Shops & Supplies",
     text: "A new shopping and supply guide has been added for visitors looking for gifts, groceries, hardware, flowers, coffee, sweets, auto parts, and practical stops before a river day or cabin stay.",
@@ -13,16 +19,11 @@ const updates = [
     text: "A new outdoor business guide brings together Caddo River outfitters, canoe and kayak rentals, golf, UTV rentals, Lake Greeson stops, and family-friendly outdoor places.",
     href: "/glenwood-outdoor-businesses",
   },
-  {
-    label: "New business guide",
-    title: "Glenwood Local Services",
-    text: "A new local services page gives useful Glenwood businesses a cleaner home, including hardware, auto parts, remodeling, banking, repairs, supplies, and practical local help.",
-    href: "/glenwood-local-services",
-  },
 ];
 
 const communityUpdateLinks = [
   { href: "/search", label: "Search the Guide" },
+  { href: "/fishing-near-glenwood-arkansas", label: "Fishing Near Glenwood" },
   { href: "/local-business", label: "Local Business Directory" },
   { href: "/glenwood-ar-shops-supplies", label: "Shops & Supplies" },
   { href: "/glenwood-outdoor-businesses", label: "Outdoor Businesses" },

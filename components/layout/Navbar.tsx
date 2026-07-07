@@ -25,6 +25,10 @@ const planLinks = [
 ];
 
 const articleLinks = [
+  {
+    href: "/fishing-near-glenwood-arkansas",
+    label: "Fishing Near Glenwood Arkansas",
+  },
   { href: "/rainy-day-things-to-do-glenwood-ar", label: "Rainy Day Backup Plans" },
   { href: "/bard-springs", label: "Bard Springs Recreation Area" },
   {

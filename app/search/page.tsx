@@ -30,6 +30,12 @@ const searchablePages = [
     tags: ["weekend", "river", "cabins", "food"],
   },
   {
+    title: "Fishing Near Glenwood Arkansas",
+    href: "/fishing-near-glenwood-arkansas",
+    text: "Compare Caddo River, Lake Greeson, and John Benjamin Pond for fishing near Glenwood, from easy family stops to full lake days.",
+    tags: ["fishing", "caddo river", "lake greeson", "john benjamin", "pond", "bass", "crappie", "catfish", "kids"],
+  },
+  {
     title: "Visitor Essentials in Glenwood",
     href: "/visitor-essentials-glenwood-ar",
     text: "Food, fuel, river supplies, ice, water, cleanup, local stops, and practical planning before a Glenwood day outside.",

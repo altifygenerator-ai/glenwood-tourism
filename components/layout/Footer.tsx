@@ -6,6 +6,7 @@ const exploreLinks = [
     label: "Things To Do With Kids",
   },
   { href: "/caddo-river", label: "Caddo River" },
+  { href: "/fishing-near-glenwood-arkansas", label: "Fishing Near Glenwood" },
   { href: "/rainy-day-things-to-do-glenwood-ar", label: "Rainy Day Ideas" },
   { href: "/history", label: "Glenwood History" },
 ];
