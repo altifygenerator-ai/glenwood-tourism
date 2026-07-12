@@ -15,6 +15,7 @@ import CaddoRiverHomeFeature from "@/components/CaddoRiverHomeFeature";
 import CaddoTripCheck from "@/components/CaddoTripCheck";
 import RecentUpdates from "@/components/RecentUpdates";
 import { generateMetadata } from "@/lib/seo";
+import { LinkedAmityText } from "@/components/AmityLink";
 
 import {
   glenwoodHero,
@@ -375,7 +376,7 @@ export default function Page() {
                   {item.title}
                 </h3>
 
-                <p className={bodyTextClass}>{item.text}</p>
+                <p className={bodyTextClass}><LinkedAmityText text={item.text} /></p>
               </div>
             ))}
           </div>
@@ -568,7 +569,7 @@ export default function Page() {
 
       <div className="mx-auto flex max-w-6xl flex-wrap justify-center gap-4 px-6 py-10">
         <a
-          href="https://amityarkansas.org"
+          href="https://www.amityarkansas.org"
           target="_blank"
           rel="noopener noreferrer"
           className={primaryButtonClass}

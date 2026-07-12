@@ -6,6 +6,7 @@ const exploreLinks = [
     label: "Things To Do With Kids",
   },
   { href: "/caddo-river", label: "Caddo River" },
+  { href: "/collier-springs-little-missouri-falls-day-trip", label: "Collier Springs & Little Missouri Falls" },
   { href: "/fishing-near-glenwood-arkansas", label: "Fishing Near Glenwood" },
   { href: "/rainy-day-things-to-do-glenwood-ar", label: "Rainy Day Ideas" },
   { href: "/history", label: "Glenwood History" },
@@ -30,7 +31,7 @@ const eventLinks = [
 ];
 
 const sisterSites = [
-  { href: "https://amityarkansas.org", label: "Visit Amity" },
+  { href: "https://www.amityarkansas.org", label: "Visit Amity" },
   { href: "https://murfreesboroarkansas.org", label: "Visit Murfreesboro" },
   { href: "https://mountidaarkansas.org", label: "Visit Mount Ida" },
   { href: "https://hotspringsarkansas.org", label: "Visit Hot Springs" },

@@ -231,6 +231,7 @@ export const glenwoodBusinesses: GlenwoodBusiness[] = [
     image: "/images/glenwood/cabins/caddo-river-cabins.png",
     phone: "870-718-3072",
     address: "Caddo River, Glenwood, AR",
+    website: "https://www.caddorivercabin.com/",
     href: "/glenwood-ar-cabins",
     directions:
       "https://www.google.com/maps/search/?api=1&query=Caddo+River+Cabins+Glenwood+AR",
@@ -311,6 +312,167 @@ export const glenwoodBusinesses: GlenwoodBusiness[] = [
     address: "804 East Broadway, Glenwood, AR 71943",
     directions:
       "https://www.google.com/maps/search/?api=1&query=Flavor-Licious+Glenwood+804+East+Broadway+Glenwood+AR+71943",
+    href: "/glenwood-ar-restaurants",
+  },
+  {
+    name: "Collier Springs Day Use Area",
+    category: "Attraction",
+    type: "Natural Spring • Picnic Area • Ouachita National Forest",
+    description:
+      "A quiet Forest Service day-use area near Norman with a clear-flowing spring, picnic space, old stonework, and a simple wooded stop that pairs well with a back-road trip toward Little Missouri Falls.",
+    image: "/images/glenwood/collier-little-missouri/collier-springs-shelter.webp",
+    address: "Ouachita National Forest near Norman, AR",
+    website: "https://www.fs.usda.gov/r08/ouachita/recreation/collier-springs-day-use",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Collier+Springs+Day+Use+Area+Arkansas",
+    href: "/collier-springs-little-missouri-falls-day-trip",
+  },
+  {
+    name: "Little Missouri Falls",
+    category: "Attraction",
+    type: "Waterfall • Picnic Area • Short Forest Walk",
+    description:
+      "A rocky cascade on the upper Little Missouri River with a forested picnic area and a short walk toward the overlook. It works best as a planned day trip with offline directions and plenty of daylight.",
+    image: "/images/glenwood/collier-little-missouri/little-missouri-winding-stairs.webp",
+    address: "Ouachita National Forest near Langley, AR",
+    website: "https://www.fs.usda.gov/r08/ouachita/recreation/little-missouri-falls-trailhead",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Little+Missouri+Falls+Arkansas",
+    href: "/collier-springs-little-missouri-falls-day-trip",
+  },
+  {
+    name: "Arrowhead Cabins and Camping",
+    category: "Cabins & Lodging",
+    type: "Cabins • RV Sites • Tent Camping • Caddo River",
+    description:
+      "A family-run Caddo Gap stay on the Caddo River with cabins, RV sites, tent camping, a bunkhouse, a gravel bar, and an outdoor base close to Glenwood and Ouachita National Forest trips.",
+    image: "/images/glenwood/cabins/arrowhead.webp",
+    phone: "870-356-2944",
+    address: "69 Arrowhead Drive, Caddo Gap, AR 71935",
+    website: "https://arrowheadar.com/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Arrowhead+Cabins+and+Camping+69+Arrowhead+Drive+Caddo+Gap+AR+71935",
+    href: "/glenwood-ar-cabins",
+  },
+  {
+    name: "Fancy Hill Cabins & RV Park",
+    category: "Cabins & Lodging",
+    type: "Cabins • RV Sites • Tent Camping • Forest Stay",
+    description:
+      "A wooded cabin and campground option in the Fancy Hill area with cabins, RV and tent sites, creekside settings, and convenient access to Little Missouri Falls and Ouachita National Forest back roads.",
+    image: "/images/glenwood/cabins/cabin-exterior.jpg",
+    phone: "870-356-5311",
+    address: "3969 Hwy 240 W, Caddo Gap, AR 71935",
+    website: "https://www.fancyhillcabinsandrvpark.com/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Fancy+Hill+Cabins+and+RV+Park+3969+Hwy+240+W+Caddo+Gap+AR+71935",
+    href: "/glenwood-ar-cabins",
+  },
+  {
+    name: "Ouachita Mountain Inn",
+    category: "Cabins & Lodging",
+    type: "Motel • Highway Access • Glenwood Lodging",
+    description:
+      "A practical Glenwood motel for visitors who want a straightforward place to stay close to restaurants, Caddo River outfitters, Highway 70, and day-trip routes around the Ouachitas.",
+    image: "/images/glenwood/cabins/riverwood.webp",
+    phone: "870-356-3737",
+    address: "189 Highway 70 E, Glenwood, AR 71943",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Ouachita+Mountain+Inn+189+Highway+70+E+Glenwood+AR+71943",
+    href: "/glenwood-ar-cabins",
+  },
+  {
+    name: "Caddo River Motel & Cabin Rental",
+    category: "Cabins & Lodging",
+    type: "Motel • Cabins • Pet-Friendly Lodging",
+    description:
+      "A small Glenwood motel and cabin rental near the Caddo River with simple rooms, kitchenettes in select units, and a practical location for river trips and short stays.",
+    image: "/images/glenwood/cabins/cabin-porch.jpg",
+    address: "109 Highway 70 W, Glenwood, AR 71943",
+    website: "https://www.facebook.com/lmotel1119/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Caddo+River+Motel+109+Highway+70+W+Glenwood+AR+71943",
+    href: "/glenwood-ar-cabins",
+  },
+  {
+    name: "Hangout Properties",
+    category: "Cabins & Lodging",
+    type: "Riverfront Cabins • Group Stays • Glenwood & Kirby",
+    description:
+      "A locally operated collection of riverfront and lake-area vacation rentals, including Glenwood stays on the Caddo River and a Kirby property near Lake Greeson for couples, families, and larger groups.",
+    image: "/images/glenwood/cabins/caddo-river-cabins.png",
+    address: "Glenwood & Kirby, AR",
+    website: "https://www.hangoutpropertiesllc.com/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Hangout+Properties+Glenwood+AR",
+    href: "/glenwood-ar-cabins",
+  },
+  {
+    name: "Caddo River Access RV Park",
+    category: "Cabins & Lodging",
+    type: "RV Park • Full Hookups • Caddo River Access",
+    description:
+      "A year-round Glenwood RV park with full-hookup sites, basic Wi-Fi, RV storage, and private river access for registered guests staying close to the Caddo River.",
+    image: "/images/glenwood/cabins/caddo-river-camping.avif",
+    phone: "870-356-2004",
+    address: "56 Hwy 70 E, Glenwood, AR 71943",
+    website: "https://www.caddoriveraccessrv.com/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Caddo+River+Access+RV+Park+56+Hwy+70+E+Glenwood+AR+71943",
+    href: "/glenwood-ar-cabins",
+  },
+  {
+    name: "Caddo Bend Lodge",
+    category: "Cabins & Lodging",
+    type: "Riverfront Lodge • Group Rental • Caddo River",
+    description:
+      "A large riverfront lodge just outside Glenwood for family gatherings, group stays, reunions, and day-use rentals along the Caddo River. Contact the property directly for current availability and booking details.",
+    image: "/images/glenwood/cabins/caddo-river-cabins.png",
+    phone: "501-463-6651",
+    address: "Caddo River near Glenwood, AR",
+    website: "https://www.facebook.com/CaddoBendLodge/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Caddo+Bend+Lodge+Glenwood+AR",
+    href: "/glenwood-ar-cabins",
+  },
+  {
+    name: "Buck's Pharmacy & Gifts",
+    category: "Shopping & Supplies",
+    type: "Pharmacy • Gifts • Local Essentials",
+    description:
+      "A longtime Glenwood pharmacy and gift stop for prescriptions, everyday health needs, small gifts, and practical items while staying in or passing through town.",
+    image: "/images/glenwood/oldtown.jpg",
+    phone: "870-356-2288",
+    address: "408 N 1st St, Glenwood, AR 71943",
+    website: "https://www.facebook.com/p/Bucks-Pharmacy-Gifts-100063551712689/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Bucks+Pharmacy+and+Gifts+408+N+1st+St+Glenwood+AR+71943",
+  },
+  {
+    name: "Farmers Bank & Trust Glenwood",
+    category: "Local Service",
+    type: "Bank • ATM • Local Financial Services",
+    description:
+      "A full-service Glenwood bank branch for residents, local businesses, property owners, and visitors who need a nearby banking or ATM stop.",
+    image: "/images/glenwood/oldbuildings.webp",
+    phone: "870-356-3196",
+    address: "214 N 1st St, Glenwood, AR 71943",
+    website: "https://www.myfarmers.bank/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Farmers+Bank+and+Trust+214+N+1st+St+Glenwood+AR+71943",
+  },
+  {
+    name: "Bayou Bella's & Biscuits",
+    category: "Restaurant",
+    type: "Cajun & Creole • Food Truck • Rotating Menu",
+    description:
+      "A locally owned purple-and-black food truck on Highway 70 serving rotating Cajun and Creole favorites such as gumbo, jambalaya, boudin, biscuits, wings, and daily specials. Check the current menu before heading over.",
+    image: "/images/glenwood/cabins/mercado-restaurant.jpg",
+    phone: "870-828-8588",
+    address: "242 Hwy 70, Glenwood, AR 71943",
+    website: "https://www.bayoubellas.net/",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Bayou+Bellas+and+Biscuits+242+Hwy+70+Glenwood+AR",
     href: "/glenwood-ar-restaurants",
   },
 ];

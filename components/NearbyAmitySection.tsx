@@ -1,5 +1,6 @@
 import Link from "next/link";
 import TrackedFeatureLink from "@/components/TrackedFeatureLink";
+import { AmityLink, LinkedAmityText } from "@/components/AmityLink";
 
 type AmityStop = {
   name: string;
@@ -67,23 +68,23 @@ export default function NearbyAmitySection() {
         <div className="grid gap-8 p-7 md:p-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
           <div>
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
-              Nearby Amity
+              Nearby <AmityLink>Amity</AmityLink>
             </p>
 
             <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
-              A few Amity stops to keep on your map.
+              A few <AmityLink>Amity</AmityLink> stops to keep on your map.
             </h2>
 
             <p className="mt-5 leading-relaxed text-[color:var(--color-muted)]">
               If you are staying around Glenwood, floating the Caddo, visiting
-              Lake Greeson, or driving between nearby small towns, Amity is close
+              Lake Greeson, or driving between nearby small towns, <AmityLink>Amity</AmityLink> is close
               enough to be worth mentioning. It is not Glenwood, but it gives
               visitors a few more local food and business options nearby.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3">
               <a
-                href="https://amityarkansas.org"
+                href="https://www.amityarkansas.org"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full bg-[color:var(--color-accent)] px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"
@@ -115,7 +116,7 @@ export default function NearbyAmitySection() {
                 )}
 
                 <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-[color:var(--color-accent)]">
-                  {stop.type}
+                  <LinkedAmityText text={stop.type} />
                 </p>
 
                 <h3 className="text-2xl font-semibold leading-tight">
@@ -123,7 +124,7 @@ export default function NearbyAmitySection() {
                 </h3>
 
                 <p className="mt-3 text-sm leading-relaxed text-[color:var(--color-muted)]">
-                  {stop.description}
+                  <LinkedAmityText text={stop.description} />
                 </p>
 
                 {(stop.phone || stop.website || stop.directions) && (

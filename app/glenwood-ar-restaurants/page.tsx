@@ -3,6 +3,7 @@ import Link from "next/link";
 import EventsCTA from "@/components/events/EventsCTA";
 import NearbyAmitySection from "@/components/NearbyAmitySection";
 import TrackedFeatureLink from "@/components/TrackedFeatureLink";
+import { LinkedAmityText } from "@/components/AmityLink";
 
 export const metadata = {
   title: "Restaurants in Glenwood, Arkansas | Places to Eat Near the Caddo River",
@@ -150,12 +151,13 @@ const restaurants = [
     type: "Food Truck • Cajun Food • Biscuits • Local Food Spot",
     description:
       "A local Glenwood food truck serving Cajun-inspired food, biscuits, rotating menu items, and casual meals. A good stop for visitors looking for something local, quick, and different while passing through Glenwood or exploring the Caddo River area.",
-    location: "22 Hwy 70, Glenwood, AR 71943",
+    location: "242 Hwy 70, Glenwood, AR 71943",
     phone: "870-828-8588",
     email: "bayoubellas@yahoo.com",
+    website: "https://www.bayoubellas.net/",
     alt: "Bayou Bella’s and Biscuits food truck in Glenwood Arkansas",
     directions:
-      "https://www.google.com/maps/search/?api=1&query=Bayou+Bella%27s+and+Biscuits+22+Hwy+70+Glenwood+AR+71943",
+      "https://www.google.com/maps/search/?api=1&query=Bayou+Bella%27s+and+Biscuits+242+Hwy+70+Glenwood+AR+71943",
   },
   {
     name: "Mercado Restaurant",
@@ -627,16 +629,16 @@ style={{
                   </h2>
 
                   <p className="mb-5 text-sm font-medium !text-[color:var(--color-muted)]">
-                    {slateRock.type}
+                    <LinkedAmityText text={slateRock.type} />
                   </p>
 
                   <p className={`mb-6 ${bodyTextClass}`}>
-                    {slateRock.description}
+                    <LinkedAmityText text={slateRock.description} />
                   </p>
 
                   <div className="space-y-2 text-sm">
                     <p className="!text-[color:var(--color-muted)]">
-                      📍 {slateRock.location}
+                      📍 <LinkedAmityText text={slateRock.location} />
                     </p>
 
                     {slateRock.phone && (
@@ -684,15 +686,15 @@ style={{
                       </h3>
 
                       <p className="mt-2 text-sm font-medium !text-[color:var(--color-muted)]">
-                        {restaurant.type}
+                        <LinkedAmityText text={restaurant.type} />
                       </p>
 
                       <p className={`mt-4 ${bodyTextClass}`}>
-                        {restaurant.description}
+                        <LinkedAmityText text={restaurant.description} />
                       </p>
 
                       <p className="mt-4 text-sm !text-[color:var(--color-muted)]">
-                        📍 {restaurant.location}
+                        📍 <LinkedAmityText text={restaurant.location} />
                       </p>
 
                       <TrackedRestaurantActions
@@ -753,7 +755,7 @@ style={{
 
                 <div className="flex flex-1 flex-col">
                   <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-[color:var(--color-accent)]">
-                    {restaurant.type}
+                    <LinkedAmityText text={restaurant.type} />
                   </p>
 
                   <h3 className="text-2xl font-semibold leading-tight text-[color:var(--color-text)]">
@@ -761,11 +763,11 @@ style={{
                   </h3>
 
                   <p className={`mt-3 ${smallBodyTextClass}`}>
-                    {restaurant.description}
+                    <LinkedAmityText text={restaurant.description} />
                   </p>
 
                   <p className="mt-3 text-sm !text-[color:var(--color-muted)]">
-                    📍 {restaurant.location}
+                    📍 <LinkedAmityText text={restaurant.location} />
                   </p>
 
                   <RestaurantActions restaurant={restaurant} />

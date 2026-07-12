@@ -562,7 +562,7 @@ export default function ContactPage() {
                   <input
                     name="location"
                     className="w-full rounded-xl border border-black/10 bg-white p-3 outline-none"
-                    placeholder="Glenwood, Amity, Caddo River, nearby area, etc."
+                    placeholder="Glenwood, Caddo River, nearby area, etc."
                   />
                 </label>
 

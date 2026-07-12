@@ -21,6 +21,10 @@ const pageLinks = [
     href: "/explore",
   },
   {
+    label: "Collier Springs & Little Missouri Falls",
+    href: "/collier-springs-little-missouri-falls-day-trip",
+  },
+  {
     label: "Glenwood Events",
     href: "/events",
   },

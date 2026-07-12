@@ -26,6 +26,10 @@ const planLinks = [
 
 const articleLinks = [
   {
+    href: "/collier-springs-little-missouri-falls-day-trip",
+    label: "Collier Springs & Little Missouri Falls",
+  },
+  {
     href: "/fishing-near-glenwood-arkansas",
     label: "Fishing Near Glenwood Arkansas",
   },
@@ -52,7 +56,7 @@ const eventLinks = [
 ];
 
 const nearbyGuideLinks = [
-  { href: "https://amityarkansas.org", label: "Amity" },
+  { href: "https://www.amityarkansas.org", label: "Amity" },
   { href: "https://murfreesboroarkansas.org", label: "Murfreesboro" },
   { href: "https://mountidaarkansas.org", label: "Mount Ida" },
   { href: "https://hotspringsarkansas.org", label: "Hot Springs" },

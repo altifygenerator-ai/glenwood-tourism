@@ -5,6 +5,7 @@ import BackgroundSection from "@/components/tourism/BackgroundSection";
 import { glenwoodAttractions, glenwoodItinerary } from "@/data/glenwood";
 import Link from "next/link";
 import EventsCTA from "@/components/events/EventsCTA";
+import { AmityLink, LinkedAmityText } from "@/components/AmityLink";
 
 export const metadata = {
   title: "Things to Do in Glenwood, Arkansas | Caddo River & Lake Greeson",
@@ -28,6 +29,12 @@ const helpfulGuideCards = [
     text: "Simple notes for dogs, cabins, patios, heat, river access, cleanup, and planning a Glenwood trip without assuming every stop allows pets.",
     href: "/pet-friendly-glenwood-ar",
     label: "Pet-Friendly Guide",
+  },
+  {
+    title: "Collier Springs & Little Missouri Falls",
+    text: "A full-day back-road route from Glenwood with a quiet spring stop, forest roads, a picnic area, and a short walk toward the Little Missouri River cascades.",
+    href: "/collier-springs-little-missouri-falls-day-trip",
+    label: "Plan the Day Trip",
   },
   {
     title: "Rainy day backup plans",
@@ -131,6 +138,7 @@ const nearbyOutdoorStops = [
   "Caddo River for floating, kayaking, swimming, and fishing.",
   "Lake Greeson for boating, camping, hiking, and lake weekends.",
   "Crater of Diamonds and Murfreesboro for a memorable day trip.",
+  "Collier Springs and Little Missouri Falls for a planned back-road day in the Ouachita National Forest.",
   "Ouachita forest roads and mountain scenery for slower exploring.",
   "Amity and Mount Ida for small-town stops and nearby attractions.",
   "Hot Springs for restaurants, shopping, Bathhouse Row, and extra activities.",
@@ -323,7 +331,7 @@ export default function ExplorePage() {
                   {item.title}
                 </h3>
 
-                <p className={bodyTextClass}>{item.text}</p>
+                <p className={bodyTextClass}><LinkedAmityText text={item.text} /></p>
               </div>
             ))}
           </div>
@@ -348,7 +356,7 @@ export default function ExplorePage() {
           </p>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-3">
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {helpfulGuideCards.map((card) => (
             <Link
               key={card.href}
@@ -529,7 +537,7 @@ export default function ExplorePage() {
                 className="rounded-2xl border border-black/10 bg-white/70 p-5"
               >
                 <p className="text-sm leading-relaxed !text-[color:var(--color-muted)]">
-                  {item}
+                  <LinkedAmityText text={item} />
                 </p>
               </div>
             ))}
@@ -586,7 +594,7 @@ export default function ExplorePage() {
             Crater of Diamonds State Park in Murfreesboro, visitors can search a
             37-acre field for real diamonds and keep what they find. You can
             also plan nearby trips to Daisy State Park, DeGray Lake, Hot
-            Springs, Murfreesboro, Amity, and other small towns that make the
+            Springs, Murfreesboro, <AmityLink>Amity</AmityLink>, and other small towns that make the
             Diamond Lakes region worth exploring.
           </p>
         </div>
@@ -624,7 +632,7 @@ export default function ExplorePage() {
             <div>
               <p className={`mb-6 ${bodyTextClass}`}>
                 Glenwood is surrounded by small Arkansas towns and regional
-                stops that are easy to add to a weekend trip. Visit Amity for a
+                stops that are easy to add to a weekend trip. Visit <AmityLink>Amity</AmityLink> for a
                 quiet small-town stop, head toward Murfreesboro for Crater of
                 Diamonds and Lake Greeson, or make the drive to Hot Springs for
                 dining, shopping, bathhouse history, and extra family-friendly
@@ -633,7 +641,7 @@ export default function ExplorePage() {
 
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="https://amityarkansas.org"
+                  href="https://www.amityarkansas.org"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={primaryButtonClass}

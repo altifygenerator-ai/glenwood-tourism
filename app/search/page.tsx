@@ -30,6 +30,12 @@ const searchablePages = [
     tags: ["weekend", "river", "cabins", "food"],
   },
   {
+    title: "Collier Springs & Little Missouri Falls Day Trip",
+    href: "/collier-springs-little-missouri-falls-day-trip",
+    text: "A back-road day trip from Glenwood to Collier Springs and Little Missouri Falls with forest-road directions, picnic planning, trail notes, water safety, and practical tips.",
+    tags: ["collier springs", "little missouri falls", "waterfall", "ouachita national forest", "day trip", "forest roads", "norman", "langley"],
+  },
+  {
     title: "Fishing Near Glenwood Arkansas",
     href: "/fishing-near-glenwood-arkansas",
     text: "Compare Caddo River, Lake Greeson, and John Benjamin Pond for fishing near Glenwood, from easy family stops to full lake days.",

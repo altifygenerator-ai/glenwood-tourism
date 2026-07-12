@@ -3,6 +3,7 @@ import Link from "next/link";
 import EventsCTA from "@/components/events/EventsCTA";
 import NearbyAmitySection from "@/components/NearbyAmitySection";
 import TrackedFeatureLink from "@/components/TrackedFeatureLink";
+import { LinkedAmityText } from "@/components/AmityLink";
 export const metadata = {
   title: "Cabins and Places to Stay Near Glenwood, Arkansas | Caddo River Stays",
   description:
@@ -34,6 +35,7 @@ const stays = [
       "A well-known Glenwood-area stop for Caddo River trips, with cabins, camping, and watercraft rentals. Good for visitors planning floats, family weekends, and river-focused stays.",
     location: "26 Hwy 8 East, Glenwood, AR 71943",
     phone: "870-356-5336",
+    website: "https://www.caddoriver.com/",
     image: "/images/glenwood/cabins/caddo-river-camping.avif",
     alt: "Caddo River Camping and Canoe Rental near Glenwood Arkansas",
     directions:
@@ -46,6 +48,7 @@ const stays = [
       "Cabins and camping near the Caddo River area, useful for visitors wanting a simple outdoor base close to floating, fishing, and southwest Arkansas scenery.",
     location: "69 Arrowhead Drive, Caddo Gap, AR 71935",
     phone: "870-356-2944",
+    website: "https://arrowheadar.com/",
     image: "/images/glenwood/cabins/arrowhead.webp",
     alt: "Arrowhead Cabins and Camping near Glenwood Arkansas",
     directions:
@@ -58,10 +61,75 @@ const stays = [
       "Riverfront cabin lodging on the Caddo River in Glenwood. These cabins are built around quiet river stays, fishing, floating, swimming, campfires, and relaxing close to the water.",
     location: "Caddo River, Glenwood, AR",
     phone: "870-718-3072",
+    website: "https://www.caddorivercabin.com/",
     image: "/images/glenwood/cabins/caddo-river-cabins.png",
     alt: "Caddo River Cabins near Glenwood Arkansas",
     directions:
       "https://www.google.com/maps/search/?api=1&query=Caddo+River+Cabins+Glenwood+AR",
+  },
+  {
+    name: "Fancy Hill Cabins & RV Park",
+    type: "Cabins • RV Sites • Tent Camping • Near Little Missouri Falls",
+    description:
+      "A wooded Caddo Gap-area stay with cabins, RV and tent sites, creekside settings, and convenient access to Little Missouri Falls and Ouachita National Forest back roads.",
+    location: "3969 Hwy 240 W, Caddo Gap, AR 71935",
+    phone: "870-356-5311",
+    website: "https://www.fancyhillcabinsandrvpark.com/",
+    image: "/images/glenwood/cabins/cabin-exterior.jpg",
+    alt: "Fancy Hill Cabins and RV Park near Caddo Gap Arkansas",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Fancy+Hill+Cabins+and+RV+Park+3969+Hwy+240+W+Caddo+Gap+AR+71935",
+  },
+  {
+    name: "Ouachita Mountain Inn",
+    type: "Motel • Highway Access • Glenwood Lodging",
+    description:
+      "A practical Glenwood motel for visitors who want a straightforward place to stay close to restaurants, Caddo River outfitters, Highway 70, and day-trip routes around the Ouachitas.",
+    location: "189 Highway 70 E, Glenwood, AR 71943",
+    phone: "870-356-3737",
+    image: "/images/glenwood/cabins/riverwood.webp",
+    alt: "Ouachita Mountain Inn in Glenwood Arkansas",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Ouachita+Mountain+Inn+189+Highway+70+E+Glenwood+AR+71943",
+  },
+  {
+    name: "Caddo River Motel & Cabin Rental",
+    type: "Motel • Cabins • Pet-Friendly Lodging",
+    description:
+      "A small Glenwood motel and cabin rental near the Caddo River with simple rooms, kitchenettes in select units, and a practical location for river trips and short stays.",
+    location: "109 Highway 70 W, Glenwood, AR 71943",
+    phone: "",
+    website: "https://www.facebook.com/lmotel1119/",
+    image: "/images/glenwood/cabins/cabin-porch.jpg",
+    alt: "Caddo River Motel and Cabin Rental in Glenwood Arkansas",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Caddo+River+Motel+109+Highway+70+W+Glenwood+AR+71943",
+  },
+  {
+    name: "Caddo River Access RV Park",
+    type: "RV Park • Full Hookups • Caddo River Access",
+    description:
+      "A year-round Glenwood RV park with full-hookup sites, basic Wi-Fi, RV storage, and private river access for registered guests staying close to the Caddo River.",
+    location: "56 Hwy 70 E, Glenwood, AR 71943",
+    phone: "870-356-2004",
+    website: "https://www.caddoriveraccessrv.com/",
+    image: "/images/glenwood/cabins/caddo-river-camping.avif",
+    alt: "Caddo River Access RV Park in Glenwood Arkansas",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Caddo+River+Access+RV+Park+56+Hwy+70+E+Glenwood+AR+71943",
+  },
+  {
+    name: "Caddo Bend Lodge",
+    type: "Riverfront Lodge • Group Rental • Caddo River",
+    description:
+      "A large riverfront lodge just outside Glenwood for family gatherings, group stays, reunions, and day-use rentals along the Caddo River. Contact the property directly for current availability and booking details.",
+    location: "Caddo River near Glenwood, AR",
+    phone: "501-463-6651",
+    website: "https://www.facebook.com/CaddoBendLodge/",
+    image: "/images/glenwood/cabins/caddo-river-cabins.png",
+    alt: "Caddo Bend Lodge on the Caddo River near Glenwood Arkansas",
+    directions:
+      "https://www.google.com/maps/search/?api=1&query=Caddo+Bend+Lodge+Glenwood+AR",
   },
   {
     name: "Riverwood Inn of Glenwood",
@@ -565,19 +633,22 @@ export default function GlenwoodCabinsPage() {
 
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {riverStayLinks.map((item) => (
-            <Link
+            <div
               key={item.href}
-              href={item.href}
               className="group flex h-full flex-col rounded-3xl border border-black/10 bg-[color:var(--bg-card)] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
             >
               <h3 className="text-2xl font-semibold text-[color:var(--color-text)]">
                 {item.title}
               </h3>
 
-              <p className={`mt-4 ${bodyTextClass}`}>{item.text}</p>
+              <p className={`mt-4 ${bodyTextClass}`}>
+                <LinkedAmityText text={item.text} />
+              </p>
 
-              <span className={bottomCardLinkClass}>{item.label} →</span>
-            </Link>
+              <Link href={item.href} className={bottomCardLinkClass}>
+                {item.label} →
+              </Link>
+            </div>
           ))}
         </div>
       </Section>

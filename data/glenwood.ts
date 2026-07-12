@@ -221,7 +221,7 @@ export const glenwoodFeaturedLocalSpots = [
     description:
       "A nearby Amity brewery and tavern stop with locally brewed craft beer, food from the grill, a laid back taproom, and outdoor space. It works well as a Glenwood-area weekend add-on for visitors planning a Caddo River float, cabin stay, Lake Greeson day, or slower evening nearby.",
     image: "/images/glenwood/slaterock.jpg",
-    href: "/glenwood-ar-restaurants",
+    href: "https://www.amityarkansas.org",
     tracked: true,
   },
     {

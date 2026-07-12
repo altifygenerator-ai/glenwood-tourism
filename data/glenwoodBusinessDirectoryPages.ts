@@ -13,6 +13,7 @@ const guideLinks = [
 const relatedLinks = [
   { label: "Local Businesses", href: "/local-business" },
   { label: "Caddo River", href: "/caddo-river" },
+  { label: "Collier Springs & Little Missouri Falls", href: "/collier-springs-little-missouri-falls-day-trip" },
   { label: "Restaurants", href: "/glenwood-ar-restaurants" },
   { label: "Cabins", href: "/glenwood-ar-cabins" },
   { label: "This Weekend", href: "/this-weekend" },

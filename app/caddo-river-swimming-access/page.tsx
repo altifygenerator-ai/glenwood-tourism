@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import CaddoTripCheck from "@/components/CaddoTripCheck";
+import { AmityLink, LinkedAmityText } from "@/components/AmityLink";
 
 export const metadata: Metadata = {
   title:
@@ -144,8 +145,8 @@ export default function CaddoRiverSwimmingAccessPage() {
                   <p className="mb-3 text-xs font-black uppercase tracking-[0.22em] text-[var(--color-accent)]">
                     {card.title}
                   </p>
-                  <h2 className="mb-3 text-2xl">{card.place}</h2>
-                  <p className="text-sm leading-7">{card.text}</p>
+                  <h2 className="mb-3 text-2xl"><LinkedAmityText text={card.place} /></h2>
+                  <p className="text-sm leading-7"><LinkedAmityText text={card.text} /></p>
                 </div>
               </article>
             ))}
@@ -225,10 +226,10 @@ export default function CaddoRiverSwimmingAccessPage() {
                   <p className="mb-3 text-sm font-black uppercase tracking-[0.22em] text-[var(--color-accent)]">
                     {spot.kicker}
                   </p>
-                  <h3 className="mb-5 text-4xl leading-tight">{spot.title}</h3>
+                  <h3 className="mb-5 text-4xl leading-tight"><LinkedAmityText text={spot.title} /></h3>
                   <div className="space-y-4 text-[1.02rem] leading-8">
                     {spot.body.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
+                      <p key={paragraph}><LinkedAmityText text={paragraph} /></p>
                     ))}
                   </div>
                 </div>
@@ -332,7 +333,7 @@ export default function CaddoRiverSwimmingAccessPage() {
                 </p>
                 <p>
                   If you want a longer paddling or fishing day, the lower route
-                  toward Amity may be worth asking about, especially if you have
+                  toward <AmityLink>Amity</AmityLink> may be worth asking about, especially if you have
                   your own gear and a shuttle plan.
                 </p>
               </div>

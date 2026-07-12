@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { AmityLink } from "@/components/AmityLink";
 import { glenwoodHistory } from "@/data/glenwood";
 import Section from "@/components/tourism/Section";
 
@@ -264,7 +265,7 @@ export default function HistoryPage() {
                 That mix is what gives Glenwood its current identity. It is
                 still a real small town, but it also gives visitors access to
                 the Caddo River, Lake Greeson, Crater of Diamonds, Hot Springs,
-                Mount Ida, Amity, and the wider Ouachita region.
+                Mount Ida, <AmityLink>Amity</AmityLink>, and the wider Ouachita region.
               </p>
 
               <div className="flex flex-wrap gap-3 pt-3">

@@ -2,6 +2,12 @@ import Link from "next/link";
 
 const updates = [
   {
+    label: "New day-trip guide",
+    title: "Collier Springs & Little Missouri Falls",
+    text: "A new back-road guide covers the route from Glenwood to Collier Springs and Little Missouri Falls, including picnic planning, forest-road notes, the short waterfall walk, and what to bring before leaving town.",
+    href: "/collier-springs-little-missouri-falls-day-trip",
+  },
+  {
     label: "New article",
     title: "Fishing Near Glenwood",
     text: "A new fishing guide compares John Benjamin Pond, the Caddo River, and Lake Greeson so visitors can pick the right kind of water for a quick family stop, a river day, or a full lake trip.",
@@ -23,6 +29,7 @@ const updates = [
 
 const communityUpdateLinks = [
   { href: "/search", label: "Search the Guide" },
+  { href: "/collier-springs-little-missouri-falls-day-trip", label: "Collier Springs & Little Missouri Falls" },
   { href: "/fishing-near-glenwood-arkansas", label: "Fishing Near Glenwood" },
   { href: "/local-business", label: "Local Business Directory" },
   { href: "/glenwood-ar-shops-supplies", label: "Shops & Supplies" },
