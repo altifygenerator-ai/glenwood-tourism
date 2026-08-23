@@ -16,12 +16,12 @@ export const metadata = {
 const stays = [
 {
   name: "At Living Water Cabins",
-  type: "Waterfront Cabins • Family Lodge • Ouachita Mountains",
+  type: "Creekside Cabins • Ouachita Mountains",
   description:
-    "A clean waterfront cabin and lodge stay located between Glenwood and Mount Ida in the Arkansas Ouachita Region. Guests can choose from a family lodge or four cozy creekside cabins named Love, Faith, Hope, and Peace, with full kitchens, air conditioning, and a quiet setting close to outdoor adventures.",
+    "Four quiet creekside cabins between Glenwood and Mount Ida in the Arkansas Ouachita region. Love, Faith, Hope, and Peace offer full kitchens, comfortable spaces, Starlink WiFi, and a peaceful setting along Collier Creek.",
   location: "136 Living Water Dr., Norman, AR 71960",
-  phone: "318-461-2650",
-  website: "https://atlivingwatercabins.com/",
+  phone: "903-702-9184",
+  website: "https://www.atlivingwatercabins.com/",
   featureHref: "/at-living-water-cabins",
   image: "/images/glenwood/cabins/at-living-water-cabins.jpg",
   alt: "At Living Water Cabins near Glenwood and Mount Ida Arkansas",
@@ -741,7 +741,7 @@ export default function GlenwoodCabinsPage() {
 
         <div className="absolute bottom-5 left-5 right-5 rounded-2xl border border-white/15 bg-black/50 p-5 text-white backdrop-blur-md">
           <p className="text-sm font-semibold !text-white">
-            Creekside cabins and a family lodge between Glenwood and Mount Ida.
+            Four creekside cabins between Glenwood and Mount Ida.
           </p>
 
           <p className="mt-2 text-xs leading-5 !text-white/85">
@@ -769,7 +769,7 @@ export default function GlenwoodCabinsPage() {
         <div className="mb-6 grid gap-3 sm:grid-cols-2">
           {[
             "Four cozy creekside cabins",
-            "Family lodge for larger stays",
+            "Four named creekside cabin options",
             "Full kitchens and comfortable cabin setup",
             "Close to Glenwood, Mount Ida, and outdoor trips",
           ].map((item) => (

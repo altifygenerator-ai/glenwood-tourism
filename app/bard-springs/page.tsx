@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title:
     "Bard Springs Recreation Area | What Happened to This Forgotten Arkansas Swimming Spot?",
   description:
-    "A local feature on Bard Springs Recreation Area, its CCC history, old swimming and camping memories, storm damage, limited access, and the question of restoration.",
+    "A local feature on Bard Springs Recreation Area, its CCC history, old swimming and camping memories, storm damage, current temporary closure, and the question of restoration.",
   alternates: {
     canonical: "/bard-springs",
   },
@@ -44,12 +44,11 @@ const rememberedFeatures = [
 ];
 
 const currentNotes = [
-  "The campground is listed as closed due to storm damage.",
-  "The day-use area is listed as open.",
-  "Access is currently walk-in only.",
-  "The site is not operating like the campground and swimming area many people remember.",
-  "Visitors should check the Forest Service listing before driving out.",
-  "Damaged structures, closures, and historic features should be respected.",
+  "The Forest Service currently lists Bard Springs Recreation Area as temporarily closed.",
+  "Do not plan on day-use, swimming, or campground access while the closure is in place.",
+  "Check the Forest Service recreation status and alerts before driving out.",
+  "Respect gates, signs, damaged structures, and closure boundaries.",
+  "The status can change as repairs and management decisions change.",
 ];
 
 const whatCanHelp = [
@@ -58,7 +57,7 @@ const whatCanHelp = [
   "Keeping the site in local tourism and preservation conversations",
   "Connecting with historic preservation groups when possible",
   "Supporting approved cleanup or volunteer efforts if they happen",
-  "Visiting respectfully and not making the damage worse",
+  "Respecting the current closure and any posted restrictions",
 ];
 
 export default function BardSpringsPage() {
@@ -272,16 +271,18 @@ export default function BardSpringsPage() {
 
             <div className="space-y-6 text-lg leading-8 text-[color:var(--color-muted)]">
               <p>
-                The official public answer right now points to storm damage. The
-                campground is listed as closed due to storm damage, while the
-                day-use area is listed as open with walk-in access.
+                The official Forest Service listing currently marks Bard Springs
+                Recreation Area as temporarily closed. That means visitors should
+                not plan on campground, swimming, or day-use access while the
+                closure remains in place.
               </p>
 
               <p>
-                So it would not be fair to say Bard Springs is completely gone.
-                It is not. But it is also not the fully usable campground and
-                swimming area many people remember. That puts it in a strange
-                place — still there, still meaningful, but not really back.
+                The place itself and its history are still there, but current
+                public recreation access should be treated as closed until the
+                Forest Service changes the status. That puts Bard Springs in a
+                strange place — still meaningful, still remembered, but not
+                currently a stop to plan a day around.
               </p>
 
               <p>

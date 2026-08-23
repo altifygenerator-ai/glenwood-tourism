@@ -587,7 +587,7 @@ export default function Page() {
         </a>
 
         <a
-          href="https://mountidaarkansas.org"
+          href="https://www.mountidaarkansas.org"
           target="_blank"
           rel="noopener noreferrer"
           className={primaryButtonClass}

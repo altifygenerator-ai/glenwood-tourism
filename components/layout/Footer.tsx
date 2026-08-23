@@ -33,7 +33,7 @@ const eventLinks = [
 const sisterSites = [
   { href: "https://www.amityarkansas.org", label: "Visit Amity" },
   { href: "https://murfreesboroarkansas.org", label: "Visit Murfreesboro" },
-  { href: "https://mountidaarkansas.org", label: "Visit Mount Ida" },
+  { href: "https://www.mountidaarkansas.org", label: "Visit Mount Ida" },
   { href: "https://hotspringsarkansas.org", label: "Visit Hot Springs" },
 ];
 
@@ -116,7 +116,7 @@ export default function Footer() {
             <div className="text-sm !text-white/65">
               Site by{" "}
               <a
-                href="https://hometownwebservicesar.cc"
+                href="https://www.hometownwebservicesar.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-semibold text-white underline underline-offset-4 transition hover:text-white/80"

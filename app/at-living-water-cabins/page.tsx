@@ -5,7 +5,7 @@ export const metadata = {
   title:
     "At Living Water Cabins Near Glenwood & Mount Ida, Arkansas",
   description:
-    "Explore At Living Water Cabins near Glenwood and Mount Ida, Arkansas, with creekside cabins, a family lodge, full kitchens, outdoor space, and access to the Caddo River and Lake Greeson.",
+    "Explore At Living Water Cabins near Glenwood and Mount Ida, Arkansas, with four creekside cabins, full kitchens, outdoor space, Starlink WiFi, and easy access to Glenwood, Mount Ida, and the Ouachita Mountains.",
   alternates: {
     canonical: "/at-living-water-cabins",
   },
@@ -125,7 +125,7 @@ export default function AtLivingWaterCabinsFeaturePage() {
             "@type": "LodgingBusiness",
             name: "At Living Water Cabins",
             description:
-              "Waterfront cabins and a family lodge near Glenwood and Mount Ida, Arkansas, with creekside cabin stays, full kitchens, and access to the Caddo River, Lake Greeson, and the Ouachita region.",
+              "Four creekside cabins near Glenwood and Mount Ida, Arkansas, with full kitchens, outdoor space, Starlink WiFi, and a quiet setting along Collier Creek.",
             address: {
               "@type": "PostalAddress",
               streetAddress: "136 Living Water Dr.",
@@ -134,8 +134,8 @@ export default function AtLivingWaterCabinsFeaturePage() {
               postalCode: "71960",
               addressCountry: "US",
             },
-            telephone: "318-461-2650",
-            url: "https://atlivingwatercabins.com/",
+            telephone: "903-702-9184",
+            url: "https://www.atlivingwatercabins.com/",
             image: cabinImages.map((image) => image.src),
           }),
         }}
@@ -170,7 +170,7 @@ export default function AtLivingWaterCabinsFeaturePage() {
 
             <div className="mt-8 flex flex-wrap gap-3">
               <a
-                href="https://atlivingwatercabins.com/"
+                href="https://www.atlivingwatercabins.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={lightButtonClass}
@@ -178,8 +178,8 @@ export default function AtLivingWaterCabinsFeaturePage() {
                 Book Direct
               </a>
 
-              <a href="tel:9037829184" className={darkOutlineButtonClass}>
-                Call 318-461-2650
+              <a href="tel:9037029184" className={darkOutlineButtonClass}>
+                Call 903-702-9184
               </a>
 
               <Link href="/glenwood-ar-cabins" className={darkOutlineButtonClass}>
@@ -231,7 +231,7 @@ export default function AtLivingWaterCabinsFeaturePage() {
 
       <section className="mx-auto max-w-6xl px-6 pb-20">
         <div className="mb-8">
-          <p className={eyebrowClass}>Cabins & Lodge</p>
+          <p className={eyebrowClass}>Creekside Cabins</p>
 
           <h2 className={smallSectionTitleClass}>
             Choose a cabin and relax in the country.
@@ -355,7 +355,7 @@ export default function AtLivingWaterCabinsFeaturePage() {
 
             <div className="flex flex-wrap gap-3 lg:justify-end">
               <a
-                href="https://atlivingwatercabins.com/"
+                href="https://www.atlivingwatercabins.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={lightButtonClass}
@@ -363,7 +363,7 @@ export default function AtLivingWaterCabinsFeaturePage() {
                 Visit Website
               </a>
 
-              <a href="tel:3184612650" className={darkOutlineButtonClass}>
+              <a href="tel:9037029184" className={darkOutlineButtonClass}>
                 Call Now
               </a>
             </div>

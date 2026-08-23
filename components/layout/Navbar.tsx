@@ -58,7 +58,7 @@ const eventLinks = [
 const nearbyGuideLinks = [
   { href: "https://www.amityarkansas.org", label: "Amity" },
   { href: "https://murfreesboroarkansas.org", label: "Murfreesboro" },
-  { href: "https://mountidaarkansas.org", label: "Mount Ida" },
+  { href: "https://www.mountidaarkansas.org", label: "Mount Ida" },
   { href: "https://hotspringsarkansas.org", label: "Hot Springs" },
 ];
 

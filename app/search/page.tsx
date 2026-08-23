@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/search",
   },
+  robots: { index: false, follow: true },
 };
 
 const searchablePages = [
@@ -134,8 +135,8 @@ const searchablePages = [
   {
     title: "At Living Water Cabins",
     href: "/at-living-water-cabins",
-    text: "Cabins and family lodge near Glenwood, Mount Ida, the Caddo River, Lake Greeson, and Ouachita outdoor trips.",
-    tags: ["at living water", "cabins", "family lodge", "mount ida", "stay"],
+    text: "Four creekside cabins near Glenwood, Mount Ida, Collier Creek, and Ouachita outdoor trips.",
+    tags: ["at living water", "cabins", "creekside", "mount ida", "stay"],
   },
   {
     title: "John Benjamin Fishing Pond",

@@ -37,12 +37,6 @@ const amityStops: AmityStop[] = [
       "A small-town cafe option worth keeping on your map if you are exploring the Glenwood and Amity area, driving the backroads, or looking for a local meal nearby.",
   },
   {
-    name: "Fox Pen",
-    type: "Local Stop • Amity Area",
-    description:
-      "A local Amity-area stop to keep in mind while exploring nearby towns and backroads. Check current details before making a special trip.",
-  },
-  {
     name: "The Sun Room",
     type: "Local Business • Amity",
     description:

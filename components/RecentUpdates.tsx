@@ -2,27 +2,27 @@ import Link from "next/link";
 
 const updates = [
   {
-    label: "New day-trip guide",
+    label: "Day-trip guide",
     title: "Collier Springs & Little Missouri Falls",
-    text: "A new back-road guide covers the route from Glenwood to Collier Springs and Little Missouri Falls, including picnic planning, forest-road notes, the short waterfall walk, and what to bring before leaving town.",
+    text: "This back-road guide covers the route from Glenwood to Collier Springs and Little Missouri Falls, including picnic planning, forest-road notes, the short waterfall walk, and what to bring before leaving town.",
     href: "/collier-springs-little-missouri-falls-day-trip",
   },
   {
-    label: "New article",
+    label: "Fishing guide",
     title: "Fishing Near Glenwood",
-    text: "A new fishing guide compares John Benjamin Pond, the Caddo River, and Lake Greeson so visitors can pick the right kind of water for a quick family stop, a river day, or a full lake trip.",
+    text: "This fishing guide compares John Benjamin Pond, the Caddo River, and Lake Greeson so visitors can pick the right kind of water for a quick family stop, a river day, or a full lake trip.",
     href: "/fishing-near-glenwood-arkansas",
   },
   {
-    label: "New business guide",
+    label: "Business guide",
     title: "Glenwood Shops & Supplies",
-    text: "A new shopping and supply guide has been added for visitors looking for gifts, groceries, hardware, flowers, coffee, sweets, auto parts, and practical stops before a river day or cabin stay.",
+    text: "This shopping and supply guide helps visitors find gifts, groceries, hardware, flowers, coffee, sweets, auto parts, and practical stops before a river day or cabin stay.",
     href: "/glenwood-ar-shops-supplies",
   },
   {
-    label: "New business guide",
+    label: "Business guide",
     title: "Glenwood Outdoor Businesses",
-    text: "A new outdoor business guide brings together Caddo River outfitters, canoe and kayak rentals, golf, UTV rentals, Lake Greeson stops, and family-friendly outdoor places.",
+    text: "This outdoor business guide brings together Caddo River outfitters, canoe and kayak rentals, golf, UTV rentals, Lake Greeson stops, and family-friendly outdoor places.",
     href: "/glenwood-outdoor-businesses",
   },
 ];
@@ -52,11 +52,11 @@ export default function RecentUpdates() {
               </p>
 
               <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
-                New and updated Glenwood guides.
+                Recently checked Glenwood guides.
               </h2>
 
               <p className="mt-3 max-w-3xl text-sm leading-7 text-[color:var(--color-muted)]">
-                The Glenwood guide is getting easier to use with expanded local business categories, better visitor pages, shopping and supply stops, outdoor businesses, local services, restaurants, cabins, events, and helpful planning pages around town.
+                We’ve been checking local business details, outdoor planning links, river information, lodging, events, and visitor pages to keep the Glenwood guide useful and current.
               </p>
             </div>
 

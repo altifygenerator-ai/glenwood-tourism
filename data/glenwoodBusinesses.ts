@@ -213,9 +213,9 @@ export const glenwoodBusinesses: GlenwoodBusiness[] = [
   {
     name: "At Living Water Cabins",
     category: "Cabins & Lodging",
-    type: "Cabins • Family Lodge • Ouachita Area Stay",
+    type: "Creekside Cabins • Ouachita Area Stay",
     description:
-      "Cabins and a family lodge near Glenwood, Norman, Mount Ida, Lake Greeson, and the Caddo River area for visitors planning quiet outdoor stays.",
+      "Four creekside cabins near Glenwood, Norman, and Mount Ida for visitors planning quiet stays around Collier Creek and the Ouachita Mountains.",
     image: "/images/glenwood/cabins/at-living-water-cabins.jpg",
     address: "Norman, AR",
     href: "/at-living-water-cabins",

@@ -4,9 +4,9 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "Fourth of July in Glenwood, Arkansas 2026 | Fireworks & Caddo River",
+    "Fourth of July in Glenwood, Arkansas | Fireworks & Caddo River",
   description:
-    "Plan Fourth of July in Glenwood, Arkansas with 2026 fireworks notes, Caddo River weekend ideas, family tips, local food, cabins, and nearby things to do.",
+    "Plan a Fourth of July trip around Glenwood, Arkansas with Caddo River ideas, local food, cabins, family tips, and an archive of the verified 2026 fireworks event.",
   keywords: [
     "Fourth of July Glenwood Arkansas",
     "Glenwood Arkansas fireworks",
@@ -27,18 +27,18 @@ const images = {
 const verifiedEvents = [
   {
     name: "7th Annual 4th of July Fireworks Celebration",
-    label: "Verified Fireworks Event",
+    label: "2026 Event Archive",
     date: "Friday, July 3, 2026",
     time: "8:00 PM",
     location: "Nightingale at Glenwood / Dougan’s Oak Park",
     address: "615 & 507 Mountain View Rd, Glenwood, AR",
     description:
-      "Nightingale at Glenwood and Dougan’s Oak Park are hosting the 7th Annual 4th of July Fireworks Celebration. This is the main verified holiday fireworks listing we found for Glenwood so far, with an evening start time and a community-style fireworks setup close to town.",
+      "Nightingale at Glenwood and Dougan’s Oak Park hosted the 7th Annual 4th of July Fireworks Celebration on July 3, 2026. This listing is kept here as a verified archive while future holiday dates are confirmed through current event sources.",
     details: [
-      "Fireworks celebration scheduled for July 3rd at 8:00 PM",
+      "The 2026 fireworks celebration was held July 3 at 8:00 PM",
       "Hosted around Nightingale at Glenwood and Dougan’s Oak Park",
-      "Good fit for families looking for a local Glenwood holiday night",
-      "Bring chairs, give yourself time to park, and check the host page before heading out",
+      "The 2026 listing was a local Glenwood holiday event",
+      "For future years, check current host and Events-page details before heading out",
     ],
     href: "https://www.glenwoodarkansas.org/events/7th-annual-4th-of-july-fireworks-celebration",
     cta: "View Event",
@@ -98,12 +98,12 @@ const faqs = [
   {
     question: "Are there Fourth of July fireworks in Glenwood, Arkansas in 2026?",
     answer:
-      "The verified Glenwood fireworks listing we found is the 7th Annual 4th of July Fireworks Celebration on Friday, July 3, 2026 at 8:00 PM at Nightingale at Glenwood / Dougan’s Oak Park.",
+      "The verified 2026 Glenwood listing was the 7th Annual 4th of July Fireworks Celebration on Friday, July 3 at Nightingale at Glenwood / Dougan’s Oak Park. That date has passed; check the current Events page for newly confirmed holiday listings.",
   },
   {
     question: "Why is the Glenwood fireworks event on July 3 instead of July 4?",
     answer:
-      "Some local fireworks celebrations happen the night before July 4. The current verified listing for Glenwood is scheduled for Friday, July 3, 2026.",
+      "The verified 2026 Glenwood celebration was held Friday, July 3, the night before Independence Day. Future dates should be confirmed from the current Events page or event host.",
   },
   {
     question: "What else can families do around Glenwood for July 4 weekend?",
@@ -202,7 +202,7 @@ export default function GlenwoodFourthOfJulyPage() {
               description: mainEvent.description,
               startDate: "2026-07-03T20:00:00-05:00",
               eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-              eventStatus: "https://schema.org/EventScheduled",
+              eventStatus: "https://schema.org/EventCompleted",
               location: {
                 "@type": "Place",
                 name: mainEvent.location,
@@ -252,11 +252,11 @@ export default function GlenwoodFourthOfJulyPage() {
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85">
-              Use this guide to plan July 4 weekend around the verified Glenwood fireworks listing, the Caddo River, local food, cabins, kids, nearby outdoor stops, and simple holiday travel tips.
+              Use this guide for Glenwood July 4 trip ideas and the archived 2026 fireworks listing. The 2026 holiday has passed, so check the current Events page before making plans around a future celebration.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#verified-event" className="btn btn-light">See Verified Event</a>
+              <a href="#verified-event" className="btn btn-light">See 2026 Event Archive</a>
               <a href="#weekend-plan" className="rounded-full border border-white/30 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/20">Plan the Weekend</a>
             </div>
           </div>
@@ -267,9 +267,9 @@ export default function GlenwoodFourthOfJulyPage() {
         <div className="container">
           <div className="grid gap-4 md:grid-cols-3">
             {[
-              ["July 3", "Verified fireworks night", "The verified Glenwood fireworks listing we found is scheduled for Friday evening before July 4."],
-              ["8 PM", "Event start time", "Arrive early enough for parking, chairs, kids, and getting settled before the fireworks."],
-              ["Local", "Events wanted", "More events can be added when the date, time, place, and host can be verified."],
+              ["July 3, 2026", "Archived fireworks night", "The verified 2026 Glenwood fireworks event has passed and is kept here for reference."],
+              ["8 PM", "2026 start time", "This was the published start time for the archived 2026 event."],
+              ["Current", "Check new listings", "Use the Events page for newly confirmed Glenwood holiday dates and public events."],
             ].map(([big, title, text]) => (
               <div key={title} className="rounded-3xl border border-black/10 bg-[color:var(--bg-card)] p-6 shadow-sm">
                 <strong className="block text-4xl leading-none text-[color:var(--color-accent)]">{big}</strong>
@@ -284,9 +284,9 @@ export default function GlenwoodFourthOfJulyPage() {
       <section id="verified-event" className="section">
         <div className="container">
           <div className="section-heading">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">Verified Event</p>
-            <h2>Confirmed Glenwood Fourth of July weekend event.</h2>
-            <p>We are keeping this page practical. Only verified public listings get added here, and local maybes can be checked before they are published.</p>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">2026 Event Archive</p>
+            <h2>Archived Glenwood Fourth of July weekend event.</h2>
+            <p>The 2026 event below is kept as a verified archive. For a future Fourth of July trip, check the current Events page and event host before relying on a date or time.</p>
           </div>
           <EventCard event={mainEvent} />
         </div>
