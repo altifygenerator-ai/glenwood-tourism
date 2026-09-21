@@ -3,7 +3,8 @@ import { supabaseAdmin } from "@/lib/supabase/server";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://www.glenwoodarkansas.org";
-  const contentUpdated = new Date("2026-08-21");
+  const contentUpdated = new Date("2026-09-20T12:00:00-05:00");
+  const today = new Date().toISOString().slice(0, 10);
 
   const staticRoutes: MetadataRoute.Sitemap = [
     {
@@ -63,8 +64,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     {
       url: `${baseUrl}/glenwood-fourth-of-july`,
       lastModified: contentUpdated,
-      changeFrequency: "weekly",
-      priority: 0.86,
+      changeFrequency: "yearly",
+      priority: 0.6,
     },
     {
       url: `${baseUrl}/submit-event`,
@@ -186,7 +187,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     .from("events")
     .select("slug, updated_at")
     .eq("status", "approved")
-    .eq("site", "glenwood");
+    .eq("site", "glenwood")
+    .or(`start_date.gte.${today},end_date.gte.${today}`);
 
   if (error) {
     console.error("Sitemap event query failed:", error.message);
