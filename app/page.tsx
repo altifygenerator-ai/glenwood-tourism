@@ -14,6 +14,7 @@ import GlenwoodFourthOfJulyFeature from "@/components/GlenwoodFourthOfJulyFeatur
 import CaddoRiverHomeFeature from "@/components/CaddoRiverHomeFeature";
 import CaddoTripCheck from "@/components/CaddoTripCheck";
 import RecentUpdates from "@/components/RecentUpdates";
+import RiverViewCabinsHomeAd from "@/components/RiverViewCabinsHomeAd";
 import AmityMarketHomeFeature from "@/components/AmityMarketHomeFeature";
 import { generateMetadata } from "@/lib/seo";
 import { LinkedAmityText } from "@/components/AmityLink";
@@ -147,6 +148,7 @@ export default function Page() {
       <Hero data={glenwoodHero} />
 
       <RecentUpdates />
+      <RiverViewCabinsHomeAd />
       <PlanMyDayTeaser />
       <CaddoRiverHomeFeature />
       <CaddoTripCheck />
