@@ -8,13 +8,41 @@ export const metadata = {
 };
 
 const highlights = [
-  "14 cabins on the Ouachita River",
+  "14 unique cabins along the Ouachita River",
   "River views and direct river access",
-  "Hot tubs and a pool on the property",
-  "Horseback riding",
-  "Kayak and canoe trips",
-  "Quartz crystals along the property hiking trails",
-  "Built-in fireplaces available November 1 through March 1",
+  "Hot tubs and a swimming pool",
+  "Horseback riding on the property",
+  "Kayak and canoe rentals with shuttle service",
+  "Private hiking trails through quartz-crystal country",
+  "Modern kitchens, bathrooms, Smart TVs, and cabin comforts",
+  "Pet-friendly stays plus options for couples, families, and large groups",
+];
+
+const photos = [
+  {
+    src: "https://irp.cdn-website.com/3c00cf11/dms3rep/multi/opt/AMENITIES1%2B%2849%29-1920w.jpg",
+    alt: "River View cabin and hot tub deck in Oden Arkansas",
+  },
+  {
+    src: "https://irp.cdn-website.com/3c00cf11/dms3rep/multi/opt/IMG_5581-1920w.jpg",
+    alt: "Wood cabin kitchen and dining area at River View Cabins",
+  },
+  {
+    src: "https://irp.cdn-website.com/3c00cf11/dms3rep/multi/opt/river%2Bview%2B%289%29-1920w.jpg",
+    alt: "Hot tub deck overlooking the wooded Ouachita River setting",
+  },
+  {
+    src: "https://irp.cdn-website.com/3c00cf11/dms3rep/multi/opt/IMG_1297-1920w.png",
+    alt: "Horseback riding at River View Cabins in the Ouachita Mountains",
+  },
+  {
+    src: "https://irp.cdn-website.com/3c00cf11/dms3rep/multi/opt/516403704_721230293998249_28317375412696257_n-1920w.jpg",
+    alt: "Kayaking on the Ouachita River near River View Cabins",
+  },
+  {
+    src: "https://irp.cdn-website.com/3c00cf11/dms3rep/multi/opt/arkansas-rocky-shoals_4d15fffc55828fc725eeff0637aa02a1-1920w.webp",
+    alt: "Ouachita River paddling near River View Cabins",
+  },
 ];
 
 export default function RiverViewCabinsPage() {
@@ -41,8 +69,15 @@ export default function RiverViewCabinsPage() {
         }}
       />
 
-      <section className="bg-gradient-to-br from-stone-950 via-stone-900 to-emerald-950 text-white">
-        <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+      <section className="relative isolate overflow-hidden bg-stone-950 text-white">
+        <img
+          src={photos[0].src}
+          alt={photos[0].alt}
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/35" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/20" />
+        <div className="relative mx-auto max-w-6xl px-6 py-24 md:py-32">
           <p className="mb-4 text-sm font-black uppercase tracking-[0.22em] text-amber-300">
             Featured Cabin Partner
           </p>
@@ -60,13 +95,13 @@ export default function RiverViewCabinsPage() {
               href="https://www.riverviewcabins-canoes.com/"
               target="_blank"
               rel="sponsored noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-black text-stone-950 transition hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm no-underline transition hover:-translate-y-0.5"\n              style={{ color: "#1c1917", fontFamily: "inherit", fontWeight: 800 }}
             >
               Visit Website ↗
             </a>
             <a
               href="tel:8703264630"
-              className="inline-flex items-center justify-center rounded-full border border-white/35 bg-white/10 px-6 py-3 text-sm font-black text-white transition hover:bg-white/20"
+              className="inline-flex items-center justify-center rounded-full border border-white/35 bg-black/20 px-6 py-3 text-sm no-underline transition hover:bg-black/30"\n              style={{ color: "#ffffff", fontFamily: "inherit", fontWeight: 800 }}
             >
               Call 870-326-4630
             </a>
@@ -128,6 +163,12 @@ export default function RiverViewCabinsPage() {
               can be found along the trails on the property. For families,
               couples, and groups, that gives the stay plenty to do without
               having to build every day around a long drive.
+            </p>
+            <p>
+              The cabins range from smaller couple-friendly stays to large-group
+              options. Possible amenities include full kitchens, decks, hot tubs,
+              grills, Smart TVs, fire pits, fireplaces, Wi-Fi, and river views.
+              River View is also pet-friendly.
             </p>
           </div>
         </div>
@@ -193,6 +234,64 @@ export default function RiverViewCabinsPage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-20">
+        <div className="mb-8 max-w-3xl">
+          <p className="mb-3 text-sm font-black uppercase tracking-[0.18em]" style={{ color: "var(--color-accent, #315947)" }}>
+            Photo Preview
+          </p>
+          <h2 className="text-3xl font-semibold leading-tight md:text-4xl" style={{ color: "var(--color-text, #292524)" }}>
+            Cabins, river views, hot tubs, horses, and time on the water.
+          </h2>
+        </div>
+
+        <div className="grid auto-rows-[240px] gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {photos.map((photo, index) => (
+            <div
+              key={photo.src}
+              className={"overflow-hidden rounded-3xl border border-black/10 bg-stone-200 shadow-sm " + (index === 0 ? "sm:col-span-2 sm:row-span-2" : "")}
+            >
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                loading={index === 0 ? "eager" : "lazy"}
+                className="h-full w-full object-cover transition duration-500 hover:scale-[1.02]"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 pb-20">
+        <div className="mb-8 max-w-3xl">
+          <p className="mb-3 text-sm font-black uppercase tracking-[0.18em]" style={{ color: "var(--color-accent, #315947)" }}>
+            Cabins For Different Group Sizes
+          </p>
+          <h2 className="text-3xl font-semibold leading-tight md:text-4xl" style={{ color: "var(--color-text, #292524)" }}>
+            From a couple's weekend to a full group getaway.
+          </h2>
+        </div>
+        <div className="grid gap-5 md:grid-cols-3">
+          <div className="rounded-3xl border border-black/10 bg-white/85 p-6 shadow-sm">
+            <h3 className="text-2xl font-semibold" style={{ color: "var(--color-text, #292524)" }}>Couples & families</h3>
+            <p className="mt-3 leading-7" style={{ color: "var(--color-muted, #57534e)" }}>
+              Fourteen unique cabins give visitors a range of layouts, from cozy smaller stays to larger family cabins with kitchens, decks, hot tubs, fireplaces, and river views depending on the cabin.
+            </p>
+          </div>
+          <div className="rounded-3xl border border-black/10 bg-white/85 p-6 shadow-sm">
+            <h3 className="text-2xl font-semibold" style={{ color: "var(--color-text, #292524)" }}>The Hideout</h3>
+            <p className="mt-3 leading-7" style={{ color: "var(--color-muted, #57534e)" }}>
+              A large river-edge cabin option that sleeps up to 24 guests and works well for reunions, multi-family trips, and bigger gatherings.
+            </p>
+          </div>
+          <div className="rounded-3xl border border-black/10 bg-white/85 p-6 shadow-sm">
+            <h3 className="text-2xl font-semibold" style={{ color: "var(--color-text, #292524)" }}>The Bunk House</h3>
+            <p className="mt-3 leading-7" style={{ color: "var(--color-muted, #57534e)" }}>
+              A 52-bed group option with a modern kitchen plus enough bathrooms and showers for church camps, team builders, and other large-group stays.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 py-20">
         <div className="rounded-3xl bg-stone-950 p-8 text-white shadow-xl md:p-10">
           <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
             <div>
@@ -213,13 +312,13 @@ export default function RiverViewCabinsPage() {
                 href="https://www.riverviewcabins-canoes.com/"
                 target="_blank"
                 rel="sponsored noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-black text-stone-950"
+                className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm no-underline"\n                style={{ color: "#1c1917", fontFamily: "inherit", fontWeight: 800 }}
               >
                 Visit Website ↗
               </a>
               <a
                 href="mailto:riverviewcabins.canoes@outlook.com"
-                className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-sm font-black text-white"
+                className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-sm no-underline"\n                style={{ color: "#ffffff", fontFamily: "inherit", fontWeight: 800 }}
               >
                 Email River View
               </a>
