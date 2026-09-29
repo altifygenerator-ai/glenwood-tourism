@@ -152,6 +152,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.88,
     },
     {
+      url: `${baseUrl}/river-view-cabins`,
+      lastModified: new Date("2026-09-29T00:30:00-05:00"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/local-business`,
       lastModified: contentUpdated,
       changeFrequency: "monthly",
