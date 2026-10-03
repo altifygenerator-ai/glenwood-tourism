@@ -6,9 +6,9 @@ import JohnBenjaminPondVisit from "@/components/JohnBenjaminPondVisit";
 
 export const metadata: Metadata = {
   title:
-    "John Benjamin Glenwood Community Fishing Pond | Glenwood Arkansas Guide",
+    "John Benjamin Fishing Pond in Glenwood, Arkansas | Family Fishing Guide",
   description:
-    "A local guide to John Benjamin Glenwood Community Fishing Pond in Glenwood, Arkansas, with fishing notes, family tips, park info, and things to know before visiting.",
+    "Plan a visit to John Benjamin Fishing Pond in Glenwood, Arkansas with family fishing tips, what to bring, local park notes, and things to know before you go.",
   alternates: {
     canonical: "/john-benjamin-pond",
   },
