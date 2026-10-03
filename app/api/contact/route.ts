@@ -1,8 +1,22 @@
 import { NextResponse } from "next/server";
+import { checkFormSubmission } from "@/lib/formSecurity";
 export const runtime = "nodejs"
 export async function POST(req: Request) {
   try {
     const body = await req.json();
+
+    const security = checkFormSubmission(req, body as Record<string, unknown>);
+
+    if (!security.ok) {
+      if (security.silent) {
+      return NextResponse.json({ success: true });
+      }
+
+      return NextResponse.json(
+        { error: security.error },
+        { status: security.status },
+      );
+    }
 
     // Optional: check env safely
     const apiKey = process.env.RESEND_API_KEY;
