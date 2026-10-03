@@ -92,6 +92,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/caddo-river-cabins`,
+      lastModified: contentUpdated,
+      changeFrequency: "monthly",
+      priority: 0.92,
+    },
+    {
       url: `${baseUrl}/collier-springs-little-missouri-falls-day-trip`,
       lastModified: contentUpdated,
       changeFrequency: "monthly",
@@ -144,6 +150,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: contentUpdated,
       changeFrequency: "monthly",
       priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/glenwood-ar-hotels`,
+      lastModified: contentUpdated,
+      changeFrequency: "monthly",
+      priority: 0.88,
     },
     {
       url: `${baseUrl}/at-living-water-cabins`,
