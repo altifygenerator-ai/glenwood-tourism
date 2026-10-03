@@ -6,9 +6,9 @@ import TrackedFeatureLink from "@/components/TrackedFeatureLink";
 import { LinkedAmityText } from "@/components/AmityLink";
 
 export const metadata = {
-  title: "Restaurants in Glenwood, Arkansas | Places to Eat Near the Caddo River",
+  title: "Restaurants in Glenwood, Arkansas | Local Food Near the Caddo River",
   description:
-    "Find Glenwood, Arkansas restaurants, cafes, coffee, sweets, family meals, and casual places to eat before or after the Caddo River, Lake Greeson, or a cabin stay.",
+    "Find restaurants in Glenwood, Arkansas for breakfast, lunch, dinner, coffee, pizza, Mexican food, seafood, sweets, and easy meals near the Caddo River and Lake Greeson.",
   alternates: {
     canonical: "/glenwood-ar-restaurants",
   },
