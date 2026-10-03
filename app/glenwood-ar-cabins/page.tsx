@@ -1,4 +1,5 @@
 import Section from "@/components/tourism/Section";
+import FindAPlaceBookingCTA from "@/components/FindAPlaceBookingCTA";
 import Link from "next/link";
 import EventsCTA from "@/components/events/EventsCTA";
 import NearbyAmitySection from "@/components/NearbyAmitySection";
@@ -970,6 +971,13 @@ export default function GlenwoodCabinsPage() {
           ))}
         </div>
       </Section>
+
+      <FindAPlaceBookingCTA
+        heading="Looking for a stay near the Caddo River?"
+        text="Browse cabins, vacation rentals, and other stays on Find a Place Booking, with results focused on the Caddo River area."
+        href="https://www.findaplacebooking.com/stays?where=Caddo%20River"
+        buttonLabel="Find a Stay Near the Caddo River →"
+      />
 
       <NearbyAmitySection />
 
