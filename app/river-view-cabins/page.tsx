@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TrackedFeatureLink from "@/components/TrackedFeatureLink";
 
 export const metadata = {
   title: "River View Cabins on the Ouachita River | Glenwood Arkansas Guide",
@@ -91,22 +92,35 @@ export default function RiverViewCabinsPage() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <a
+            <TrackedFeatureLink
               href="https://www.riverviewcabins-canoes.com/"
-              target="_blank"
-              rel="sponsored noopener noreferrer"
+              business="River View Cabins & Canoes"
+              city="Glenwood"
+              page="/river-view-cabins"
+              placement="spotlight_hero"
+              action="website"
+              placementType="paid"
+              newTab
               className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm no-underline transition hover:-translate-y-0.5"
-              style={{ color: "#1c1917", fontFamily: "inherit", fontWeight: 800 }}
             >
-              Visit Website ↗
-            </a>
-            <a
+              <span style={{ color: "#1c1917", fontFamily: "inherit", fontWeight: 800 }}>
+                Visit Website ↗
+              </span>
+            </TrackedFeatureLink>
+            <TrackedFeatureLink
               href="tel:8703264630"
+              business="River View Cabins & Canoes"
+              city="Glenwood"
+              page="/river-view-cabins"
+              placement="spotlight_hero"
+              action="call"
+              placementType="paid"
               className="inline-flex items-center justify-center rounded-full border border-white/35 bg-black/20 px-6 py-3 text-sm no-underline transition hover:bg-black/30"
-              style={{ color: "#ffffff", fontFamily: "inherit", fontWeight: 800 }}
             >
-              Call 870-326-4630
-            </a>
+              <span style={{ color: "#ffffff", fontFamily: "inherit", fontWeight: 800 }}>
+                Call 870-326-4630
+              </span>
+            </TrackedFeatureLink>
             <Link
               href="/glenwood-ar-cabins"
               className="inline-flex items-center justify-center rounded-full border border-white/35 bg-black/20 px-6 py-3 text-sm no-underline transition hover:bg-black/30"
@@ -311,22 +325,35 @@ export default function RiverViewCabinsPage() {
               </p>
             </div>
             <div className="flex flex-wrap gap-3 lg:justify-end">
-              <a
+              <TrackedFeatureLink
                 href="https://www.riverviewcabins-canoes.com/"
-                target="_blank"
-                rel="sponsored noopener noreferrer"
+                business="River View Cabins & Canoes"
+                city="Glenwood"
+                page="/river-view-cabins"
+                placement="spotlight_footer"
+                action="website"
+                placementType="paid"
+                newTab
                 className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm no-underline"
-                style={{ color: "#1c1917", fontFamily: "inherit", fontWeight: 800 }}
               >
-                Visit Website ↗
-              </a>
-              <a
+                <span style={{ color: "#1c1917", fontFamily: "inherit", fontWeight: 800 }}>
+                  Visit Website ↗
+                </span>
+              </TrackedFeatureLink>
+              <TrackedFeatureLink
                 href="mailto:riverviewcabins.canoes@outlook.com"
+                business="River View Cabins & Canoes"
+                city="Glenwood"
+                page="/river-view-cabins"
+                placement="spotlight_footer"
+                action="email"
+                placementType="paid"
                 className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-sm no-underline"
-                style={{ color: "#ffffff", fontFamily: "inherit", fontWeight: 800 }}
               >
-                Email River View
-              </a>
+                <span style={{ color: "#ffffff", fontFamily: "inherit", fontWeight: 800 }}>
+                  Email River View
+                </span>
+              </TrackedFeatureLink>
             </div>
           </div>
         </div>
