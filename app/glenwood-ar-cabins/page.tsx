@@ -972,6 +972,44 @@ export default function GlenwoodCabinsPage() {
         </div>
       </Section>
 
+      <Section>
+        <div className="grid gap-4 md:grid-cols-2">
+          <Link
+            href="/caddo-river-cabins"
+            className="rounded-3xl border border-black/10 bg-[color:var(--bg-card)] p-7 shadow-sm transition hover:-translate-y-0.5"
+          >
+            <p className={eyebrowClass}>Riverfront Stays</p>
+            <h2 className="text-3xl font-semibold text-[color:var(--color-text)]">
+              Caddo River cabins
+            </h2>
+            <p className={`mt-3 ${bodyTextClass}`}>
+              Compare river-focused cabins and camping options for floating,
+              fishing, swimming, and a weekend built around the Caddo.
+            </p>
+            <span className="mt-5 inline-block font-semibold text-[color:var(--color-accent)]">
+              Browse Caddo River cabins →
+            </span>
+          </Link>
+
+          <Link
+            href="/glenwood-ar-hotels"
+            className="rounded-3xl border border-black/10 bg-[color:var(--bg-card)] p-7 shadow-sm transition hover:-translate-y-0.5"
+          >
+            <p className={eyebrowClass}>Simple Local Rooms</p>
+            <h2 className="text-3xl font-semibold text-[color:var(--color-text)]">
+              Glenwood hotels & motels
+            </h2>
+            <p className={`mt-3 ${bodyTextClass}`}>
+              See straightforward motel and inn options close to Highway 70,
+              restaurants, river outfitters, and the rest of town.
+            </p>
+            <span className="mt-5 inline-block font-semibold text-[color:var(--color-accent)]">
+              Browse hotels & motels →
+            </span>
+          </Link>
+        </div>
+      </Section>
+
       <FindAPlaceBookingCTA
         heading="Looking for a stay near the Caddo River?"
         text="Browse cabins, vacation rentals, and other stays on Find a Place Booking, with results focused on the Caddo River area."
