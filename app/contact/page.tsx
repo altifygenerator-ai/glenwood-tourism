@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 
 const businessTypes = [
@@ -47,6 +47,8 @@ const suggestionTypes = [
 ];
 
 export default function ContactPage() {
+  const advertiseStartedAt = useRef(Date.now());
+  const suggestionStartedAt = useRef(Date.now());
   const [advertiseStatus, setAdvertiseStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
@@ -79,6 +81,8 @@ export default function ContactPage() {
       listingType: String(formData.get("listingType") || ""),
       message: String(formData.get("message") || ""),
       site: "Glenwood Arkansas Guide",
+      websiteUrl: String(formData.get("websiteUrl") || ""),
+      formStartedAt: advertiseStartedAt.current,
     };
 
     try {
@@ -101,6 +105,7 @@ export default function ContactPage() {
         "Thanks! Your request was sent. We’ll get back with you as soon as we can."
       );
       form.reset();
+      advertiseStartedAt.current = Date.now();
     } catch (error) {
       setAdvertiseStatus("error");
       setAdvertiseMessage(
@@ -131,6 +136,8 @@ export default function ContactPage() {
       link: String(formData.get("link") || ""),
       message: String(formData.get("message") || ""),
       site: "Glenwood Arkansas Guide",
+      websiteUrl: String(formData.get("websiteUrl") || ""),
+      formStartedAt: suggestionStartedAt.current,
     };
 
     try {
@@ -153,6 +160,7 @@ export default function ContactPage() {
         "Thanks! Your suggestion was sent. We’ll review it for the guide."
       );
       form.reset();
+      suggestionStartedAt.current = Date.now();
     } catch (error) {
       setSuggestionStatus("error");
       setSuggestionMessage(
@@ -227,6 +235,14 @@ export default function ContactPage() {
               onSubmit={handleAdvertiseSubmit}
               className="rounded-3xl border border-black/5 bg-[color:var(--bg-card)] p-6 shadow-sm md:p-8"
             >
+              <input
+                type="text"
+                name="websiteUrl"
+                tabIndex={-1}
+                autoComplete="off"
+                className="hidden"
+                aria-hidden="true"
+              />
               <div className="mb-6">
                 <p className="mb-2 text-sm font-bold uppercase tracking-[0.22em] text-[color:var(--color-accent)]">
                   Get Listed
@@ -483,6 +499,14 @@ export default function ContactPage() {
               onSubmit={handleSuggestionSubmit}
               className="rounded-3xl border border-black/5 bg-[color:var(--bg-card)] p-6 shadow-sm md:p-8"
             >
+              <input
+                type="text"
+                name="websiteUrl"
+                tabIndex={-1}
+                autoComplete="off"
+                className="hidden"
+                aria-hidden="true"
+              />
               <div className="mb-6">
                 <p className="mb-2 text-sm font-bold uppercase tracking-[0.22em] text-[color:var(--color-accent)]">
                   Send a Suggestion
