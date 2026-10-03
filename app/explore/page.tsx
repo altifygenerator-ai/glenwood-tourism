@@ -8,9 +8,9 @@ import EventsCTA from "@/components/events/EventsCTA";
 import { AmityLink, LinkedAmityText } from "@/components/AmityLink";
 
 export const metadata = {
-  title: "Things to Do in Glenwood, Arkansas | Caddo River & Lake Greeson",
+  title: "Things to Do in Glenwood, Arkansas | Caddo River, Lake Greeson & Local Stops",
   description:
-    "Explore things to do in Glenwood, Arkansas, including the Caddo River, Lake Greeson, cabins, restaurants, camping, fishing, family stops, and nearby day trips.",
+    "Plan what to do in Glenwood, Arkansas with the Caddo River, Lake Greeson, family stops, fishing, cabins, restaurants, scenic drives, and easy nearby day trips.",
   alternates: {
     canonical: "/explore",
   },
