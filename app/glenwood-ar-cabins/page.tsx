@@ -1,3 +1,4 @@
+import GuidePaths from "@/components/GuidePaths";
 import Section from "@/components/tourism/Section";
 import FindAPlaceBookingCTA from "@/components/FindAPlaceBookingCTA";
 import Link from "next/link";
@@ -6,9 +7,8 @@ import NearbyAmitySection from "@/components/NearbyAmitySection";
 import TrackedFeatureLink from "@/components/TrackedFeatureLink";
 import { LinkedAmityText } from "@/components/AmityLink";
 export const metadata = {
-  title: "Cabins and Places to Stay Near Glenwood, Arkansas | Caddo River Stays",
-  description:
-    "Find cabins, rentals, motels, campgrounds, and places to stay near Glenwood, Arkansas, the Caddo River, Lake Greeson, fishing, floating, and outdoor attractions.",
+  title: { absolute: "Glenwood, AR Cabins | Caddo River Stays & Camping" },
+  description: "Compare cabins, river stays and camping around Glenwood and the Caddo River. Find local lodging links and plan food, floats and lake days nearby.",
   alternates: {
     canonical: "/glenwood-ar-cabins",
   },
@@ -1106,6 +1106,7 @@ export default function GlenwoodCabinsPage() {
           </div>
         </div>
       </Section>
+      <GuidePaths next title="Staying overnight? Plan the rest of the trip." links={[{"href": "/caddo-river", "label": "Plan a Caddo River day"}, {"href": "/glenwood-ar-restaurants", "label": "Find local food"}, {"href": "/things-to-do-in-glenwood-with-kids", "label": "Family activities"}, {"href": "/events", "label": "Check local events"}]} />
     </main>
   );
 }

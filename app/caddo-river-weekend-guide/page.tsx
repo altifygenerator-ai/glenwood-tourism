@@ -1,12 +1,12 @@
+import GuidePaths from "@/components/GuidePaths";
 import Link from "next/link";
 import Section from "@/components/tourism/Section";
 import CaddoTripCheck from "@/components/CaddoTripCheck";
 import EventsCTA from "@/components/events/EventsCTA";
 
 export const metadata = {
-  title: "Caddo River Weekend Guide | Floating, Cabins & Food Near Glenwood",
-  description:
-    "Plan a Caddo River weekend near Glenwood with floating and river tips, cabins, campgrounds, local food, current events, Lake Greeson, and easy trip ideas.",
+  title: { absolute: "Caddo River Weekend Guide | Glenwood, Arkansas" },
+  description: "Build a Caddo River weekend around floating, cabins, camping and local food. Check river conditions, events and Lake Greeson ideas before you go.",
   alternates: {
     canonical: "/caddo-river-weekend-guide",
   },
@@ -154,6 +154,7 @@ export default function CaddoRiverWeekendGuidePage() {
           </div>
         </div>
       </section>
+      <GuidePaths />
 
       <CaddoTripCheck />
 
@@ -286,6 +287,7 @@ export default function CaddoRiverWeekendGuidePage() {
         title="Planning a Glenwood weekend soon?"
         text="Check current events before you come. There may be live music, markets, fundraisers, family-friendly plans, or local happenings around town."
       />
+      <GuidePaths next title="Round out your river weekend" links={[{"href": "/glenwood-ar-restaurants", "label": "Find local food"}, {"href": "/glenwood-ar-cabins", "label": "Find a cabin"}, {"href": "/lake-greeson-near-glenwood", "label": "Explore Lake Greeson"}, {"href": "/events", "label": "Check local events"}]} />
     </main>
   );
 }

@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import type { PlanGroupType, PlanOption, PlanTimeOption } from "@/types/planMyDay";
 import { groupAdvice, timeAdvice } from "@/data/planMyDay";
 
@@ -9,6 +9,15 @@ type PlanResultCardProps = {
 };
 
 export default function PlanResultCard({ plan, time, group }: PlanResultCardProps) {
+  const suggestedLinks = [
+    ...(time === "weekend" ? [
+      { href: "/caddo-river-weekend-guide", label: "Plan a full weekend" },
+      { href: "/glenwood-ar-cabins", label: "Find a place to stay" },
+    ] : []),
+    ...(time === "couple-hours" && ["river-day", "family-day", "outdoors-fishing"].includes(plan.id) ? [{ href: "/john-benjamin-pond", label: "Try a fishing stop" }] : []),
+    ...(group === "family" ? [{ href: "/things-to-do-in-glenwood-with-kids", label: "Family activities" }] : []),
+    ...plan.links,
+  ].filter((link, index, all) => all.findIndex(item => item.href === link.href) === index);
   return (
     <div className="plan-result-card">
       <div className="plan-result-header">
@@ -60,10 +69,10 @@ export default function PlanResultCard({ plan, time, group }: PlanResultCardProp
         <h3>Useful Glenwood links</h3>
 
         <div className="plan-link-grid">
-          {plan.links.map((link) => (
+          {suggestedLinks.map((link) => (
             <Link key={link.href} href={link.href} className="plan-link-card">
               {link.label}
-              <span>?</span>
+
             </Link>
           ))}
         </div>

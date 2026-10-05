@@ -1,3 +1,4 @@
+import GuidePaths from "@/components/GuidePaths";
 import Link from "next/link";
 import Hero from "@/components/tourism/Hero";
 import Highlights from "@/components/tourism/Highlights";
@@ -32,7 +33,7 @@ import {
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
-export const metadata = generateMetadata(glenwoodSEO);
+export const metadata = { ...generateMetadata(glenwoodSEO), title: { absolute: "Glenwood, Arkansas | Caddo River, Cabins & Things to Do" }, description: "Plan your Glenwood trip with Caddo River float guides, Lake Greeson ideas, local restaurants, cabins, family stops and upcoming events." };
 
 const eyebrowClass =
   "mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[color:var(--color-accent)]";
@@ -146,6 +147,7 @@ export default function Page() {
       />
 
       <Hero data={glenwoodHero} />
+      <GuidePaths />
 
       <RecentUpdates />
       <RiverViewCabinsHomeAd />
@@ -597,6 +599,7 @@ export default function Page() {
           Visit Mount Ida →
         </a>
       </div>
+      <GuidePaths next title="Choose your next Glenwood stop" links={[{"href": "/caddo-river", "label": "Plan a Caddo River day"}, {"href": "/glenwood-ar-restaurants", "label": "Find local food"}, {"href": "/glenwood-ar-cabins", "label": "Find a cabin"}, {"href": "/plan-my-day", "label": "Plan my Glenwood day"}]} />
     </main>
   );
 }
