@@ -1,3 +1,5 @@
+import styles from "@/components/GuidePaths.module.css";
+import GuidePaths from "@/components/GuidePaths";
 import Section from "@/components/tourism/Section";
 import Link from "next/link";
 import EventsCTA from "@/components/events/EventsCTA";
@@ -6,9 +8,8 @@ import TrackedFeatureLink from "@/components/TrackedFeatureLink";
 import { LinkedAmityText } from "@/components/AmityLink";
 
 export const metadata = {
-  title: "Restaurants in Glenwood, Arkansas | Local Food Near the Caddo River",
-  description:
-    "Find restaurants in Glenwood, Arkansas for breakfast, lunch, dinner, coffee, pizza, Mexican food, seafood, sweets, and easy meals near the Caddo River and Lake Greeson.",
+  title: { absolute: "Restaurants in Glenwood, AR | Food Near the Caddo River" },
+  description: "Find Glenwood cafes, breakfast, pizza, Mexican food and seafood. Use local listings, phone numbers and directions to plan a meal around your river day.",
   alternates: {
     canonical: "/glenwood-ar-restaurants",
   },
@@ -412,6 +413,10 @@ function TrackedRestaurantActions({
   );
 }
 
+function foodId(name: string) {
+  return `food-${name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/-$/, "")}`;
+}
+
 export default function GlenwoodRestaurantsPage() {
   return (
     <main>
@@ -507,6 +512,12 @@ export default function GlenwoodRestaurantsPage() {
           </div>
         </div>
       </section>
+      <GuidePaths title="Find your kind of meal" links={[
+        { href: "#food-caddo-cafe", label: "Breakfast · Caddo Cafe" },
+        { href: "#food-ari-s-little-italy", label: "Pizza · Ari’s" },
+        { href: "#food-el-diamante-mexican-restaurant", label: "Mexican · El Diamante" },
+        { href: "#food-flavor-licious-glenwood", label: "Sweets · Flavor-Licious" },
+      ]} />
 
       <Section>
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
@@ -663,6 +674,8 @@ style={{
                 restaurant && (
                   <div
                     key={restaurant.name}
+                    id={foodId(restaurant.name)}
+                    style={{ scrollMarginTop: 210 }}
                     className="flex h-full flex-col overflow-hidden rounded-3xl border border-black/10 bg-[color:var(--bg-card)] shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
                   >
                     {restaurant.image && (
@@ -739,7 +752,9 @@ style={{
           {standardRestaurants.map((restaurant) => (
             <article
               key={restaurant.name}
-              className={`${cardClass} flex h-full flex-col p-6`}
+                    id={foodId(restaurant.name)}
+                    style={{ scrollMarginTop: 210 }}
+              className={`${cardClass} flex h-full flex-col p-6 ${styles.jumpTarget}`}
             >
               <div className="flex flex-1 flex-col gap-5 md:flex-row">
                 {restaurant.image && (
@@ -864,6 +879,7 @@ style={{
           </div>
         </div>
       </Section>
+      <GuidePaths next title="Where next after your meal?" links={[{"href": "/caddo-river", "label": "Plan a Caddo River day"}, {"href": "/john-benjamin-pond", "label": "Fishing at John Benjamin Pond"}, {"href": "/lake-greeson-near-glenwood", "label": "Explore Lake Greeson"}, {"href": "/glenwood-ar-cabins", "label": "Find a cabin"}]} />
     </main>
   );
 }

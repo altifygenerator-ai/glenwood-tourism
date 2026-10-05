@@ -1,0 +1,29 @@
+.quick {
+  padding: 28px 0;
+  background: var(--bg-card);
+}
+.next {
+  padding: 40px 0;
+}
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.links a {
+  min-height: 44px;
+  max-width: 100%;
+}
+.links a:focus-visible,
+.planner a:focus-visible,
+.planner button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+.jumpTarget {
+  scroll-margin-top: 210px;
+}
+.planner a,
+.planner button {
+  min-height: 44px;
+}

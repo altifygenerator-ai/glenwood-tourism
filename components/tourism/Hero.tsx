@@ -1,25 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const planningLinks = [
-  {
-    label: "Restaurants",
-    href: "/glenwood-ar-restaurants",
-  },
-  {
-    label: "Cabins & Stays",
-    href: "/glenwood-ar-cabins",
-  },
-  {
-    label: "Things To Do",
-    href: "/explore",
-  },
-  {
-    label: "Local Events",
-    href: "/events",
-  },
-];
-
 export default function Hero({ data }: any) {
   return (
     <section className="relative h-[78vh] min-h-[600px] overflow-hidden">
@@ -76,23 +57,6 @@ export default function Hero({ data }: any) {
                 </Link>
               </div>
 
-              <div className="mt-7 border-t border-white/15 pt-5">
-                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] !text-white/60">
-                  Start Planning
-                </p>
-
-                <div className="flex flex-wrap gap-2">
-                  {planningLinks.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      className="rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white/85 transition hover:bg-white hover:text-black"
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
-                </div>
-              </div>
             </div>
           </div>
         </div>

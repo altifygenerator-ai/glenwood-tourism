@@ -1,5 +1,6 @@
-﻿"use client";
+"use client";
 
+import styles from "./GuidePaths.module.css";
 import { useMemo, useState } from "react";
 import PlanResultCard from "@/components/PlanResultCard";
 import { groupOptions, planOptions, timeOptions } from "@/data/planMyDay";
@@ -15,7 +16,7 @@ export default function PlanMyDayTool() {
   }, [tripType]);
 
   return (
-    <section className="plan-tool-shell" aria-label="Plan My Glenwood Day tool">
+    <section className={`plan-tool-shell ${styles.planner}`} aria-label="Plan My Glenwood Day tool">
       <div className="plan-tool-sidebar">
         <p className="eyebrow">Plan My Day</p>
 
@@ -50,6 +51,7 @@ export default function PlanMyDayTool() {
                 key={option.id}
                 type="button"
                 onClick={() => setTripType(option.id)}
+                  aria-pressed={tripType === option.id}
                 className={`plan-choice ${tripType === option.id ? "active" : ""}`}
               >
                 <span>{option.eyebrow}</span>
@@ -73,6 +75,7 @@ export default function PlanMyDayTool() {
                   key={option.id}
                   type="button"
                   onClick={() => setTime(option.id)}
+                  aria-pressed={time === option.id}
                   className={`plan-small-choice ${time === option.id ? "active" : ""}`}
                 >
                   <strong>{option.label}</strong>
@@ -94,6 +97,7 @@ export default function PlanMyDayTool() {
                   key={option.id}
                   type="button"
                   onClick={() => setGroup(option.id)}
+                  aria-pressed={group === option.id}
                   className={`plan-small-choice ${group === option.id ? "active" : ""}`}
                 >
                   <strong>{option.label}</strong>
@@ -104,6 +108,7 @@ export default function PlanMyDayTool() {
           </div>
         </div>
 
+        <p role="status" className="sr-only">Showing {selectedPlan.label}, {timeOptions.find(option => option.id === time)?.label}, {groupOptions.find(option => option.id === group)?.label}.</p>
         <PlanResultCard plan={selectedPlan} time={time} group={group} />
       </div>
     </section>

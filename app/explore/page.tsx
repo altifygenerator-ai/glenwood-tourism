@@ -1,3 +1,4 @@
+import GuidePaths from "@/components/GuidePaths";
 import AttractionGrid from "@/components/tourism/AttractionGrid";
 import Itinerary from "@/components/tourism/Itinerary";
 import Section from "@/components/tourism/Section";
@@ -8,9 +9,8 @@ import EventsCTA from "@/components/events/EventsCTA";
 import { AmityLink, LinkedAmityText } from "@/components/AmityLink";
 
 export const metadata = {
-  title: "Things to Do in Glenwood, Arkansas | Caddo River, Lake Greeson & Local Stops",
-  description:
-    "Plan what to do in Glenwood, Arkansas with the Caddo River, Lake Greeson, family stops, fishing, cabins, restaurants, scenic drives, and easy nearby day trips.",
+  title: { absolute: "Things to Do in Glenwood, AR | Caddo River & Lake Greeson" },
+  description: "Explore Caddo River floats, John Benjamin Pond, Lake Greeson and nearby day trips. Find family ideas, food stops and a simple Glenwood day plan.",
   alternates: {
     canonical: "/explore",
   },
@@ -299,6 +299,7 @@ export default function ExplorePage() {
           </div>
         </div>
       </section>
+      <GuidePaths />
 
       <Section>
         <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
@@ -726,6 +727,7 @@ export default function ExplorePage() {
           </div>
         </div>
       </Section>
+      <GuidePaths next title="Make a day of Glenwood" links={[{"href": "/glenwood-ar-restaurants", "label": "Find local food"}, {"href": "/glenwood-ar-cabins", "label": "Find a cabin"}, {"href": "/things-to-do-in-glenwood-with-kids", "label": "Family activities"}, {"href": "/plan-my-day", "label": "Plan my Glenwood day"}]} />
     </main>
   );
 }

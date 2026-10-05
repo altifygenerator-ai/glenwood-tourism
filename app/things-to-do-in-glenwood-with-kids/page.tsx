@@ -1,12 +1,11 @@
+import GuidePaths from "@/components/GuidePaths";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title:
-    "Things to Do in Glenwood With Kids | Caddo River, Fishing & Family Ideas",
-  description:
-    "Find family-friendly things to do in Glenwood with kids, from the Caddo River and John Benjamin Fishing Pond to Lake Greeson, food stops, cabins, and easy day trips.",
+  title: { absolute: "Things to Do With Kids in Glenwood, AR | Fishing & River" },
+  description: "Plan a family day in Glenwood with John Benjamin Fishing Pond, Caddo River ideas, Lake Greeson, easy food stops and backup plans for changing weather.",
   keywords: [
     "things to do in Glenwood Arkansas with kids",
     "Glenwood Arkansas family activities",
@@ -56,7 +55,7 @@ const familyStops = [
     description:
       "Lake Greeson gives families another nearby option for boating, fishing, swimming, camping, and making a full outdoor weekend around Glenwood, Kirby, Daisy, and the surrounding area.",
     image: images.lake,
-    href: "/explore",
+    href: "/lake-greeson-near-glenwood",
     bestFor: ["Lake days", "Camping", "Boating", "Fishing"],
   },
 ];
@@ -239,6 +238,7 @@ export default function ThingsToDoInGlenwoodWithKidsPage() {
           </div>
         </div>
       </section>
+      <GuidePaths />
 
       <section className="section py-12">
         <div className="container">
@@ -482,6 +482,7 @@ export default function ThingsToDoInGlenwoodWithKidsPage() {
           </div>
         </div>
       </section>
+      <GuidePaths next title="Keep your family trip easy" links={[{"href": "/glenwood-ar-restaurants", "label": "Find local food"}, {"href": "/glenwood-ar-cabins", "label": "Find a cabin"}, {"href": "/john-benjamin-pond", "label": "Fishing at John Benjamin Pond"}, {"href": "/plan-my-day", "label": "Plan my Glenwood day"}]} />
     </main>
   );
 }
