@@ -8,7 +8,7 @@ Verification:
 - `npm run build`: passes. Existing Next middleware naming deprecation remains; middleware was not changed.
 - `tsc --noEmit`: passes. No lint script is configured.
 - Production browser QA: 12 routes × 1440, 1280, 768, 360 and 390px = 60 checks. All HTTP 200, no horizontal overflow, missing jump targets or uncaught runtime errors.
-- 32 discovered internal destinations return successfully. Planner weekend/solo interactions checked. Desktop/mobile hero, chooser, next paths, listing layout, footer, mobile menu and River View Spotlight inspected.
+- 32 discovered internal destinations return successfully. Planner weekend/solo/short-visit interactions checked, including avoiding outdoor fishing suggestions for rainy-day selections. Desktop/mobile hero, chooser, next paths, listing layout, footer, mobile menu and River View Spotlight inspected.
 - External River View/CDN images are blocked/unavailable in this execution environment. Local Vercel analytics requests can also return 404. These existing resources/placements are not changed; production asset rendering needs preview verification.
 - Ignored preview-only environment variables and empty event fixtures were used. No live submissions, email or database writes. Populated events and delivery require environment-backed preview QA.
 

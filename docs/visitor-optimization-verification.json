@@ -1,0 +1,31 @@
+{
+  "source": "1ad1d89373564797250611bb33f9bb7c7a6a9df9",
+  "viewportWidths": [
+    360,
+    390,
+    768,
+    1280,
+    1440
+  ],
+  "checkedRoutes": [
+    "/",
+    "/caddo-river",
+    "/caddo-river-weekend-guide",
+    "/events",
+    "/explore",
+    "/glenwood-ar-cabins",
+    "/glenwood-ar-restaurants",
+    "/john-benjamin-pond",
+    "/plan-my-day",
+    "/river-view-cabins",
+    "/things-to-do-in-glenwood-with-kids",
+    "/this-weekend"
+  ],
+  "responsiveChecks": 60,
+  "internalDestinations": 32,
+  "runtimeErrors": 0,
+  "missingJumpTargets": 0,
+  "overflowChecksFailed": 0,
+  "localQAUsesEmptyEventFixtures": true,
+  "liveSubmissionsTested": false
+}

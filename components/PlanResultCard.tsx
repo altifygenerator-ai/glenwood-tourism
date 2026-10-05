@@ -14,7 +14,7 @@ export default function PlanResultCard({ plan, time, group }: PlanResultCardProp
       { href: "/caddo-river-weekend-guide", label: "Plan a full weekend" },
       { href: "/glenwood-ar-cabins", label: "Find a place to stay" },
     ] : []),
-    ...(time === "couple-hours" ? [{ href: "/john-benjamin-pond", label: "Try a fishing stop" }] : []),
+    ...(time === "couple-hours" && ["river-day", "family-day", "outdoors-fishing"].includes(plan.id) ? [{ href: "/john-benjamin-pond", label: "Try a fishing stop" }] : []),
     ...(group === "family" ? [{ href: "/things-to-do-in-glenwood-with-kids", label: "Family activities" }] : []),
     ...plan.links,
   ].filter((link, index, all) => all.findIndex(item => item.href === link.href) === index);
