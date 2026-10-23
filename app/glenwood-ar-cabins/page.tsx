@@ -1,5 +1,6 @@
 import Section from "@/components/tourism/Section";
 import FindAPlaceBookingCTA from "@/components/FindAPlaceBookingCTA";
+import FindAPlaceCaddoGapStays from "@/components/FindAPlaceCaddoGapStays";
 import Link from "next/link";
 import EventsCTA from "@/components/events/EventsCTA";
 import NearbyAmitySection from "@/components/NearbyAmitySection";
@@ -75,9 +76,9 @@ const stays = [
       "A wooded Caddo Gap-area stay with cabins, RV and tent sites, creekside settings, and convenient access to Little Missouri Falls and Ouachita National Forest back roads.",
     location: "3969 Hwy 240 W, Caddo Gap, AR 71935",
     phone: "870-356-5311",
-    website: "https://www.fancyhillcabinsandrvpark.com/",
-    image: "/images/glenwood/cabins/cabin-exterior.jpg",
-    alt: "Fancy Hill Cabins and RV Park near Caddo Gap Arkansas",
+    website: "https://www.findaplacebooking.com/stays/lil-rustic",
+    image: "https://www.findaplacebooking.com/api/public/stay-cover/lil-rustic",
+    alt: "Lil Rustic cabin at Fancy Hill Cabins and RV Park, Caddo Gap Arkansas",
     directions:
       "https://www.google.com/maps/search/?api=1&query=Fancy+Hill+Cabins+and+RV+Park+3969+Hwy+240+W+Caddo+Gap+AR+71935",
   },
@@ -1009,6 +1010,8 @@ export default function GlenwoodCabinsPage() {
           </Link>
         </div>
       </Section>
+
+      <FindAPlaceCaddoGapStays />
 
       <FindAPlaceBookingCTA
         heading="Looking for a stay near the Caddo River?"
