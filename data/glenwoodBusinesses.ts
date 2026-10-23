@@ -363,7 +363,7 @@ export const glenwoodBusinesses: GlenwoodBusiness[] = [
     image: "https://www.findaplacebooking.com/api/public/stay-cover/lil-rustic",
     phone: "870-356-5311",
     address: "3969 Hwy 240 W, Caddo Gap, AR 71935",
-    website: "https://www.findaplacebooking.com/stays/lil-rustic",
+    website: "https://www.findaplacebooking.com/hosts/fancy-hill-cabins",
     directions:
       "https://www.google.com/maps/search/?api=1&query=Fancy+Hill+Cabins+and+RV+Park+3969+Hwy+240+W+Caddo+Gap+AR+71935",
     href: "/glenwood-ar-cabins",
