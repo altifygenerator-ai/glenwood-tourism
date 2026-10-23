@@ -5,7 +5,6 @@ import Link from "next/link";
 import EventsCTA from "@/components/events/EventsCTA";
 import NearbyAmitySection from "@/components/NearbyAmitySection";
 import TrackedFeatureLink from "@/components/TrackedFeatureLink";
-import { LinkedAmityText } from "@/components/AmityLink";
 export const metadata = {
   title: "Cabins and Places to Stay Near Glenwood, Arkansas | Caddo River Stays",
   description:
@@ -294,33 +293,6 @@ const stays = [
   },
 ];
 
-const riverStayLinks = [
-  {
-    title: "Stay close to river time",
-    text: "Cabins and local stays make more sense when you want extra time for floating, fishing, family visits, or a slower weekend around the Caddo River.",
-    href: "/caddo-river",
-    label: "View Caddo River Guide",
-  },
-  {
-    title: "Plan food before you book",
-    text: "A good stay is easier when you know where breakfast, coffee, pizza, seafood, Mexican food, and quick meals are nearby.",
-    href: "/glenwood-ar-restaurants",
-    label: "View Restaurants",
-  },
-  {
-    title: "Check the weekend",
-    text: "Before you book, check for local events, markets, music, fundraisers, and family-friendly things happening around Glenwood.",
-    href: "/this-weekend",
-    label: "See This Weekend",
-  },
-  {
-    title: "Add Lake Greeson or a day trip",
-    text: "Glenwood can also work as a base for Lake Greeson, Murfreesboro, Mount Ida, Amity, and nearby outdoor stops.",
-    href: "/explore",
-    label: "Explore Nearby",
-  },
-];
-
 const featuredNames = [
   "At Living Water Cabins",
   "Caddo River Cabins",
@@ -339,26 +311,7 @@ const arrowhead = stays.find(
   (stay) => stay.name === "Arrowhead Cabins and Camping"
 );
 
-const standardStays = stays.filter((stay) => !featuredNames.includes(stay.name));
-
-const tripStyles = [
-  {
-    title: "Riverfront cabin weekend",
-    text: "Best if the Caddo River is the whole point of the trip. Look for river access, outdoor space, float planning, fire pits, and enough room to relax after a day on the water.",
-  },
-  {
-    title: "Camping and float trip",
-    text: "Good for groups, families, and visitors who want a lower-friction outdoor weekend with rentals, campsites, and river logistics close together.",
-  },
-  {
-    title: "Motel or simple local stay",
-    text: "Works well if you need easy highway access, restaurants nearby, and a practical place to sleep between river time, Lake Greeson, and day trips.",
-  },
-  {
-    title: "Lake Greeson add-on",
-    text: "Better for visitors planning boating, fishing, marina access, swimming, or a lake-heavy weekend around Murfreesboro, Daisy, Kirby, and the Lake Greeson area.",
-  },
-];
+const standardStays = stays.filter((stay) => !featuredNames.includes(stay.name) && stay.name !== "Fancy Hill Cabins & RV Park");
 
 const lodgingFaqs = [
   {
@@ -392,21 +345,12 @@ const darkEyebrowClass =
 const sectionTitleClass =
   "text-3xl font-semibold leading-tight text-[color:var(--color-text)] md:text-4xl";
 
-const largeSectionTitleClass =
-  "text-4xl font-semibold leading-tight text-[color:var(--color-text)] md:text-5xl";
-
 const bodyTextClass = "leading-relaxed !text-[color:var(--color-muted)]";
 
 const smallBodyTextClass = "text-sm leading-6 !text-[color:var(--color-muted)]";
 
-const strongBodyTextClass =
-  "text-lg leading-relaxed !text-[color:var(--color-muted)]";
-
 const cardClass =
   "rounded-2xl border border-black/10 bg-[color:var(--bg-card)] shadow-sm";
-
-const largeCardClass =
-  "rounded-3xl border border-black/10 bg-[color:var(--bg-card)] shadow-sm";
 
 const primaryButtonClass =
   "inline-flex items-center justify-center rounded-full bg-[color:var(--color-accent)] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md";
@@ -419,9 +363,6 @@ const lightButtonClass =
 
 const darkOutlineButtonClass =
   "inline-flex items-center justify-center rounded-full border border-white/35 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/20";
-
-const bottomCardLinkClass =
-  "mt-auto inline-flex pt-5 font-semibold text-[color:var(--color-accent)] transition group-hover:opacity-75";
 
 function phoneHref(phone: string) {
   return `tel:${phone.replace(/[^\d]/g, "")}`;
@@ -616,88 +557,15 @@ export default function GlenwoodCabinsPage() {
         </div>
       </section>
 
-      <Section>
-        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
-          <div>
-            <p className={eyebrowClass}>River Weekend Stays</p>
+      <nav aria-label="On this lodging guide" className="mx-auto flex max-w-6xl flex-wrap items-center gap-2 px-6 py-6 text-sm">
+        <span className="mr-2 font-semibold text-[color:var(--color-text)]">Browse stays:</span>
+        <a href="#featured-stays" className="rounded-full border border-black/10 bg-white px-4 py-2 font-medium hover:border-[color:var(--color-accent)]">Featured local stays</a>
+        <a href="#find-a-place-stays" className="rounded-full border border-black/10 bg-white px-4 py-2 font-medium hover:border-[color:var(--color-accent)]">Bookable cabins & camping</a>
+        <a href="#other-local-stays" className="rounded-full border border-black/10 bg-white px-4 py-2 font-medium hover:border-[color:var(--color-accent)]">More lodging</a>
+        <Link href="/glenwood-ar-hotels" className="rounded-full border border-black/10 bg-white px-4 py-2 font-medium hover:border-[color:var(--color-accent)]">Hotels & motels</Link>
+      </nav>
 
-            <h2 className={`max-w-2xl ${largeSectionTitleClass}`}>
-              Pick the stay that fits the kind of Glenwood weekend you want.
-            </h2>
-          </div>
-
-          <p className={`max-w-2xl ${strongBodyTextClass}`}>
-            Some visitors want to be as close to the Caddo River as possible.
-            Others need room for family, a quiet cabin, a campground, or a simple
-            base for Lake Greeson, restaurants, and nearby day trips.
-          </p>
-        </div>
-
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {riverStayLinks.map((item) => (
-            <div
-              key={item.href}
-              className="group flex h-full flex-col rounded-3xl border border-black/10 bg-[color:var(--bg-card)] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
-            >
-              <h3 className="text-2xl font-semibold text-[color:var(--color-text)]">
-                {item.title}
-              </h3>
-
-              <p className={`mt-4 ${bodyTextClass}`}>
-                <LinkedAmityText text={item.text} />
-              </p>
-
-              <Link href={item.href} className={bottomCardLinkClass}>
-                {item.label} →
-              </Link>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      <Section>
-        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-          <div>
-            <p className={eyebrowClass}>Choose Your Stay</p>
-
-            <h2 className={`mb-5 ${sectionTitleClass}`}>
-              Stay close to the kind of trip you are actually taking.
-            </h2>
-
-            <div className={`space-y-4 ${bodyTextClass}`}>
-              <p>
-                A Glenwood stay usually works best when it matches the trip.
-                River visitors may want quick Caddo River access, families may
-                need more room, and weekend travelers may want a quiet cabin or
-                campground that still keeps food, events, and nearby outdoor
-                stops within reach.
-              </p>
-
-              <p>
-                Use this page to compare cabins, campgrounds, motels, private
-                rentals, river-area stays, and Lake Greeson options before you
-                build the rest of the trip around food, events, and nearby
-                attractions.
-              </p>
-            </div>
-          </div>
-
-          <div className="grid gap-4 md:grid-cols-2">
-            {tripStyles.map((item) => (
-              <div key={item.title} className={`${cardClass} p-5`}>
-                <div className="mb-3 h-1 w-10 rounded-full bg-[color:var(--color-accent)]" />
-
-                <h3 className="mb-2 text-lg font-semibold text-[color:var(--color-text)]">
-                  {item.title}
-                </h3>
-
-                <p className={smallBodyTextClass}>{item.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
+      <div id="featured-stays" />
       <Section>
         <div className="mb-8 grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
           <div>
@@ -736,9 +604,7 @@ export default function GlenwoodCabinsPage() {
             Featured Cabin Partner
           </span>
 
-          <span className="rounded-full bg-white/90 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--color-text)] shadow-sm">
-            Spotlight Stay
-          </span>
+
         </div>
 
         <div className="absolute bottom-5 left-5 right-5 rounded-2xl border border-white/15 bg-black/50 p-5 text-white backdrop-blur-md">
@@ -767,36 +633,6 @@ export default function GlenwoodCabinsPage() {
         <p className={`mb-6 ${bodyTextClass}`}>
           {atLivingWater.description}
         </p>
-
-        <div className="mb-6 grid gap-3 sm:grid-cols-2">
-          {[
-            "Four cozy creekside cabins",
-            "Four named creekside cabin options",
-            "Full kitchens and comfortable cabin setup",
-            "Close to Glenwood, Mount Ida, and outdoor trips",
-          ].map((item) => (
-            <div
-              key={item}
-              className="rounded-2xl border border-black/10 bg-white/65 p-4"
-            >
-              <p className="text-sm font-semibold leading-5 !text-[color:var(--color-text)]">
-                {item}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <div className="rounded-2xl border border-black/10 bg-white/60 p-4">
-          <p className="text-sm font-semibold !text-[color:var(--color-text)]">
-            Best for
-          </p>
-
-          <p className="mt-2 text-sm leading-6 !text-[color:var(--color-muted)]">
-            Families, couples, quiet cabin weekends, creekside stays, Caddo
-            River trips, Lake Greeson days, Mount Ida exploring, and travelers
-            wanting a clean, peaceful place in the Ouachita region.
-          </p>
-        </div>
 
         <div className="mt-6 space-y-2 text-sm">
           <p className="!text-[color:var(--color-muted)]">
@@ -906,6 +742,9 @@ export default function GlenwoodCabinsPage() {
         </div>
 </Section>
 
+      <div id="find-a-place-stays" />
+      <FindAPlaceCaddoGapStays />
+
 <div className="[&_h2]:!text-white [&_h3]:!text-white [&_p]:!text-white">
   <EventsCTA
     title="Staying in Glenwood for the weekend?"
@@ -913,6 +752,7 @@ export default function GlenwoodCabinsPage() {
   />
 </div>
 
+      <div id="other-local-stays" />
       <Section>
         <div className="mb-8 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div>
@@ -941,7 +781,7 @@ export default function GlenwoodCabinsPage() {
                   <div
                     role="img"
                     aria-label={stay.alt || stay.name}
-                    className="h-40 shrink-0 rounded-xl bg-cover bg-center md:w-44"
+                    className="h-48 w-full shrink-0 rounded-xl bg-cover bg-center md:h-40 md:w-44"
                     style={{
                       backgroundImage: `url('${stay.image}')`,
                     }}
@@ -1011,8 +851,6 @@ export default function GlenwoodCabinsPage() {
         </div>
       </Section>
 
-      <FindAPlaceCaddoGapStays />
-
       <FindAPlaceBookingCTA
         heading="Looking for a stay near the Caddo River?"
         text="Browse cabins, vacation rentals, and other stays on Find a Place Booking, with results focused on the Caddo River area."
@@ -1021,38 +859,6 @@ export default function GlenwoodCabinsPage() {
       />
 
       <NearbyAmitySection />
-
-      <Section>
-        <div className={`${largeCardClass} p-8 md:p-10`}>
-          <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-            <div>
-              <p className={eyebrowClass}>Good To Know</p>
-
-              <h2 className={sectionTitleClass}>
-                Staying near the Caddo River and Lake Greeson.
-              </h2>
-            </div>
-
-            <div className={`space-y-4 ${bodyTextClass}`}>
-              <p>
-                Most visitors choose lodging based on their main outdoor plan.
-                Stay near the Caddo River if floating, kayaking, fishing, or
-                riverfront time matters most. Look closer to Lake Greeson if
-                boating, marina access, lake camping, or fishing is the center
-                of the trip.
-              </p>
-
-              <p>
-                Cabins and rentals can fill faster during spring, summer, and
-                warm-weather weekends. If you are planning for a group, a
-                holiday, or a river-heavy weekend, it is usually better to book
-                earlier and then build food, events, and day trips around the
-                place you choose to stay.
-              </p>
-            </div>
-          </div>
-        </div>
-      </Section>
 
       <Section>
         <div className="mb-8 max-w-3xl">
