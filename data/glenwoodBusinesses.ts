@@ -360,10 +360,10 @@ export const glenwoodBusinesses: GlenwoodBusiness[] = [
     type: "Cabins • RV Sites • Tent Camping • Forest Stay",
     description:
       "A wooded cabin and campground option in the Fancy Hill area with cabins, RV and tent sites, creekside settings, and convenient access to Little Missouri Falls and Ouachita National Forest back roads.",
-    image: "/images/glenwood/cabins/cabin-exterior.jpg",
+    image: "https://www.findaplacebooking.com/api/public/stay-cover/lil-rustic",
     phone: "870-356-5311",
     address: "3969 Hwy 240 W, Caddo Gap, AR 71935",
-    website: "https://www.fancyhillcabinsandrvpark.com/",
+    website: "https://www.findaplacebooking.com/stays/lil-rustic",
     directions:
       "https://www.google.com/maps/search/?api=1&query=Fancy+Hill+Cabins+and+RV+Park+3969+Hwy+240+W+Caddo+Gap+AR+71935",
     href: "/glenwood-ar-cabins",
