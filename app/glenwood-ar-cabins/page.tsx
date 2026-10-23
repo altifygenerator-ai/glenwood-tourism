@@ -466,7 +466,7 @@ function TrackedStayActions({
           newTab
           className={primaryButtonClass}
         >
-          View Listing
+          {stay.website?.includes("findaplacebooking.com") ? "Book on Find A Place" : "View Listing"}
         </TrackedFeatureLink>
       )}
 
@@ -503,7 +503,7 @@ function StayActions({ stay }: { stay: (typeof stays)[number] }) {
           rel="noopener noreferrer"
           className={primaryButtonClass}
         >
-          View Listing
+          {stay.website?.includes("findaplacebooking.com") ? "Book on Find A Place" : "View Listing"}
         </a>
       )}
 
