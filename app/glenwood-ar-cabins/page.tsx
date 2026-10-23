@@ -1,6 +1,7 @@
 import Section from "@/components/tourism/Section";
 import FindAPlaceBookingCTA from "@/components/FindAPlaceBookingCTA";
 import FindAPlaceCaddoGapStays from "@/components/FindAPlaceCaddoGapStays";
+import WeeklyFindAPlaceStays from "@/components/WeeklyFindAPlaceStays";
 import Link from "next/link";
 import EventsCTA from "@/components/events/EventsCTA";
 import NearbyAmitySection from "@/components/NearbyAmitySection";
@@ -744,6 +745,7 @@ export default function GlenwoodCabinsPage() {
 
       <div id="find-a-place-stays" />
       <FindAPlaceCaddoGapStays />
+      <WeeklyFindAPlaceStays />
 
 <div className="[&_h2]:!text-white [&_h3]:!text-white [&_p]:!text-white">
   <EventsCTA
