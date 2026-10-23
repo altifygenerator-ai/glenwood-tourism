@@ -57,7 +57,7 @@ const riverStays = [
     description:
       "A wooded Caddo Gap-area stay with cabins, RV and tent sites, creekside settings, and convenient access to Ouachita National Forest back roads.",
     phone: "870-356-5311",
-    website: "https://www.fancyhillcabinsandrvpark.com/",
+    website: "https://www.findaplacebooking.com/stays/lil-rustic",
   },
 ];
 
