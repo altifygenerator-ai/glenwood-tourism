@@ -470,6 +470,13 @@ export default function GlenwoodRestaurantsPage() {
           <a className="mt-4 inline-block font-semibold underline" href="https://www.google.com/maps/search/?api=1&query=No+Way+Jose+804+E+Broadway+Glenwood+AR" target="_blank" rel="noopener noreferrer">
             Find No Way Jose on the map
           </a>
+          <div className="mt-7 border-t pt-6">
+            <h3 className="text-xl font-semibold">Lidia's Authentic Pupusas — Mobile</h3>
+            <p className="mt-2 max-w-3xl leading-7">
+              A mobile pupusa stop listed at 335 US-70 in Glenwood. Call 870-828-8821
+              to check where and when the food truck is serving before driving over.
+            </p>
+          </div>
         </div>
       </section>
 
