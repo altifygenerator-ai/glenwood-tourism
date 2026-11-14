@@ -5,7 +5,7 @@ const sources = [
   {
     "site": "glenwood",
     "name": "Glenwood Regional Chamber events",
-    "url": "https://glenwoodregionalchamber.com/",
+    "url": "https://glenwoodregionalchamber.com/events",
     "city": "Glenwood",
     "category": "Community",
     "notes": "Official area chamber; only clearly dated local events qualify"
