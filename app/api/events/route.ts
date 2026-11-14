@@ -134,3 +134,30 @@ export async function POST(request: Request) {
     );
   }
 }
+/** Public read-only feed for the Amity and Murfreesboro tourism guides. */
+export async function GET(request: Request) {
+  const site = new URL(request.url).searchParams.get("site");
+  if (site !== "amity" && site !== "murfreesboro") {
+    return NextResponse.json({ error: "Unsupported site" }, { status: 400 });
+  }
+
+  const today = new Date().toISOString().slice(0, 10);
+  const { data, error } = await supabaseAdmin
+    .from("events")
+    .select("id,title,description,city,location_name,address,start_date,end_date,start_time,end_time,category,source_url")
+    .eq("site", site)
+    .eq("status", "approved")
+    .gte("start_date", today)
+    .order("start_date", { ascending: true })
+    .order("start_time", { ascending: true })
+    .limit(50);
+
+  if (error) {
+    console.error("Public event feed failed", site, error);
+    return NextResponse.json({ error: "Event feed unavailable" }, { status: 503 });
+  }
+  return NextResponse.json(
+    { events: data || [] },
+    { headers: { "Cache-Control": "public, s-maxage=600, stale-while-revalidate=600" } },
+  );
+}
