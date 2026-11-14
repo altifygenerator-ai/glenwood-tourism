@@ -7,7 +7,7 @@ import FindAPlaceBookingCTA from "@/components/FindAPlaceBookingCTA";
 export const metadata: Metadata = {
   title: "Caddo River Cabins Near Glenwood, Arkansas | Riverfront Places to Stay",
   description:
-    "Find Caddo River cabins near Glenwood, Arkansas for floating, fishing, swimming, family weekends, and quiet river stays, plus booking and trip-planning tips.",
+    "Compare cabins on and near the Caddo River in Glenwood, Arkansas. Find riverfront stays, cabins near outfitters, and places with canoe or kayak rentals.",
   keywords: [
     "Caddo River cabins",
     "cabins on Caddo River Arkansas",
@@ -70,7 +70,7 @@ export default function CaddoRiverCabinsPage() {
             Caddo River Cabins
           </p>
           <h1 className="text-5xl font-semibold leading-[0.98] text-[color:var(--color-text)] md:text-7xl">
-            Stay close to the Caddo River and build the weekend around the water.
+            Cabins on and near the Caddo River in Glenwood
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-[color:var(--color-muted)]">
             River cabins make the most sense when floating, fishing, swimming,
