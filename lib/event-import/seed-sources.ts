@@ -26,6 +26,14 @@ const sources = [
     "category": "Arts & Culture",
     "notes": "Official academy page; verify actual Amity venue for each concert"
   }
+  {
+    "site": "murfreesboro",
+    "name": "Crater of Diamonds State Park events",
+    "url": "https://www.arkansas.com/state-parks/explore/parks/crater-of-diamonds-state-park",
+    "city": "Murfreesboro",
+    "category": "Outdoor & Parks",
+    "notes": "Official park page includes current park interpreter events and links; strict date and city checks apply"
+  },
 ] as const;
 
 export async function ensureTrustedEventSources(site?: string) {
