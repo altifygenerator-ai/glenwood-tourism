@@ -3,6 +3,14 @@
     {
       "path": "/api/cron/import-events",
       "schedule": "0 11 * * *"
+    },
+    {
+      "path": "/api/cron/import-events-murfreesboro",
+      "schedule": "0 12 * * *"
+    },
+    {
+      "path": "/api/cron/import-events-amity",
+      "schedule": "0 13 * * *"
     }
   ]
 }
