@@ -4,7 +4,7 @@ import { supabaseAdmin } from "@/lib/supabase/server";
 const sources = [
   {
     "site": "glenwood",
-    "name": "Glenwood Regional Chamber events",
+    "name": "Glenwood Regional Chamber event calendar",
     "url": "https://glenwoodregionalchamber.com/events",
     "city": "Glenwood",
     "category": "Community",
