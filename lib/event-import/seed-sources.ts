@@ -25,7 +25,7 @@ const sources = [
     "city": "Amity",
     "category": "Arts & Culture",
     "notes": "Official academy page; verify actual Amity venue for each concert"
-  }
+  },
   {
     "site": "murfreesboro",
     "name": "Crater of Diamonds State Park events",
