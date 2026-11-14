@@ -85,11 +85,11 @@ export default function Navbar() {
 
         <nav className="hidden items-center gap-4 text-sm md:flex">
           <div className="group relative">
-            <button className="font-medium text-[color:var(--color-text)] transition hover:text-[color:var(--color-accent)]">
+            <button type="button" className="font-medium text-[color:var(--color-text)] transition hover:text-[color:var(--color-accent)]">
               Things To Do ▾
             </button>
 
-            <div className="absolute left-0 top-full hidden min-w-[240px] pt-3 group-hover:block">
+            <div className="absolute left-0 top-full hidden min-w-[240px] pt-3 group-hover:block group-focus-within:block">
               <div className="overflow-hidden rounded-xl border border-black/10 bg-[color:var(--bg-card)] py-2 text-[color:var(--color-text)] shadow-xl">
                 {thingsToDoLinks.map((link) => (
                   <Link
@@ -105,11 +105,11 @@ export default function Navbar() {
           </div>
 
           <div className="group relative">
-            <button className="font-medium text-[color:var(--color-text)] transition hover:text-[color:var(--color-accent)]">
+            <button type="button" className="font-medium text-[color:var(--color-text)] transition hover:text-[color:var(--color-accent)]">
               Plan Your Trip ▾
             </button>
 
-            <div className="absolute left-0 top-full hidden min-w-[230px] pt-3 group-hover:block">
+            <div className="absolute left-0 top-full hidden min-w-[230px] pt-3 group-hover:block group-focus-within:block">
               <div className="overflow-hidden rounded-xl border border-black/10 bg-[color:var(--bg-card)] py-2 text-[color:var(--color-text)] shadow-xl">
                 {planLinks.map((link) => (
                   <Link
@@ -125,11 +125,11 @@ export default function Navbar() {
           </div>
 
           <div className="group relative">
-            <button className="font-medium text-[color:var(--color-text)] transition hover:text-[color:var(--color-accent)]">
+            <button type="button" className="font-medium text-[color:var(--color-text)] transition hover:text-[color:var(--color-accent)]">
               Articles ▾
             </button>
 
-            <div className="absolute left-0 top-full hidden min-w-[250px] pt-3 group-hover:block">
+            <div className="absolute left-0 top-full hidden min-w-[250px] pt-3 group-hover:block group-focus-within:block">
               <div className="overflow-hidden rounded-xl border border-black/10 bg-[color:var(--bg-card)] py-2 text-[color:var(--color-text)] shadow-xl">
                 {articleLinks.map((link) => (
                   <Link
@@ -145,11 +145,11 @@ export default function Navbar() {
           </div>
 
           <div className="group relative">
-            <button className="font-medium text-[color:var(--color-text)] transition hover:text-[color:var(--color-accent)]">
+            <button type="button" className="font-medium text-[color:var(--color-text)] transition hover:text-[color:var(--color-accent)]">
               Events ▾
             </button>
 
-            <div className="absolute left-0 top-full hidden min-w-[200px] pt-3 group-hover:block">
+            <div className="absolute left-0 top-full hidden min-w-[200px] pt-3 group-hover:block group-focus-within:block">
               <div className="overflow-hidden rounded-xl border border-black/10 bg-[color:var(--bg-card)] py-2 text-[color:var(--color-text)] shadow-xl">
                 {eventLinks.map((link) => (
                   <Link
@@ -165,11 +165,11 @@ export default function Navbar() {
           </div>
 
           <div className="group relative">
-            <button className="font-medium text-[color:var(--color-text)] transition hover:text-[color:var(--color-accent)]">
+            <button type="button" className="font-medium text-[color:var(--color-text)] transition hover:text-[color:var(--color-accent)]">
               Nearby Guides ▾
             </button>
 
-            <div className="absolute left-0 top-full hidden min-w-[190px] pt-3 group-hover:block">
+            <div className="absolute left-0 top-full hidden min-w-[190px] pt-3 group-hover:block group-focus-within:block">
               <div className="overflow-hidden rounded-xl border border-black/10 bg-[color:var(--bg-card)] py-2 text-[color:var(--color-text)] shadow-xl">
                 {nearbyGuideLinks.map((link) => (
                   <a
