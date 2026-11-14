@@ -460,6 +460,19 @@ export default function GlenwoodRestaurantsPage() {
         }}
       />
 
+      <section className="section">
+        <div className="mx-auto max-w-6xl px-6 py-10">
+          <h2 className="mb-3 text-2xl font-semibold">Another local food stop: No Way Jose</h2>
+          <p className="max-w-3xl leading-7">
+            No Way Jose is a Mexican restaurant at 804 E Broadway in Glenwood.
+            Call 870-828-4547 to check current opening days before making a special trip.
+          </p>
+          <a className="mt-4 inline-block font-semibold underline" href="https://www.google.com/maps/search/?api=1&query=No+Way+Jose+804+E+Broadway+Glenwood+AR" target="_blank" rel="noopener noreferrer">
+            Find No Way Jose on the map
+          </a>
+        </div>
+      </section>
+
       <section className="relative overflow-hidden bg-[color:var(--color-text)] text-white">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-50"
