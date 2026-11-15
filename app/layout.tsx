@@ -1,3 +1,4 @@
+import NstpReachTracker from "@/components/NstpReachTracker";
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Inter, Playfair_Display } from "next/font/google";
@@ -226,6 +227,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <Analytics />
+        <NstpReachTracker />
       </body>
     </html>
   );
