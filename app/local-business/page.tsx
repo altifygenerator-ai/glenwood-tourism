@@ -4,6 +4,7 @@ import NearbyAmitySection from "@/components/NearbyAmitySection";
 import TrackedFeatureLink from "@/components/TrackedFeatureLink";
 import { allBusinessDirectoryListings } from "@/data/glenwoodBusinessDirectoryPages";
 import type { GlenwoodBusiness } from "@/data/glenwoodBusinesses";
+import { approvedCityListings, mergeApprovedListings } from "@/lib/nstp-business-sync";
 
 const categoryCards = [
   {
@@ -43,14 +44,6 @@ const featuredNames = [
   "Mercantile on Broadway",
   "At Living Water Cabins",
 ];
-
-const featuredBusinesses = featuredNames
-  .map((name) => allBusinessDirectoryListings.find((business) => business.name === name))
-  .filter((business): business is GlenwoodBusiness => Boolean(business));
-
-const regularBusinesses = allBusinessDirectoryListings.filter(
-  (business) => !featuredNames.includes(business.name)
-);
 
 export const metadata = {
   title:
@@ -150,7 +143,15 @@ function BusinessCard({ business, featured = false }: { business: GlenwoodBusine
   );
 }
 
-export default function LocalBusinessesPage() {
+export const revalidate = 300;
+export default async function LocalBusinessesPage() {
+  const live = await approvedCityListings("Glenwood");
+  const updated = mergeApprovedListings(allBusinessDirectoryListings, live);
+  const featuredBusinesses = featuredNames
+    .map(name => updated.find(b => b.name === name))
+    .filter((business): business is GlenwoodBusiness => Boolean(business));
+  const regularBusinesses = updated.filter(b => !featuredNames.includes(b.name));
+
   return (
     <main>
       <script
