@@ -147,6 +147,20 @@ function DirectoryCard({
         >
           {cardInner}
         </TrackedFeatureLink>
+      ) : trackingPage ? (
+        <TrackedFeatureLink
+          href={href}
+          business={business.name}
+          city="Glenwood"
+          page={trackingPage}
+          placement="basic-directory-listing"
+          action="view-details"
+          placementType="editorial"
+          eventName="business_click"
+          newTab={external}
+        >
+          {cardInner}
+        </TrackedFeatureLink>
       ) : (
         <a
           href={href}
@@ -458,6 +472,7 @@ export default function GlenwoodBusinessDirectoryPage({
                   business={business}
                   index={index + 1}
                   featuredNames={featuredNames}
+                  trackingPage={trackingPage}
                 />
               ))}
             </div>
