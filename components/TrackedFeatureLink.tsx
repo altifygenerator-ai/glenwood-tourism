@@ -15,6 +15,7 @@ type TrackedFeatureLinkProps = {
   action: string;
   placementType?: string;
   newTab?: boolean;
+  eventName?: string;
 };
 
 export default function TrackedFeatureLink({
@@ -28,9 +29,10 @@ export default function TrackedFeatureLink({
   action,
   placementType,
   newTab = false,
+  eventName = "Featured Listing Click",
 }: TrackedFeatureLinkProps) {
   function handleClick() {
-    track("Featured Listing Click", {
+    track(eventName, {
       business,
       city,
       page,
