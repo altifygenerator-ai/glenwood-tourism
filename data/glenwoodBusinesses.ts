@@ -173,6 +173,28 @@ export const glenwoodBusinesses: GlenwoodBusiness[] = [
       "https://www.google.com/maps/search/?api=1&query=Family+Dollar+180+Highway+70+E+Glenwood+AR+71943",
   },
   {
+    name: "Red Dirt Property Services LLC",
+    category: "Local Service",
+    type: "Dirt Work • Brush Hogging • Junk Removal • Property Cleanup",
+    description:
+      "Locally based property services for Glenwood, Amity, and surrounding communities, including brush hogging, driveway and culvert work, hauling, junk removal, cleanouts, and light clearing.",
+    image: "/images/local-services/red-dirt-property-services.svg",
+    phone: "870-828-2562",
+    address: "Serving Glenwood, Amity & surrounding Arkansas areas",
+    website: "https://www.reddirtpropertyservicesar.com/",
+  },
+  {
+    name: "Lyn & Lili's Tidy House",
+    category: "Local Service",
+    type: "House Cleaning • Deep Cleaning • Rental Turnovers • Organization",
+    description:
+      "Locally owned home services for Glenwood, Amity, and nearby communities. Offers regular and deep cleaning, Airbnb and cabin turnovers, move-out cleaning, home organization, and non-medical senior household help.",
+    image: "/images/local-services/lyn-lilis-tidy-house.svg",
+    phone: "870-260-4536",
+    address: "Serving Glenwood, Amity & nearby areas",
+    website: "https://www.lynandlilistidyhouse.com/",
+  },
+  {
     name: "Glenwood Auto Parts",
     category: "Local Service",
     type: "Auto Parts • Vehicle Supplies • Local Parts Store",
